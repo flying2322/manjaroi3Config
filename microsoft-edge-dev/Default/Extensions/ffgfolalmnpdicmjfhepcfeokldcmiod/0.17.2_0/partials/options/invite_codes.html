@@ -1,0 +1,228 @@
+
+<div ng-hide="anonymous()">
+    <div class="url-wrapper" style="background-color:#f8f8f8;padding:3px;margin-top:16px">
+        <div class="reward-header">
+            <h2>
+                <i class="fa fa-th-large" aria-hidden="true"></i>
+                
+                {{'options.invite_codes.title'|translate}}
+            </h2>
+            <div class="clearfix"></div>  
+        </div>
+   
+        <div class="rules" style="padding:3px;">
+              
+                <div class="reward-header">
+                    <h2>
+                        <i class="fa fa-trophy" style="color:#4cae4c;" aria-hidden="true"></i>
+                        <span translate="options.invite_codes.invite_friend_registeration_reward"></span>
+                    </h2>
+                </div>
+                <h3>
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                    <b translate='options.invite_codes.prerequisites'></b>
+                </h3>
+
+                <ul class="steps">
+                    <li>
+                        <span class="label label-info">1</span>
+                        <span translate="options.invite_codes.friend_registeration_step1"></span>
+                        <small ng-show="signup_with_invite_code_reward">(
+                            <span style="color:#ff3e84">
+                                {{signup_with_invite_code_reward}}
+                            </span>
+                        )</small>
+                        <small class="link_lable" style="color:#999;cursor:pointer;" ng-click="showInvitationCodes()"  ng-show="$root.user.selectedInvitationCode">&nbsp;<u>({{'options.invite_codes.click_to_show_all_codes'|translate}}</u>)</small>
+                    </li>
+                    <li>
+
+                        <div style="padding-left:32px" ng-show="!$root.user.selectedInvitationCode">
+                            <span translate="options.invite_codes.friend_registeration_no_active_codes"></span>
+                                (
+                                <a ng-href="{{getBareInviteUrl()}}" target="_blank">
+                                    {{getBareInviteUrl()}}
+                                </a>
+                                )
+                        </div>
+                        <div style="padding-left:32px;margin-bottom:20px" ng-show="$root.user.selectedInvitationCode">
+                            <span translate="options.invite_codes.friend_registeration_active_codes"></span>
+                                <span style="color:#5cb85c">{{$root.user.selectedInvitationCode}}</span>
+                                <span class="text-muted"> ({{ 'common.expire.t1' | translate }}</span>
+                                <span class="text-muted" title="{{getInviteCodeExpireTime() | date: 'yyyy-MM-dd HH:mm:ss'}}">
+                                    {{ getInviteCodeExpireTime() | durationToNow }}
+                                </span>
+                                <small style="color:#ff6c2c" class="text-muted">{{ 'common.expire.t2' | translate }}</small><span class="text-muted">)</span>
+
+                            <small style="color:#999;cursor:pointer;" class="link_lable" ng-show="!showSelectCodes" ng-click="showSelectCodes=true">&nbsp;<u>({{'options.invite_codes.click_to_edit_active_code'|translate}}</u>)</small>
+                            <div ng-show="showSelectCodes">
+                                <select class="form-control" ng-model="$root.user.selectedInvitationCode" style="width: 200px;" >
+                                    <option ng-repeat="code in getActiveCodes()" ng-value="code">
+                                        {{code}}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div style="padding-left:32px" ng-show="$root.user.selectedInvitationCode">
+                            <div style="cursor:pointer;padding:3px" ng-click="showInviteLink=true">
+                                
+                                <span class="link_lable" translate="options.invite_codes.invite_friend_registeration_method_link"></span>
+                                <small class="link_lable" ng-hide="showInviteLink" style="color:#999">&nbsp;(<u>{{'options.invite_codes.click_to_show_url'|translate}}</u>)</small>
+                            </div>
+                            <div class="alert alert-success" style="font-size: 14px;" ng-show="showInviteLink">
+                                <b>{{'options.invite_codes.invite_url'|translate}}</b>
+                                
+                                <a ng-href="{{getInviteUrl()}}" target="_blank">
+                                    <u>{{getInviteUrl()}}</u>
+                                </a>
+                            </div>
+                            <div style="cursor:pointer;padding:3px" ng-click="showInviteEmailModal()">
+                                <span class="link_lable" translate="options.invite_codes.invite_friend_registeration_method_email"></span>
+                                
+                                <small class="link_lable" style="color:#999">&nbsp;(<u>{{'options.invite_codes.click_to_edit_email'|translate}}</u>)</small>
+                            </div>
+                            <div style="cursor:pointer;padding:3px" ng-click="showInviteQRCodeModal()">
+                                <span class="link_lable" translate="options.invite_codes.invite_friend_registeration_method_qrcode"></span>
+
+                                <small class="link_lable" style="color:#999">&nbsp;(<u>{{'options.invite_codes.click_to_show_qrcode'|translate}}</u>)</small>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="label label-info">2</span>
+                        <span translate="options.invite_codes.friend_registeration_step2"></span>
+                    </li>
+                    <li>
+                        <span class="label label-success">{{'options.invite_codes.reward'|translate}}</span>
+                        <span ng-show="getInviteLeftTimes() <= 0" ng-bind-html="'options.invite_codes.friend_registeration_step3' | translate:{ inviterReward: getInviterReward(), inviteeReward: getInviteeReward()}"></span>
+                        <span ng-show="getInviteLeftTimes() > 0" ng-bind-html="'options.invite_codes.friend_registeration_step3_extra' | translate:{ inviterReward: getInviterReward(), inviteeReward: getInviteeReward(), leftTimes: getInviteLeftTimes(), leftReward: getInviterLeftReward()}"></span>
+                    </li>
+                </ul>
+                <div class="alert alert-info">
+                    <span>
+                        {{'options.invite_codes.has_no_invite_code'|translate}}
+                        <span ng-if="!$root.isWheatCollectingDisabled()">
+                            <span class="label label-success" style="cursor:pointer;" ng-click="showGrabWheat()">{{'options.invite_codes.has_no_invite_code_collect_wheat'|translate}}</span>
+                            {{'options.invite_codes.has_no_invite_code_and'|translate}}
+                            <span class="label label-success" style="cursor:pointer;" ng-click="exchangeWheat()">{{'options.invite_codes.has_no_invite_code_trade_score'|translate}}</span>
+                            {{'options.invite_codes.has_no_invite_code_or'|translate}}
+                        </span>
+                        <a href="{{$root.orderUrl()}}" target="_blank" class="label label-success">{{'options.invite_codes.has_no_invite_code_place_order'|translate}}</a>
+                        <!--
+                        <span class="label label-default" style="cursor:pointer;">{{'options.invite_codes.has_no_invite_code_place_order'|translate}}</span>-->
+                    </span>
+                </div>
+                <div class="alert alert-warning" ng-if="lang == 'zh'" ng-show="$root.user.selectedInvitationCode">
+                    <span translate="options.invite_codes.invite_friend_registeration_caveat"></span>
+                </div>
+            
+        </div>
+        <div class="clearfix" ng-show="$root.user.selectedInvitationCode">
+
+            <div class="alert {{alertStyle}} text-center" ng-show="showAlertFetch">{{alertText}}</div>
+            <h4 class="rewards">
+                <i class="fa fa-th-large" aria-hidden="true"></i>
+                {{'options.invite_codes.invite_code'|translate}}:&nbsp;
+                <span style="color:#ff6c2c">{{$root.user.selectedInvitationCode}}</span>
+                &nbsp;{{'options.invite_codes.usage_info'|translate}}
+                (<span style="color:#5CB85C">&nbsp;{{getInviteCodeUsedTimes()}}</span>&nbsp;/&nbsp;<span style="color:#23377c">{{getInviteCodeAllowance()}}</span>&nbsp;)
+
+
+                <a href="" class="btn" style="padding: 0;color: black;cursor:point"
+                   ng-click="reloadInvitations()" ng-mouseenter="hovering_CT=true" ng-mouseleave="hovering_CT=false"
+                   bs-tooltip="{title: ('common.reload'|translate)}" data-placement="top"
+                   >
+                    <i class="fa fa-refresh" ng-class="{'color_emphasis':hovering_CT}" aria-hidden="true"></i>
+                </a>
+            </h4>
+            <table class="invitation table">
+
+                <thead>
+                <tr>
+                    <th class="account" translate="options.invite_codes.beneficiary"></th>
+                    <th class="status">{{'options.invite_codes.invite_status'|translate}}</span></th>
+                    <th class="time"><span bs-tooltip="{title: ('options.invite_codes.invitation_expire_notice'|translate) }">{{'options.invite_codes.invitation_expire'|translate}}</span></th>
+                    
+                    <th class="action text-right" translate="options.invite_codes.operation"></th>
+                </tr>
+                </thead>
+                <tbody>
+                    <div class="sarsha-spinner-container" style="position: relative; top: 50px;" ng-show="invitation_loading"> 
+                        <div class="sarsha-spinner"> <div class="spinner ng-scope"> <div class="rect1"></div> <div class="rect2"></div> <div class="rect3"></div> <div class="rect4"></div> <div class="rect5"></div> </div> </div> 
+                    </div>
+                    <tr class="text-muted" ng-show="selected_invite_code_invitations && !selected_invite_code_invitations.length">
+                        <td colspan="3" translate="options.invite_codes.no_reward_so_far"></td>
+                    </tr>
+                    <tr ng-repeat="invitation in selected_invite_code_invitations">
+                        <td class="account" ng-switch="isMe(invitation.sender)" style="width:30%">
+                            <span>
+                                {{ invitation.receiver }}
+                            </span>
+                        </td>
+                        <td class="status">
+                            <span class="label label-default" ng-show="invitation.status !== 'rewardable'">{{invitation.status_caption}}</span>
+                            
+                            <span class="text-success" ng-show="invitation.status == 'rewardable'">
+                                {{invitation.status_caption}}
+                            </span>
+                        </td>
+                        <td class="time">
+                            <span class="" title="{{invitation.expire | date: 'yyyy-MM-dd HH:mm:ss'}}" ng-show="!invitation.expired">
+                                {{ invitation.expire | durationToNow }}
+                                <i class="fa fa-info-circle ng-scope" style="cursor:pointer;color:black" aria-hidden="true" ng-click="showWaitingPaymentNotice()"  ng-show="invitation.status === 'waiting_payment'"></i>
+                            </span>
+                            <span class="" ng-show="invitation.expired" translate="options.invite_codes.expired">
+                              
+                            </span>
+                
+                        </td>
+                        <td class="action text-right" ng-if="!invitation.expired && invitation.status === 'rewardable'">
+                            <button class="btn btn-xs btn-success" ng-if="!invitation.fetching"
+                                    ng-show="invitation.can_fetch_reward"
+                                    ng-click="fetchInvitationReward(invitation)">
+                                    {{invitation.reward_caption}}
+                            </button>
+                            <button class="btn btn-xs  btn-secondary" ng-if="invitation.fetching"
+                                    ng-show="invitation.can_fetch_reward" disabled
+                                    ng-click="$root.fetchInvitationReward(invitation)">
+                                    <img src="/img/loading-bars.svg" alt="loading"/>
+                            </button>
+                            <span class="text-success" ng-hide="invitation.can_fetch_reward" translate="options.invite_codes.rewarded">
+                            </span>
+                        </td>
+                        <td class="action text-right" ng-if="!invitation.expired && invitation.status !== 'rewardable'">
+                            <span class="text-muted" translate="options.invite_codes.not_rewardable"></span>
+                        </td>
+                        <td class="action text-right" ng-if="invitation.expired && invitation.status !== 'waiting_payment'">
+                            <span class="text-muted" translate="options.invite_codes.expired"></span>
+                        </td>
+                        <td class="operation text-right" ng-if="invitation.expired && invitation.status === 'waiting_payment'" style="width:40%">
+                            <span ng-if="!invitation.deleting" ng-show="invitation.status === 'waiting_payment'">
+                                <i class="fa fa-question-circle ng-scope" style="cursor:pointer;color:black" ng-click="showDeleteExpiredInvitationNotice()"></i>
+                                &nbsp;
+                                <button class="btn btn-xs btn-primary"
+                                        ng-click="deleteExpiredInvitation(invitation)">
+                                        {{'options.invite_codes.delete_expired_invitation'|translate}}
+                                </button>
+                                
+                            </span>
+                            <button class="btn btn-xs btn-primary" ng-if="invitation.deleting"
+                                    ng-show="invitation.status === 'waiting_payment'" disabled>
+                                    <img src="/img/loading-bars.svg" alt="loading"/>
+                            </button>
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+

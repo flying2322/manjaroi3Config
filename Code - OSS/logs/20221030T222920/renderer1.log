@@ -1,0 +1,5 @@
+[2022-10-30 22:29:23.973] [renderer1] [warning] [twxs.cmake]: Cannot register 'cmake.cmakePath'. This property is already registered.
+[2022-10-30 22:29:25.349] [renderer1] [error] RequestService#request (browser) - error https://open-vsx.org/vscode/gallery/extensionquery {"name":"Offline"}
+[2022-10-30 22:29:25.677] [renderer1] [error] [Extension Host] [CMakeTools] 2022-10-30T14:29:25.653Z [error] [rollbar] "sourceDirectory" is not a directory {"sourceDirectory":"/home/dom/Dev/olas/Lession01"}
+[2022-10-30 22:29:25.971] [renderer1] [error] [Extension Host] [CMakeTools] 2022-10-30T14:29:25.966Z [error] [rollbar] "sourceDirectory" is not a directory {"sourceDirectory":"/home/dom/Dev/olas/Lession01"}
+[2022-10-30 22:29:34.380] [renderer1] [error] Error while registering log channel file:///home/dom/.config/Code%20-%20OSS/logs/20221030T222920/userDataSync.log Timed out while waiting for file to be created

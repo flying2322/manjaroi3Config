@@ -1,0 +1,277 @@
+
+
+.font-ya-hei{
+  font-family:"Helvetica Neue", Helvetica, "Microsoft YaHei" , Arial, STXihei, "华文细黑", "Nimbus Sans L", "Liberation Sans", "Hiragino Sans GB", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+
+}
+
+.font-hei {
+  font-family: "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Hiragino Sans GB", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+}
+
+
+
+.font-kai {
+  font-family: Arial, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, TW\-Kai, serif;
+}
+/*
+.font-kai {
+  font-family: Baskerville, Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, TW\-Kai, serif;
+}
+*/
+.font-song {
+  font-family: Georgia, "Nimbus Roman No9 L", "Songti SC", STSong, "AR PL SungtiL GB", NSimSun, SimSun, TW\-Sung, "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", serif;
+}
+.font-fang-song {
+  font-family: Baskerville, "Times New Roman", "Liberation Serif", STFangsong, FangSong, FangSong_GB2312, CWTEX\-F, serif;
+}
+.font-ming {
+  font-family: Georgia, "Nimbus Roman No9 L", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
+}
+.uppercase {
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+
+
+[ng-cloak],
+.ng-hide {
+  display: none !important;
+}
+
+body {
+  background-color: #f5f5f5;
+  overflow-y: scroll;
+    font-family:"Helvetica Neue", Helvetica, "Microsoft YaHei" , Arial, STXihei, "华文细黑", "Nimbus Sans L", "Liberation Sans", "Hiragino Sans GB", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+
+}
+
+
+.text-muted {
+    color: #999;
+    font-size:80%;
+}
+/* testing  */
+
+.nav-col-head{
+  display: block;
+  height:40px;
+}
+.nav-col .header-languages{
+  margin-right:8px;
+  float:left!important;
+}
+.languages {
+    position: relative;
+    padding: 0 35px 0 15px;
+    padding: 0 3.5rem 0 1.5rem;
+    color: #232323;
+      
+}
+.languages:after {
+    display: inline-block;
+    line-height: 0;
+    width: auto;
+    height: auto;
+    font-family: FontAwesome;
+    font-size: 23px;
+    font-size: 2.3rem;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.languages:after {
+    content: "\f106";
+}
+
+.languages:after {
+    position: relative;
+    top: 50%;
+    right: 13px;
+    font-size: 12px;
+    font-size: 1.2rem;
+    color:#888;
+    float: right;
+}
+
+.languages:active, .languages:hover {
+    border-color: #c3c3c3;
+}
+
+.languages:hover .languages-title{
+  color:#23377c;
+
+}
+
+.languages:hover:after {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    color:black;
+}
+.languages-title {
+    position: absolute;
+    width: 120px;
+}
+.header-divider-left {
+    border-left: 1px solid #f2f2f2;
+}
+.header-divider-right {
+    border-right: 1px solid #f2f2f2;
+    width:130px;
+}
+.languages-icon {
+    line-height: 39px;
+    /*
+    line-height: 3.9rem;
+    */
+}
+
+.languages-chosen {
+    /*
+    font-size: 11px;
+    font-size: 1.1rem;
+    padding-left: .2rem;
+    */
+    padding-left: 2px;
+    color:#888;
+    font-size:80%;
+    
+}
+.languages:hover .languages-chosen {
+    color: black;
+}
+.languages-dropdown-icon {
+    font-size: 10px;
+    /*font-size: 1rem;*/
+}
+
+.languages-menu {
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    left: -1px;
+    right: -1px;
+    top: 40px;
+    background: #fff;
+    border-right: 1px solid #c3c3c3;
+    border-bottom: 1px solid #c3c3c3;
+    border-left: 1px solid #c3c3c3;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    z-index: 7000;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    padding-left: 0;
+    margin-bottom: 0;
+    width: 120px;
+}
+
+.languages-menu-item {
+    list-style-type: none;
+}
+
+.languages-menu-item-link {
+    padding: 7px 15px;
+    padding: .7rem 1.5rem;
+    color: #323232;
+    font-size: 11px;
+    display: block;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+.languages-menu-item-link:hover {
+    background-color: #dce2e6;
+}
+
+.languages-menu-item-link:hover {
+    color: #323232;
+}
+
+.languages:active .languages-menu, .languages:hover .languages-menu {
+    display: block;
+}
+
+
+.languages-menu-item-link.current {
+    background-color: #23377c;
+    color:#fff;
+    cursor: default;
+}
+.languages-menu-item-link.current:hover{
+  text-decoration: none;
+}
+
+a.unchecked {
+    float: left;
+    height: 16px;
+    width: 16px;
+    border: 1px solid #96a5b4;
+}
+a.checked {
+    background: url("../img/icon_loginpage.png") no-repeat;
+    background-position: -59px -17px;
+    margin-bottom: 10px;
+
+}
+
+
+.opaque-10{
+    opacity: 1
+}
+.opaque-9{
+    opacity: 0.9
+}
+.opaque-8{
+    opacity: 0.8
+}
+.opaque-7{
+    opacity: 0.7
+}
+.opaque-6{
+    opacity: 0.6
+}
+.opaque-5{
+    opacity: 0.5
+}
+.opaque-4{
+    opacity: 0.4
+}
+.opaque-3{
+    opacity: 0.3
+}
+.opaque-2{
+    opacity: 0.2
+}
+.opaque-1{
+    opacity: 0.1
+}
+
+
+/* for alert float */
+
+
+.floater{
+    width:50%;
+    position: fixed;
+}
+.left {
+    left: 10px;
+}
+.right {
+    right: 10px;
+}
+.top {
+    top: 10px;
+}
+.bottom {
+    bottom: 10px;
+}
+.center {
+    left: 50%;
+    transform:translateX(-50%);
+}
+
+

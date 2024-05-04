@@ -1,0 +1,4 @@
+2023-04-23 23:15:52.004 [info] update#ctor - updates are disabled as there is no update URL
+2023-04-23 23:15:53.442 [info] Starting extension host with pid 14249 (fork() took 8 ms).
+2023-04-23 23:17:24.095 [info] Extension host with pid 14249 exited with code: 0, signal: null.
+2023-04-23 23:17:25.269 [info] Starting extension host with pid 14508 (fork() took 11 ms).

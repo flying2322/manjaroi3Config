@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>{{"app"  | translate}} {{"guide.title" | translate}}</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/common.css"/>
+<link rel="stylesheet" href="css/guide/reveal.min.css">
+<link rel="stylesheet" href="css/guide/guide_default.css" id="theme">
+<link rel="stylesheet" href="css/guide/my_guide.css?312">
+<link rel="stylesheet" href="css/guide/jquery.remodal.css">
+<link rel="stylesheet" href="css/guide/animate.min.css">
+</head>
+
+<body style="transition: -webkit-transform 0.8s ease;">
+
+
+<div class="reveal remodal-bg default center" data-transition-speed="default" data-background-transition="default" ng-controller="GuidePageController">
+<!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides" style="width: 960px; height: 700px; zoom: 0.915429;">
+        <section data-background="#eee" class="present" style="top: -223.5px; display: block;" data-autoslide="3000">
+            <h1 style="color:#23377c">{{"app"  | translate}}</h1>
+            <h2>智能路由技术简介</h2>
+            
+        </section>
+        <section data-background="#FFFFFF" hidden="" class="future" data-autoslide="2000" style="top: -127px; display: block;">
+            <h3>同时连接多个服务器</h3>
+            <p>在多个服务器中选取最好的线路</p>
+            <p>获得更好的访问速度和可靠性</p>
+            <img class="" src="img/routing_tutorial/maikr-mutilple-servers.jpg" >
+        </section>
+        <section data-background="#FFFFFF" hidden="" class="future" data-autoslide="7500" style="top: -127px; display: block;">
+            <h3>动态路由</h3>
+            <p>根据实时网络波动状况，调整网络访问至最佳服务器</p>
+            <p>即使一个服务器被*，还有备胎，狡兔三窟</p>
+            <img class="" src="img/routing_tutorial/maikr-dynamic-routing.gif" >
+        </section>
+        <section data-background="#FFFFFF" hidden="" class="future" data-autoslide="2000" style="top: -272.5px; display: block;">
+            <h2 style="color:#23377c">新增手动服务器选择功能</h2>
+            <p>有时候，我们会需要通过特定区域的服务器来进行网络访问，比如上日本服务器看动漫</p>
+            <p>这时可以启用手动服务器选择功能。在服务器列表页面，点击选择手动指定</p>
+            <img  class="fragment fade-up" src="img/routing_tutorial/routing_switch.jpg" >
+        </section>
+        <section data-background="#FFFFFF" hidden="" class="future" data-autoslide="2000" style="top: -272.5px; display: block;">
+            <h3>选择手动指定后，在服务器列表左侧</h3>
+            <p>会出现如图所示的图标，提示可以手动调整服务器顺序</p>
+            <img  class="fragment fade-up" src="img/routing_tutorial/routing_servers_list.png" >
+        </section>
+        <section data-background="#FFFFFF" hidden="" class="future" data-autoslide="2000" style="top: -272.5px; display: block;">
+            <p>这时，可以通过拖动列表中的服务器</p>
+            <p>让中意的，排在第一个</p>
+            <p>用完记得要恢复成自动路由哦(省心省力)</p>
+            <img  class="fragment fade-up" src="img/routing_tutorial/drag_and_drop.png" >
+        </section>
+        
+        <section data-background="#FFFFFF" hidden="" class="future" style="top: -134.5px; display: block;">
+            <h3>这样就实现手动选择功能了</h3>
+            <h3>是不是很简单呢？</h3>
+            <small ng-click="gotoOptions()"><br>谢谢耐心观看。手动选择功能还需继续改进，希望能听到你的建议哦。</small>
+            
+        </section>
+    </div>
+    <div class="backgrounds">
+        <div class="slide-background present" data-background-hash="#eeeeeenullnullnullnullnullnull" style=""></div>
+        <div class="slide-background future" data-background-hash="#eeeeeenullnullnullnullnullnull" style=""></div>
+        <div class="slide-background future" data-background-hash="#eeeeeenullnullnullnullnullnull" style=""></div>
+        <div class="slide-background future" data-background-hash="#eeeeeenullnullnullnullnullnull" style=""></div>
+        <div class="slide-background future" data-background-hash="#eeeeeenullnullnullnullnullnull" style=""></div>
+        <div class="slide-background future" data-background-hash="#eeeeeenullnullnullnullnullnull" style=""></div>
+        <div class="slide-background future" data-background-hash="#eeeeeenullnullnullnullnullnull" style=""></div>
+        <div class="slide-background future" data-background-hash="#eeeeeenullnullnullnullnullnull" style=""></div>
+        <div class="slide-background future" data-background-hash="#eeeeeenullnullnullnullnullnull" style=""></div>
+    </div>
+    <div class="progress" style="display: block;"><span style="width: 0px;"></span></div>
+
+    <div class="controls" style="display: block; width: 800px; margin:0 auto;">
+        <div class="navigate-left"></div>
+        <div class="navigate-right enabled"></div>
+        <div class="navigate-up"></div>
+        <div class="navigate-down"></div>
+    </div>
+
+    <div class="slide-number"></div>
+    <div class="state-background"></div>
+    <div class="pause-overlay"></div>
+</div>
+
+<script src="js/guide/lib/jquery-1.8.2.min.js"></script>
+
+<script src="js/guide/lib/head.min.js"></script>
+<script src="js/guide/lib/reveal.min.js"></script>
+<script src="js/guide/lib/jquery.remodal.min.js"></script>
+
+<script src="js/guide/routing_tutorial.js"></script>
+<script type="text/javascript" src="js/guide/lib/zoom.js"></script>
+<script type="text/javascript" src="js/guide/lib/classList.js"></script>
+
+<script data-main="/js/guide/guide.js"
+        src="/js/libs/require.js"></script>
+</body>
+</html>

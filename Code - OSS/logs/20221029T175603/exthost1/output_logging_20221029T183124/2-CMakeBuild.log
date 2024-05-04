@@ -1,0 +1,79 @@
+[variant] Loaded new set of variants
+[kit] Successfully loaded 3 kits from /home/dom/.local/share/CMakeTools/cmake-tools-kits.json
+[proc] Executing command: /usr/bin/gcc -v
+[proc] The command: ninja --version failed with error: Error: spawn ninja ENOENT
+[proc] The command: ninja-build --version failed with error: Error: spawn ninja-build ENOENT
+[main] Configuring folder: Lession03 
+[proc] Executing command: /usr/bin/cmake --no-warn-unused-cli -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE -DCMAKE_BUILD_TYPE:STRING=Debug -DCMAKE_C_COMPILER:FILEPATH=/usr/bin/gcc -DCMAKE_CXX_COMPILER:FILEPATH=/usr/bin/g++ -S/home/dom/Dev/olas/Lession03 -B/home/dom/Dev/olas/Lession03/build -G "Unix Makefiles"
+[cmake] Not searching for unused variables given on the command line.
+[cmake] -- The C compiler identification is GNU 12.2.0
+[cmake] -- The CXX compiler identification is GNU 12.2.0
+[cmake] -- Detecting C compiler ABI info
+[cmake] -- Detecting C compiler ABI info - done
+[cmake] -- Check for working C compiler: /usr/bin/gcc - skipped
+[cmake] -- Detecting C compile features
+[cmake] -- Detecting C compile features - done
+[cmake] -- Detecting CXX compiler ABI info
+[cmake] -- Detecting CXX compiler ABI info - done
+[cmake] -- Check for working CXX compiler: /usr/bin/g++ - skipped
+[cmake] -- Detecting CXX compile features
+[cmake] -- Detecting CXX compile features - done
+[cmake] -- Configuring done
+[cmake] -- Generating done
+[cmake] -- Build files have been written to: /home/dom/Dev/olas/Lession03/build
+[main] Configuring folder: Lession03 
+[proc] Executing command: /usr/bin/cmake --no-warn-unused-cli -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE -DCMAKE_BUILD_TYPE:STRING=Debug -DCMAKE_C_COMPILER:FILEPATH=/usr/bin/gcc -DCMAKE_CXX_COMPILER:FILEPATH=/usr/bin/g++ -S/home/dom/Dev/olas/Lession03 -B/home/dom/Dev/olas/Lession03/build -G "Unix Makefiles"
+[cmake] Not searching for unused variables given on the command line.
+[cmake] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[cmake] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[cmake] -- Found Threads: TRUE  
+[cmake] -- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
+[cmake] -- Using X11 for window creation
+[cmake] -- Found X11: /usr/include   
+[cmake] -- Looking for XOpenDisplay in /usr/lib/libX11.so;/usr/lib/libXext.so
+[cmake] -- Looking for XOpenDisplay in /usr/lib/libX11.so;/usr/lib/libXext.so - found
+[cmake] -- Looking for gethostbyname
+[cmake] -- Looking for gethostbyname - found
+[cmake] -- Looking for connect
+[cmake] -- Looking for connect - found
+[cmake] -- Looking for remove
+[cmake] -- Looking for remove - found
+[cmake] -- Looking for shmat
+[cmake] -- Looking for shmat - found
+[cmake] -- Looking for IceConnectionNumber in ICE
+[cmake] -- Looking for IceConnectionNumber in ICE - found
+[cmake] -- Configuring done
+[cmake] -- Generating done
+[cmake] -- Build files have been written to: /home/dom/Dev/olas/Lession03/build
+[main] Configuring folder: Lession03 
+[proc] Executing command: /usr/bin/cmake --no-warn-unused-cli -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE -DCMAKE_BUILD_TYPE:STRING=Debug -DCMAKE_C_COMPILER:FILEPATH=/usr/bin/gcc -DCMAKE_CXX_COMPILER:FILEPATH=/usr/bin/g++ -S/home/dom/Dev/olas/Lession03 -B/home/dom/Dev/olas/Lession03/build -G "Unix Makefiles"
+[cmake] Not searching for unused variables given on the command line.
+[cmake] -- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
+[cmake] -- Using X11 for window creation
+[cmake] -- Configuring done
+[cmake] -- Generating done
+[cmake] -- Build files have been written to: /home/dom/Dev/olas/Lession03/build
+[main] Configuring folder: Lession03 
+[proc] Executing command: /usr/bin/cmake --no-warn-unused-cli -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE -DCMAKE_BUILD_TYPE:STRING=Debug -DCMAKE_C_COMPILER:FILEPATH=/usr/bin/gcc -DCMAKE_CXX_COMPILER:FILEPATH=/usr/bin/g++ -S/home/dom/Dev/olas/Lession03 -B/home/dom/Dev/olas/Lession03/build -G "Unix Makefiles"
+[cmake] Not searching for unused variables given on the command line.
+[cmake] -- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
+[cmake] -- Using X11 for window creation
+[cmake] -- Configuring done
+[cmake] -- Generating done
+[cmake] -- Build files have been written to: /home/dom/Dev/olas/Lession03/build
+[main] Configuring folder: Lession03 
+[proc] Executing command: /usr/bin/cmake --no-warn-unused-cli -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE -DCMAKE_BUILD_TYPE:STRING=Debug -DCMAKE_C_COMPILER:FILEPATH=/usr/bin/gcc -DCMAKE_CXX_COMPILER:FILEPATH=/usr/bin/g++ -S/home/dom/Dev/olas/Lession03 -B/home/dom/Dev/olas/Lession03/build -G "Unix Makefiles"
+[cmake] Not searching for unused variables given on the command line.
+[cmake] -- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
+[cmake] -- Using X11 for window creation
+[cmake] -- Configuring done
+[cmake] -- Generating done
+[cmake] -- Build files have been written to: /home/dom/Dev/olas/Lession03/build
+[main] Configuring folder: Lession03 
+[proc] Executing command: /usr/bin/cmake --no-warn-unused-cli -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE -DCMAKE_BUILD_TYPE:STRING=Debug -DCMAKE_C_COMPILER:FILEPATH=/usr/bin/gcc -DCMAKE_CXX_COMPILER:FILEPATH=/usr/bin/g++ -S/home/dom/Dev/olas/Lession03 -B/home/dom/Dev/olas/Lession03/build -G "Unix Makefiles"
+[cmake] Not searching for unused variables given on the command line.
+[cmake] -- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
+[cmake] -- Using X11 for window creation
+[cmake] -- Configuring done
+[cmake] -- Generating done
+[cmake] -- Build files have been written to: /home/dom/Dev/olas/Lession03/build

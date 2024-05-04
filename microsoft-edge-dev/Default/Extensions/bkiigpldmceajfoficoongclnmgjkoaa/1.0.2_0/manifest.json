@@ -1,0 +1,45 @@
+{
+   "author": "Free Simple Apps",
+   "background": {
+      "scripts": [ "config.js", "common.js" ]
+   },
+   "commands": {
+      "toggle-reader-view": {
+         "description": "__MSG_app_command__"
+      }
+   },
+   "default_locale": "en",
+   "description": "__MSG_app_description__",
+   "homepage_url": "https://readerview.freeonlineapps.net",
+   "icons": {
+      "128": "data/icons/128.png",
+      "16": "data/icons/16.png",
+      "256": "data/icons/256.png",
+      "32": "data/icons/32.png",
+      "48": "data/icons/48.png",
+      "64": "data/icons/64.png"
+   },
+   "incognito": "split",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApy2CJHKMEDl4EALD557p/3toR1FLPAZzJtEeELqOiXqazcNm44mfSb/9Dzb4Q7WWrhFVy9pBQgUeZItOWO2b2/FAVoMrbvqDUG+NhBEGyGZ9Zm4U/fclBmxyMbOcDzIfFFaHNHm97pjiLu3KA1usMNJk0WwbNDiyE4VFKdP9yWT/dj5lTvS0XHhzwQG2T7lhilvEggYnE4bCZD1SN6q/vkJXFPRZb5uGKZ9qcf2E3pt3Sk7pQgNyOSDAYLMWBiw4sHzSqMvVR7k+NiC+FEwJj/aTDxJ0FqM34T4igAK1SaNGnE+jI49oW4jrpL08RGfF2JTo8rg+WcIjdBflMy/dmwIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_app_name__",
+   "offline_enabled": true,
+   "optional_permissions": [ "tabs", "*://*/*" ],
+   "options_ui": {
+      "chrome_style": true,
+      "page": "data/options/index.html"
+   },
+   "page_action": {
+      "default_icon": {
+         "16": "data/icons/16.png",
+         "32": "data/icons/32.png",
+         "48": "data/icons/48.png",
+         "64": "data/icons/64.png"
+      },
+      "default_title": "__MSG_app_name__"
+   },
+   "permissions": [ "storage", "activeTab", "contextMenus", "declarativeContent", "chrome://favicon/" ],
+   "short_name": "reader view",
+   "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+   "version": "1.0.2"
+}

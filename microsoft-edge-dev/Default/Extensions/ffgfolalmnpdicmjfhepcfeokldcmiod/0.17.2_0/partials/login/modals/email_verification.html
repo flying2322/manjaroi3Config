@@ -1,0 +1,56 @@
+<div class="modal" tabindex="-1">
+    <div class="modal-dialog" style="width: 450px;">
+        <div class="modal-content" ng-controller="EmailVerificationModalController">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                        ng-click="closeModal()">
+                    &times;
+                </button>
+                <h4 class="modal-title">{{'login.email_verification'|translate}}</h4>
+            </div>
+            <div>
+                <form name="passwordForm" class="modify-password">
+                <div class="modal-body">
+
+            <div class="">
+                {{'login.email_verify_step_1'|translate}}
+            </div>
+                <div class="form-item" style="padding-top:12px">
+                    <div class="fn-clear">
+                        <div class="mobile fn-left">
+                            <span class="email-val">{{name}}</span>
+                        </div>
+                        <div class="fn-right send-btn" ng-click="sendCode()">
+                            <button type="button" class="btn btn-email" ng-class="{'btn-disabled': code_sent}" ng-disabled="code_sent">
+                                {{'login.verify_email_send_btn_title'|translate}} 
+                                <span ng-show="code_sent"><span id="counting_down">{{counting_down}}</span>&nbsp;s</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <small style="color: #888;" ng-show="code_sent">{{'login.verify_email_no_received_notice'|translate}} </small>
+                
+                </div>
+                <div class="" style="padding-top: 60px;">
+                    {{'login.email_verify_step_2'|translate}}
+                </div>
+                <div class="form-item">
+                    <div class="fn-clear mobile-code">
+                        <div class="mobile-code-item">
+                            <input ng-disabled="verify_submitting" type="text" class="form-text checkcode" name="code" ng-model="code" placeholder="{{'login.email_verify_input_placeholder'|translate}}">
+                            <div class="msg-wrapper" ng-class="{'fn-hide': submit_no_error}"><p class="auth-msg auth-error">{{submit_error_msg}}</p></div>
+                        </div>
+                        <div class="mobile-code-item item-verify" style="padding-top:30px">
+                            <button type="submit" class="btn btn-submit btn-large btn-disabled" ng-class="{'btn-disabled': submit_disabled}" ng-disabled="submit_disabled" ng-click="verify()" >
+                                <span ng-hide="verify_submitting">{{'login.verify_and_register'|translate}}</span>
+                                <img src="/img/loading-bars.svg" alt="loading" ng-show="verify_submitting"/>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

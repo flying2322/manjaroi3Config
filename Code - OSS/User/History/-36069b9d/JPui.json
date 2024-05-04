@@ -1,0 +1,5 @@
+{
+    "explorer.confirmDragAndDrop": false,
+    "cmake.configureOnOpen": true,
+    "git.suggestSmartCommit": false
+}

@@ -1,0 +1,10 @@
+[2022-10-29 17:09:22.420] [sharedprocess] [info] Starting worker process with pid 25301 (type: fileWatcher, window: 1).
+[2022-10-29 17:09:22.602] [sharedprocess] [info] Deleted from disk ms-vscode.js-debug-companion /home/dom/.vscode-oss/extensions/ms-vscode.js-debug-companion-1.0.18
+[2022-10-29 17:09:22.602] [sharedprocess] [info] Deleted from disk ms-vscode.references-view /home/dom/.vscode-oss/extensions/ms-vscode.references-view-0.0.89
+[2022-10-29 17:09:31.515] [sharedprocess] [info] Worker process with pid 25301 terminated normally (type: fileWatcher, window: 1).
+[2022-10-29 17:09:33.705] [sharedprocess] [info] Starting worker process with pid 25400 (type: fileWatcher, window: 1).
+[2022-10-29 17:42:28.295] [sharedprocess] [warning] SharedProcess: createWorker found an existing worker that will be terminated (window: 1, moduleId: vs/platform/files/node/watcher/watcherMain)
+[2022-10-29 17:42:28.295] [sharedprocess] [info] Worker process with pid 25400 terminated normally (type: fileWatcher, window: 1).
+[2022-10-29 17:42:28.305] [sharedprocess] [info] Starting worker process with pid 27053 (type: fileWatcher, window: 1).
+[2022-10-29 17:54:35.294] [sharedprocess] [info] Worker process with pid 27053 terminated normally (type: fileWatcher, window: 1).
+[2022-10-29 17:54:36.724] [sharedprocess] [info] Starting worker process with pid 28296 (type: fileWatcher, window: 1).

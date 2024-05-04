@@ -1,0 +1,122 @@
+{
+   "app_command": {
+      "message": "Alternar la vista del lector"
+   },
+   "app_description": {
+      "message": "Elimina el desorden como botones, imágenes de fondo y cambia el tamaño del texto, el contraste y el diseño de la página para una mejor legibilidad"
+   },
+   "app_name": {
+      "message": "Vista de lector"
+   },
+   "app_title": {
+      "message": "Cargando ... :: Vista del lector"
+   },
+   "app_ui_btn_fullscreen": {
+      "message": "Cambiar a la lectura de pantalla completa"
+   },
+   "app_ui_btn_imgs": {
+      "message": "Alternar imágenes"
+   },
+   "app_ui_btn_next": {
+      "message": "pasar a la página siguiente (Meta + tecla de flecha derecha)"
+   },
+   "app_ui_btn_prev": {
+      "message": "ir a la página anterior (Meta + tecla de flecha izquierda)"
+   },
+   "app_ui_btn_print": {
+      "message": "Imprimir en la vista del lector"
+   },
+   "app_ui_btn_rateUs": {
+      "message": "¡Por favor califícanos! ⭑⭑⭑⭑⭑"
+   },
+   "app_ui_btn_site_gd": {
+      "message": "En nuestro sitio puede guardar el artículo en su unidad de Google"
+   },
+   "app_ui_btn_site_pc": {
+      "message": "En nuestro sitio puede guardar el artículo en su computadora"
+   },
+   "app_ui_btn_speech": {
+      "message": "Lee este artículo"
+   },
+   "app_ui_label1": {
+      "message": "Ancho completo"
+   },
+   "app_ui_label2": {
+      "message": "Sin altura"
+   },
+   "app_ui_label3": {
+      "message": "Ligero"
+   },
+   "app_ui_label4": {
+      "message": "Oscuro"
+   },
+   "app_ui_label5": {
+      "message": "Azul"
+   },
+   "app_ui_label6": {
+      "message": "Esconder"
+   },
+   "app_ui_label7": {
+      "message": "mostrar"
+   },
+   "app_ui_notify_wrong_content": {
+      "message": "Lo sentimos, el contenido original ya no es accesible. Cargue el contenido de origen y vuelva a intentar"
+   },
+   "options_header": {
+      "message": "Personalización de UI"
+   },
+   "options_opt1": {
+      "message": "Mostrar \"botón de impresión\" en la vista del lector"
+   },
+   "options_opt10": {
+      "message": "Cambiar automáticamente al modo de pantalla completa"
+   },
+   "options_opt11": {
+      "message": "Estilo personalizado"
+   },
+   "options_opt12": {
+      "message": "Estilos de usuario para la vista de lector real"
+   },
+   "options_opt13": {
+      "message": "Apertura de enlace"
+   },
+   "options_opt14": {
+      "message": "Abrir enlaces en nuevas pestañas"
+   },
+   "options_opt15": {
+      "message": "Abrir enlaces en el modo de vista del lector"
+   },
+   "options_opt16": {
+      "message": "Misceláneos"
+   },
+   "options_opt17": {
+      "message": "Abrir la página de preguntas frecuentes sobre actualizaciones"
+   },
+   "options_opt2": {
+      "message": "Mostrar \"botón Guardar\" en la vista del lector"
+   },
+   "options_opt3": {
+      "message": "Mostrar \"botón de pantalla completa\" en la vista del lector"
+   },
+   "options_opt4": {
+      "message": "Mostrar \"botón de voz\" en la vista del lector"
+   },
+   "options_opt5": {
+      "message": "Mostrar \"botón de alternar imágenes\" en la vista del lector"
+   },
+   "options_opt6": {
+      "message": "Mostrar \"botones de navegación\" en la vista del lector"
+   },
+   "options_opt7": {
+      "message": "Mostrar el elemento del menú contextual \"Abrir en vista de lector\" (se requiere reiniciar) (requiere permiso de chrome.tabs)"
+   },
+   "options_opt8": {
+      "message": "Mostrar elemento de menú contextual \"Abrir en vista de lector en segundo plano\" (se requiere reiniciar) (requiere permiso de chrome.tabs)"
+   },
+   "options_opt9": {
+      "message": "Mostrar el elemento del menú contextual \"Cambiar a vista de lector\" (se requiere reiniciar)"
+   },
+   "options_title": {
+      "message": "Vista del lector :: Opciones"
+   }
+}

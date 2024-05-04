@@ -1,0 +1,6 @@
+[2022-10-30 22:29:29.626] [ptyhost] [warning] Persistent process "1": Process had no disconnect runners but was an orphan
+[2022-10-30 22:29:29.626] [ptyhost] [info] Persistent process reconnection "1"
+[2022-10-30 22:29:29.627] [ptyhost] [warning] Persistent process "2": Process had no disconnect runners but was an orphan
+[2022-10-30 22:29:29.627] [ptyhost] [info] Persistent process reconnection "2"
+[2022-10-30 22:29:29.695] [ptyhost] [info] Persistent process "1": Replaying 5357 chars and 1 size events
+[2022-10-30 22:29:29.707] [ptyhost] [info] Persistent process "2": Replaying 248 chars and 1 size events

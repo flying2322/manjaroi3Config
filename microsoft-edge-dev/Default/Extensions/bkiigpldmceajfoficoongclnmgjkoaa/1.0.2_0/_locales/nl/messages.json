@@ -1,0 +1,122 @@
+{
+   "app_command": {
+      "message": "Schakel de lezerweergave in"
+   },
+   "app_description": {
+      "message": "Verwijdert rommelige knoppen, achtergrondafbeeldingen en wijzigt de tekstgrootte, het contrast en de lay-out van de pagina voor een betere leesbaarheid"
+   },
+   "app_name": {
+      "message": "Lezerweergave"
+   },
+   "app_title": {
+      "message": "Bezig met laden ... :: Reader View"
+   },
+   "app_ui_btn_fullscreen": {
+      "message": "Schakel over naar de weergave op volledig scherm"
+   },
+   "app_ui_btn_imgs": {
+      "message": "Afbeeldingen schakelen"
+   },
+   "app_ui_btn_next": {
+      "message": "ga naar de volgende pagina (Meta + pijl-rechts)"
+   },
+   "app_ui_btn_prev": {
+      "message": "ga naar de vorige pagina (Meta + pijl-links)"
+   },
+   "app_ui_btn_print": {
+      "message": "Druk af in de Reader View"
+   },
+   "app_ui_btn_rateUs": {
+      "message": "Beoordeel ons alstublieft! ⭑⭑⭑⭑⭑"
+   },
+   "app_ui_btn_site_gd": {
+      "message": "Op onze site kunt u een artikel opslaan op uw Google-schijf"
+   },
+   "app_ui_btn_site_pc": {
+      "message": "Op onze site kunt u het artikel op uw computer opslaan"
+   },
+   "app_ui_btn_speech": {
+      "message": "Lees dit artikel"
+   },
+   "app_ui_label1": {
+      "message": "Volle breedte"
+   },
+   "app_ui_label2": {
+      "message": "Geen hoogte"
+   },
+   "app_ui_label3": {
+      "message": "Licht"
+   },
+   "app_ui_label4": {
+      "message": "Donker"
+   },
+   "app_ui_label5": {
+      "message": "Blauw"
+   },
+   "app_ui_label6": {
+      "message": "Verbergen"
+   },
+   "app_ui_label7": {
+      "message": "Laten zien"
+   },
+   "app_ui_notify_wrong_content": {
+      "message": "Sorry, de originele inhoud is niet meer toegankelijk. Laad de oorspronkelijke inhoud en probeer het opnieuw"
+   },
+   "options_header": {
+      "message": "UI-aanpassing"
+   },
+   "options_opt1": {
+      "message": "Toon \"printknop\" in de lezerweergave"
+   },
+   "options_opt10": {
+      "message": "Schakel automatisch naar de modus Volledig scherm"
+   },
+   "options_opt11": {
+      "message": "Aangepaste styling"
+   },
+   "options_opt12": {
+      "message": "Gebruikersstijlen voor de daadwerkelijke lezerweergave"
+   },
+   "options_opt13": {
+      "message": "Link openen"
+   },
+   "options_opt14": {
+      "message": "Open koppelingen in nieuwe tabbladen"
+   },
+   "options_opt15": {
+      "message": "Open koppelingen in de leesmodus van de lezer"
+   },
+   "options_opt16": {
+      "message": "Misc"
+   },
+   "options_opt17": {
+      "message": "Open de pagina met veelgestelde vragen over updates"
+   },
+   "options_opt2": {
+      "message": "Toon \"knop opslaan\" in de lezerweergave"
+   },
+   "options_opt3": {
+      "message": "Toon \"knop volledig scherm\" in de lezerweergave"
+   },
+   "options_opt4": {
+      "message": "Toon \"spraakknop\" in de lezerweergave"
+   },
+   "options_opt5": {
+      "message": "Toon \"knop afbeeldingen wisselen\" in de lezerweergave"
+   },
+   "options_opt6": {
+      "message": "Toon \"navigatieknoppen\" in de lezerweergave"
+   },
+   "options_opt7": {
+      "message": "Contextmenu-item 'Openen in Reader View' weergeven (opnieuw opstarten vereist) (vereist chrome.tabs-toestemming)"
+   },
+   "options_opt8": {
+      "message": "Contextmenu-item 'Openen in achtergrondweergave van lezer' weergeven (opnieuw opstarten vereist) (vereist toestemming chrome.tabs)"
+   },
+   "options_opt9": {
+      "message": "Contextmenu-item \"Overschakelen naar Reader View\" weergeven (opnieuw opstarten vereist)"
+   },
+   "options_title": {
+      "message": "Reader View :: Opties"
+   }
+}

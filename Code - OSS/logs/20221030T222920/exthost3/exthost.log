@@ -1,0 +1,13 @@
+[2022-10-30 22:29:43.319] [exthost] [info] Extension host with pid 4652 started
+[2022-10-30 22:29:43.319] [exthost] [info] Skipping acquiring lock for /home/dom/.config/Code - OSS/User/workspaceStorage/b12581e40b13362918833df891045619.
+[2022-10-30 22:29:43.616] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: true, activationEvent: '*'
+[2022-10-30 22:29:43.617] [exthost] [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*'
+[2022-10-30 22:29:43.618] [exthost] [info] ExtensionService#_doActivateExtension vscode.ipynb, startup: true, activationEvent: '*'
+[2022-10-30 22:29:43.647] [exthost] [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+[2022-10-30 22:29:43.673] [exthost] [info] Eager extensions activated
+[2022-10-30 22:29:43.676] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onStartupFinished'
+[2022-10-30 22:29:43.677] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+[2022-10-30 22:29:48.229] [exthost] [info] ExtensionService#_doActivateExtension vscode.git, startup: false, activationEvent: 'api', root cause: vscode.github
+[2022-10-30 22:29:48.412] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode.cmake-tools, startup: false, activationEvent: 'workspaceContains:*/CMakeLists.txt,*/*/CMakeLists.txt,*/*/*/CMakeLists.txt'
+[2022-10-30 22:29:55.381] [exthost] [info] ExtensionService#_doActivateExtension vscode.media-preview, startup: false, activationEvent: 'onCustomEditor:imagePreview.previewEditor'
+[2022-10-30 22:54:35.960] [exthost] [info] ExtensionService#_doActivateExtension franneck94.c-cpp-runner, startup: false, activationEvent: 'onLanguage:cpp'

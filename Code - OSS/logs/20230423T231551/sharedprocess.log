@@ -1,0 +1,28 @@
+2023-04-23 23:15:54.024 [info] Started initializing default profile extensions in extensions installation folder. file:///home/dom/.vscode-oss/extensions
+2023-04-23 23:15:54.231 [info] Starting worker process with pid 14303 (type: fileWatcher, window: 1).
+2023-04-23 23:15:54.433 [info] Completed initializing default profile extensions in extensions installation folder. file:///home/dom/.vscode-oss/extensions
+2023-04-23 23:15:58.467 [info] Getting Manifest... franneck94.c-cpp-runner
+2023-04-23 23:15:58.478 [info] Getting Manifest... ms-vscode.cmake-tools
+2023-04-23 23:16:00.729 [info] Installing extension: franneck94.c-cpp-runner
+2023-04-23 23:16:01.103 [info] Getting Manifest... vadimcn.vscode-lldb
+2023-04-23 23:16:03.127 [info] Installing extension: vadimcn.vscode-lldb franneck94.c-cpp-runner
+2023-04-23 23:16:03.808 [info] Installing extension: ms-vscode.cmake-tools
+2023-04-23 23:16:06.024 [info] Extension signature verification is not done: vadimcn.vscode-lldb
+2023-04-23 23:16:06.094 [info] Extracted extension to /home/dom/.vscode-oss/extensions/.16d23a44-e7b1-4d12-8649-d1246b7193b2: vadimcn.vscode-lldb
+2023-04-23 23:16:06.104 [info] Renamed to /home/dom/.vscode-oss/extensions/vadimcn.vscode-lldb-1.9.0-universal
+2023-04-23 23:16:06.108 [info] Extracting extension completed. vadimcn.vscode-lldb
+2023-04-23 23:16:21.998 [info] Extension signature verification is not done: franneck94.c-cpp-runner
+2023-04-23 23:16:22.163 [info] Extracted extension to /home/dom/.vscode-oss/extensions/.45e5b917-0624-4047-af5a-80115f4a46a9: franneck94.c-cpp-runner
+2023-04-23 23:16:22.171 [info] Renamed to /home/dom/.vscode-oss/extensions/franneck94.c-cpp-runner-5.2.1-universal
+2023-04-23 23:16:22.175 [info] Extracting extension completed. franneck94.c-cpp-runner
+2023-04-23 23:16:22.195 [info] Extension installed successfully: vadimcn.vscode-lldb
+2023-04-23 23:16:22.196 [info] Extension installed successfully: franneck94.c-cpp-runner
+2023-04-23 23:16:22.206 [info] Marked extension as uninstalled franneck94.c-cpp-runner-3.0.0-universal
+2023-04-23 23:16:39.968 [info] Extension signature verification is not done: ms-vscode.cmake-tools
+2023-04-23 23:16:40.263 [info] Extracted extension to /home/dom/.vscode-oss/extensions/.b423655b-547c-4c36-a233-578a6faedd17: ms-vscode.cmake-tools
+2023-04-23 23:16:40.273 [info] Renamed to /home/dom/.vscode-oss/extensions/ms-vscode.cmake-tools-1.14.30-universal
+2023-04-23 23:16:40.279 [info] Extracting extension completed. ms-vscode.cmake-tools
+2023-04-23 23:16:40.295 [info] Extension installed successfully: ms-vscode.cmake-tools
+2023-04-23 23:16:40.302 [info] Marked extension as uninstalled ms-vscode.cmake-tools-1.12.27-universal
+2023-04-23 23:17:24.107 [info] Worker process with pid 14303 terminated normally (type: fileWatcher, window: 1).
+2023-04-23 23:17:25.467 [info] Starting worker process with pid 14521 (type: fileWatcher, window: 1).

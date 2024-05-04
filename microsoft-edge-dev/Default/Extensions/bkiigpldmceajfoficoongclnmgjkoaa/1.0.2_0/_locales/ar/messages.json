@@ -1,0 +1,122 @@
+{
+   "app_command": {
+      "message": "تبديل طريقة عرض القارئ"
+   },
+   "app_description": {
+      "message": "تزيل الفوضى مثل الأزرار والصور الخلفية وتغيير حجم نص الصفحة والتباين والتخطيط للحصول على قراءة أفضل"
+   },
+   "app_name": {
+      "message": "عرض القارئ"
+   },
+   "app_title": {
+      "message": "تحميل ... :: عرض القارئ"
+   },
+   "app_ui_btn_fullscreen": {
+      "message": "التبديل إلى القراءة ملء الشاشة"
+   },
+   "app_ui_btn_imgs": {
+      "message": "تبديل الصور"
+   },
+   "app_ui_btn_next": {
+      "message": "الانتقال إلى الصفحة التالية (Meta + مفتاح السهم الأيمن)"
+   },
+   "app_ui_btn_prev": {
+      "message": "الانتقال إلى الصفحة السابقة (Meta + مفتاح السهم الأيسر)"
+   },
+   "app_ui_btn_print": {
+      "message": "اطبع في طريقة عرض القارئ"
+   },
+   "app_ui_btn_rateUs": {
+      "message": "ارجوك قم بتقييمنا! ⭑⭑⭑⭑⭑"
+   },
+   "app_ui_btn_site_gd": {
+      "message": "على موقعنا يمكنك حفظ المادة على محرك جوجل الخاص بك"
+   },
+   "app_ui_btn_site_pc": {
+      "message": "على موقعنا يمكنك حفظ المادة على جهاز الكمبيوتر الخاص بك"
+   },
+   "app_ui_btn_speech": {
+      "message": "اقرأ هذه المقالة"
+   },
+   "app_ui_label1": {
+      "message": "العرض الكامل"
+   },
+   "app_ui_label2": {
+      "message": "لا ارتفاع"
+   },
+   "app_ui_label3": {
+      "message": "ضوء"
+   },
+   "app_ui_label4": {
+      "message": "داكن"
+   },
+   "app_ui_label5": {
+      "message": "أزرق"
+   },
+   "app_ui_label6": {
+      "message": "إخفاء"
+   },
+   "app_ui_label7": {
+      "message": "تبين"
+   },
+   "app_ui_notify_wrong_content": {
+      "message": "عذرًا ، لم يعد الوصول إلى المحتوى الأصلي ممكنًا. يرجى تحميل المحتوى الأصلي وإعادة المحاولة"
+   },
+   "options_header": {
+      "message": "تخصيص واجهة المستخدم"
+   },
+   "options_opt1": {
+      "message": "إظهار \"زر الطباعة\" في عرض القارئ"
+   },
+   "options_opt10": {
+      "message": "التبديل تلقائيًا إلى وضع ملء الشاشة"
+   },
+   "options_opt11": {
+      "message": "تصميم مخصص"
+   },
+   "options_opt12": {
+      "message": "أنماط المستخدم لعرض القارئ الفعلي"
+   },
+   "options_opt13": {
+      "message": "افتتاح الرابط"
+   },
+   "options_opt14": {
+      "message": "افتح الروابط في علامات تبويب جديدة"
+   },
+   "options_opt15": {
+      "message": "افتح الروابط في وضع عرض القارئ"
+   },
+   "options_opt16": {
+      "message": "متفرقات"
+   },
+   "options_opt17": {
+      "message": "افتح صفحة الأسئلة الشائعة حول التحديثات"
+   },
+   "options_opt2": {
+      "message": "إظهار \"حفظ زر\" في عرض القارئ"
+   },
+   "options_opt3": {
+      "message": "إظهار \"زر ملء الشاشة\" في عرض القارئ"
+   },
+   "options_opt4": {
+      "message": "إظهار \"زر الكلام\" في عرض القارئ"
+   },
+   "options_opt5": {
+      "message": "إظهار \"زر تبديل الصور\" في عرض القارئ"
+   },
+   "options_opt6": {
+      "message": "إظهار \"أزرار التنقل\" في عرض القارئ"
+   },
+   "options_opt7": {
+      "message": "إظهار عنصر قائمة السياق \"Open in Reader View\" (إعادة التشغيل مطلوب) (يتطلب إذن chrome.tabs)"
+   },
+   "options_opt8": {
+      "message": "إظهار عنصر قائمة السياق \"فتح في الخلفية عرض القارئ\" (إعادة التشغيل مطلوب) (يتطلب إذن chrome.tabs)"
+   },
+   "options_opt9": {
+      "message": "إظهار عنصر قائمة السياق \"التبديل إلى عرض القارئ\" (إعادة التشغيل مطلوبة)"
+   },
+   "options_title": {
+      "message": "عرض القارئ :: خيارات"
+   }
+}

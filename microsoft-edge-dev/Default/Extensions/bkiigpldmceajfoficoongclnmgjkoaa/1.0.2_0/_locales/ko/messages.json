@@ -1,0 +1,122 @@
+{
+   "app_command": {
+      "message": "리더보기 전환"
+   },
+   "app_description": {
+      "message": "더 나은 가독성을 위해 버튼, 배경 이미지와 같은 혼란을 제거하고 페이지의 텍스트 크기, 대비 및 레이아웃을 변경합니다."
+   },
+   "app_name": {
+      "message": "리더 뷰"
+   },
+   "app_title": {
+      "message": "불러 오기 ... : 리더보기"
+   },
+   "app_ui_btn_fullscreen": {
+      "message": "전체 화면 읽기로 전환"
+   },
+   "app_ui_btn_imgs": {
+      "message": "이미지 토글"
+   },
+   "app_ui_btn_next": {
+      "message": "다음 페이지로 이동 (메타 + 오른쪽 화살표 키)"
+   },
+   "app_ui_btn_prev": {
+      "message": "이전 페이지로 이동 (메타 + 왼쪽 화살표 키)"
+   },
+   "app_ui_btn_print": {
+      "message": "리더보기에서 인쇄"
+   },
+   "app_ui_btn_rateUs": {
+      "message": "우리를 평가하십시오! ⭑⭑⭑⭑⭑"
+   },
+   "app_ui_btn_site_gd": {
+      "message": "우리 사이트에서 당신은 당신의 구글 드라이브에 기사를 저장할 수 있습니다"
+   },
+   "app_ui_btn_site_pc": {
+      "message": "우리 사이트에서 당신은 당신의 컴퓨터에 기사를 저장할 수 있습니다"
+   },
+   "app_ui_btn_speech": {
+      "message": "이 기사를 읽으십시오"
+   },
+   "app_ui_label1": {
+      "message": "전체 넓이"
+   },
+   "app_ui_label2": {
+      "message": "높이 없음"
+   },
+   "app_ui_label3": {
+      "message": "빛"
+   },
+   "app_ui_label4": {
+      "message": "어두운"
+   },
+   "app_ui_label5": {
+      "message": "푸른"
+   },
+   "app_ui_label6": {
+      "message": "숨는 장소"
+   },
+   "app_ui_label7": {
+      "message": "보여 주다"
+   },
+   "app_ui_notify_wrong_content": {
+      "message": "원본 콘텐츠에 더 이상 액세스 할 수 없습니다. 원본 콘텐츠를로드하고 다시 시도하십시오"
+   },
+   "options_header": {
+      "message": "UI 커스터마이징"
+   },
+   "options_opt1": {
+      "message": "리더보기에서 \"인쇄 버튼\"표시"
+   },
+   "options_opt10": {
+      "message": "전체 화면 모드로 자동 전환"
+   },
+   "options_opt11": {
+      "message": "맞춤형 스타일링"
+   },
+   "options_opt12": {
+      "message": "실제 독자 관점의 사용자 스타일"
+   },
+   "options_opt13": {
+      "message": "링크 오프닝"
+   },
+   "options_opt14": {
+      "message": "새 탭에서 링크 열기"
+   },
+   "options_opt15": {
+      "message": "리더보기 모드에서 링크 열기"
+   },
+   "options_opt16": {
+      "message": "기타"
+   },
+   "options_opt17": {
+      "message": "업데이트 관련 FAQ 페이지 열기"
+   },
+   "options_opt2": {
+      "message": "리더보기에서 \"저장 버튼\"표시"
+   },
+   "options_opt3": {
+      "message": "리더보기에서 \"전체 화면 버튼\"표시"
+   },
+   "options_opt4": {
+      "message": "리더보기에서 \"음성 버튼\"표시"
+   },
+   "options_opt5": {
+      "message": "리더보기에서 \"이미지 전환 버튼\"표시"
+   },
+   "options_opt6": {
+      "message": "리더보기에서 \"탐색 버튼\"표시"
+   },
+   "options_opt7": {
+      "message": "\"독자보기에서 열기\"상황에 맞는 메뉴 항목 표시 (다시 시작해야 함) (chrome.tabs 권한 필요)"
+   },
+   "options_opt8": {
+      "message": "\"백그라운드 리더보기에서 열기\"상황에 맞는 메뉴 항목 표시 (다시 시작해야 함) (chrome.tabs 권한 필요)"
+   },
+   "options_opt9": {
+      "message": "\"리더보기로 전환\"상황에 맞는 메뉴 항목 표시 (다시 시작해야 함)"
+   },
+   "options_title": {
+      "message": "리더보기 :: 옵션"
+   }
+}

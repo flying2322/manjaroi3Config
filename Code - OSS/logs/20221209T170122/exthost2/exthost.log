@@ -1,0 +1,13 @@
+[2022-12-09 17:01:25.448] [exthost] [info] Extension host with pid 5901 started
+[2022-12-09 17:01:25.448] [exthost] [info] Skipping acquiring lock for /home/dom/.config/Code - OSS/User/workspaceStorage/b12581e40b13362918833df891045619.
+[2022-12-09 17:01:25.909] [exthost] [info] ExtensionService#_doActivateExtension franneck94.c-cpp-runner, startup: false, activationEvent: 'onLanguage:cpp'
+[2022-12-09 17:01:25.909] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: true, activationEvent: '*'
+[2022-12-09 17:01:25.910] [exthost] [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+[2022-12-09 17:01:25.910] [exthost] [info] ExtensionService#_doActivateExtension vscode.ipynb, startup: true, activationEvent: '*'
+[2022-12-09 17:01:25.975] [exthost] [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+[2022-12-09 17:01:25.976] [exthost] [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+[2022-12-09 17:01:26.003] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode.cmake-tools, startup: true, activationEvent: 'workspaceContains:*/CMakeLists.txt,*/*/CMakeLists.txt,*/*/*/CMakeLists.txt'
+[2022-12-09 17:01:26.332] [exthost] [info] Eager extensions activated
+[2022-12-09 17:01:26.399] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onStartupFinished'
+[2022-12-09 17:01:26.399] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+[2022-12-09 17:02:05.319] [exthost] [info] ExtensionService#_doActivateExtension vscode.media-preview, startup: false, activationEvent: 'onCustomEditor:imagePreview.previewEditor'

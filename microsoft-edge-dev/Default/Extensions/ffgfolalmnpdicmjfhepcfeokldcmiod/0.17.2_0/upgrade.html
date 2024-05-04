@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>{{"upgrade.title" | translate}}</title>
+    <link rel="stylesheet" href="/css/font-awesome.css"/>
+    <link rel="stylesheet" href="/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/css/common.css"/>
+    <link rel="stylesheet" href="/css/options.css"/>
+</head>
+<body>
+<div class="container" style="padding-top: 100px;" ng-cloak ng-controller="UpgradeMainController">
+    <div class="alert alert-danger">
+        <p>
+            {{"upgrade.p1.t1" | translate}}
+            <a target="_blank" style="cursor:pointer" href="https://chrome.google.com/webstore/detail/ffgfolalmnpdicmjfhepcfeokldcmiod">Chrome Web Store</a>
+        </p>
+
+        <p>
+            {{"upgrade.if_trouble" | translate}} <a href="{{howToInstallURL}}" style="cursor:pointer" target="_blank">{{"upgrade.manual_install_tutorial"|translate}}</a>
+            <!--
+            <a href="{{howToInstallURL}}" style="cursor:pointer" target="_blank">{{"upgrade.manual_install_tutorial"|translate}}</a>
+        -->
+        </p>
+    </div>
+    <p class="alert alert-warning">
+        {{"upgrade.uninstall_first" | translate}}
+    </p>
+
+
+
+<!--
+    <div class="text-center step-wrapper" style="padding-top:30px">
+
+        <h2>升级，安装说明</h2>
+        <small style="color:#999">此说明仅对不能上Google Chrome Store时适用</small>
+            <div class="row install-step-intro">
+                <div class="" style="margin-bottom: 15px;margin-top: 30px;" ng-click="showDownloadExtension()">
+                    <i class="fa fa-download" aria-hidden="true" style="font-size:60px"></i>
+                    <h3>第一步:下载插件</h3>
+                    <a href="#">详细图文说明</a>
+                </div>
+                <div class="" style="margin-bottom: 15px;margin-top: 30px;" ng-click="showOpenChromeExtensionsTab()">
+                    <i class="fa fa-cogs" aria-hidden="true" style="font-size:60px"></i>
+                    <h3>第二步:打开Chrome【扩展程序】</h3>
+                    <a href="#">详细图文说明</a>
+                </div>
+                <div class="" style="margin-bottom: 15px;margin-top: 30px;" ng-click="showDragInstallMaikr()">
+                    <i class="fa fa-mouse-pointer" aria-hidden="true" style="font-size:60px"></i>
+                    <h3>第三步:拖拽，安装</h3>
+                    <a href="#" data-toggle="modal" data-target="#messages">详细图文说明</a>
+                </div>
+                <div class="" style="margin-bottom: 15px;margin-top: 30px;" ng-click="showFillinInvitationCodeWhenRegister()">
+                    <i class="fa fa-check" aria-hidden="true" style="font-size:60px"></i>
+                    <h3>第四步:注册，填入邀写邀请码</h3>
+                    <a href="#" data-toggle="modal" data-target="#settings">详细图文说明</a>
+                </div>
+            </div>
+    </div>
+-->
+
+</div>
+
+
+
+
+
+
+<script data-main="/js/upgrade/upgrade.js"
+        src="/js/libs/require.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+{
+   "app_command": {
+      "message": "Pārslēgt lasītāja skatu"
+   },
+   "app_description": {
+      "message": "Atbrīvojas no jucekļa, piemēram, pogām, fona attēliem, un maina lapas teksta lielumu, kontrastu un izkārtojumu, lai labāka lasāmība"
+   },
+   "app_name": {
+      "message": "Lasītāja skats"
+   },
+   "app_title": {
+      "message": "Notiek ielāde ... :: Lasītāja skats"
+   },
+   "app_ui_btn_fullscreen": {
+      "message": "Pārslēdzieties uz pilnekrāna lasīšanu"
+   },
+   "app_ui_btn_imgs": {
+      "message": "Pārslēgt attēlus"
+   },
+   "app_ui_btn_next": {
+      "message": "pāriet uz nākamo lapu (Meta + labā bultiņa)"
+   },
+   "app_ui_btn_prev": {
+      "message": "pāriet uz iepriekšējo lapu (Meta + kreisās bultiņas taustiņš)"
+   },
+   "app_ui_btn_print": {
+      "message": "Drukājiet lasītāja skatā"
+   },
+   "app_ui_btn_rateUs": {
+      "message": "Lūdzu, novērtējiet mūs! ⭑⭑⭑⭑⭑"
+   },
+   "app_ui_btn_site_gd": {
+      "message": "Mūsu vietnē jūs varat saglabāt rakstu savā Google diskā"
+   },
+   "app_ui_btn_site_pc": {
+      "message": "Mūsu vietnē jūs varat saglabāt rakstu datorā"
+   },
+   "app_ui_btn_speech": {
+      "message": "Izlasiet šo rakstu"
+   },
+   "app_ui_label1": {
+      "message": "Pilns platums"
+   },
+   "app_ui_label2": {
+      "message": "Nav augstuma"
+   },
+   "app_ui_label3": {
+      "message": "Gaismas"
+   },
+   "app_ui_label4": {
+      "message": "Tumšs"
+   },
+   "app_ui_label5": {
+      "message": "Zils"
+   },
+   "app_ui_label6": {
+      "message": "Paslēpties"
+   },
+   "app_ui_label7": {
+      "message": "Izrāde"
+   },
+   "app_ui_notify_wrong_content": {
+      "message": "Diemžēl sākotnējais saturs vairs nav pieejams. Lūdzu, ielādējiet izcelsmes saturu un mēģiniet vēlreiz"
+   },
+   "options_header": {
+      "message": "UI pielāgošana"
+   },
+   "options_opt1": {
+      "message": "Rādīt \"drukāšanas pogu\" lasītāja skatā"
+   },
+   "options_opt10": {
+      "message": "Automātiski pārslēdzas uz pilnekrāna režīmu"
+   },
+   "options_opt11": {
+      "message": "Pielāgots stils"
+   },
+   "options_opt12": {
+      "message": "Lietotāja stili faktiskajam lasītāja skatam"
+   },
+   "options_opt13": {
+      "message": "Saites atvēršana"
+   },
+   "options_opt14": {
+      "message": "Atveriet saites jaunajās cilnēs"
+   },
+   "options_opt15": {
+      "message": "Atveriet saites lasītāja skata režīmā"
+   },
+   "options_opt16": {
+      "message": "Dažādi"
+   },
+   "options_opt17": {
+      "message": "Atjauninājumu lapā atveriet bieži uzdoto jautājumu lapu"
+   },
+   "options_opt2": {
+      "message": "Rādīt \"saglabāt pogu\" lasītāja skatā"
+   },
+   "options_opt3": {
+      "message": "Rādīt \"pilnekrāna pogu\" lasītāja skatā"
+   },
+   "options_opt4": {
+      "message": "Rādīt \"runas pogu\" lasītāja skatā"
+   },
+   "options_opt5": {
+      "message": "Rādīt \"pārslēgt attēlu pogu\" lasītāja skatā"
+   },
+   "options_opt6": {
+      "message": "Rādīt \"navigācijas pogas\" lasītāja skatā"
+   },
+   "options_opt7": {
+      "message": "Rādīt konteksta izvēlnes vienumu “Atvērt lasītāja skatījumā” (nepieciešama restartēšana) (nepieciešama chrome.tabs atļauja)"
+   },
+   "options_opt8": {
+      "message": "Rādīt konteksta izvēlnes vienumu “Atvērt fona lasītāja skatā” (nepieciešama restartēšana) (nepieciešama chrome.tabs atļauja)"
+   },
+   "options_opt9": {
+      "message": "Rādīt konteksta izvēlnes vienumu “Pārslēgties uz lasītāja skatu” (nepieciešama restartēšana)"
+   },
+   "options_title": {
+      "message": "Lasītāja skats :: Opcijas"
+   }
+}

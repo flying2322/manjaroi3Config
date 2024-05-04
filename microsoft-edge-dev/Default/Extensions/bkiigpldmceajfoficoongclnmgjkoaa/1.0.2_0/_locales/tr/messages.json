@@ -1,0 +1,122 @@
+{
+   "app_command": {
+      "message": "Reader Görünümünü Değiştirin"
+   },
+   "app_description": {
+      "message": "Düğmeler, arka plan görüntüleri gibi karışıklıkları ortadan kaldırır ve daha iyi okunabilirlik için sayfanın metin boyutunu, kontrastını ve düzenini değiştirir"
+   },
+   "app_name": {
+      "message": "Reader Görünümü"
+   },
+   "app_title": {
+      "message": "Yükleniyor ... :: Reader View"
+   },
+   "app_ui_btn_fullscreen": {
+      "message": "Tam ekran okumasına geç"
+   },
+   "app_ui_btn_imgs": {
+      "message": "Görüntüleri değiştir"
+   },
+   "app_ui_btn_next": {
+      "message": "sonraki sayfaya gitme (Meta + Sağ Ok Tuşu)"
+   },
+   "app_ui_btn_prev": {
+      "message": "önceki sayfaya gitme (Meta + Sol Ok Tuşu)"
+   },
+   "app_ui_btn_print": {
+      "message": "Reader Görünümünde Yazdır"
+   },
+   "app_ui_btn_rateUs": {
+      "message": "Lütfen Bizi Takip Edin! ⭑⭑⭑⭑⭑"
+   },
+   "app_ui_btn_site_gd": {
+      "message": "Sitemizdeki makaleyi Google sürücünüze kaydedebilirsiniz."
+   },
+   "app_ui_btn_site_pc": {
+      "message": "Sitemizdeki makaleleri bilgisayarınıza kaydedebilirsiniz."
+   },
+   "app_ui_btn_speech": {
+      "message": "Bu makaleyi oku"
+   },
+   "app_ui_label1": {
+      "message": "Tam genişlik"
+   },
+   "app_ui_label2": {
+      "message": "Yükseklik yok"
+   },
+   "app_ui_label3": {
+      "message": "ışık"
+   },
+   "app_ui_label4": {
+      "message": "karanlık"
+   },
+   "app_ui_label5": {
+      "message": "Mavi"
+   },
+   "app_ui_label6": {
+      "message": "Saklamak"
+   },
+   "app_ui_label7": {
+      "message": "Göstermek"
+   },
+   "app_ui_notify_wrong_content": {
+      "message": "Üzgünüz, orijinal içeriğe artık erişilemiyor. Lütfen menşe içeriğini yükleyin ve tekrar deneyin"
+   },
+   "options_header": {
+      "message": "UI Özelleştirme"
+   },
+   "options_opt1": {
+      "message": "Okuyucu görünümünde \"yazdırma düğmesini\" göster"
+   },
+   "options_opt10": {
+      "message": "Tam ekran moduna otomatik olarak geç"
+   },
+   "options_opt11": {
+      "message": "Özel stil"
+   },
+   "options_opt12": {
+      "message": "Gerçek okuyucu görünümü için kullanıcı stilleri"
+   },
+   "options_opt13": {
+      "message": "Bağlantı Açılışı"
+   },
+   "options_opt14": {
+      "message": "Bağlantıları yeni sekmelerde aç"
+   },
+   "options_opt15": {
+      "message": "Bağlantıları okuyucu görünüm modunda aç"
+   },
+   "options_opt16": {
+      "message": "Çeşitli"
+   },
+   "options_opt17": {
+      "message": "Güncellemeler hakkında SSS sayfasını aç"
+   },
+   "options_opt2": {
+      "message": "Okuyucu görünümünde \"kaydet düğmesini\" göster"
+   },
+   "options_opt3": {
+      "message": "Okuyucu görünümünde \"tam ekran düğmesini\" göster"
+   },
+   "options_opt4": {
+      "message": "Okuyucu görünümünde \"konuşma düğmesini\" göster"
+   },
+   "options_opt5": {
+      "message": "Okuyucu görünümünde \"görüntüleri değiştir düğmesini\" göster"
+   },
+   "options_opt6": {
+      "message": "Okuyucu görünümünde \"gezinme düğmelerini\" göster"
+   },
+   "options_opt7": {
+      "message": "\"Okuyucu Görünümünde Aç\" bağlam menüsü öğesini göster (yeniden başlatma gerekli) (chrome.tabs izni gerektirir)"
+   },
+   "options_opt8": {
+      "message": "\"Arka Plan Okuyucu Görünümü'nde Aç\" bağlam menüsü öğesini göster (yeniden başlatma gerekli) (chrome.tabs izni gerektirir)"
+   },
+   "options_opt9": {
+      "message": "\"Okuyucu Görünümüne Geç\" bağlam menüsü öğesini göster"
+   },
+   "options_title": {
+      "message": "Okuyucu görünümü :: seçenekleri"
+   }
+}

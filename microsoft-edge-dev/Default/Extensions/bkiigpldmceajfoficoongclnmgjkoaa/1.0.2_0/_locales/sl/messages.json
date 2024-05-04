@@ -1,0 +1,122 @@
+{
+   "app_command": {
+      "message": "Preklopite pogled bralnika"
+   },
+   "app_description": {
+      "message": "Odstrani nerede, kot so gumbi, slike ozadja in spremeni velikost besedila, kontrast in postavitev strani za boljšo berljivost"
+   },
+   "app_name": {
+      "message": "Pogled bralca"
+   },
+   "app_title": {
+      "message": "Nalaganje ... :: bralni pogled"
+   },
+   "app_ui_btn_fullscreen": {
+      "message": "Preklopite na branje na celotnem zaslonu"
+   },
+   "app_ui_btn_imgs": {
+      "message": "Preklopite slike"
+   },
+   "app_ui_btn_next": {
+      "message": "premakni se na naslednjo stran (tipka Meta + Right Arrow)"
+   },
+   "app_ui_btn_prev": {
+      "message": "premakni se na prejšnjo stran (Meta + leva puščica)"
+   },
+   "app_ui_btn_print": {
+      "message": "Natisnite v pogledu Bralnik"
+   },
+   "app_ui_btn_rateUs": {
+      "message": "Prosimo, ocenite nas! ⭑⭑⭑⭑⭑"
+   },
+   "app_ui_btn_site_gd": {
+      "message": "Na našem spletnem mestu lahko shranite članek v Google Drive"
+   },
+   "app_ui_btn_site_pc": {
+      "message": "Na našem spletnem mestu lahko shranite članek v svoj računalnik"
+   },
+   "app_ui_btn_speech": {
+      "message": "Preberite ta članek"
+   },
+   "app_ui_label1": {
+      "message": "Polna širina"
+   },
+   "app_ui_label2": {
+      "message": "Brez višine"
+   },
+   "app_ui_label3": {
+      "message": "Luč"
+   },
+   "app_ui_label4": {
+      "message": "Temno"
+   },
+   "app_ui_label5": {
+      "message": "Modro"
+   },
+   "app_ui_label6": {
+      "message": "Skrij se"
+   },
+   "app_ui_label7": {
+      "message": "Pokaži"
+   },
+   "app_ui_notify_wrong_content": {
+      "message": "Žal originalna vsebina ni več dostopna. Prosimo, naložite izvorno vsebino in poskusite znova"
+   },
+   "options_header": {
+      "message": "Prilagoditev uporabniškega vmesnika"
+   },
+   "options_opt1": {
+      "message": "V prikazu bralnika prikažite \"gumb za tiskanje\""
+   },
+   "options_opt10": {
+      "message": "Samodejno preklopite na celozaslonski način"
+   },
+   "options_opt11": {
+      "message": "Oblikovanje po meri"
+   },
+   "options_opt12": {
+      "message": "Uporabniški slogi za dejanski pogled bralca"
+   },
+   "options_opt13": {
+      "message": "Odpiranje povezav"
+   },
+   "options_opt14": {
+      "message": "Odprite povezave v novih zavihkih"
+   },
+   "options_opt15": {
+      "message": "Odprite povezave v načinu bralnika"
+   },
+   "options_opt16": {
+      "message": "Razno"
+   },
+   "options_opt17": {
+      "message": "Odprite stran s pogostimi vprašanji o posodobitvah"
+   },
+   "options_opt2": {
+      "message": "V prikazu bralnika prikažite \"gumb za shranjevanje\""
+   },
+   "options_opt3": {
+      "message": "V prikazu bralnika prikažite \"gumb na celotnem zaslonu\""
+   },
+   "options_opt4": {
+      "message": "V prikazu bralnika prikažite \"gumb govora\""
+   },
+   "options_opt5": {
+      "message": "V prikazu bralnika pokažite \"gumb za preklop slik\""
+   },
+   "options_opt6": {
+      "message": "Prikažite \"navigacijske gumbe\" v pogledu bralca"
+   },
+   "options_opt7": {
+      "message": "Pokaži postavko v kontekstnem meniju »Odpri v bralnem pogledu« (potreben je ponovni zagon) (zahteva dovoljenje chrome.tabs)"
+   },
+   "options_opt8": {
+      "message": "Prikaži postavko v kontekstnem meniju »Odpri v bralnem pogledu v ozadju« (potreben je ponovni zagon) (zahteva dovoljenje chrome.tabs)"
+   },
+   "options_opt9": {
+      "message": "Pokaži element kontekstnega menija \"Preklopi na bralni pogled\" (potreben je ponovni zagon)"
+   },
+   "options_title": {
+      "message": "Bralni pogled :: Možnosti"
+   }
+}

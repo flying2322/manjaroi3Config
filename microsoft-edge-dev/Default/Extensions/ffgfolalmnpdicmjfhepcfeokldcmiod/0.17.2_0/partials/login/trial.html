@@ -1,0 +1,38 @@
+<form name="trial" class="trial step disconnected" style="background-image:url('../../img/trial_bg.jpg');background-position: center;background-size: 350px 600px; height: 400px; position: relative;" novalidate>
+
+
+
+    <button type="submit" id="connect"  ng-class="{'is-loading': submitting}" ng-click="doGoTrial()"></button>
+    <div id="host-input-wrapper" ng-class="{'show': show_server_addr}" style="width: 240px;">
+                <input name="host" class="form-control font-ya-hei"
+                       type="text" 
+                       ng-model="$root.server_address"
+                       placeholder="{{'login.host_placeholder'|translate}}"
+
+                       ng-blur="checkHost()"
+                       >
+                <i class="form-control-feedback glyphicon glyphicon-ok"></i>
+                <img class="form-control-feedback loading" src="/img/loading-bars-gray.svg" alt="loading"/>
+
+
+    </div>
+    <div id="loader" ng-class="{'is-loading': submitting}"> 
+    	<img src="../../img/puff.svg">
+        <div id="loader-text">{{ "login.loader_text" | translate}}</div>
+    </div>
+
+
+
+
+    <div id="map-world">
+
+        <img style="top: 36px;left: 65px;position: absolute;width: 15%;" src="../../img/puff.svg">
+        
+        <i class="location FR_Paris"></i>
+        
+    </div>
+
+
+
+    <div class="clearfix"></div>
+</form>

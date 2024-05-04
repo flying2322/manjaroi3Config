@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>{{ "login.title" | translate}}</title>
+    <link rel="stylesheet" href="/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/css/font-awesome.css"/>
+    <link rel="stylesheet" href="/css/angular-motion.css"/>
+    <link rel="stylesheet" href="/css/common.css"/>
+    <link rel="stylesheet" href="/css/login.css"/>
+    <link rel="stylesheet" href="/css/animate.css"/>
+
+    <link rel="stylesheet" href="/css/sweetalert2.css"/>
+</head>
+<body>
+<style>
+html {
+    font-size: 100%;
+}
+.languages-title {
+    position: relative;
+    width: 120px;
+}
+.languages:after {
+    position: absolute;
+}
+.modal-backdrop.am-fade {
+    opacity: .7;
+    transition: opacity .15s linear;
+}
+</style>
+<div class="container" ng-controller="LoginPageController"  ng-cloak>
+    <div>
+        <language-select class="head-dropdown"></language-select>
+        <div class="pull-right" style="line-height: 39px;">
+            <a ng-click="setupServerAddress()" class="head btn ng-scope ng-binding" data-animation="am-fade-and-slide-top" data-placement="bottom-right" bs-dropdown="dropdown" style="color: #5e5e5e">
+                    {{"login.server_address_input"|translate}}
+                <span class="glyphicon glyphicon-align-justify"></span>
+            </a>
+        </div>
+    </div>
+    <div class="heading">
+        <h1 class="font-ya-hei uppercase text-center text-danger">{{"app" | translate}}</h1>
+
+        <h2 class="font-kai text-center text-muted">
+            <p ng-bind-html="'{{'login.head' | translate}}'"></p>
+        </h2>
+    </div>
+
+    <div class="login-box">
+        <ul class="nav">
+            <li>
+                <a class="tab col-xs-6 col-sm-4"
+                   ng-show="search().source!='onkey-login'"
+                   ng-class="{active: $root.step=='trial'}"
+                   ng-click="$root.step='trial'">{{"login.trial"|translate}}</a>
+            </li>
+            <li>
+                <a class="tab col-xs-6 col-sm-4"
+                   ng-show="search().source!='onkey-login'"
+                   ng-class="{active: $root.step=='login'}"
+                   ng-click="$root.step='login'">{{"login.login"|translate}}</a>
+            </li>
+
+            <li>
+                <a class="tab col-xs-6 col-sm-4"
+                   ng-show="search().source!='onkey-login'"
+                   ng-class="{active: $root.step=='register'}"
+                   ng-click="$root.step='register'">{{"login.register"|translate}}</a>
+            </li>
+
+        </ul>
+        
+        <ng-view></ng-view>
+    </div>
+
+    <div class="alert alert-warning animated bounce" ng-show="zh_only">
+        {{"login.messages.zh_notice"|translate}}
+    </div>
+
+    <div class="alert alert-success animated bounce" ng-show="search().source=='logout'">
+        {{"login.messages.success_logout"|translate}}
+    </div>
+
+    <div class="alert alert-warning animated bounce" ng-show="search().source=='force-login'">
+        {{"login.messages.notice_must_login_or_register"|translate}}
+    </div>
+
+    <div class="alert alert-warning animated bounce" ng-show="search().message">
+        {{ search().message }}
+    </div>
+
+    <p class="small text-muted text-center"  ng-bind-html="'{{'login.messages.contact_me' | translate}}'">  </p>
+    <div>&nbsp;</div>
+    <p class="small text-muted text-center">&copy; {{'app' | translate}}  Ver. {{ver}} {{'options.layout.beta'|translate}}</p> 
+    <div>&nbsp;</div><div>&nbsp;</div>
+</div>
+<script src="/js/libs/sweetalert2.js"></script>
+
+<script data-main="/js/login/login.js"
+        src="/js/libs/require.js"></script>
+</body>
+</html>

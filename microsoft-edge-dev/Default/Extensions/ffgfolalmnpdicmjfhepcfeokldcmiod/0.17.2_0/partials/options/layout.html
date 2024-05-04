@@ -1,0 +1,699 @@
+
+<div class="row">
+
+    <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+        
+            <!--
+        <li><a href=""><i class="icon-black icon-download-alt"></i></a></li>
+    -->
+        <li><a href="">&nbsp;</a></li>
+        <li><a href="">&nbsp;</a></li>
+        </ul>
+
+        <h3 class="muted" style="margin-top: 10px">
+            {{'app' | translate}} - {{'app_en' | translate}}
+            <span style="font-size: 10px;color:#999;margin-left:8px">Ver. {{ver}} {{'options.layout.beta'|translate}}</span>
+        </h3>
+        
+        <div class="alert {{alertStyle}} text-center" ng-show="showAlert">
+            <span ng-bind-html="alertText"></span>
+            <small ng-click="logout()" ng-show="showTryResigninAlert" style="cursor:pointer;color:#999;padding-left:12px">{{'options.layout.disconnected_resign_in_suffix'|translate}}</small>
+            <small ng-show="showTryReconnectAlert" ng-click="showTryReconnectAlert=false;reloadServers()" style="cursor:pointer;color:#999;padding-left:12px">({{'options.layout.manual_reconnect'|translate}})</small>
+
+        </div>
+    </div>
+
+
+    <div class="nav-col col-xs-3">
+
+        <div class="nav-col-head" id="menu">
+            <div class="head-dropdown-menu">
+                <a class="head btn btn-default btn-xs"
+                   data-animation="am-fade-and-slide-top"
+                   
+                   data-placement="bottom-right"
+                   bs-dropdown="dropdown" style="color: #5e5e5e">
+                    {{'options.layout.menu' | translate}}
+                    <span class="glyphicon glyphicon-align-justify"></span>
+                </a>
+                
+                <i class="badge1 fa fa-bell" data-badge="{{ $root.user.profile.notification_count }}" ng-show="$root.user.profile.notification_count" ng-click="showUserNotifications()" style="cursor:pointer; font-size: 16px; right: 4px;float: right; color: #5e5e5e;margin-top: 12px;margin-right: 2px;padding:4px"></i>
+                <i class="notifications fa fa-bell" ng-show="!$root.user.profile.notification_count" ng-click="showUserNotifications()" style="cursor:pointer; font-size: 16px; right: 4px;float: right; color: #5e5e5e;margin-top: 12px;margin-right: 2px;padding:4px"></i>
+
+            </div>
+
+
+
+            <language-select class="head-dropdown-lang"></language-select>
+        </div>
+        <hr>
+        <!--
+        <h1>
+            {{'app' | translate}}
+            <small>{{ ver }}</small>
+        </h1>
+        -->
+
+
+
+        <div ng-controller="ProfileController">
+            <div class="profile panel panel-default">
+                <div id="name_avatar" class="panel-body" style="padding-left:10px;padding-right:8px" ng-class="{'ribbon-holder':$root.isVIP()}">
+                   
+
+                    <div class="ribbon" ng-if="$root.isVIP()" ng-class="{'vvip-ribbon': ($root.isVVIP() || $root.isEnterpriseUser())}">
+                        <b ng-if="$root.isVVIP() && !$root.isEnterpriseUser()">VVIP</b>
+                        <b ng-if="$root.isEnterpriseUser()" style="font-size:10px">{{'common.enterprise_user_ribbon' | translate}}</b>
+                        <b ng-if="!$root.isVVIP() && !$root.isEnterpriseUser()">VIP</b>
+                    </div>    
+                
+<!--    
+                    <div class="avatar" style="position:absolute;" ng-hide="showAvatarUploader">
+                      
+                        
+                   
+                        <img src="../img/icon-auto_128.png" class="avatar" />
+                    </div>
+-->
+                    <div class="avatar" style="position:absolute;" ng-mouseover="avatarHoverIn()" ng-mouseleave="avatarHoverOut()">
+                        
+                        <div class="avatar-upload" style="width: 64px;
+                                    height: 64px;
+                                    overflow: hidden;">
+                                    <div class="avatar-upload__wrapper" ng-class="{'avatar-upload--complete' : uploadProgress >= 100}">
+                                        <span  ng-if="$root.isVIP()" id="gl-avatar-edit-pane" ng-show="showAvatarUploader">{{'options.layout.avatar_edit' | translate}}</span>
+                                        <div class="avatar-upload__image-wrapper" 
+                                            ng-class="{'avatar-upload--complete' : uploadProgress >= 100}"
+                                            style="width:{{uploadProgress}}%" >
+                                            <img ng-src="{{avatar}}" style="max-width: 64px;max-height:64px">
+                                        </div>
+                                        <img ng-src="{{avatar}}" class="avatar-upload__faded-image" style="max-width: 64px;max-height:64px">
+                                        <div class="avatar-upload__progress-wrapper"
+                                            ng-class="{'avatar-upload--complete' : uploadProgress >= 100}">
+                                            <span>{{uploadProgress}}%</span>
+                                        </div>
+                                        <input  ng-if="$root.isVIP()" type="file" avatar-uploader="uploadAvatar">
+                                    </div>
+                        </div>
+                    </div>
+                    
+                    <div class="clearfix"></div>  
+                    <div class="info">
+                        <ul class="badges">
+                            <li>
+                                <i class="signal level{{stabilityLevel()}}"
+                                   bs-tooltip="{title: ('options.layout.line_usable'|translate)+': '+ stabilityPercentage()}"
+                                   data-placement="right"></i>
+
+<!--
+                                <span class="from" ng-if="$root.wsConnected" style="float: right; margin-right: 24px; font-size: 9px; color: #999; vertical-align: bottom; margin-top: 4px;" title="{{from | date: 'yyyy-MM-dd HH:mm:ss'}}">
+                                -->
+                                <span class="from" ng-if="$root.wsConnected" style="float: right; margin-right: 24px; font-size: 9px; color: #999; vertical-align: bottom; margin-top: 4px;" data-placement="bottom" bs-tooltip="{title: ('options.layout.ws_connected_at' | translate) + (from | date: 'yyyy-MM-dd HH:mm:ss') }">
+                                    {{ fromStr }}
+                                </span>  
+                           
+                                <span class="disconnected" ng-if="!$root.wsConnected" style="float: right; margin-right: 16px; font-size: 10px; color: #ff3e84; vertical-align: bottom; margin-top: 3px;">
+                                    {{ disconnectedWarningStr }}
+                                </span>  
+                            </li>
+                        </ul>
+              
+                        <div class="nickname" ng-if="$root.isVIP() && $root.wsConnected">
+                            <span class="" ng-show="showNickname && !showNicknameInput">
+                                {{nickname}}
+                                <span class="text-muted" style="font-size: 10px;cursor:pointer" ng-hide="showNicknameInput" ng-click="showNicknameInput=true;focusNicknameInput=true;"><i class="fa fa-edit" style="font-size: 10px; margin-left: 6px;"></i>{{'options.layout.nickname_edit' | translate}}</span>
+                            </span>
+                            <span ng-hide="showNickname || showNicknameInput">
+                                <a href="" class="text-muted" ng-click="showNicknameInput=true;focusNicknameInput=true;">
+                                    {{'options.layout.nickname_not_set'|translate}}
+                                </a>
+                            </span>
+                            <div class="">
+                                <nickname-input manual-focus="focusNicknameInput" update-nickname="submitNickname" ng-show="showNicknameInput"></nickname-input>
+                            </div>
+                        </div>
+
+                        <span class="name" title="{{ $root.user.profile.name }}" ng-click="showNewcomerInfo()">
+                            <span ng-if="!$root.isGuest()">
+                                {{ $root.user.profile.name }}
+                            </span>
+                            <span ng-if="$root.isGuest()">
+                                {{ 'common.anonymous_account' | translate }}
+                            </span>
+                        </span>
+
+
+                    </div>
+                </div>
+
+                <table id="vip" class="table expire" ng-if="!$root.isGuest()">
+                    <thead></thead>
+                    <!--thead is a must, otherwise style will broken-->
+                    <tr>
+                        <td class="key">
+                            {{'options.layout.service'|translate}}
+                        </td>
+                        <td class="value">
+                            <div ng-if="$root.isVIP()">
+                                <span class="text-muted">{{ 'common.vip_expire.t1' | translate }}</span>
+                                <!--
+                                <span
+                                      bs-tooltip="{title: ('options.layout.vip_tooltip'|translate) }"bs-tooltip="{title: '{{VIPUntil | date: 'yyyy-MM-dd HH:mm:ss'}}'}">
+                                -->
+                                <span title="{{VIPUntil | date: 'yyyy-MM-dd HH:mm:ss'}}">
+                                    {{ VIPLeft | durationToNow }}
+                                </span>
+                                <small class="text-muted">{{ 'common.vip_expire.t2' | translate }}</small>
+                            </div>
+
+                            <div ng-if="!$root.isVIP() && !$root.isDue()" class="text-danger"
+                                 translate="options.layout.not_vip"></div>
+
+                            <div ng-if="!$root.isVIP() && $root.isDue()"
+                                 class="text-danger"
+                                 translate="options.layout.expire"></div>
+
+                            <span class="text-muted" ng-if="!inc_vip_time_hidden && $root.inc_vip_time>0" ng-class="{'start-fade': inc_vip_time_startFade}">
+                                {{$root.inc_vip_time | milliSecondsToHourMinText}}
+                                <i class="fa fa-arrow-up" style="color:#5CB85C"></i>
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+<!--
+                <div id="invitation_codes">
+                    <table class="table total_invitation" ng-if="!$root.isGuest()" style="margin-bottom:0">
+                        <thead></thead>
+                        <tr>
+                            <td class="key">
+                                <span>
+                                    {{'options.layout.invitation_codes.title'|translate}}
+                                </span>
+                            </td>
+                            <td class="value" ng-click="showInvitationCodes()" style="cursor:pointer" bs-tooltip="{title: ('options.layout.invitation_codes.tooltip'|translate)}">
+                                <div>
+                                    <span>
+                                        {{ active_invitation_code_count }}
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>-->
+                <!--
+                <div  id="wheat_score">
+                <table class="table wheat_score" ng-if="!$root.isGuest() && !$root.isEnterpriseUser()" style="margin-bottom:0">
+                    <thead></thead>
+
+                    <tr>
+                        <td class="key">
+                            <img src="/img/total_wheats_24_24.png" style="max-width: 16px;max-height:16px" bs-tooltip="{title: ('options.layout.exchange_wheat.layout_title_total_score'|translate)}"/>
+                        </td>
+                        <td class="value" ng-click="exchangeWheat()" style="cursor:pointer" bs-tooltip="{title: ('options.layout.exchange_wheat.tooltip'|translate)}">
+                            <span ng-class="{'exchangable': exchangable}">
+                                {{wheat_score}}
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+                </div>
+                -->
+                <div id="wheat">
+                    <table class="table wheat" ng-show="!$root.isWheatCollectingDisabled()" ng-if="!$root.isGuest() && !$root.isEnterpriseUser()" style="margin-bottom:0">
+                        <thead></thead>
+                        <!--thead is a must, otherwise style will broken-->
+                        <tr>
+                            <td class="key" style="font-size:12px" ng-click="exchangeWheat()" >
+                                {{'options.layout.grab_wheat.layout_title_today'|translate}}
+                            </td>
+                            <td class="value">
+                                <div ng-click="showGrabWheat()" style="cursor:pointer" bs-tooltip="{title: ('options.layout.grab_wheat.tooltip'|translate)}">
+                                    <span ng-repeat="wheat in wheats()" ng-show="wheat.status=='unfetched' || wheat.status=='fetched' || wheat.status=='waiting' || wheat.status=='ready' || wheat.status=='fetching'">
+
+                                       <img src="/img/wheat_grains_gold_24_24.png" style="max-width: 16px;max-height:16px"  ng-show="wheat.status =='fetched'"/>
+
+                                       <img src="/img/wheat_grains_gray_24_24.png" style="max-width: 16px;max-height:16px"  ng-show="wheat.status =='unfetched'"/>
+                                       <img src="/img/wheat_grains_green_24_24.png" style="max-width: 16px;max-height:16px"  ng-show="wheat.status =='waiting'|| wheat.status=='ready'||wheat.status=='fetching'" ng-class="{'blink-image':wheat.status =='waiting'}" />
+                                    </span>
+                                    <i ng-show="!wheats().length" class="fa fa-info-circle" style="cursor:pointer;color:black" aria-hidden="true" ng-click="" bs-tooltip="{title: ('options.layout.grab_wheat.no_wheat_alert'|translate)}" data-placement="top"></i>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div id="telegream" ng-if="currentLocale == 'zh_CN'">
+                    <table class="table wheat" ng-if="!$root.isGuest() && !$root.isEnterpriseUser()" style="margin-bottom:0">
+                        <thead></thead>
+                        <!--thead is a must, otherwise style will broken-->
+                        <tr>
+                            <td class="key" style="font-size:12px">
+                                {{'options.layout.bind_telegram'|translate}}
+                            </td>
+                            <td class="value">
+                                <div class="telegram" ng-if="$root.wsConnected">
+                                    <span class="" ng-show="showTelegram && !showTelegramInput">
+                                        {{telegram}}
+                                        <span class="text-muted" style="font-size: 10px;cursor:pointer" ng-hide="showTelegramInput" ng-click="showTelegramInput=true;focusTelegramInput=true;"><i class="fa fa-edit" style="font-size: 10px; margin-left: 6px;"></i></span>
+                                    </span>
+                                    <span ng-hide="showTelegram || showTelegramInput">
+                                        <a href="" class="text-muted" ng-click="showTelegramInput=true;focusTelegramInput=true;">
+                                            {{'options.layout.telegram_not_set'|translate}}
+                                        </a>
+                                    </span>
+                                    <div class="">
+                                        <telegram-input manual-focus="focusTelegramInput" update-telegram="submitTelegram" ng-show="showTelegramInput"></telegram-input>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <table id="client_id" class="table data">
+                    <thead></thead>
+                    <!--thead is a must, otherwise style will broken-->
+                    <tr>
+                        <td class="key" style="width:100px">
+                            <div style="font-size:12px;width: 52px">
+                            {{'options.layout.chicago_u'|translate}}
+                            <i class="fa fa-question-circle" style="cursor:pointer;color:black" aria-hidden="true" ng-click="showAboutClientChicagoUsername()" bs-tooltip="{title: ('common.what_is_this'|translate)}" data-placement="top"></i>
+                            </div>
+                        </td>
+                        <td class="value" style="overflow: hidden;">
+                                <span  style="font-size:8px;overflow: hidden;cursor: pointer" ng-mouseenter="showChicagou=true" ng-mouseleave="showChicagou=false" ng-click="$root.copyToClipboard($root.user.profile.chicago_u)">
+                                    {{$root.user.profile.chicago_u}}
+
+                                    <svg ng-if="showChicagou" style="width:12px;height:12px;opacity: 50%;" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ContentCopyIcon" aria-label="fontSize small"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg>
+                                </span>
+                      
+             
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="key" style="width:100px">
+                            <span  style="font-size:12px;width: 52px">
+                                {{'options.layout.chicago_p'|translate}}
+                                <i class="fa fa-question-circle" style="cursor:pointer;color:black" aria-hidden="true" ng-click="showAboutClientChicagoUsername()" bs-tooltip="{title: ('common.what_is_this'|translate)}" data-placement="top"></i>
+                            </span>
+                        </td>
+                        <td class="value" style="overflow: hidden;">
+                                <span  style="font-size:8px;overflow: hidden;cursor: pointer" ng-mouseenter="showChicagop=true" ng-mouseleave="showChicagop=false" ng-click="$root.copyToClipboard($root.user.profile.chicago_p)">
+                                    {{$root.user.profile.chicago_p}}
+                                    <svg ng-if="showChicagop" style="width:12px;height:12px;opacity: 50%;" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ContentCopyIcon" aria-label="fontSize small"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg>
+                                </span>
+                        </td>
+                    </tr>
+                </table>
+
+                <table id="data_traffic" class="table data">
+                    <thead></thead>
+                    <!--thead is a must, otherwise style will broken-->
+                    <tr>
+                        <td class="key">
+                            <span>
+                            {{'options.layout.data_month'|translate}}
+                            <i class="fa fa-info-circle" style="cursor:pointer;color:black" aria-hidden="true" ng-click="showAboutDataTraffic()" bs-tooltip="{title: ('common.about_data_traffic'|translate)}" data-placement="top"></i>
+                            </span>
+                        </td>
+                        <td class="value">
+                            <div ng-show="$root.data_user_month !== ''">
+                                <span>
+                                    {{ $root.data_user_month }} 
+                                </span>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="key">
+                            <span>
+                            {{'options.layout.data_day'|translate}}
+                            <i class="fa fa-info-circle" style="cursor:pointer;color:black" aria-hidden="true" ng-click="showAboutDataTraffic()" bs-tooltip="{title: ('common.about_data_traffic'|translate)}" data-placement="top"></i>
+                            </span>
+                        </td>
+                        <td class="value">
+                            <div ng-show="$root.data_user_day !== ''">
+                                <span>
+                                    {{ $root.data_user_day }} 
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+                <table class="table speed" ng-show="false">
+                    <thead></thead>
+                    <!--thead is a must, otherwise style will broken-->
+                    <tr>
+                        <td class="key">
+                            <span bs-tooltip="{title: ('options.layout.upload_download'|translate) }">
+                                <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+                                <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                            </span>
+                        </td>
+                        <td class="value">
+                            <div class="animated" ng-class="{'animated fadeInRight' : $root.speedChanged}" ng-show="$root.session_download_txt !== ''">
+
+                                <span>
+                                    <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+                                    {{$root.session_upload_txt}} 
+                                    <span ng-show="$root.speed_upload !== ''">
+                                    ({{ $root.speed_upload }})
+                                    </span>
+                                </span>
+                                <br/>
+                                <span>
+                                    <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                                    {{$root.session_download_txt}} 
+                                    <span ng-show="$root.speed_download !== ''">
+                                    ({{ $root.speed_download }})
+                                    </span>
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+
+            <div class="panel-footer" ng-if="!$root.newestVer">
+                    <a href="https://chrome.google.com/webstore/detail/ffgfolalmnpdicmjfhepcfeokldcmiod" class="btn btn-primary btn-block" style="background-color:#E91E63;border-color:#E91E63" target="_blank">
+                        <span translate="options.layout.upgrade_to_newest"></span>
+
+                    </a>
+
+            </div>
+
+                <div class="panel-footer" ng-if="!$root.isGuest() && !$root.isEnterpriseUser()">
+                    <a href="#/vipcodes" target="_blank" class="btn btn-primary btn-block" style="background-color:#ff6c2c;border-color:#ff8e2b">
+                        <span ng-if="$root.isVIP()" translate="options.layout.extend_vip"></span>
+                        <span ng-if="!$root.isVIP()" translate="options.layout.open_vip"></span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <!--end of profile controller-->
+
+        <div class="anonymous-warning panel panel-warning" ng-if="anonymous()">
+            <div class="panel-body text-warning">
+                {{'options.layout.welcome_to_trial'|translate}}<br>
+                {{'options.layout.signup_for_service'|translate}}
+                
+            </div>
+            <div class="panel-footer">
+                <a href="" class="btn btn-warning btn-block" ng-click="openAnonymousModal()">{{'options.layout.signup_now'|translate}}</a>
+            </div>
+        </div>
+
+
+
+        <div class="nav-menu list-group">
+            <a id="servers" href="#/servers" class="list-group-item" ng-class="{selected: 'servers' == currentState}" >
+                {{'options.layout.server_list' | translate : '{connected_server_num : $root.connected_server_num}'}}
+            </a>
+
+            <a id="domain_rules" href="#/domains" class="list-group-item" ng-class="{selected: 'domains' == currentState}" ng-if="$root.isVIP()">
+               {{'options.layout.domain_list'|translate}} 
+
+                <span class="rulesCount badge" ng-show="rulesCount()" style="background-color:#23377c">
+                    {{rulesCount()}}
+                </span>
+            </a>
+            
+            <a href="#/invoices" class="list-group-item"
+               ng-class="{selected: 'invoices' == currentState}"
+               translate="options.layout.invoice_history" ng-hide="anonymous() || $root.isEnterpriseUser()">
+            </a>
+
+            <a href="#/vipcodes" class="list-group-item"
+               ng-class="{selected: 'vipcodes' == currentState}" ng-hide="anonymous() || $root.isEnterpriseUser()">
+               {{'options.layout.vipcodes'|translate}}
+            </a>      
+
+            <a href="#/coupons" class="list-group-item"
+               ng-class="{selected: 'coupons' == currentState}" ng-hide="anonymous() || $root.isEnterpriseUser()">
+               {{'options.layout.coupon_history'|translate}}
+                <span class="badge" style="background-color:#ff6c2c;color:white" ng-if="active_coupon_count > 0">
+                    {{active_coupon_count}}
+                </span>
+            </a>
+            <a id="invite_codes" href="#/invite_codes" class="list-group-item"
+               ng-class="{selected: 'invite_codes' == currentState}" ng-hide="anonymous()">
+               {{'options.layout.invite_codes'|translate}}
+                <span class="badge" style="background-color:#ff6c2c;color:white" ng-if="active_invitation_code_count > 0">
+                    {{ active_invitation_code_count }}
+                </span>
+            </a>
+            <a href="#/ss" class="list-group-item"
+               ng-class="{selected: 'ss' == currentState}" ng-hide="anonymous()">
+               {{'options.layout.ss_subscription'|translate}}
+                <!--
+                <span class="badge" style="background-color:white;color:red;padding-left:0">
+                    NEW
+                </span>
+                -->
+            </a>
+            <a href="#/v2r" class="list-group-item"
+               ng-class="{selected: 'v2r' == currentState}" ng-hide="anonymous()">
+               {{'options.layout.v2r_subscription'|translate}}
+                <!--
+                <span class="badge" style="background-color:white;color:red;padding-left:0">
+                    NEW
+                </span>
+                -->
+            </a>
+            <a href="#/clash" class="list-group-item"
+               ng-class="{selected: 'clash' == currentState}" ng-hide="anonymous()">
+               {{'options.layout.clash_subscription'|translate}}
+                <!--
+                <span class="badge" style="background-color:white;color:red;padding-left:0">
+                    NEW
+                </span>
+                -->
+            </a>
+            <!--
+            <a href="#/trades" class="list-group-item"
+               ng-class="{selected: 'trades' == currentState}"
+               translate="options.layout.order_history" ng-hide="anonymous() || $root.isEnterpriseUser()">
+            </a>
+            -->
+
+            <!--
+            <a ng-click="showInvitationCodes()" bs-tooltip="{title: ('options.layout.invitation_codes.tooltip'|translate)}" href="" class="list-group-item"  ng-hide="anonymous() || $root.isEnterpriseUser()" style="cursor:pointer" >
+               {{'options.layout.invitation_codes.title'|translate}}
+                <span class="badge" style="background-color:#ff6c2c;color:white" ng-if="active_invitation_code_count > 0">
+                    {{ active_invitation_code_count }}
+                </span>
+            </a>-->
+            
+            <a id="bonus" href="#/invitations" class="list-group-item" ng-class="{selected: 'invitations' == currentState}"  ng-hide="anonymous() || $root.isEnterpriseUser()">
+                {{'options.layout.invitation'|translate}} 
+                <!--
+                <i class="fa fa-trophy" style="font-size: 14px; margin-left: 5px;color:#23377c;"></i>
+                &nbsp;
+                <small style="color:red;font-size:10px">NEW!</small>
+-->
+                <span class="invitationCount badge" ng-show="newInvitationCount">
+                    {{newInvitationCount}}
+                </span>
+            </a>
+
+
+
+        </div>
+
+        <div id="tutorial" class="nav-menu list-group">
+
+            <a href="" class="list-group-item" ng-click="gotoGuide()" >
+               {{'options.layout.guide'|translate}}
+               <i class="fa fa-wpexplorer" style="font-size: 14px; right: 12px;float: right; color: #23377c;"></i>
+            </a>
+            <a href="{{$root.officialWebsite()}}" class="list-group-item" target="_blank">
+               {{'options.layout.official_website'|translate}}
+               <i class="fa fa-university" style="font-size: 14px; right: 12px;float: right; color: #23377c;"></i>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.michaelscofield.android"
+               class="list-group-item" target="_blank">
+               {{'options.layout.android_app_from_google_play'|translate}}
+               <i class="fa fa-android" style="font-size: 16px; right: 12px;float: right; color: #23377c;"></i>
+            </a>
+            <a href="https://chrome.google.com/webstore/detail/ffgfolalmnpdicmjfhepcfeokldcmiod"
+               class="list-group-item" target="_blank">
+               {{'options.layout.help_chrome_store'|translate}}
+               <i class="fa fa-google" style="font-size: 16px; right: 12px;float: right; color: #23377c;"></i>
+            </a>
+            <a href="https://twitter.com/maikrVPN"
+               class="list-group-item" target="_blank">
+               {{'options.layout.help_official_twitter'|translate}}
+               <i class="fa fa-twitter" style="font-size: 16px; right: 12px;float: right; color: #23377c;"></i>
+            </a>
+            <a href="https://t.me/maikr_users" ng-if="currentLocale == 'zh_CN'"
+               class="list-group-item" target="_blank">
+               {{'options.layout.help_official_telegram'|translate}}
+               <i class="fa fa-telegram" style="font-size: 16px; right: 12px;float: right; color: #23377c;"></i>
+            </a>
+        </div>
+
+
+
+        <br/>
+        <hr/>
+            <h1 ng-if="!$root.newestVer">
+                <span style="margin-left: 0px">
+                    
+                    {{'options.layout.found_new_version'|translate}}
+                    <a  style="color:#E91E63" target="_blank" style="cursor:pointer" href="https://chrome.google.com/webstore/detail/ffgfolalmnpdicmjfhepcfeokldcmiod">{{'options.layout.chrome_app_store'|translate}}</a>
+                    {{'options.layout.download_newest'|translate}}
+                    
+                </span>
+            </h1>
+            <div id="mobile">
+            <h1>
+
+                <div translate="options.layout.android_testing"></div>
+                <div>&nbsp;</div>
+                <!--
+                        <div class="vc_row wpb_row vc_inner vc_row-fluid">                         
+                            <div class="wpb_column vc_column_container col-md-6" style="padding-left:0px;padding-right:0px">
+                                <div class="vc_column-inner ">
+                                    <div class="wpb_wrapper">
+                                        <div class="vc_icon_element vc_icon_element-outer vc_icon_element-align-center">
+                                            <div class="vc_icon_element-inner vc_icon_element-color-custom vc_icon_element-size-xl vc_icon_element-style- vc_icon_element-background-color-grey" style="text-align: center;">
+                                                <span style="color:#828282 !important;text-align: center;font-size: 3em!important;" class="vc_icon_element-icon fa fa-android"></span></div>
+                                        </div>
+                                        <div class="wpb_text_column wpb_content_element ">
+                                            <div class="wpb_wrapper">
+                                                <h6 style="text-align: center;">android</h6>
+                                                <div style="text-align: center;width: 100%;"><h9 style="text-align: center;width: 100%;">available</h9></div>
+                                                <div style="text-align: center;width: 100%;"><h9 style="text-align: center;width: 100%;">within <b class="color_emphasis">2</b> Months</h9></div>
+                          
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>   
+                        </div>
+                    -->
+           <!--
+                            <div class="wpb_column vc_column_container col-md-6" style="padding-left:0px;padding-right:0px">
+                                <div class="vc_column-inner ">
+                                    <div class="wpb_wrapper">
+                                        
+                                        <div class="vc_icon_element vc_icon_element-outer vc_icon_element-align-center">
+                                            <div class="vc_icon_element-inner vc_icon_element-color-custom vc_icon_element-size-xl vc_icon_element-style- vc_icon_element-background-color-grey" style="text-align: center;">
+                                                <a href="https://play.google.com/store/apps/details?id=com.michaelscofield.android" target="_blank">
+                                                <span class="vc_icon_element-icon"><img style="margin-top: 10px;" width=64 src="../img/google_play_2.png" /></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="wpb_text_column wpb_content_element ">
+                                            <div class="wpb_wrapper">
+                                                
+                                                    <a href="https://play.google.com/store/apps/details?id=com.michaelscofield.android" target="_blank">
+                                                    <h6 style="text-align: center;">
+                                                    {{'options.layout.google_play_store'|translate}}</h6>
+                                                    </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  -->
+                            <div class="wpb_column vc_column_container col-md-6" style="padding-left:0px;padding-right:0px">
+                                <div class="vc_column-inner ">
+                                    <div class="wpb_wrapper">
+                                        <div class="vc_icon_element vc_icon_element-outer vc_icon_element-align-center">
+                                            <div class="vc_icon_element-inner vc_icon_element-color-custom vc_icon_element-size-xl vc_icon_element-style- vc_icon_element-background-color-grey" style="text-align: center;">
+                                                <a href="{{SERVER_URL}}" target="_blank">
+                                                <span style="" class="vc_icon_element-icon">
+                                                    <img width=64 src="../img/ic_icon_round.png" /></span>
+                                                </a>
+
+                                            </div>
+                                        </div>
+                                        <div class="wpb_text_column wpb_content_element ">
+                                            <div class="wpb_wrapper">
+                                                <h6 style="text-align: center;">
+                                                    <a href="{{SERVER_URL}}scofield/apk" target="_blank">
+                                                    {{'options.layout.maikr_official_website'|translate}}
+                                                    </a>
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>     
+                        
+                    
+            </h1>
+
+            <h1>
+                <div>{{'options.layout.we_working_on'|translate}}</div>
+                <div>&nbsp;</div>
+                        <div class="vc_row wpb_row vc_inner vc_row-fluid">                         
+                            <div class="wpb_column vc_column_container col-md-6" style="padding-left:0px;padding-right:0px">
+                                <div class="vc_column-inner ">
+                                    <div class="wpb_wrapper">
+                                        <div class="vc_icon_element vc_icon_element-outer vc_icon_element-align-center">
+                                            <div class="vc_icon_element-inner vc_icon_element-color-custom vc_icon_element-size-xl vc_icon_element-style- vc_icon_element-background-color-grey" style="text-align: center;">
+                                                <a href="https://apps.apple.com/app/id1538000588" target="_blank">
+                                                    <!--<span style="color:#828282 !important;text-align: center;font-size: 3em!important;" class="vc_icon_element-icon fa fa-apple"></span>-->
+                                                    <span style="" class="vc_icon_element-icon">
+                                                        <img width=64 src="../img/ic_icon_round.png" />
+                                                    </span>
+                                    
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="wpb_text_column wpb_content_element ">
+                                            <div class="wpb_wrapper">
+                                                <a href="https://apps.apple.com/app/id1538000588" target="_blank">
+                                                <h6 style="text-align: center;">Maikr iOS App</h6>
+                                            </a>
+                                                <!--
+                                                <div style="text-align: center;width: 100%;"><h9 style="text-align: center;width: 100%;">hopefully available</h9></div>
+
+                                                <div style="text-align: center;width: 100%;"><h9 style="text-align: center;width: 100%;">before <span style='color:#ff3e84'>End of November</span></h9></div>-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>   
+                        </div>
+            </h1>
+
+        </div>
+            <!--
+            <h1>
+
+                <span style="margin-left: 0px">
+
+                    {{'options.layout.follow_our'|translate}}<a href="https://twitter.com/maikrVPN" target="_blank" style="cursor:pointer"><i class="fa  fa-twitter" style="color:#1ea1f2">{{'options.layout.twitter'|translate}}</i></a>{{'options.layout.for_more'|translate}}<a style="color:#E91E63" href="https://twitter.com/maikrVPN" target="_blank" style="cursor:pointer">maikrVPN@twitter</a>
+                </span>
+            </h1>
+            -->
+        <hr>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <h1>
+             
+            
+            <small>&copy; {{'app' | translate}}  Ver. {{ver}} {{'options.layout.beta'|translate}}</small>                
+
+        </h1>
+
+
+
+    </div>
+
+    <div class="main-col col-xs-9">
+        <div ui-view></div>
+    </div>
+
+
+
+         
+</div>

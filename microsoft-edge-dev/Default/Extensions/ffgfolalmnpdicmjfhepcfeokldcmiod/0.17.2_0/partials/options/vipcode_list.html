@@ -1,0 +1,63 @@
+<div class="page-header">
+    <h2 class="page-header-title">
+        {{ 'options.vipcodes.title' | translate }}
+        <a href="javascript:void()" class="btn ng-scope" style="padding: 0;color: black;cursor:point" ng-click="reloadVIPCodes()" ng-mouseenter="hovering_CT=true" ng-mouseleave="hovering_CT=false" bs-tooltip="{title: ('common.reload'|translate)}" data-placement="bottom">
+            <i class="fa fa-refresh" ng-class="{'color_emphasis':hovering_CT}" aria-hidden="true"></i>
+        </a>
+    </h2>
+
+    <div class="clearfix"></div>
+</div>
+
+<div class="alert alert alert-info text-center" style="height: 50px;">
+    <span style="float:left">
+    {{'options.vipcodes.like_to_topup_vip'|translate}}
+    <span>
+    <a class="label label-success" style="cursor:pointer;" href="{{$root.orderUrl()}}" >
+        {{'options.vipcodes.order_vipcard'|translate}}
+    </a>
+    </span>
+    
+    &nbsp;&nbsp;{{'options.vipcodes.or'|translate}}&nbsp;
+    <a class="label label-success" style="cursor:pointer;" href="{{$root.vipCodeUrl()}}" >
+         {{'options.vipcodes.order_vipcode'|translate}}
+    </a>
+    </span>
+
+</div>
+
+<div class="">
+    <span href="javascript:void(0)" class="btn btn-primary btn-block" style="background-color:#E91E63;border-color:#E91E63;margin: auto; width: 50%;" target="_blank" ng-click="redeemCode()">
+        <span translate="options.vipcodes.redeem_code" class="ng-scope"></span>
+    </span>
+</div>
+
+
+
+<table class="orders table" style="margin-top:20px">
+    <thead>
+        <tr>
+        <th class="type" translate="options.vipcodes.type" style="width: 220px;"></th>
+        <th class="code" translate="options.vipcodes.code" style="width: 140px;"></th>
+        <th class="description" style="width:-webkit-fill-available"><span  translate="options.vipcodes.description" style="float:right"></span></th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr ng-repeat="code in $root.vipcodes" class="coupon_row">
+            <td class="type" style="width: 220px;">{{code.description}}</td>
+            <td class="code" style="width: 140px;"><span style="font-size:0.8em">{{code.id}}</span></td>
+            <td class="description" style="width:-webkit-fill-available">
+                <span  style="font-size:0.8em;float: right;">{{code.operation_info}}</span>
+            </td>
+        </tr>
+        <tr ng-show="!$root.vipcodes || !$root.vipcodes.length">
+            <td colspan="5">
+                <span class="text-muted">{{'common.no_record' | translate}}</span>
+            </td>
+        </tr>
+    </tbody>
+        <div class="sarsha-spinner-container" style="" ng-show="$root.vipcodes_loading"> 
+            <div class="sarsha-spinner"> <div class="spinner ng-scope"> <div class="rect1"></div> <div class="rect2"></div> <div class="rect3"></div> <div class="rect4"></div> <div class="rect5"></div> </div> </div> 
+        </div>
+</table>

@@ -1,0 +1,32 @@
+<div class="domain">
+
+    <form ng-submit="updateDomain()">
+
+        <div class="form-group" ng-if="!editing">
+            <a ng-click="deleteDomain()" href="" class="remove glyphicon glyphicon-trash"
+               title="{{'options.domain.delete_domain'|translate}}"></a>
+            <span ng-click="edit()" class="name form-control-static">
+                <i class="fa fa-snowflake-o" aria-hidden="true" style="margin-top: 2px; float: right;" ng-if="domain._keyword"></i>
+                {{ domain.name }}
+                <span class="glyphicon glyphicon-pencil"></span>
+            </span>
+        </div>
+
+        <div class="input-group" ng-if="editing">
+            <input ng-model="edition.name"
+                   focus-bind="focusInput"
+                   ui-keydown="{esc:'edit(false)'}"
+                   type="text" class="form-control">
+
+            <div class="input-group-btn">
+                <button type="submit" class="btn btn-default" title="{{'common.ok'|translate}}">
+                    <span class="glyphicon glyphicon-ok"></span>
+                </button>
+                <button ng-click="edit(false)" type="button" class="btn btn-default"
+                        title="{{'common.cancel'|translate}}">
+                    <span class="glyphicon glyphicon-ban-circle"></span>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

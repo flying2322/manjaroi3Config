@@ -1,0 +1,122 @@
+{
+   "app_command": {
+      "message": "切換閱讀器視圖"
+   },
+   "app_description": {
+      "message": "剝離像按鈕，背景圖像一樣的雜亂，並改變頁面的文本大小，對比度和佈局，以提高可讀性"
+   },
+   "app_name": {
+      "message": "讀者觀點"
+   },
+   "app_title": {
+      "message": "正在加載...... ::閱讀器視圖"
+   },
+   "app_ui_btn_fullscreen": {
+      "message": "切換到全屏閱讀"
+   },
+   "app_ui_btn_imgs": {
+      "message": "切換圖像"
+   },
+   "app_ui_btn_next": {
+      "message": "轉到下一頁（Meta +右箭頭鍵）"
+   },
+   "app_ui_btn_prev": {
+      "message": "移至上一頁（Meta +左箭頭鍵）"
+   },
+   "app_ui_btn_print": {
+      "message": "在Reader View中打印"
+   },
+   "app_ui_btn_rateUs": {
+      "message": "請給我們評分！ ⭑⭑⭑⭑⭑"
+   },
+   "app_ui_btn_site_gd": {
+      "message": "在我們的網站上，您可以在Google雲端硬盤上保存文章"
+   },
+   "app_ui_btn_site_pc": {
+      "message": "在我們的網站上，您可以在計算機上保存文章"
+   },
+   "app_ui_btn_speech": {
+      "message": "閱讀這篇文章"
+   },
+   "app_ui_label1": {
+      "message": "全屏寬度"
+   },
+   "app_ui_label2": {
+      "message": "沒有高度"
+   },
+   "app_ui_label3": {
+      "message": "光"
+   },
+   "app_ui_label4": {
+      "message": "暗"
+   },
+   "app_ui_label5": {
+      "message": "藍色"
+   },
+   "app_ui_label6": {
+      "message": "隱藏"
+   },
+   "app_ui_label7": {
+      "message": "節目"
+   },
+   "app_ui_notify_wrong_content": {
+      "message": "抱歉，原始內容不再可訪問。請加載原始內容並重試"
+   },
+   "options_header": {
+      "message": "UI自定義"
+   },
+   "options_opt1": {
+      "message": "在閱讀器視圖中顯示“打印按鈕”"
+   },
+   "options_opt10": {
+      "message": "自動切換到全屏模式"
+   },
+   "options_opt11": {
+      "message": "自定義樣式"
+   },
+   "options_opt12": {
+      "message": "實際讀者視圖的用戶樣式"
+   },
+   "options_opt13": {
+      "message": "鏈接開放"
+   },
+   "options_opt14": {
+      "message": "在新標籤頁中打開鏈接"
+   },
+   "options_opt15": {
+      "message": "在閱讀器視圖模式下打開鏈接"
+   },
+   "options_opt16": {
+      "message": "雜項"
+   },
+   "options_opt17": {
+      "message": "打開有關更新的常見問題頁面"
+   },
+   "options_opt2": {
+      "message": "在閱讀器視圖中顯示“保存按鈕”"
+   },
+   "options_opt3": {
+      "message": "在閱讀器視圖中顯示“全屏按鈕”"
+   },
+   "options_opt4": {
+      "message": "在閱讀器視圖中顯示“語音按鈕”"
+   },
+   "options_opt5": {
+      "message": "在閱讀器視圖中顯示“切換圖像按鈕”"
+   },
+   "options_opt6": {
+      "message": "在閱讀器視圖中顯示“導航按鈕”"
+   },
+   "options_opt7": {
+      "message": "顯示“在Reader View中打開”上下文菜單項（需要重新啟動）（需要chrome.tabs權限）"
+   },
+   "options_opt8": {
+      "message": "顯示“在後台打開Reader Reader”上下文菜單項（需要重啟）（需要chrome.tabs權限）"
+   },
+   "options_opt9": {
+      "message": "顯示“切換到Reader View”上下文菜單項（需要重啟）"
+   },
+   "options_title": {
+      "message": "閱讀器視圖::選項"
+   }
+}

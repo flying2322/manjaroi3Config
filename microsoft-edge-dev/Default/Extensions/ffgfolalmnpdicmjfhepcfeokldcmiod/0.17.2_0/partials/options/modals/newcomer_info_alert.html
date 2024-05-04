@@ -1,0 +1,200 @@
+<div class="modal"  tabindex="-1">
+    <div class="modal-dialog" style="width: 600px;">
+        <div class="modal-content" ng-controller="NewcomerInfoAlertModalController">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                    ng-click="closeModal()">
+                    &times;
+                </button>
+
+                <h4 ng-show="isGuest()" class="modal-title">{{'options.layout.newcomer_info_alert.anonymous_title'|translate}}</h4>
+                <h4 ng-show="isUser()" class="modal-title">{{'options.layout.newcomer_info_alert.user_title'|translate}}</h4>
+                <h4 ng-show="isVIP()" class="modal-title">{{'options.layout.newcomer_info_alert.vip_title'|translate}}</h4>
+            </div>
+            <form ng-submit="onSubmit()">
+                <div class="modal-body">
+                    <div style="margin-bottom:10px">
+                        {{'options.layout.frequent_domain_alert.info'|translate}}
+                    </div>
+                    <div class="row" style="margin-left: -10px;">
+                        <div class="col-md-2">
+                            <div id="" class="app-contents">
+                                <a href="https://www.google.com" target="_blank">
+                                    <div class="app-img-container launch-click-target" aria-hidden="true" title="{{'options.layout.frequent_domain_alert.website.google'|translate}}" style="height: 64px; width: 64px;">
+                                        <img class="" alt="" src="/img/websites/google.png" width="64" height="64">
+                                    </div>
+                                    <div class="title launch-click-target" title="{{'options.layout.frequent_domain_alert.website.google'|translate}}">{{'options.layout.frequent_domain_alert.website.google'|translate}}</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div id="" class="app-contents">
+                                <a href="https://www.gmail.com" target="_blank">
+                                    <div class="app-img-container launch-click-target" aria-hidden="true" title="{{'options.layout.frequent_domain_alert.website.gmail'|translate}}" style="height: 64px; width: 64px;">
+                                        <img class="" alt="" src="/img/websites/gmail.png" width="64" height="64">
+                                    </div>
+                                    <div class="title launch-click-target" title="{{'options.layout.frequent_domain_alert.website.gmail'|translate}}">{{'options.layout.frequent_domain_alert.website.gmail'|translate}}</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="https://www.youtube.com" target="_blank">
+                                <div id="" class="app-contents">
+                                    <div class="app-img-container launch-click-target" aria-hidden="true" title="{{'options.layout.frequent_domain_alert.website.youtube'|translate}}" style="height: 64px; width: 64px;">
+                                        <img class="" alt="" src="/img/websites/youtube.png" width="64" height="64">
+                                    </div>
+                                    <div class="title launch-click-target" title="{{'options.layout.frequent_domain_alert.website.youtube'|translate}}">{{'options.layout.frequent_domain_alert.website.youtube'|translate}}</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="https://www.facebook.com" target="_blank">
+                                <div id="" class="app-contents">
+                                    <div class="app-img-container launch-click-target" aria-hidden="true" title="{{'options.layout.frequent_domain_alert.website.facebook'|translate}}" style="height: 64px; width: 64px;">
+                                        <img class="" alt="" src="/img/websites/facebook.png" width="64" height="64">
+                                    </div>
+                                    <div class="title launch-click-target" title="{{'options.layout.frequent_domain_alert.website.facebook'|translate}}">{{'options.layout.frequent_domain_alert.website.facebook'|translate}}</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="https://www.twitter.com" target="_blank">
+                                <div id="" class="app-contents">
+                                    <div class="app-img-container launch-click-target" aria-hidden="true" title="{{'options.layout.frequent_domain_alert.website.twitter'|translate}}" style="height: 64px; width: 64px;">
+                                        <img class="" alt="" src="/img/websites/twitter.png" width="64" height="64">
+                                    </div>
+                                    <div class="title launch-click-target" title="{{'options.layout.frequent_domain_alert.website.twitter'|translate}}">{{'options.layout.frequent_domain_alert.website.twitter'|translate}}</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="https://www.tumblr.com" target="_blank">
+                                <div id="" class="app-contents">
+                                    <div class="app-img-container launch-click-target" aria-hidden="true" title="{{'options.layout.frequent_domain_alert.website.tumblr'|translate}}" style="height: 64px; width: 64px;">
+                                        <img class="" alt="" src="/img/websites/tumblr.png" width="64" height="64">
+                                    </div>
+                                    <div class="title launch-click-target" title="{{'options.layout.frequent_domain_alert.website.tumblr'|translate}}">{{'options.layout.frequent_domain_alert.website.tumblr'|translate}}</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top:20px;margin-left: -10px;">
+                        <div class="col-md-2">
+                            <a href="https://www.instagram.com" target="_blank">
+                                <div id="" class="app-contents">
+                                    <div class="app-img-container launch-click-target" aria-hidden="true" title="{{'options.layout.frequent_domain_alert.website.instagram'|translate}}" style="height: 64px; width: 64px;">
+                                        <img class="" alt="" src="/img/websites/instagram.png" width="64" height="64">
+                                    </div>
+                                    <div class="title launch-click-target" title="{{'options.layout.frequent_domain_alert.website.instagram'|translate}}">{{'options.layout.frequent_domain_alert.website.instagram'|translate}}</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="https://www.blogger.com" target="_blank">
+                                <div id="" class="app-contents">
+                                    <div class="app-img-container launch-click-target" aria-hidden="true" title="{{'options.layout.frequent_domain_alert.website.blogger'|translate}}" style="height: 64px; width: 64px;">
+                                        <img class="" alt="" src="/img/websites/blogger.png" width="64" height="64">
+                                    </div>
+                                    <div class="title launch-click-target" title="{{'options.layout.frequent_domain_alert.website.blogger'|translate}}">{{'options.layout.frequent_domain_alert.website.blogger'|translate}}</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="https://www.voachinese.com" target="_blank">
+                                <div id="" class="app-contents">
+                                    <div class="app-img-container launch-click-target" aria-hidden="true" title="{{'options.layout.frequent_domain_alert.website.voa'|translate}}" style="height: 64px; width: 64px;">
+                                        <img class="" alt="" src="/img/websites/voa.png" width="64" height="64">
+                                    </div>
+                                    <div class="title launch-click-target" title="{{'options.layout.frequent_domain_alert.website.voa'|translate}}">{{'options.layout.frequent_domain_alert.website.voa'|translate}}</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="https://cn.nytimes.com" target="_blank">
+                                <div id="" class="app-contents">
+                                    <div class="app-img-container launch-click-target" aria-hidden="true" title="{{'options.layout.frequent_domain_alert.website.nytimes'|translate}}" style="height: 64px; width: 64px;">
+                                        <img class="" alt="" src="/img/websites/nytimes.jpg" width="64" height="64">
+                                    </div>
+                                    <div class="title launch-click-target" title="{{'options.layout.frequent_domain_alert.website.nytimes'|translate}}">{{'options.layout.frequent_domain_alert.website.nytimes'|translate}}</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="https://www.wsj.com/" target="_blank">
+                                <div id="" class="app-contents">
+                                    <div class="app-img-container launch-click-target" aria-hidden="true" title="{{'options.layout.frequent_domain_alert.website.wsj'|translate}}" style="height: 64px; width: 64px;">
+                                        <img class="" alt="" src="/img/websites/wsj.png" width="64" height="64">
+                                    </div>
+                                    <div class="title launch-click-target" title="{{'options.layout.frequent_domain_alert.website.wsj'|translate}}">{{'options.layout.frequent_domain_alert.website.wsj'|translate}}</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="https://chrome.google.com" target="_blank">
+                                <div id="" class="app-contents">
+                                    <div class="app-img-container launch-click-target" aria-hidden="true" title="{{'options.layout.frequent_domain_alert.website.chrome_webstore'|translate}}" style="height: 64px; width: 64px;">
+                                        <img class="" alt="" src="/img/websites/google_webstore.png" width="64" height="64">
+                                    </div>
+                                    <div class="title launch-click-target" title="{{'options.layout.frequent_domain_alert.website.chrome_webstore'|translate}}">{{'options.layout.frequent_domain_alert.website.chrome_webstore'|translate}}</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div ng-show="isGuest()" style="margin-top:30px">
+                        {{'options.layout.newcomer_info_alert.anomymous_limitations'|translate}} 
+                        <!--
+                        <a href="" font="-1" style="font-size:11px;color:#ccc;text-decoration: underline;" ng-click="openGuide()">{{'options.layout.newcomer_info_alert.open_guide'|translate}}</a>
+                        -->
+                    </div>
+                    <div ng-show="isUser()" style="margin-top:30px">
+                        {{'options.layout.newcomer_info_alert.user_limitations'|translate}} 
+                        <!--
+                        <a href="" font="-1" style="font-size:11px;color:#ccc;text-decoration: underline;" ng-click="openGuide()">{{'options.layout.newcomer_info_alert.open_guide'|translate}}</a>
+                        -->
+                    </div>
+                    <div ng-show="isVIP()" style="margin-top:30px">
+                        {{'options.layout.newcomer_info_alert.vip_limitations'|translate}} 
+                        <!--
+                        <a href="" font="-1" style="font-size:11px;color:#ccc;text-decoration: underline;" ng-click="openGuide()">{{'options.layout.newcomer_info_alert.open_guide'|translate}}</a>
+                        -->
+                    </div>
+                    <small ng-show="isVIP() || isUser() || isGuest()" style="padding-top:10px;color:#E91E63;" >
+
+                        {{'options.layout.newcomer_info_alert.close_other_tools'|translate}} 
+
+                    </small>
+                    <small ng-show="isVIP() || isUser()" style="padding-top:10px;color:#999;cursor:pointer" ng-click="openSafety()">
+
+                        {{'options.layout.newcomer_info_alert.open_safety'|translate}} 
+
+                    </small>
+
+                    <div  style="padding-top:20px">
+                    <div ng-show="isGuest()">
+                        {{'options.layout.about_data_traffic_modal.guest_title'|translate}}
+                        <small ng-bind-html="'{{'options.ss_subscription.data_traffic_notice_anonymous' | translate}}'"></small>
+                    </div>
+                    <div ng-show="isVIP()">
+                        {{'options.layout.about_data_traffic_modal.title'|translate}}
+                        <span ng-bind-html="'{{'options.ss_subscription.data_traffic_notice' | translate}}'"></span>
+                    </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="margin-top:0;">
+                    <button type="submit" class="btn btn-primary pull-right">
+                        {{'common.got_it'|translate}}
+                    </button>
+
+                    <div class="pull-right login_checkbox_wrapper"  ng-click="toggleNotShowAgain()" style="height=36px;line-height:36px;margin-right:10px;position: absolute;right: 100px;">
+                        <a class="unchecked" ng-class="{'checked': notShowAgainChecked}" tabindex="3"   href=""  style="position: relative;top: 16px;"></a>
+                        <label class="font-kai" style="position: relative;top: 5px;margin-left: 3px;">
+                            {{'common.do_not_show_again'|translate}}
+                        </label>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

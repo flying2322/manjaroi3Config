@@ -1,0 +1,31 @@
+[variant] Loaded new set of variants
+[kit] Successfully loaded 3 kits from /home/dom/.local/share/CMakeTools/cmake-tools-kits.json
+[proc] Executing command: /usr/bin/gcc -v
+[proc] The command: ninja --version failed with error: Error: spawn ninja ENOENT
+[proc] The command: ninja-build --version failed with error: Error: spawn ninja-build ENOENT
+[main] Configuring folder: Lession01 
+[proc] Executing command: /usr/bin/cmake --no-warn-unused-cli -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE -DCMAKE_BUILD_TYPE:STRING=Debug -DCMAKE_C_COMPILER:FILEPATH=/usr/bin/gcc -DCMAKE_CXX_COMPILER:FILEPATH=/usr/bin/g++ -S/home/dom/Dev/olas/Lession01 -B/home/dom/Dev/olas/Lession01/build -G "Unix Makefiles"
+[cmake] Not searching for unused variables given on the command line.
+[cmake] -- The C compiler identification is GNU 12.2.0
+[cmake] -- The CXX compiler identification is GNU 12.2.0
+[cmake] -- Detecting C compiler ABI info
+[cmake] -- Detecting C compiler ABI info - done
+[cmake] -- Check for working C compiler: /usr/bin/gcc - skipped
+[cmake] -- Detecting C compile features
+[cmake] -- Detecting C compile features - done
+[cmake] -- Detecting CXX compiler ABI info
+[cmake] -- Detecting CXX compiler ABI info - done
+[cmake] -- Check for working CXX compiler: /usr/bin/g++ - skipped
+[cmake] -- Detecting CXX compile features
+[cmake] -- Detecting CXX compile features - done
+[cmake] -- Configuring done
+[cmake] -- Generating done
+[cmake] -- Build files have been written to: /home/dom/Dev/olas/Lession01/build
+[main] Building folder: Lession01 
+[build] Starting build
+[proc] Executing command: /usr/bin/cmake --build /home/dom/Dev/olas/Lession01/build --config Debug --target all -j 14 --
+[build] [ 33%] Building CXX object CMakeFiles/ZITONG.dir/main.cpp.o
+[build] [ 66%] Building CXX object CMakeFiles/ZITONG.dir/adder.cpp.o
+[build] [100%] Linking CXX executable ZITONG
+[build] [100%] Built target ZITONG
+[build] Build finished with exit code 0

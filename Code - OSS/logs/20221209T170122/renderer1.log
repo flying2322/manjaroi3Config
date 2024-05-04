@@ -1,0 +1,3 @@
+[2022-12-09 17:01:24.841] [renderer1] [warning] [twxs.cmake]: Cannot register 'cmake.cmakePath'. This property is already registered.
+[2022-12-09 17:01:26.038] [renderer1] [error] [Extension Host] [CMakeTools] 2022-12-09T09:01:26.019Z [error] [rollbar] "sourceDirectory" is not a directory {"sourceDirectory":"/home/dom/Dev/olas/Lession01"}
+[2022-12-09 17:01:26.374] [renderer1] [error] [Extension Host] [CMakeTools] 2022-12-09T09:01:26.339Z [error] [rollbar] "sourceDirectory" is not a directory {"sourceDirectory":"/home/dom/Dev/olas/Lession01"}

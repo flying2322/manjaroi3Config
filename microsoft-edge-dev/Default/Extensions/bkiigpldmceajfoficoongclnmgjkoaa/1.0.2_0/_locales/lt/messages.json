@@ -1,0 +1,122 @@
+{
+   "app_command": {
+      "message": "Perjungti skaitytojo vaizdą"
+   },
+   "app_description": {
+      "message": "Pašalina netvarką, pavyzdžiui, mygtukus, fono paveikslėlius, ir keičia puslapio teksto dydį, kontrastą ir išdėstymą, kad būtų lengviau perskaityti"
+   },
+   "app_name": {
+      "message": "Skaitytojo vaizdas"
+   },
+   "app_title": {
+      "message": "Įkeliama ... :: Skaitytojo vaizdas"
+   },
+   "app_ui_btn_fullscreen": {
+      "message": "Perjungti į viso ekrano rodmenis"
+   },
+   "app_ui_btn_imgs": {
+      "message": "Perjungti vaizdus"
+   },
+   "app_ui_btn_next": {
+      "message": "pereiti į kitą puslapį (Meta + rodyklė dešinėn)"
+   },
+   "app_ui_btn_prev": {
+      "message": "pereiti į ankstesnį puslapį (Meta + rodyklė kairėn)"
+   },
+   "app_ui_btn_print": {
+      "message": "Spausdinkite skaitytojo rodinyje"
+   },
+   "app_ui_btn_rateUs": {
+      "message": "Prašau Įvertink mus! ⭑⭑⭑⭑⭑"
+   },
+   "app_ui_btn_site_gd": {
+      "message": "Mūsų svetainėje galite išsaugoti straipsnį savo „Google“ diske"
+   },
+   "app_ui_btn_site_pc": {
+      "message": "Mūsų svetainėje galite išsaugoti straipsnį savo kompiuteryje"
+   },
+   "app_ui_btn_speech": {
+      "message": "Perskaitykite šį straipsnį"
+   },
+   "app_ui_label1": {
+      "message": "Visas plotis"
+   },
+   "app_ui_label2": {
+      "message": "Nėra aukščio"
+   },
+   "app_ui_label3": {
+      "message": "Šviesa"
+   },
+   "app_ui_label4": {
+      "message": "Tamsi"
+   },
+   "app_ui_label5": {
+      "message": "Mėlyna"
+   },
+   "app_ui_label6": {
+      "message": "Slėpti"
+   },
+   "app_ui_label7": {
+      "message": "Rodyti"
+   },
+   "app_ui_notify_wrong_content": {
+      "message": "Deja, pirminis turinys nebegalimas. Įkelkite kilmės turinį ir bandykite dar kartą"
+   },
+   "options_header": {
+      "message": "UI tinkinimas"
+   },
+   "options_opt1": {
+      "message": "Rodyti „spausdinimo mygtuką“ skaitytojo rodinyje"
+   },
+   "options_opt10": {
+      "message": "Automatiškai perjungti į viso ekrano režimą"
+   },
+   "options_opt11": {
+      "message": "Individualus stilius"
+   },
+   "options_opt12": {
+      "message": "Vartotojo stiliai faktiniam skaitytojo vaizdui"
+   },
+   "options_opt13": {
+      "message": "Nuorodos atidarymas"
+   },
+   "options_opt14": {
+      "message": "Atidarykite nuorodas naujuose skirtukuose"
+   },
+   "options_opt15": {
+      "message": "Atidarykite nuorodas skaitytojo rodinio režime"
+   },
+   "options_opt16": {
+      "message": "Įvairūs"
+   },
+   "options_opt17": {
+      "message": "Atidarykite DUK puslapį apie atnaujinimus"
+   },
+   "options_opt2": {
+      "message": "Rodyti „išsaugoti mygtuką“ skaitytojo rodinyje"
+   },
+   "options_opt3": {
+      "message": "Rodyti „viso ekrano mygtuką“ skaitytojo rodinyje"
+   },
+   "options_opt4": {
+      "message": "Rodyti „kalbos mygtuką“ skaitytojo rodinyje"
+   },
+   "options_opt5": {
+      "message": "Rodyti „perjungti vaizdų mygtuką“ skaitytojo rodinyje"
+   },
+   "options_opt6": {
+      "message": "Rodyti „naršymo mygtukus“ skaitytojo rodinyje"
+   },
+   "options_opt7": {
+      "message": "Rodyti kontekstinio meniu elementą „Atidaryti skaitytojo vaizde“ (reikia iš naujo paleisti) (reikalingas „chrome.tabs“ leidimas)"
+   },
+   "options_opt8": {
+      "message": "Rodyti kontekstinio meniu elementą „Atidaryti foniniame skaitytojo rodinyje“ (reikia iš naujo paleisti) (reikalingas „chrome.tabs“ leidimas)"
+   },
+   "options_opt9": {
+      "message": "Rodyti kontekstinio meniu elementą „Perjungti į skaitytojo rodinį“ (reikia iš naujo paleisti)"
+   },
+   "options_title": {
+      "message": "Skaitytojo vaizdas :: Parinktys"
+   }
+}

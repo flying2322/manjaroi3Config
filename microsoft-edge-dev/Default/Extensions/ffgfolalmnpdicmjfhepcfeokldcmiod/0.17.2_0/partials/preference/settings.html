@@ -1,0 +1,234 @@
+
+<div class="menu page" style="background-image:url('../../img/trial_bg.jpg'); color: #fff;">
+    <div id="back" class="back" ng-click="gotoPopup()"></div>
+
+    <div class="section" style="margin-top:16px">
+
+        <span class="section-title" style="font-size:16px" translate="popup.settings.title"></span>
+    </div>
+
+
+    <div class="mode section mode-section" style="margin-top:16px">
+
+        <span class="section-title" translate="popup.settings.routing_mode"></span>
+
+        <div class="tips-box" ng-init="domain_mode_tips=''" ng-show="domain_mode_tips">
+            <div class="tips">
+                <div class="content">
+                    {{ domain_mode_tips }}
+                </div>
+            </div>
+        </div>
+
+        <div class="modes btn-group btn-group-justified btn-group-sm">
+            <a href="" class="btn"
+               ng-class="{'btn-success': $root.mode=='auto' , 'btn-default': $root.mode!='auto'}"
+               ng-mouseenter="showDomainModeTips('auto')"
+               ng-mouseleave="showDomainModeTips()"
+               ng-click="switchMode('auto')">
+                {{"popup.menu.auto.name" | translate}}
+            </a>
+            <a href="" class="btn"
+               ng-class="{'btn-warning':$root.mode=='always' , 'btn-default': $root.mode!='always'}"
+               ng-mouseenter="showDomainModeTips('always')"
+               ng-mouseleave="showDomainModeTips()"
+               ng-click="switchMode('always')">
+                {{'popup.menu.always.name'|translate}}
+            </a>
+            <a href="" class="btn"
+               ng-class="{'btn-danger':$root.mode=='never', 'btn-default': $root.mode!='never'}"
+               ng-mouseenter="showDomainModeTips('never')"
+               ng-mouseleave="showDomainModeTips()"
+               ng-click="switchMode('never')">
+                {{'popup.menu.never.name'|translate}}
+            </a>
+        </div>
+    </div>
+
+
+    <div class="isp section isp-section" style="margin-top:16px">
+
+        <span class="section-title" translate="popup.settings.isp_mode"></span>
+
+
+        <div class="tips-box" ng-init="isp_mode_tips=''" ng-show="isp_mode_tips">
+            <div class="tips">
+                <div class="content">
+                    {{ isp_mode_tips }}
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-group btn-group-justified btn-group-sm">
+            <a href="" class="btn"
+               ng-class="{'btn-success': $root.isp_mode=='CT' , 'btn-default': $root.isp_mode!='CT'}"
+               ng-mouseenter="showISPModeTips('CT')"
+               ng-mouseleave="showISPModeTips()"
+               ng-click="switchISPMode('CT')">
+                {{"popup.settings.isp_ct.name" | translate}}
+            </a>
+            <a href="" class="btn"
+               ng-class="{'btn-success':$root.isp_mode=='CU' , 'btn-default': $root.isp_mode!='CU'}"
+               ng-mouseenter="showISPModeTips('CU')"
+               ng-mouseleave="showISPModeTips()"
+               ng-click="switchISPMode('CU')">
+                {{'popup.settings.isp_cu.name'|translate}}
+            </a>
+            <a href="" class="btn"
+               ng-class="{'btn-success':$root.isp_mode=='CM', 'btn-default': $root.isp_mode!='CM'}"
+               ng-mouseenter="showISPModeTips('CM')"
+               ng-mouseleave="showISPModeTips()"
+               ng-click="switchISPMode('CM')">
+                {{'popup.settings.isp_cm.name'|translate}}
+            </a>
+            <a href="" class="btn"
+               ng-class="{'btn-success':$root.isp_mode=='CE' , 'btn-default': $root.isp_mode!='CE'}"
+               ng-mouseenter="showISPModeTips('CE')"
+               ng-mouseleave="showISPModeTips()"
+               ng-click="switchISPMode('CE')">
+                {{'popup.settings.isp_ce.name'|translate}}
+            </a>
+            <a href="" class="btn"
+               ng-class="{'btn-danger':$root.isp_mode=='none', 'btn-default': $root.isp_mode!='none'}"
+               ng-mouseenter="showISPModeTips('none')"
+               ng-mouseleave="showISPModeTips()"
+               ng-click="switchISPMode('none')">
+                {{'popup.settings.isp_none.name'|translate}}
+            </a>
+        </div>
+    </div>
+
+    <!--
+
+    <div class="data_saving section data-saving-section" style="margin-top:16px">
+
+        <span class="section-title" translate="popup.settings.data_saving_mode"></span>
+
+
+        <div class="tips-box" ng-init="data_saving_mode_tips=''" ng-show="data_saving_mode_tips">
+            <div class="tips">
+                <div class="content">
+                    {{ data_saving_mode_tips }}
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-group btn-group-justified btn-group-sm">
+            <a href="" class="btn"
+               ng-class="{'btn-success': $root.data_saving_mode=='full' , 'btn-default': $root.data_saving_mode!='full'}"
+               ng-mouseenter="showDataSavingModeTips('full')"
+               ng-mouseleave="showDataSavingModeTips()"
+               ng-click="switchDataSavingModeTips('full')">
+                {{"popup.settings.data_saving_full.name" | translate}}
+            </a>
+            <a href="" class="btn"
+               ng-class="{'btn-warning':$root.data_saving_mode=='half' , 'btn-default': $root.data_saving_mode!='half'}"
+               ng-mouseenter="showDataSavingModeTips('half')"
+               ng-mouseleave="showDataSavingModeTips()"
+               ng-click="switchDataSavingModeTips('half')">
+                {{'popup.settings.data_saving_half.name'|translate}}
+            </a>
+            <a href="" class="btn"
+               ng-class="{'btn-warning':$root.data_saving_mode=='quarter', 'btn-default': $root.data_saving_mode!='quarter'}"
+               ng-mouseenter="showDataSavingModeTips('quarter')"
+               ng-mouseleave="showDataSavingModeTips()"
+               ng-click="switchDataSavingModeTips('quarter')">
+                {{'popup.settings.data_saving_quarter.name'|translate}}
+            </a>
+            <a href="" class="btn"
+               ng-class="{'btn-danger':$root.data_saving_mode=='stop', 'btn-default': $root.data_saving_mode!='stop'}"
+               ng-mouseenter="showDataSavingModeTips('stop')"
+               ng-mouseleave="showDataSavingModeTips()"
+               ng-click="switchDataSavingModeTips('stop')">
+                {{'popup.settings.data_saving_stop.name'|translate}}
+            </a>
+        </div>
+    </div>
+-->
+    <div class="servers-mode section servers-mode-section" style="margin-top:16px">
+
+        <span class="section-title" translate="popup.settings.servers_mode"></span>
+
+        <div class="tips-box" ng-init="servers_mode_tips=''" ng-show="servers_mode_tips">
+            <div class="tips">
+                <div class="content">
+                    {{servers_mode_tips}}
+                </div>
+            </div>
+        </div>
+
+        <div class="modes btn-group btn-group-justified btn-group-sm">
+            <a href="" class="btn"
+               ng-class="{'btn-success': $root.servers_mode=='auto' , 'btn-default': $root.servers_mode!='auto'}"
+               ng-mouseenter="showServersModeTips('auto')"
+               ng-mouseleave="showServersModeTips()"
+               ng-click="switchServersMode('auto')">
+                {{"popup.settings.servers_mode_auto.name" | translate}}
+            </a>
+            <a href="" class="btn"
+               ng-class="{'btn-warning':$root.servers_mode=='manual' , 'btn-default': $root.servers_mode!='manual'}"
+               ng-mouseenter="showServersModeTips('manual')"
+               ng-mouseleave="showServersModeTips()"
+               ng-click="switchServersMode('manual')">
+                {{"popup.settings.servers_mode_manual.name" | translate}}
+            </a>
+        </div>
+    </div>
+
+
+
+    <div class="servers-mode section servers-mode-section disconnected" style="margin-top:16px" ng-mouseleave="hideServersSelect()" ng-hide="$root.servers_mode=='auto'">
+        <div class="tips-box" ng-init="hover_server_tips=''" ng-show="hover_server_tips">
+            <div class="tips">
+                <div class="content" ng-bind-html="hover_server_tips">
+
+                </div>
+            </div>
+        </div>
+        <div id="select-country" class="flag-24 {{getTopServer().country.toLowerCase()}}" ng-show="$root.servers.length">
+            <div id="select-style">
+                <div id="country-selected" ng-class="{opened: showServerSelect}" ng-click="toggleServersSelect()">
+                    <!--
+                    {{'country.' + getTopServer().country | translate}}
+                -->
+                    <div class="row" style="padding-left:27px"
+                        ng-mouseenter="showServersTips(getTopServer())"
+                        ng-mouseleave="showServersTips()"
+                    >
+                      <span class="col-sm-6">{{'country.' + getTopServer().country | translate}}</span>
+                      <span class="col-sm-6">
+                                {{getTopServer().score.toFixed(1)}}
+                      </span>
+                    </div>
+                </div>
+            </div>
+            
+            <ul id="choices" ng-class="{opened: showServerSelect}">
+                <li ng-repeat="server in displayServers" class="country-option flag-24 {{makeLowerCase(server.country)}}"               
+                ng-mouseenter="showServersTips(server)"
+               ng-mouseleave="showServersTips()"
+               ng-click="selectServer(server)">
+       
+                    {{'country.' + server.country | translate}}
+           
+                <!--
+                <span style="width: 100px;padding-left:37px">
+                    {{'country.' + server.country | translate}}
+                </span>
+                      <span style="width: 40px;">
+                                {{server.score.toFixed(1)}}
+                      </span>
+                  -->
+                <li>
+            </ul>
+        
+        </div>
+    </div>
+<!--
+
+
+
+-->
+
+
+</div>

@@ -1,0 +1,205 @@
+
+    <div class="app-alerts animated bounce" ng-if="'blog' != currentState">
+<!--
+        <div style="float:right">
+
+            <i class="fa fa-arrow-circle-up" style="cursor:pointer" ng-click="importRule()"/>
+            <i class="fa fa-arrow-circle-down" style="cursor:pointer;margin-left:10px" ng-click="exportRules()"/>
+        </div>
+-->
+        <div ng-if="$root.isDue()" class="app-alert alert alert-danger">
+            <i class="glyphicon glyphicon-usd pull-right" style="font-size:32px; margin: -3px 10px 0 0;"></i>
+
+            <p translate="options.alerts.expire"></p>
+            <div>
+
+                <div>
+                    <a href="#/invitations" class="btn btn-default">
+                        {{'options.alerts.invite_friends'|translate}}
+                        <small>{{'options.alerts.watch_detail'|translate}}</small>
+                    </a>
+                </div>
+                <div>
+                    <a href="#/invitations" class="btn btn-default" style="margin-top:10px">
+                        {{'options.alerts.edu_email_verification'|translate}}
+                        <small>{{'options.alerts.watch_detail'|translate}}</small>
+                    </a>
+                </div>
+
+                <!--
+                <div>
+                <a href="{{payUrl}}" target="_blank" class="btn btn-default" disabled style="margin-top: 10px; cursor: not-allowed;">
+                        {{'options.alerts.buy_vip'|translate}}
+                        <small>{{'options.alerts.not_yet_open'|translate}}</small>
+                    </a>
+                </div>
+                -->
+            </div>
+            <hr> {{'options.alerts.free_server'|translate}}</hr>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="tabbed-content icon-tabs text-center">
+        <ul class="tabs" ng-init="tab = 1" style="padding-top:20px">
+            <li class="tabs-li" ng-class="{'active' : tab == 1}" ng-click="tab = 1" style="">
+                <span style="padding: 6px 4px;">
+                    
+                    <!--<img width="18" src="/img/icon-auto-active_48.png" style="height:18px"/>-->
+
+                    {{'options.domain_list.tab_title'|translate}}&nbsp;({{domainsCount()}})
+                </span>
+            </li>
+            <li class="tabs-li" ng-class="{'active' : tab == 2}" ng-click="tab = 2">
+                <span style="padding: 6px 4px;">
+                     <!--<img width="18" src="/img/icon-rejected_48.png" style="height:18px"/>-->
+                    {{'options.domain_list.reject_domain_tab_title'|translate}}&nbsp;({{rejectDomainsCount()}})
+                </span>
+            </li>
+            <li class="tabs-li" ng-class="{'active' : tab == 3}" ng-click="tab = 3">
+                <span style="padding: 6px 4px;">
+                    <!--<img width="18" src="/img/ip_proxy_48x48.png" style="height:18px"/>-->
+                    {{'options.domain_list.ip_rule_tab_title'|translate}}&nbsp;({{ipsCount()}})
+                </span>
+            </li>
+            <li class="tabs-li" ng-class="{'active' : tab == 4}" ng-click="tab = 4">
+                <span style="padding: 6px 4px;">
+                    <!--<img width="18" src="/img/ip_reject_48x48.png" style="height:18px"/>-->
+                    {{'options.domain_list.reject_ip_rule_tab_title'|translate}}&nbsp;({{rejectIpsCount()}})
+                </span>
+            </li>
+        </ul>
+        <ul class="content" style="padding-inline-start: 20px;">
+            <li class="active" ng-show="tab == 1" style="display: inline-block">
+                <div class="tab-content maikr">
+                    <div class="page-header">
+                        <h2>{{'options.domain_list.title'|translate}}</h2>
+                        <div class="sort dropdown right">
+                            <a class="btn btn-link btn-xs" data-animation="am-flip-x" data-placement="bottom-right" bs-dropdown="dropdown">
+                                <span ng-if="sorter == '-_mtime'">{{'options.domain_list.sort_by_time'|translate}}</span>
+                                <span ng-if="sorter == 'name'">{{'options.domain_list.sort_by_char'|translate}}</span>
+                                <span class="caret"></span>
+                            </a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <form class="add-domain" ng-submit="addDomain()">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="{{'options.domain_list.add_domain_placeholder'|translate}}" ng-change="clearError()" ng-model="domainToAdd" />
+                            <div class="input-group-btn">
+                                <input type="submit" value="{{'options.domain_list.add_domain'|translate}}" class="btn btn-success" />
+                            </div>
+                        </div>
+                    </form>
+                    <div class="alert {{proxy_domain_alertStyle}} text-center">
+                        {{proxy_domain_alertTitle}}
+                    </div>
+
+                    <div class="domains row">
+                        <div ng-repeat="domain in $root.domains|orderBy: sorter" ng-if="!domain._deleted && !domain._hidden" class="col-xs-6">
+                            <domain domain="domain" status="'normal'"></domain>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="active" ng-show="tab == 2" style="display: inline-block">
+                <div class="tab-content maikr">
+                    <div class="page-header">
+                        <h2>{{'options.domain_list.reject_domains_title'|translate}}</h2>
+                        <div class="sort dropdown right">
+                            <a class="btn btn-link btn-xs" data-animation="am-flip-x" data-placement="bottom-right" bs-dropdown="dropdown">
+                                <span ng-if="reject_rule_sorter == '-_mtime'">{{'options.domain_list.sort_by_time'|translate}}</span>
+                                <span ng-if="reject_rule_sorter == 'name'">{{'options.domain_list.sort_by_char'|translate}}</span>
+                                <span class="caret"></span>
+                            </a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <form class="add-domain" ng-submit="addRejectDomain()">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="{{'options.domain_list.add_reject_domain_placeholder'|translate}}" ng-change="clearError()" ng-model="rejectDomainToAdd" />
+                            <div class="input-group-btn">
+                                <input type="submit" value="{{'options.domain_list.add_reject_domain'|translate}}" class="btn btn-success" />
+                            </div>
+                        </div>
+                    </form>
+                    <div class="alert {{reject_domain_alertStyle}} text-center">
+                        {{reject_domain_alertTitle}}
+                    </div>
+
+                    <div class="domains row">
+                        <div ng-repeat="domain in $root.rejectDomains|orderBy: reject_rule_sorter" ng-if="!domain._deleted && !domain._hidden" class="col-xs-6">
+                            <domain domain="domain" status="'reject'"></domain>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="active" ng-show="tab == 3" style="display: inline-block">
+                <div class="tab-content maikr">
+                    <div class="page-header">
+                        <h2>{{'options.domain_list.ip_rule_title'|translate}}</h2>
+                        <div class="clearfix"></div>
+                    </div>
+                    <form class="add-domain" ng-submit="addIpRule()">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="{{'options.domain_list.add_ip_rule_placeholder'|translate}}" ng-pattern='/^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\/([0-9]|[1-2][0-9]|3[0-2]))?$/' ng-change="clearError()" ng-model="ipRuleToAdd" />
+                            <div class="input-group-btn">
+                                <input type="submit" value="{{'options.domain_list.add_ip_rule'|translate}}" class="btn btn-success" />
+                            </div>
+                        </div>
+                    </form>
+                    <div class="alert {{ip_rule_alertStyle}} text-center">
+                        {{ip_rule_alertTitle}}
+                    </div>
+
+                    <div class="domains row">
+                        <div ng-repeat="iprule in $root.ips" ng-if="!iprule._deleted && !iprule._hidden" class="col-xs-6">
+                            <ip-rule ip-rule="iprule" status="'normal'"></ip-rule>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="active" ng-show="tab == 4" style="display: inline-block">
+                <div class="tab-content maikr">
+                    <div class="page-header">
+                        <h2>{{'options.domain_list.reject_ip_rule_title'|translate}}</h2>
+                        <div class="clearfix"></div>
+                    </div>
+                    <form class="add-domain" ng-submit="addRejectIpRule()">
+                        <div class="input-group">
+                            <input type="text" class="form-control" ng-pattern='/^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\/([0-9]|[1-2][0-9]|3[0-2]))?$/' ng-change="clearError()" placeholder="{{'options.domain_list.add_reject_ip_rule_placeholder'|translate}}" ng-change="clearError()" ng-model="rejectIpRuleToAdd" />
+                            <div class="input-group-btn">
+                                <input type="submit" value="{{'options.domain_list.add_reject_ip_rule'|translate}}" class="btn btn-success" />
+                            </div>
+                        </div>
+                    </form>
+                    <div class="alert {{reject_ip_rule_alertStyle}} text-center">
+                        {{reject_ip_rule_alertTitle}}
+                    </div>
+
+                    <div class="domains row">
+                        <div ng-repeat="iprule in $root.rejectIps" ng-if="!iprule._deleted && !iprule._hidden" class="col-xs-6">
+                            <ip-rule ip-rule="iprule" status="'reject'"></ip-rule>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

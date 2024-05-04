@@ -1,0 +1,40 @@
+{
+   "background": {
+      "page": "background.html",
+      "persistent": false
+   },
+   "browser_action": {
+      "default_icon": {
+         "32": "images/icon-text-32-2.png",
+         "64": "images/icon-text-64-2.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "Best Reader View"
+   },
+   "content_scripts": [ {
+      "css": [ "content.css", "signin.css" ],
+      "js": [ "minis/Readability.min.js", "minis/Readability-readerable.min.js", "minis/yamd5.min.js", "images/svgs.js", "auto-reader.js", "always-start-reader.js", "note-highlight-store.js", "signin.js", "content.js" ],
+      "matches": [ "*://*/*" ],
+      "run_at": "document_idle"
+   } ],
+   "content_security_policy": "img-src chrome://favicon https://upload.wikimedia.org; script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com https://apis.google.com; object-src 'self'",
+   "description": "Tired of cluttered web pages full of commericals? Best Reader View cleans all up and renders the only main article of the page!",
+   "icons": {
+      "128": "images/icon-store-128.png",
+      "32": "images/icon-text-32.png",
+      "64": "images/icon-text-64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu7opdjVrOuHp7ygho/+HE4b2MiXKh67Q0yzk0dM2Jfc9tAX9QeE3PDMALnSLPxwwiSo5zM3TUa1fcVagfL8f+QfNpW4x+whSebuaWYbip/zYtOj+8PrUESOp9Y6kXPzls9TityE5b09Kz6gt5ZMwF6OnJE7NafXUIRrLKX3edJwEfxxaw4OXPHJNqSni3zRNIS9QQIYEwUx/6tFUYCyiHR++gHm1Dw88U6pt4Fio6PrVJ8jxf4ArdP+cr/eOL0THxLiqCfqvJz3M39ltmbvW9CJroWjJvvhLN6pynZaBQROb5dAOI4kDJzCkdKGhzAMzKN9CNXt9f+ckNrtIcEOOBwIDAQAB",
+   "manifest_version": 2,
+   "name": "Best Reader View",
+   "oauth2": {
+      "client_id": "283963152595-36etu9l60le171l15kdn9rqcvq0tdeh2.apps.googleusercontent.com",
+      "scopes": [ "https://www.googleapis.com/auth/userinfo.email", "https://www.googleapis.com/auth/userinfo.profile" ]
+   },
+   "options_page": "options.html",
+   "permissions": [ "storage", "activeTab", "identity", "chrome://favicon/", "contextMenus" ],
+   "short_name": "Reader",
+   "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+   "version": "1.2.6",
+   "web_accessible_resources": [ "images/*.png" ]
+}

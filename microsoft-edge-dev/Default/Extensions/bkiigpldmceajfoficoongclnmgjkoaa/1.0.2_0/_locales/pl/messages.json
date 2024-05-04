@@ -1,0 +1,122 @@
+{
+   "app_command": {
+      "message": "Przełącz widok czytelnika"
+   },
+   "app_description": {
+      "message": "Usuwa bałagan, jak przyciski, obrazy tła i zmienia rozmiar tekstu, kontrast i układ strony dla lepszej czytelności"
+   },
+   "app_name": {
+      "message": "Widok czytelnika"
+   },
+   "app_title": {
+      "message": "Ładowanie ... :: Widok czytelnika"
+   },
+   "app_ui_btn_fullscreen": {
+      "message": "Przełącz do odczytu pełnoekranowego"
+   },
+   "app_ui_btn_imgs": {
+      "message": "Przełącz obrazy"
+   },
+   "app_ui_btn_next": {
+      "message": "przejdź do następnej strony (Meta + klawisz strzałki w prawo)"
+   },
+   "app_ui_btn_prev": {
+      "message": "przejdź do poprzedniej strony (Meta + klawisz strzałki w lewo)"
+   },
+   "app_ui_btn_print": {
+      "message": "Wydrukuj w widoku czytelnika"
+   },
+   "app_ui_btn_rateUs": {
+      "message": "Oceń nas! ⭑⭑⭑⭑⭑"
+   },
+   "app_ui_btn_site_gd": {
+      "message": "W naszej witrynie możesz zapisać artykuł na dysku Google"
+   },
+   "app_ui_btn_site_pc": {
+      "message": "Na naszej stronie możesz zapisać artykuł na swoim komputerze"
+   },
+   "app_ui_btn_speech": {
+      "message": "Przeczytaj ten artykuł"
+   },
+   "app_ui_label1": {
+      "message": "Pełna szerokość"
+   },
+   "app_ui_label2": {
+      "message": "Bez wysokości"
+   },
+   "app_ui_label3": {
+      "message": "Lekki"
+   },
+   "app_ui_label4": {
+      "message": "Ciemny"
+   },
+   "app_ui_label5": {
+      "message": "niebieski"
+   },
+   "app_ui_label6": {
+      "message": "Ukryć"
+   },
+   "app_ui_label7": {
+      "message": "Pokazać"
+   },
+   "app_ui_notify_wrong_content": {
+      "message": "Przepraszamy, oryginalna treść nie jest już dostępna. Załaduj treść oryginału i spróbuj ponownie"
+   },
+   "options_header": {
+      "message": "Dostosowywanie interfejsu użytkownika"
+   },
+   "options_opt1": {
+      "message": "Pokaż „przycisk drukowania” w widoku czytnika"
+   },
+   "options_opt10": {
+      "message": "Automatycznie przełącz na tryb pełnoekranowy"
+   },
+   "options_opt11": {
+      "message": "Niestandardowa stylizacja"
+   },
+   "options_opt12": {
+      "message": "Style użytkownika dla rzeczywistego widoku czytelnika"
+   },
+   "options_opt13": {
+      "message": "Otwarcie łącza"
+   },
+   "options_opt14": {
+      "message": "Otwórz linki w nowych kartach"
+   },
+   "options_opt15": {
+      "message": "Otwórz łącza w trybie widoku czytnika"
+   },
+   "options_opt16": {
+      "message": "różne"
+   },
+   "options_opt17": {
+      "message": "Otwórz stronę często zadawanych pytań na temat aktualizacji"
+   },
+   "options_opt2": {
+      "message": "Pokaż „przycisk Zapisz” w widoku czytnika"
+   },
+   "options_opt3": {
+      "message": "Pokaż „przycisk pełnoekranowy” w widoku czytnika"
+   },
+   "options_opt4": {
+      "message": "Pokaż „przycisk mowy” w widoku czytnika"
+   },
+   "options_opt5": {
+      "message": "Pokaż „przycisk przełączania obrazów” w widoku czytnika"
+   },
+   "options_opt6": {
+      "message": "Pokaż „przyciski nawigacyjne” w widoku czytnika"
+   },
+   "options_opt7": {
+      "message": "Pokaż element menu kontekstowego „Otwórz w widoku czytelnika” (wymagane ponowne uruchomienie) (wymaga pozwolenia chrome.tabs)"
+   },
+   "options_opt8": {
+      "message": "Pokaż element menu kontekstowego „Otwórz w tle Widok czytnika” (wymagane ponowne uruchomienie) (wymaga pozwolenia chrome.tabs)"
+   },
+   "options_opt9": {
+      "message": "Pokaż pozycję menu kontekstowego „Przełącz do widoku czytelnika” (wymagane ponowne uruchomienie)"
+   },
+   "options_title": {
+      "message": "Widok czytelnika :: Opcje"
+   }
+}

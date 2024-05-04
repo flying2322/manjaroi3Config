@@ -1,0 +1,231 @@
+<!--
+<div class="menu page" style="background-image:url('../../img/trial_bg.jpg'); color: #fff;" ng-class="{'locked' : !$root.isVIP()}">
+-->
+
+<div class="menu page" style="background-image:url('../../img/trial_bg.jpg'); color: #fff;">
+
+<div style="position: absolute; top: 11px; right: 10px;">
+    <div id="preferences" style="float:right" ng-attr-title="{{'popup.settings.title'|translate}}" ng-click="gotoPreference()" ng-show="$root.isVIP()"></div>
+
+    <div id="notifications" class="badge1 fa fa-bell-o" ng-show="$root.user.profile.notification_count" data-badge="{{ $root.user.profile.notification_count }}" style="cursor:pointer;margin-right: 6px;" ng-attr-title="{{'popup.notifications.title'|translate}}" ng-click="gotoNotifications()"></div>
+    <div id="notifications" class="fa fa-bell-o" ng-show="!$root.user.profile.notification_count" style="cursor:pointer;margin-right: 6px;" ng-attr-title="{{'popup.notifications.title'|translate}}" ng-click="gotoNotifications()"></div>
+</div>
+
+
+
+    <div ng-switch x-on="state" class="domain-section">
+        <!--
+        <div class="domain section" ng-if="$root.needDownloadNewVer">
+            <span class="section-title" style="color:#F06292">
+                                {{'options.layout.found_new_version'|translate}}
+                    <a  style="color:#E91E63" target="_blank" style="cursor:pointer" href="https://chrome.google.com/webstore/detail/ffgfolalmnpdicmjfhepcfeokldcmiod">{{'options.layout.chrome_app_store'|translate}}</a>
+                    {{'options.layout.download_newest'|translate}}
+            </span>
+        </div>
+        -->
+
+        <div class="domain section block" ng-switch-when="blocked"><!-- blocked -->
+            <div ng-if="blockedDomains.length &gt; 0">
+                <span class="section-title" style="text-align: left;">{{'popup.menu.unavailable_domains'|translate}}:</span>
+
+                <ul class="block-list list-unstyled">
+                    <li ng-repeat="domain in blockedDomains">
+                        <label style="cursor:pointer">
+                            <input type="checkbox" ng-model="domain.selected">
+                            <span class="">{{ domain.name }}</span>
+                        </label>
+                    </li>
+                </ul>
+                <!--
+                <button type="button" class="add btn btn-block btn-sm"
+                        ng-class="{'btn-default': blockedDomains.length == 0, 'btn-success': blockedDomains.length != 0}"
+                        ng-click="addSelectedDomains()" ng-disabled="!$root.isVIP()">
+                    <i class="fa fa-plus"></i>
+                    <span ng-if="!$root.isVIP()">{{'popup.menu.add_domain_novip'|translate}}</span>
+                    <span ng-if="$root.isVIP()"> {{'popup.menu.add_domain'|translate}}</span>
+                </button>
+                -->
+                <button type="button" class="add btn btn-block btn-sm"
+                        ng-class="{'btn-default': blockedDomains.length == 0, 'btn-success': blockedDomains.length != 0}"
+                        ng-click="addSelectedDomains()" ng-if="$root.isVIP()">
+                    <i class="fa fa-plus"></i>
+                    <span> {{'popup.menu.add_domain'|translate}}</span>
+                </button>
+                <button type="button" class="add new btn btn-block btn-default btn-sm"
+                        ng-class="btn-default"
+                        ng-click="openConsole()" ng-if="!$root.isVIP()"></i>
+                    <span>{{'popup.menu.add_domain_novip'|translate}}</span>
+                </button>
+
+            </div>
+
+            <div ng-if="rejectedDomains.length &gt; 0">
+                <span class="section-title" style="text-align: left;">{{'popup.menu.rejected_domains'|translate}}:</span>
+
+                <ul class="block-list list-unstyled">
+                    <li ng-repeat="domain in rejectedDomains">
+                        <label style="cursor:pointer">
+                            <input type="checkbox" ng-model="domain.selected">
+                            <span class="">{{ domain.name }}</span>
+                        </label>
+                    </li>
+                </ul>
+                <!--
+                <button type="button" class="add btn btn-block btn-sm"
+                        ng-class="{'btn-default': blockedDomains.length == 0, 'btn-success': blockedDomains.length != 0}"
+                        ng-click="addSelectedDomains()" ng-disabled="!$root.isVIP()">
+                    <i class="fa fa-plus"></i>
+                    <span ng-if="!$root.isVIP()">{{'popup.menu.add_domain_novip'|translate}}</span>
+                    <span ng-if="$root.isVIP()"> {{'popup.menu.add_domain'|translate}}</span>
+                </button>
+                -->
+                <button type="button" class="add btn btn-block btn-sm"
+                        ng-class="{'btn-default': rejectedDomains.length != 0, 'btn-success': rejectedDomains.length == 0}"
+                        ng-click="removeSelectedDomains()">
+                    <i class="fa fa-minus"></i>
+                    <span> {{'popup.menu.remove_reject_rule'|translate}}</span>
+                </button>
+            </div>
+        </div>
+
+
+
+        <div class="domain section non-block" ng-switch-when="normal"><!-- normal -->
+            <span class="section-title" translate="popup.menu.current_domain" ng-if="!currentDomainIsIp"></span>
+            <span class="section-title" translate="popup.menu.current_ip" ng-if="currentDomainIsIp"></span>
+            <div class="current-domain">
+                <img ng-if="currentFavIconUrl" class="domain-icon" ng-src="{{currentFavIconUrl}}">
+                <i ng-if="!currentFavIconUrl" class="domain-icon fa fa-link"></i>
+                <span>{{ currentDomain }}</span>
+            </div>
+
+            <div ng-switch x-on="currentDomainIsAdded" ng-show="currentDomain != ''">
+
+                <button ng-switch-when="no"
+                        type="button" class="add new btn btn-block btn-default btn-sm"
+                        ng-click="addDomain(currentDomain)"  style="color:#000" ng-if="$root.isVIP()">
+                    <i class="fa fa-plus" style="color:#000"></i>
+                    <span> {{'popup.menu.add_domain'|translate}}</span>
+                </button>
+                <button ng-switch-when="no"
+                        type="button" class="add new btn btn-block btn-default btn-sm"
+                        ng-click="openConsole()"  style="color:#000" ng-if="!$root.isVIP()">
+                    <i class="fa fa-plus" style="color:#000"></i>
+                    <span>{{'popup.menu.add_domain_novip'|translate}}</span>
+                </button>
+
+                <div ng-switch-when="yes">
+                    <!--
+                    <button type="button"
+                            class="added left-btn old btn btn-block btn-default btn-sm pull-left"
+                            disabled>
+                        <i class="fa fa-check"></i>
+                        <span ng-if="!$root.isVIP()">{{'popup.menu.has_domain_novip'|translate}}</span>
+                        <span ng-if="$root.isVIP()"> {{'popup.menu.has_domain'|translate}}</span>
+                    </button>
+                    -->
+                    <button type="button"
+                            class="added left-btn old btn btn-block btn-default btn-sm pull-left"
+                            disabled>
+                        <i class="fa fa-check"></i>
+                        <span> {{'popup.menu.has_domain'|translate}}</span>
+                    </button>
+                    <!--
+                    <button type="button" class="added right-btn btn btn-default pull-right"
+                            ng-click="deleteDomain(currentDomain)"
+                            title="{{'popup.menu.delete_domain'|translate}}"
+                            data-title="{{'popup.menu.delete_domain'|translate}}"
+                            data-placement="left" data-type="info" bs-tooltip  ng-disabled="!$root.isVIP()">
+                        <i class="glyphicon glyphicon-trash pull-right text-danger"></i>
+                    </button>
+                    -->
+                    <button type="button" class="added right-btn btn btn-default pull-right"
+                            ng-click="deleteDomain(currentDomain)"
+                            title="{{'popup.menu.delete_domain'|translate}}"
+                            data-title="{{'popup.menu.delete_domain'|translate}}"
+                            data-placement="left" data-type="info" bs-tooltip>
+                        <i class="glyphicon glyphicon-trash pull-right text-danger"></i>
+                    </button>
+                </div>
+
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+
+
+
+
+    <div class="footer" style="z-index:10000;">
+        <button class="options btn btn-default btn-xs"
+                ng-click="openOptions()">{{'popup.menu.console'|translate}}</button>
+                <!--
+        <div class="clearfix"></div>
+-->
+        <span class="due-time" ng-if="VIPDuration">
+
+                                <span class="text-muted">{{'options.layout.service'|translate}}: {{ 'common.vip_expire.t1' | translate }}</span>
+
+                                <span bs-tooltip="{title: ('{{VIPUntil | date: 'yyyy-MM-dd HH:mm:ss'}}')}">
+
+                                    {{ VIPLeft | durationToNow }}
+                                </span>
+                                <small class="text-muted">{{ 'common.vip_expire.t2' | translate }}</small>
+        </span>
+    </div>
+
+    <div class="server-section" style="position: absolute;bottom: 120px">
+        <div ng-if="state == 'normal'">
+            <div class="section-title">
+                <span><span>{{'options.server_list.connected_server'|translate}} <b>{{$root.connected_server_num}}</b> {{'options.server_list.server_num'|translate}}</span></span> 
+            </div>
+        </div>
+        <div class="disconnected" ng-if="state == 'normal'"   style="position: relative; ng-mouseleave="hideServersSelect()">
+            <div class="tips-box" style="top:10px" ng-show="hover_server_tips">
+                <div class="tips">
+                    <div class="content"  ng-bind-html="hover_server_tips">
+
+                    </div>
+                </div>
+            </div>
+            <div id="select-country"  style="top:20px;" class="flag-24 {{getTopServer().country.toLowerCase()}}" ng-show="$root.servers.length">
+                <div id="select-style" style="left: -5px; position: relative;">
+                    <div id="country-selected" ng-class="{opened: showServerSelect}" ng-click="toggleServersSelect()">
+                        <div class="row" style="padding-left:27px"
+                            ng-mouseenter="showServersTips(getTopServer())"
+                            ng-mouseleave="showServersTips()"
+                        >
+                          <span class="col-sm-6">{{'country.' + getTopServer().country | translate}}</span>
+                          <span class="col-sm-6">
+                                    {{getTopServer().score.toFixed(1)}}
+                          </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <ul id="choices" ng-class="{opened: showServerSelect}" style="height:120px">
+                    <li ng-repeat="server in $root.displayServers" class="country-option flag-24 {{makeLowerCase(server.country)}}"               
+                    ng-mouseenter="showServersTips(server)"
+                   ng-mouseleave="showServersTips()"
+                   ng-click="selectServer(server)">
+                        {{'country.' + server.country | translate}}
+                    <li>
+                </ul>
+            
+            </div>
+        </div>
+        <div id="map-world" style="bottom:0px">
+            <!--
+            <i class="location focused US_SF" />
+            -->
+            <i ng-repeat="server in $root.servers" id="{{server.server_id}}" ng-class="{primary: server.primary == true}" class="location {{server.country}}_{{server.city}}"/>
+            
+            
+        </div>
+    </div>
+
+
+</div>

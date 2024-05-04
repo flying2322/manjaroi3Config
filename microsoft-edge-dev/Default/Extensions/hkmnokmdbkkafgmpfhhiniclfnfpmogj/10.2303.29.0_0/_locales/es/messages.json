@@ -1,0 +1,59 @@
+{
+   "appDesc": {
+      "message": "Extensión oficial de Amazon para navegadores web. Al instalar estás aceptando las Condiciones de Uso: amazon.es/aa/TOU"
+   },
+   "appName": {
+      "message": "Amazon Assistant"
+   },
+   "appTitle": {
+      "message": "Amazon Assistant"
+   },
+   "changeMarketplaceString": {
+      "message": "Intenta seleccionar una ubicación cercana para volver a cargar la extensión."
+   },
+   "deprecationMessage": {
+      "message": "En Amazon siempre estamos experimentando y evaluando el potencial de nuestros productos. Hemos tomado la decisión de \u003Cb>suspender Amazon Assistant el 28 de marzo de 2023.\u003C/b> A partir de esa fecha, ya no podrás utilizar Amazon Assistant. En Amazon, seguirás teniendo acceso a las listas que ya hayas creado con Amazon Assistant y se conservarán los productos que hayas añadido anteriormente desde otros sitios. Te pedimos disculpas por las molestias que esta decisión pueda ocasionarte."
+   },
+   "emailBody1": {
+      "message": "Ayúdame a mejorar! Por favor, dime lo que pasó para que pueda arreglarlo."
+   },
+   "emailBody2": {
+      "message": "¿Que pasó?"
+   },
+   "emailBody3": {
+      "message": "Cualquier otra cosa que me puede decir acerca de su ordenador, el navegador o conexión de red?"
+   },
+   "emailBody4": {
+      "message": "ID de referencia: "
+   },
+   "emailSubject": {
+      "message": "Votación para Amazon Assistant"
+   },
+   "feedbackMessage": {
+      "message": "Enviar comentarios de Amazon Assistant"
+   },
+   "feedbackString": {
+      "message": "realimentación"
+   },
+   "improveString": {
+      "message": "¿Podrías hacerme saber lo que está pasando , así que puede mejorar?"
+   },
+   "noLuckString": {
+      "message": "Todavía no hay suerte ?"
+   },
+   "resetAgainString": {
+      "message": "Trate de cerrar y reiniciar de nuevo"
+   },
+   "resetString": {
+      "message": "Cierre y reinicio"
+   },
+   "sorryString1": {
+      "message": "Lo siento por esto,"
+   },
+   "sorryString2": {
+      "message": "estoy teniendo problemas de carga."
+   },
+   "uninstallButton": {
+      "message": "Desinstalación de Amazon Assistant"
+   }
+}

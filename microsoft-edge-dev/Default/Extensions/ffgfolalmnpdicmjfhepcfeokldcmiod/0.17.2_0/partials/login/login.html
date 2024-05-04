@@ -1,0 +1,101 @@
+<form name="login" class="login step" ng-submit="doLogin()" novalidate>
+
+    <div class="form-group"  id="signup-host" ng-class="{'show': show_server_addr}">
+        <div class="errors">
+            <span class="error" ng-if="login.host.$error.required" translate="login.errors.server_required"></span>
+            <span class="error" ng-if="login.host.$error.format" translate="login.errors.serverFormat"></span>
+        </div>
+        <label>{{ "login.server" | translate}}<br/><span class="font-kai">{{ "login.server_example" | translate}}</span></label>
+
+                <input name="host" class="form-control inputdefault font-ya-hei"
+                       type="text" 
+                       ng-model="$root.server_address"
+                       ng-blur="checkHost()"
+                       placeholder="{{'login.host_placeholder'|translate}}"
+                       focus-bind="focuses.host"
+                       ng-disabled="checkingHost || submitting"
+                       ng-change="clearFormValidity()"
+                       ng-disabled="disableInput"
+                       
+                       required>
+                <i class="form-control-feedback glyphicon glyphicon-ok"></i>
+                <img class="form-control-feedback loading" src="/img/loading-bars-gray.svg" alt="loading"/>
+
+    </div>
+
+    <div class="form-group" ng-class="{'is-loading': checkingName}">
+        <div class="errors">
+            <span class="error" ng-if="login.name.$error.required" translate="login.errors.name_required"></span>
+            <span class="error" ng-if="login.name.$error.format" translate="login.errors.format"></span>
+            <span class="error" ng-if="login.name.$error.server" translate="login.errors.server"></span>
+            <span class="error" ng-if="login.name.$error.notExisted" translate="login.errors.notExisted"></span>
+
+        </div>
+        <label translate="login.account"></label>
+        <!--
+        <input name="name" class="form-control inputdefault font-ya-hei"
+               type="text" placeholder="{{'login.account_placeholder'|translate}}"
+               ng-model="name"
+               focus-bind="focuses.name"
+               ng-disabled="checkingName || submitting"
+               ng-blur="checkNameExistence()"
+               ng-change="clearFormValidity()"
+               ui-validate="{format: '$root.validateNameFormat($value)'}"
+               required
+                >
+              -->
+                      <input name="name" class="form-control inputdefault font-ya-hei"
+               type="text" placeholder="{{'login.account_placeholder'|translate}}"
+               ng-model="name"
+               focus-bind="focuses.name"
+               ng-disabled="checkingName || submitting"
+               ng-change="clearFormValidity()"
+               ui-validate="{format: '$root.validateNameFormat($value)'}"
+               required
+                >
+        <i class="form-control-feedback glyphicon glyphicon-ok"></i>
+        <img class="form-control-feedback loading" src="/img/loading-bars-gray.svg" alt="loading"/>
+    </div>
+
+    <div class="form-group" form-state="login.password">
+        <div class="errors">
+            <span ng-if="login.password.$error.required" class="error">{{"login.errors.password_required"|translate}}</span>
+            <span ng-if="login.password.$error.minlength" class="error">{{"login.errors.minlength"|translate}}</span>
+            <span ng-if="login.password.$error.mismatch" class="error">{{"login.errors.mismatch"|translate}}</span>
+        </div>
+        <label translate="login.password"></label>
+        <input name="password" type="password" class="form-control inputdefault font-ya-hei"
+               placeholder="{{'login.password_placeholder'|translate}}"
+               ng-model="password"
+               focus-bind="focuses.password"
+               ng-disabled="submitting"
+               ng-change="clearFormValidity()"
+               required
+               ng-minlength="6"
+               autocomplete="on">
+    </div>
+
+
+
+
+    <div class="form-group login_checkbox_wrapper" ng-click="toggleRemember()">
+        <a class="unchecked" ng-class="{'checked': rememberChecked}" tabindex="3"   href="" ></a>
+        <label class="font-kai">{{ "login.remember" | translate}}</label>
+
+    </div>
+
+    <button type="submit" class="btn btn-block btn-success" ng-disabled="submitting">
+        <span ng-hide="submitting">{{'login.login'|translate}}</span>
+        <img src="/img/loading-bars.svg" alt="loading" ng-show="submitting"/>
+    </button>
+
+    <!--
+    <a ng-href="{{resetPasswordUrl}}" class="pull-right" target="_blank">{{'login.find_password'|translate}}</a>
+    -->
+    <div class="clearfix"></div>
+
+
+    <div style="padding-top:8px">&nbsp;
+    <span style="float:right"><a href="#" ng-click="showForgetPasswordModal()" style="font-size:12px" class="font-kai">{{'login.forget_password_question'|translate}}</a></span>
+    </div>
+</form>

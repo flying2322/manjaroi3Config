@@ -1,0 +1,10 @@
+2023/04/24-21:42:33.624 e02 Creating DB /home/dom/.config/microsoft-edge-dev/Default/IndexedDB/https_www.notion.so_0.indexeddb.leveldb since it was missing.
+2023/04/24-21:42:33.628 e02 Reusing MANIFEST /home/dom/.config/microsoft-edge-dev/Default/IndexedDB/https_www.notion.so_0.indexeddb.leveldb/MANIFEST-000001
+2023/04/24-21:42:34.547 b74 Level-0 table #5: started
+2023/04/24-21:42:34.548 b74 Level-0 table #5: 2617 bytes OK
+2023/04/24-21:42:34.549 b74 Delete type=0 #3
+2023/04/24-21:42:34.549 b74 Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)
+2023/04/24-21:42:35.575 b8a Level-0 table #7: started
+2023/04/24-21:42:35.576 b8a Level-0 table #7: 533 bytes OK
+2023/04/24-21:42:35.577 b8a Delete type=0 #4
+2023/04/24-21:42:35.577 b8a Manual compaction at level-0 from '\x00\x03\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x04\x00\x00\x00' @ 0 : 0; will stop at (end)

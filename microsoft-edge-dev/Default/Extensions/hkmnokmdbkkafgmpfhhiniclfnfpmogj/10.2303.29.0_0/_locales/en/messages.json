@@ -1,0 +1,59 @@
+{
+   "appDesc": {
+      "message": "Amazon's official browser extension. By installing you agree to the Conditions of Use at amazon.com/aa/TOU"
+   },
+   "appName": {
+      "message": "Amazon Assistant"
+   },
+   "appTitle": {
+      "message": "Amazon Assistant"
+   },
+   "changeMarketplaceString": {
+      "message": "Please try selecting a nearby location to reload the extension."
+   },
+   "deprecationMessage": {
+      "message": "At Amazon, we’re always experimenting and evaluating the potential of our products. We have made the decision to \u003Cb>discontinue Amazon Assistant on March 28, 2023.\u003C/b> From that date you will no longer be able to use Amazon Assistant. You will still have access on Amazon to Lists you’ve already created with Amazon Assistant, and the products you previously added from other sites will remain. We apologize for any inconvenience this decision may cause you."
+   },
+   "emailBody1": {
+      "message": "Help me improve! Please tell me what happened so I can fix it."
+   },
+   "emailBody2": {
+      "message": "What happened?"
+   },
+   "emailBody3": {
+      "message": "Anything else you can tell me about your computer, browser or network connection?"
+   },
+   "emailBody4": {
+      "message": "Reference ID: "
+   },
+   "emailSubject": {
+      "message": "Amazon Assistant Feedback"
+   },
+   "feedbackMessage": {
+      "message": "Send Amazon Assistant feedback"
+   },
+   "feedbackString": {
+      "message": "Feedback"
+   },
+   "improveString": {
+      "message": "Could you let me know what's going on so I can improve?"
+   },
+   "noLuckString": {
+      "message": "Still no luck?"
+   },
+   "resetAgainString": {
+      "message": "Try to close and reset again"
+   },
+   "resetString": {
+      "message": "Close and reset"
+   },
+   "sorryString1": {
+      "message": "Sorry about this,"
+   },
+   "sorryString2": {
+      "message": "I'm having trouble loading."
+   },
+   "uninstallButton": {
+      "message": "Uninstall Amazon Assistant"
+   }
+}

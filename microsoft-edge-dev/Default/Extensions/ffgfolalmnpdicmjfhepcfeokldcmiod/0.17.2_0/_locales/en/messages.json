@@ -1,0 +1,11 @@
+{
+   "DESCRIPTION": {
+      "message": "HTTP/2 Network Speedup Utility which tunnels web access via HTTP/2 proxy, providing fast and secure network connection."
+   },
+   "EXT_NAME": {
+      "message": "Maikr"
+   },
+   "POPUP_TITLE": {
+      "message": "Maikr"
+   }
+}

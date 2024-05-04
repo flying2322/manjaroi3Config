@@ -1,0 +1,81 @@
+<div class="modal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" ng-controller="ImportRuleModalController">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                        ng-click="closeModal()">
+                    &times;
+                </button>
+                <h4 class="modal-title">{{'options.rules_import.title'|translate}}</h4>
+            </div>
+            <!--
+
+                                    <button type="button" class="btn btn-lg btn-primary" data-placement="bottom" data-animation="am-flip-x" bs-popover="popover">Click to toggle popover
+  <br>
+  <small>(using an object)</small>
+</button>-->
+            <div>
+                <form name="">
+                    <div class="modal-body">
+                        <div class="alert {{alertStyle}} text-center">{{alertText}}</div>
+
+                        <div class="row">
+                            <div class="register col-xs-12">
+                                <div class="input-group" style="margin-left:20px">
+
+                                    <input name="url" type="text" class="form-control"
+                                           ng-disabled='url_loading||verified'
+                                           ng-model="url" focus-bind="focuses.url">
+                                    <div class="input-group-btn">
+                                        <button ng-click="loadURL(url)" class="btn btn-block btn-success" ng-disabled="url_loading||verified" style="width: 120px;">
+                                            <span ng-hide="url_loading">{{'options.rules_import.import_third_party_url'|translate}}</span>
+                                            <img src="/img/loading-bars.svg" alt="loading" ng-show="url_loading" style="height: 20px;" />
+                                        </button>
+
+                                    </div>
+                                </div>
+                                <div class="help-block" style="margin-left:30px">
+                                    <span ng-if="!load_error">{{'options.rules_import.help_block_text'|translate}}</span>
+                                    <span ng-if="load_error" class="text-danger">
+                                        <i class="glyphicon glyphicon-exclamation-sign" style="height: 20px;"></i>
+                                        {{load_error_message}}
+                                    </span>
+                                </div>
+
+                                <div>
+                                    <div class="number-gutter" align="center" style="min-height:45vh">
+                                        <div id="r1" class="ansbox">1</div>         
+                                    </div>
+
+
+                                    <div id="numbered-text-box" ng-keyup="keyup()" class="numbered-text-box content" contenteditable="plaintext-only" style="overflow: auto;min-height:45vh">[RULE]<br/></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <div style="float: right;">
+                        <button class="btn btn-success pull-left" ng-show="submit_succ" ng-click="cancel()" >
+                            {{'common.close'|translate}}
+                        </button>
+                        <button class="cancel btn btn-link pull-left"
+                                ng-click="cancel()" ng-hide='submiting||url_loading||submit_succ'>
+                            {{'common.cancel'|translate}}
+                        </button>
+                        <button ng-click="submitRules()" class="btn btn-primary pull-left" ng-disabled='submiting||url_loading' ng-hide="submit_succ">
+                            <span ng-hide="submiting">
+                                {{submit_button_text}}
+                            </span>
+                            <span ng-show="submiting">
+                                {{submit_button_text}}
+                                <img src="/img/loading-bars.svg" alt="loading"/>
+                            </span>
+                        </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

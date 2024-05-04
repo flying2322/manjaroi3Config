@@ -1,0 +1,51 @@
+[2022-10-29 17:09:22.313] [exthost] [info] Extension host with pid 25260 started
+[2022-10-29 17:09:22.372] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: true, activationEvent: '*'
+[2022-10-29 17:09:22.373] [exthost] [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+[2022-10-29 17:09:22.374] [exthost] [info] ExtensionService#_doActivateExtension vscode.ipynb, startup: true, activationEvent: '*'
+[2022-10-29 17:09:22.412] [exthost] [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+[2022-10-29 17:09:22.413] [exthost] [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+[2022-10-29 17:09:22.533] [exthost] [info] Eager extensions activated
+[2022-10-29 17:09:22.561] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onStartupFinished'
+[2022-10-29 17:09:22.562] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+[2022-10-29 17:09:31.498] [exthost] [info] Extension host terminating: received terminate message from renderer
+[2022-10-29 17:09:31.509] [exthost] [info] Extension host with pid 25260 exiting with code 0
+[2022-10-29 17:09:32.885] [exthost] [info] Extension host with pid 25315 started
+[2022-10-29 17:09:32.885] [exthost] [info] Skipping acquiring lock for /home/dom/.config/Code - OSS/User/workspaceStorage/6614e367187bb51f1d5c2804e4c6d651.
+[2022-10-29 17:09:32.950] [exthost] [info] ExtensionService#_doActivateExtension twxs.cmake, startup: false, activationEvent: 'onLanguage:cmake'
+[2022-10-29 17:09:32.951] [exthost] [info] ExtensionService#_doActivateExtension vscode.markdown-language-features, startup: false, activationEvent: 'onWebviewPanel:markdown.preview'
+[2022-10-29 17:09:32.951] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: true, activationEvent: '*'
+[2022-10-29 17:09:32.951] [exthost] [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+[2022-10-29 17:09:32.951] [exthost] [info] ExtensionService#_doActivateExtension vscode.ipynb, startup: true, activationEvent: '*'
+[2022-10-29 17:09:33.112] [exthost] [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+[2022-10-29 17:09:33.112] [exthost] [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+[2022-10-29 17:09:33.202] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode.cmake-tools, startup: true, activationEvent: 'workspaceContains:*/CMakeLists.txt,*/*/CMakeLists.txt,*/*/*/CMakeLists.txt'
+[2022-10-29 17:09:33.810] [exthost] [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:markdown'
+[2022-10-29 17:09:33.811] [exthost] [info] ExtensionService#_doActivateExtension vscode.markdown-math, startup: false, activationEvent: 'api', root cause: vscode.markdown-language-features
+[2022-10-29 17:09:33.899] [exthost] [info] Eager extensions activated
+[2022-10-29 17:09:33.969] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onStartupFinished'
+[2022-10-29 17:09:33.970] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+[2022-10-29 17:09:56.611] [exthost] [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+[2022-10-29 17:09:56.611] [exthost] [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+[2022-10-29 17:09:56.612] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+[2022-10-29 17:21:00.827] [exthost] [error] [twxs.cmake] provider FAILED
+[2022-10-29 17:21:00.827] [exthost] [error] undefined
+[2022-10-29 17:34:51.149] [exthost] [info] ExtensionService#_doActivateExtension franneck94.c-cpp-runner, startup: false, activationEvent: 'onLanguage:cpp'
+[2022-10-29 17:54:35.270] [exthost] [info] Extension host terminating: received terminate message from renderer
+[2022-10-29 17:54:35.305] [exthost] [info] Extension host with pid 25315 exiting with code 0
+[2022-10-29 17:54:37.247] [exthost] [info] Extension host with pid 28297 started
+[2022-10-29 17:54:37.247] [exthost] [info] Skipping acquiring lock for /home/dom/.config/Code - OSS/User/workspaceStorage/68649607b51873d48219cc45d8d43928.
+[2022-10-29 17:54:37.332] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: true, activationEvent: '*'
+[2022-10-29 17:54:37.333] [exthost] [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+[2022-10-29 17:54:37.333] [exthost] [info] ExtensionService#_doActivateExtension vscode.ipynb, startup: true, activationEvent: '*'
+[2022-10-29 17:54:37.334] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode.cmake-tools, startup: true, activationEvent: 'workspaceContains:CMakeLists.txt'
+[2022-10-29 17:54:37.419] [exthost] [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+[2022-10-29 17:54:37.420] [exthost] [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+[2022-10-29 17:54:37.441] [exthost] [info] ExtensionService#_doActivateExtension franneck94.c-cpp-runner, startup: true, activationEvent: 'workspaceContains:*.h,*.c,*.hh,*.cc,*.hxx,*.cxx,*.hpp,*.cpp'
+[2022-10-29 17:54:37.762] [exthost] [info] Eager extensions activated
+[2022-10-29 17:54:37.773] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onStartupFinished'
+[2022-10-29 17:54:37.774] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+[2022-10-29 17:54:49.733] [exthost] [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+[2022-10-29 17:54:49.734] [exthost] [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+[2022-10-29 17:54:49.735] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+[2022-10-29 17:55:52.769] [exthost] [info] Extension host terminating: received terminate message from renderer
+[2022-10-29 17:55:52.803] [exthost] [info] Extension host with pid 28297 exiting with code 0

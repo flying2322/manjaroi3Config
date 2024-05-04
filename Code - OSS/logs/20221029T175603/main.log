@@ -1,0 +1,13 @@
+[2022-10-29 17:56:03.910] [main] [info] update#ctor - updates are disabled as there is no update URL
+[2022-10-29 17:56:05.501] [main] [info] Starting extension host with pid 28810 (fork() took 12 ms).
+[2022-10-29 17:56:16.923] [main] [info] Extension host with pid 28810 exited with code: 0, signal: null.
+[2022-10-29 17:56:17.803] [main] [info] Starting extension host with pid 28962 (fork() took 8 ms).
+[2022-10-29 18:06:22.995] [main] [info] Extension host with pid 28962 exited with code: 0, signal: null.
+[2022-10-29 18:06:24.408] [main] [info] Starting extension host with pid 29629 (fork() took 9 ms).
+[2022-10-29 18:31:22.401] [main] [info] Extension host with pid 29629 exited with code: 0, signal: null.
+[2022-10-29 18:31:23.805] [main] [info] Starting extension host with pid 31573 (fork() took 11 ms).
+[2022-10-29 19:52:34.224] [main] [info] Extension host with pid 31573 exited with code: 0, signal: null.
+[2022-10-29 19:52:35.733] [main] [info] Starting extension host with pid 37866 (fork() took 10 ms).
+[2022-10-29 20:44:27.711] [main] [info] Extension host with pid 37866 exited with code: 0, signal: null.
+[2022-10-29 20:44:29.172] [main] [info] Starting extension host with pid 42150 (fork() took 12 ms).
+[2022-10-29 21:06:15.082] [main] [info] Enabling inspect port on extension host with pid 42150.

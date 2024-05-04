@@ -1,0 +1,59 @@
+{
+   "action": {
+      "default_icon": "icons/icon-logo.png",
+      "default_popup": "pages/popup.html",
+      "default_title": "CSDN-搜索"
+   },
+   "background": {
+      "service_worker": "serviceWorker.js"
+   },
+   "chrome_url_overrides": {
+      "newtab": "pages/newTab.html"
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "css": [  ],
+      "js": [ "js/content.js", "packages/json-format/js/json_utils.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "css": [ "plugins/doc/index.css" ],
+      "js": [ "js/jquery-3.5.1.min.js", "plugins/doc/index.js" ],
+      "matches": [ "https://www.runoob.com/*__mode__=frame*" ]
+   } ],
+   "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self';"
+   },
+   "declarative_net_request": {
+      "rule_resources": [ {
+         "enabled": true,
+         "id": "bizModifyHeader",
+         "path": "json/bizModifyHeader.json"
+      } ]
+   },
+   "default_locale": "zh_CN",
+   "description": "__MSG_extDescription__",
+   "externally_connectable": {
+      "matches": [ "*://*.csdn.net/*" ]
+   },
+   "homepage_url": "https://plugin.csdn.net/",
+   "host_permissions": [ "\u003Call_urls>" ],
+   "icons": {
+      "128": "icons/icon-logo-128.png",
+      "16": "icons/icon-logo-16.png",
+      "48": "icons/icon-logo-48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3e8TnnXBDrd9SAwH75pJkhrBn7S5MrSyhAHnoUu8pntM2f5+93sJOagDGYqKxEeCQuBotwlfHp3ZawMj+Ta/VxbgwkzB2mfvM2Imcggs4gaL1YeCyKGjOHmz5LH6AfKmzM0gtC3x/Z3MzWTe4NuJzHAtw52UwM2EFDYPZOALesRDzP3Yeg7BS2HL4NecKTvYFQ0P9coS2wo51IMiUv3GTgt6xR1EoH9vnQE/2GNZIahCouMe53JBIbCKhy6D2VzcLRvIp/BB9chyqiAZBtskVZdTPWzR3/BdCLAsAMJrkqQ+mLMt2p59FBC+SJ63tnBfwqLg+rjZJUfTYylgcxIWlwIDAQAB",
+   "manifest_version": 3,
+   "minimum_chrome_version": "88.0",
+   "name": "__MSG_extName__",
+   "options_page": "pages/options.html",
+   "permissions": [ "tabs", "bookmarks", "history", "contextMenus", "storage", "webNavigation", "unlimitedStorage", "declarativeNetRequest", "cookies", "topSites", "scripting" ],
+   "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+   "version": "3.0.5",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "packages/*", "svg/*", "images/*", "icons/*", "pages/*", "js/*", "css/jsonPages.css", "vendor/*" ]
+   } ]
+}

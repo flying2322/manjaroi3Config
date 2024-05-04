@@ -1,0 +1,97 @@
+<div class="modal" tabindex="-1">
+    <div class="modal-dialog" style="width: 800px;">
+        <div class="modal-content" ng-controller="RedeemVIPCodeModalController">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                        ng-click="closeModal()">
+                    &times;
+                </button>
+                <h4 class="modal-title">{{'options.redeem_vipcode.title'|translate}}</h4>
+            </div>
+           
+            <div> 
+                <form name="redeemForm" ng-submit="redeem()">
+                    <div class="modal-body">
+                        <div class="alert {{alertStyle}} text-center">{{alertText}}</div>
+                        
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="input-group" style="padding: 20px;">
+                                    <input name="vipcode" type="text" class="form-control"
+                                           ng-disabled='disableVipcodeInput'
+                                           placeholder="{{'options.redeem_vipcode.vipcode_placeholder'|translate}}" 
+                                           ng-model="vipcode" focus-bind="focuses.vipcode" style="width:95%" />
+                                    <div class="input-group-btn">
+                                            <button ng-disabled='disableVipcodeInput' type="button" class="btn btn-block btn-success" ng-click="viewCodeDetails()"  style="display:inline;padding: 6px 6px;">
+                                                <span ng-show="detailsButton">{{'options.redeem_vipcode.view_code_details'|translate}}</span>
+                                                <img src="/img/loading-bars.svg" alt="loading" ng-hide="detailsButton" style="height: 24px;padding-left: 20px;padding-right: 20px;" />
+                                            </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div style="text-align: center;">
+                            <div ng-show="vipcode_details_status == 'created'"  style="text-align: center;">
+                                <div class="credit-card-wrap" style="position: relative;">
+                                    <div class="mk-icon-world-map"></div>
+                                    <div class="credit-card-inner">
+                                        <header class="header">
+                                            <div class="credit-logo">
+                                                <div class="shape"><span class="txt"></span></div> <span class="text">Maikr VIP Code</span>
+                                            </div>
+                                        </header>
+                                        <div class="mk-icon-sim" style="line-height: 40px; font-size: 24px;">
+                                            {{vipcode_details.id}}
+                                        </div>
+                                        <div class="credit-font credit-card-number" style="font-size:16px">{{vipcode_details.description}}</div>
+                                        <footer class="footer">
+                                            <div class="clearfix">
+                                                <div class="pull-left">
+                                                    <div class="credit-card-date">
+                                                        <span class="title">{{'options.redeem_vipcode.view_code_expire'|translate}}</span>
+                                                        <span class="credit-font">{{vipcode_details.expire | date: 'yyyy-MM-dd hh:mm'}}</span>
+                                                    </div>
+                                                    <div class="credit-font credit-author"></div>
+                                                </div>
+                                               
+                                                <div class="pull-right">
+                                                    <div class="mk-icon-visa" style="font-size: 18px;" ng-class="{green: vipcode_details.status == 'created', red: vipcode_details.status == 'used', red: vipcode_details.status == 'expired', red: vipcode_details.status == 'locked'}">{{vipcode_details_status_description}}</div>
+                                                </div>
+                                           
+                                            </div>
+                                        </footer>
+                                    </div>
+                                </div>
+                                <div class="input-group" style="padding: 20px; left: 38%; width: 200px;" ng-show="vipcode_details.status == 'created'">
+                                    <input name="pass" type="text" class="form-control"
+                                           ng-disabled='disablePassInput'
+                                           placeholder="{{'options.redeem_vipcode.pass_placeholder'|translate}}" 
+                                           ng-model="pass" focus-bind="focuses.pass" style="width:95%" />
+ 
+                                </div>
+                                <div style="text-align: center;" ng-show="vipcode_details.status == 'created'">
+                                    
+                                    <div class="alert  {{submitAlertStyle}}  ng-scope" ng-show="showSubmitAlert">
+                                        <span class="ng-scope">{{submitAlertText}}</span>
+                                    </div>
+                                       <div class="input-group-btn">
+                                                <button ng-disabled='disablePassInput' type="submit" class="btn btn-block btn-success" style="display:inline;padding: 6px 6px;width: 300px;background-color: #E91E63;border-color: #E91E63;">
+                                                    <span ng-show="passButton">{{'options.redeem_vipcode.redeem'|translate}}</span>
+                                                    <img src="/img/loading-bars.svg" alt="loading" ng-hide="passButton" style="height: 24px;padding-left: 20px;padding-right: 20px;" />
+                                                </button>
+                                        </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>{{"compromised.title" | translate}}</title>
+    <link rel="stylesheet" href="/css/font-awesome.css"/>
+    <link rel="stylesheet" href="/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/css/common.css"/>
+    <link rel="stylesheet" href="/css/options.css"/>
+</head>
+<body>
+<div class="container" style="padding-top: 100px;" ng-cloak ng-controller="UpgradeMainController">
+    <div class="alert alert-danger">
+        <p>
+            {{"compromised.p1.t1" | translate}}
+            <a target="_blank" style="cursor:pointer" href="https://chrome.google.com/webstore/detail/ffgfolalmnpdicmjfhepcfeokldcmiod">Chrome Web Store</a>
+        </p>
+
+        <p>
+            {{"compromised.if_trouble" | translate}} <a href="{{howToInstallURL}}" style="cursor:pointer" target="_blank">{{"compromised.manual_install_tutorial"|translate}}</a>
+            <!--
+            <a href="{{howToInstallURL}}" style="cursor:pointer" target="_blank">{{"upgrade.manual_install_tutorial"|translate}}</a>
+        -->
+        </p>
+    </div>
+    <p class="alert alert-warning">
+        {{"compromised.uninstall_first" | translate}}
+    </p>
+
+
+
+
+</div>
+
+
+
+
+
+
+<script data-main="/js/upgrade/upgrade.js"
+        src="/js/libs/require.js"></script>
+</body>
+</html>

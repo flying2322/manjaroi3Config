@@ -1,0 +1,59 @@
+{
+   "appDesc": {
+      "message": "Extensão de navegador oficial da Amazon. Ao instalar, você concorda com as Condições de Uso em amazon.com.br/aa/TOU"
+   },
+   "appName": {
+      "message": "Amazon Assistant"
+   },
+   "appTitle": {
+      "message": "Amazon Assistant"
+   },
+   "changeMarketplaceString": {
+      "message": "Tente selecionar um local próximo para recarregar a extensão."
+   },
+   "deprecationMessage": {
+      "message": "Na Amazon, estamos sempre testando e avaliando o potencial de nossos produtos. Tomamos a decisão de \u003Cb>descontinuar o Amazon Assistant em 28 de março de 2023.\u003C/b> A partir dessa data, você não poderá mais usar o Amazon Assistant. Você ainda terá acesso às listas que tiver criado com o Amazon Assistant na Amazon e os produtos que você adicionou anteriormente de outros sites permanecerão. Pedimos desculpas por qualquer inconveniente que essa decisão possa causar a você."
+   },
+   "emailBody1": {
+      "message": "Ajude-me a melhorar! Me diga o que aconteceu para que eu possa arrumar."
+   },
+   "emailBody2": {
+      "message": "O que aconteceu?"
+   },
+   "emailBody3": {
+      "message": "Há mais algo que precisa me dizer sobre seu computador, navegador ou conexão de rede?"
+   },
+   "emailBody4": {
+      "message": "ID de referência: "
+   },
+   "emailSubject": {
+      "message": "Avaliação do Amazon Assistant"
+   },
+   "feedbackMessage": {
+      "message": "Enviar feedback sobre o Amazon Assistant"
+   },
+   "feedbackString": {
+      "message": "Feedback"
+   },
+   "improveString": {
+      "message": "Você poderia me dizer o que está acontecendo para que eu possa melhorar?"
+   },
+   "noLuckString": {
+      "message": "Ainda não deu certo?"
+   },
+   "resetAgainString": {
+      "message": "Tente fechar e reiniciar novamente"
+   },
+   "resetString": {
+      "message": "Fechar e redefinir"
+   },
+   "sorryString1": {
+      "message": "Desculpe-me por isso,"
+   },
+   "sorryString2": {
+      "message": "Estou tendo problemas para carregar."
+   },
+   "uninstallButton": {
+      "message": "Desinstalar o Amazon Assistant"
+   }
+}

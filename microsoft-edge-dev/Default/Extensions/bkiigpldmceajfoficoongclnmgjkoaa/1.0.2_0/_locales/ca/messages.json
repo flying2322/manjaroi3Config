@@ -1,0 +1,122 @@
+{
+   "app_command": {
+      "message": "Commuta la vista del lector"
+   },
+   "app_description": {
+      "message": "Retira el desordre com els botons, les imatges de fons i canvia la mida del text, el contrast i la disposició del text de la pàgina per millorar-la"
+   },
+   "app_name": {
+      "message": "Vista del lector"
+   },
+   "app_title": {
+      "message": "Carregant ... :: Vista del lector"
+   },
+   "app_ui_btn_fullscreen": {
+      "message": "Canvia a la lectura a pantalla completa"
+   },
+   "app_ui_btn_imgs": {
+      "message": "Commuta les imatges"
+   },
+   "app_ui_btn_next": {
+      "message": "aneu a la pàgina següent (meta + tecla de fletxa dreta)"
+   },
+   "app_ui_btn_prev": {
+      "message": "aneu a la pàgina anterior (meta + tecla de fletxa esquerra)"
+   },
+   "app_ui_btn_print": {
+      "message": "Imprimeix a la vista del lector"
+   },
+   "app_ui_btn_rateUs": {
+      "message": "Valoreu-nos! ⭑⭑⭑⭑⭑"
+   },
+   "app_ui_btn_site_gd": {
+      "message": "Al nostre lloc podeu desar el vostre article a Google Drive"
+   },
+   "app_ui_btn_site_pc": {
+      "message": "Al nostre lloc podeu desar l’article al vostre ordinador"
+   },
+   "app_ui_btn_speech": {
+      "message": "Llegiu aquest article"
+   },
+   "app_ui_label1": {
+      "message": "Amplada completa"
+   },
+   "app_ui_label2": {
+      "message": "Sense Alçada"
+   },
+   "app_ui_label3": {
+      "message": "Llum"
+   },
+   "app_ui_label4": {
+      "message": "Fosc"
+   },
+   "app_ui_label5": {
+      "message": "Blau"
+   },
+   "app_ui_label6": {
+      "message": "Amagar"
+   },
+   "app_ui_label7": {
+      "message": "Espectacle"
+   },
+   "app_ui_notify_wrong_content": {
+      "message": "Ho sentim, ja no és accessible el contingut original. Carregueu el contingut de l’origen i torneu-ho a provar"
+   },
+   "options_header": {
+      "message": "Personalització de la interfície d'usuari"
+   },
+   "options_opt1": {
+      "message": "Mostra el \"botó d'impressió\" a la vista del lector"
+   },
+   "options_opt10": {
+      "message": "Canvia automàticament al mode de pantalla completa"
+   },
+   "options_opt11": {
+      "message": "Estil personalitzat"
+   },
+   "options_opt12": {
+      "message": "Estils d’usuari per a la visualització del lector real"
+   },
+   "options_opt13": {
+      "message": "Obertura d'enllaç"
+   },
+   "options_opt14": {
+      "message": "Obriu enllaços en pestanyes noves"
+   },
+   "options_opt15": {
+      "message": "Obriu enllaços al mode de visualització del lector"
+   },
+   "options_opt16": {
+      "message": "Diversos"
+   },
+   "options_opt17": {
+      "message": "Obriu la pàgina de preguntes freqüents sobre les actualitzacions"
+   },
+   "options_opt2": {
+      "message": "Mostra el botó \"guardar\" a la vista del lector"
+   },
+   "options_opt3": {
+      "message": "Mostra el \"botó de pantalla completa\" a la vista del lector"
+   },
+   "options_opt4": {
+      "message": "Mostra el \"botó de veu\" a la vista del lector"
+   },
+   "options_opt5": {
+      "message": "Mostra el botó de commutació d'imatges a la vista del lector"
+   },
+   "options_opt6": {
+      "message": "Mostra els \"botons de navegació\" a la vista del lector"
+   },
+   "options_opt7": {
+      "message": "Mostra l'opció del menú contextual \"Obrir a la vista del lector\" (requereix reinici) (requereix permís de chrome.tabs)"
+   },
+   "options_opt8": {
+      "message": "Mostra \"Obriu la vista del lector de fons en un element de menú de context\" (cal reiniciar) (requereix permís de chrome.tabs)"
+   },
+   "options_opt9": {
+      "message": "Mostra el menú del context de \"Canvia a vista de lector\" (requereix reinici)"
+   },
+   "options_title": {
+      "message": "Visualització del lector :: Opcions"
+   }
+}

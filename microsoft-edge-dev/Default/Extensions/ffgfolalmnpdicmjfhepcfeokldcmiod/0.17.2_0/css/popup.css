@@ -1,0 +1,1829 @@
+
+.page {
+  width: 238px;
+  position: relative;
+  font-size: 12px;
+  margin: 10px;
+  overflow: hidden;
+}
+.section-title {
+  font-size: 12px;
+  display: block;
+  text-align: center;
+  padding-top: 5px;
+}
+hr {
+
+}
+#preferences {
+
+  background: url("/img/settings.png");
+  width: 23px;
+  height: 23px;
+  transition: 300ms ease all; 
+    z-index: 100;}
+#preferences:hover {
+    transform: rotate(90deg);
+    cursor: pointer; 
+    opacity: 0.9;
+}
+
+#notifications {
+  /*
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  */
+  width: 23px;
+  height: 23px;
+  font-size:22px;
+    z-index: 100;}
+#notifications:hover {
+  opacity: 0.9;
+}
+
+.back {
+  background: url("/img/back.png");
+  position: absolute;
+  top: 22px;
+  left: 14px;
+  width: 32px;
+  height: 22px;
+  cursor: pointer;
+  transition: 150ms linear all; 
+}
+.back:hover {
+    left: 10px; 
+}
+.left_arrow {
+  background: url("/img/left_arrow.png");
+  position: absolute;
+  left: 14px;
+    width: 30px;
+    height: 30px;
+  cursor: pointer;
+  transition: 150ms linear all; 
+}
+
+.left_arrow:hover {
+    left: 10px; 
+}
+.multi-section-renderer:hover{
+  background-color: #e6e6e6; 
+}
+
+.multi-section-renderer i.fa-renderer.accent{
+  color: #23377c !important;
+}
+
+.multi-section-renderer i.fa-renderer:hover{
+  color: #ff3e84 !important; 
+  font-size: 110% !important;
+}
+
+.badge1:hover{
+  
+}
+.badge1[data-badge]:after {
+   content:attr(data-badge);
+   position:absolute;
+   top:-2px;
+   left:0px;
+   font-size:.5em;
+   background:#ff3e84;
+   color:white;
+   width:12px;height:12px;
+   text-align:center;
+   line-height:12px;
+   border-radius:50%;
+   box-shadow:0 0 1px #333;
+}
+
+
+.menu.page hr{
+  margin: 16px;
+  border-color: #eee
+}
+
+.menu.page{
+  color:#fff;
+  margin: 0px;
+  height: 423px;
+  position: relative;
+}
+.menu .domain-section{
+  padding-top:20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+.menu.locked{
+  cursor: not-allowed;
+}
+.menu .footer .due-time {
+  margin-bottom: 0;
+  margin-left:12px;
+}
+.menu .mode-section{
+
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.menu .isp-section{
+
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.isp-section .btn{
+
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.menu .data-saving-section{
+
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.menu .servers-mode-section{
+
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.menu .server-section{
+  margin-top:40px;
+  /*
+    top: 400px;
+    position: absolute;
+    */
+}
+
+.menu .server-section .tips-box{
+  /*
+    position: absolute;
+    top: -240px;
+    height: 20px;
+    width: 150px;
+    */
+}
+.menu .server-section .section-title{
+  /*
+    position: absolute;
+    top: -220px;
+    left: 50px;
+    height: 20px;
+    width: 150px;
+    */
+}
+.menu .server-section .server-section-list{
+  /*
+    position: absolute;
+    top: -190px;
+    left: 40px;
+    height: 24px;
+    width:200px; */
+
+    display:inline-flex;
+    margin-top:12px;
+    margin-left: 5px;
+   
+}
+
+.menu .server-section .server-section-list li{
+  display:block;
+  height: 28px;
+  width: 28px;
+}
+
+.menu .server-section .server-section-list li:hover{
+  opacity: 0.8;
+}
+
+.menu.page .block-list {
+  margin-bottom: 5px;
+}
+.menu.page .block-list li {
+  margin: 0;
+}
+.menu.page .block-list label {
+  display: block;
+  font-weight: normal;
+  margin-left: 5px;
+}
+
+.menu.page .block-list label:hover {
+  opacity: 0.8;
+}
+
+.menu.page .block-list label input[type=checkbox] {
+  float: left;
+  margin-right: 5px;
+}
+
+.menu.page .current-domain {
+  margin-bottom: 5px;
+  font-size: 13px;
+  line-height: 20px;
+}
+.menu.page .current-domain .domain-icon {
+  float: left;
+  margin-top: 2px;
+}
+.menu.page .current-domain img.domain-icon {
+  max-width: 16px;
+  max-height: 16px;
+}
+.menu.page .current-domain i.domain-icon {
+  font-size: 14px;
+}
+.menu.page .current-domain span {
+  display: block;
+  margin-left: 20px;
+  overflow: hidden;
+}
+
+.menu.page .btn.add {
+  font-size: 12px;
+
+}
+.menu.page .btn.add i {
+  margin-right: 3px;
+}
+.menu.page .btn.added {
+  font-size: 12px;
+}
+.menu.page .left-btn {
+  display: inline-block;
+  width: 91%;
+  position: absolute;
+  padding-right: 38px;
+}
+.menu.page .right-btn {
+  border-color: #909090;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  z-index: 3;
+}
+.menu.page .right-btn i {
+  z-index: 3;
+  line-height: inherit;
+}
+
+.menu.page .tips-box {
+  position: relative;
+}
+.menu.page .tips-box .tips {
+  position: absolute;
+  z-index: 100;
+  background: black;
+  width: 100%;
+  border-radius: 5px;
+  bottom: 5px;
+  opacity: 0.9;
+}
+.menu.page .tips-box .tips .content {
+  font-size: 12px;
+  color: white;
+  margin: 10px 10px;
+}
+.menu.page .modes {
+  position: relative;
+}
+.menu.page .modes .btn-danger {
+  background-color: #888;
+  border: 1px solid #777;
+}
+
+
+.menu.page .isp-section .btn-danger {
+    background-color: #888;
+    border: 1px solid #777;
+}
+
+.menu.page .data-saving-section .btn-danger {
+    background-color: #888;
+    border: 1px solid #777;
+}
+
+.menu.page .modes .btn-danger:hover {
+  background-color: #777;
+}
+
+
+.menu.page .popup-progress-bar {
+    float: left;
+    width: 0;
+    height: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+    -webkit-transition: width .6s ease;
+    transition: width .6s ease;
+}
+
+.progress-normal {
+    background-color: #5cb85c;
+}
+.progress-warning {
+    background-color: #f0ad4e;
+}
+.progress-danger {
+    background-color: #d9534f;
+}
+
+
+.menu.page .footer {
+    height: 25px;
+    bottom: 10px;
+    left:   10px;
+    position: absolute;
+    width: 95%;
+}
+
+
+
+.menu.page .footer button{
+  color:#ff3e84;
+}
+
+.menu.page .footer a.glyphicon {
+  color: #fff;
+}
+.menu.page .footer a.glyphicon:hover {
+  color: #eee;
+}
+.add.page .text-muted {
+  display: inline-block;
+  margin-top: 5px;
+}
+.add.page button {
+  margin-top: 5px;
+}
+.conflict.page ul li {
+  padding: 5px 0px;
+  color: #444;
+}
+.conflict.page ul li img {
+  float: left;
+  width: 16px;
+  height: 16px;
+}
+.conflict.page ul li a {
+  display: block;
+  margin-left: 20px;
+  line-height: 16px;
+  overflow-x: hidden;
+  line-break: normal;
+}
+.block-alert {
+  margin-bottom: 0;
+  padding: 10px;
+  font-size: 12px;
+}
+
+  #map-world {
+    background: url("../img/world_map_.png");
+    position: relative;
+    top:80px;
+    width: 218px;
+    height: 109px;
+    left: 9px;
+    /*
+    bottom: 50px;*/
+    z-index: 0;
+
+    }
+
+
+     #map-world .location {
+      background: url("../img/world_map_pin.png");
+      position: absolute;
+      width: 16px;
+      height: 22px;
+      z-index:100;
+      transition: 0.3s; }
+
+     #map-world .location.focused {
+      background: url("../img/world_map_pin_pink.png");
+      position: absolute;
+      width:  20px;
+      height: 22px;
+      z-index:1000;
+      transition: 0.3s; }
+
+
+
+
+
+      #map-world .hide{
+        display:none;
+      }
+
+      #map-world .location.AU_Adelaide {
+        display: block;
+        top: 74px;
+        left: 89px;
+      }
+
+       #map-world .location.NL_Amsterdam {
+        display: block;
+        top: 14px;
+        left: 9px;
+      }
+       #map-world .location.KZ_Astana {
+        display: block;
+        top: 15px;
+        left: 38px;
+      }
+       #map-world .location.GR_Athens {
+        display: block;
+        top: 26px;
+        left: 14px;
+      }
+
+       #map-world .location.US_Atlanta {
+        display: block;
+        top: 27px;
+        left: 170px;
+      }
+       #map-world .location.IQ_Baghdad {
+        display: block;
+        top: 30px;
+        left: 28px;
+      }
+
+      #map-world .location.BH_Bahrain {
+        display: block;
+        top: 36px;
+        left: 34px;
+      }
+      #map-world .location.AZ_Baku {
+        display: block;
+        top: 25px;
+        left: 33px;
+      }
+      #map-world .location.IN_Bangalore {
+        display: block;
+        top: 43px;
+        left: 51px;
+      }
+      #map-world .location.TH_Bangkok {
+        display: block;
+        top: 43px;
+        left: 66px; 
+      }
+
+      #map-world .location.ES_Barcelona {
+        display: block;
+        top: 25px;
+        left: 3px;
+      }
+
+      #map-world .location.SK_Bratislava {
+        display: block;
+        top: 19px;
+        left: 16px;
+      }
+
+      #map-world .location.BE_Brussels {
+        display: block;
+        top: 15px;
+        left: 9px;
+      }
+      
+      #map-world .location.RO_Bucharest {
+        display: block;
+        top: 25px;
+        left: 18px;
+      }
+
+      #map-world .location.HU_Budapest {
+        display: block;
+        top: 18px;
+        left: 16px;
+      }
+
+      #map-world .location.AR_Buenos_Aires {
+        display: block;
+        top: 74px;
+        left: 184px;
+      }
+      #map-world .location.EG_Cairo {
+        display: block;
+        top: 33px;
+        left: 21px;
+      }
+      #map-world .location.ZA_Cape_Town {
+        display: block;
+        top: 72px;
+        left: 16px;
+      }
+      #map-world .location.US_Chicago {
+        display: block;
+        top: 22px;
+        left: 160px;
+      }
+      #map-world .location.IN_Chennai {
+        display: block;
+        top: 43px;
+        left: 53px;
+      }
+      #map-world .location.MD_Chisinau {
+        display: block;
+        top: 21px;
+        left: 21px;
+      }
+      #map-world .location.US_Cleveland {
+        display: block;
+        top: 19px;
+        left: 175px;
+      }
+
+      #map-world .location.DK_Copenhagen {
+        display: block;
+        top: 10px;
+        left: 13px;
+      }
+
+      #map-world .location.US_Dallas {
+        display: block;
+        top: 26px;
+        left: 164px;
+      }
+      #map-world .location.US_Denver {
+        display: block;
+        top: 24px;
+        left: 155px;
+      }
+      #map-world .location.BD_Dhaka {
+        display: block;
+        top: 37px;
+        left: 60px;
+      }
+      #map-world .location.AE_Dubai {
+        display: block;
+        top: 37px;
+        left: 38px;
+      }
+
+      #map-world .location.IE_Dublin {
+        display: block;
+        top: 12px;
+        left: -3px;
+      }
+      
+      #map-world .location.DE_Frankfurt {
+        display: block;
+        top: 19px;
+        left: 12px;
+      }
+
+      #map-world .location.US_Fremont {
+        display: block;
+        top: 24px;
+        left: 148px;
+      }
+
+      #map-world .location.VN_Hanoi {
+        display: block;
+        top: 39px;
+        left: 69px;
+      }
+
+      #map-world .location.FI_Helsinki {
+        display: block;
+        top: 7px;
+        left: 17px;
+      }
+
+      #map-world .location.HK_HK {
+        display: block;
+        top: 36px;
+        left: 73px;
+      }
+
+      #map-world .location.VN_Hochiminh {
+        display: block;
+        top: 43px;
+        left: 68px;
+      }
+
+      #map-world .location.TR_Istanbul {
+        display: block;
+        top: 23px;
+        left: 17px;
+      }
+
+      #map-world .location.ID_Jakarta {
+        display: block;
+        top: 56px;
+        left: 74px;
+      }
+      #map-world .location.IL_Jerusalem {
+        display: block;
+        top: 30px;
+        left: 25px;
+      }
+      #map-world .location.TW_Kaohsiung {
+        display: block;
+        top: 35px;
+        left: 78px;
+      }
+      #map-world .location.PK_Karachi {
+        display: block;
+        top: 34px;
+        left: 45px;
+      }
+      #map-world .location.NP_Kathmandu {
+        display: block;
+        top: 34px;
+        left: 55px;
+      }
+      #map-world .location.RU_Khabarovsk {
+        display: block;
+        top: 18px;
+        left: 88px;
+      }
+
+      #map-world .location.MY_Kuala_Lumpur {
+        display: block;
+        top: 50px;
+        left: 66px;
+      }
+
+      #map-world .location.UA_Kyiv {
+        display: block;
+        top: 18px;
+        left: 21px;
+      }
+
+      #map-world .location.US_LA {
+        display: block;
+        top: 28px;
+        left: 150px;
+      }
+      #map-world .location.US_Las_Vegas {
+        display: block;
+        top: 26px;
+        left: 151px;
+      }
+      #map-world .location.UK_London {
+        display: block;
+        top: 13px;
+        left: 3px;
+      }
+
+      #map-world .location.MO_Macao {
+        display: block;
+        top: 36px;
+        left: 74px;
+      }
+
+      #map-world .location.PH_Manila {
+          display: block;
+          top: 45px;
+          left: 79px;
+      }
+
+      #map-world .location.MX_Mexico_City {
+          display: block;
+          top: 33px;
+          left: 158px;
+      }
+       #map-world .location.US_Miami {
+        display: block;
+        top: 30px;
+        left: 169px;
+      }
+      #map-world .location.IT_Milan {
+        display: block;
+        top: 22px;
+        left: 11px;  
+      }
+
+      #map-world .location.CA_Montreal {
+        display: block;
+        top: 15px;
+        left: 181px;
+      }
+
+      #map-world .location.RU_Moscow {
+        display: block;
+        top: 5px;
+        left: 42px;
+      }
+
+      #map-world .location.IN_Mumbai {
+        display: block;
+        top: 40px;
+        left: 48px;
+      }
+
+      #map-world .location.US_Newark {
+        display: block;
+        top: 19px;
+        left: 180px;
+      }
+      #map-world .location.CY_Nicosia {
+        display: block;
+        top: 22px;
+        left: 26px;
+      }
+
+      #map-world .location.RU_Novosibirsk {
+        display: block;
+        top: 12px;
+        left: 57px;
+      }
+
+      #map-world .location.US_NYC {
+        display: block;
+        top: 18px;
+        left: 181px;
+      }
+
+      #map-world .location.JP_Osaka {
+        display: block;
+        top: 28px;
+        left: 90px;
+      }
+
+      #map-world .location.NO_Oslo {
+        display: block;
+        top: 9px;
+        left: 11px;
+      }
+      #map-world .location.KH_Phnom_Penh {
+        display: block;
+        top: 42px;
+        left: 66px;
+      }    
+
+      #map-world .location.US_Portland {
+        display: block;
+        top: 23px;
+        left: 147px;
+      }
+
+      #map-world .location.FR_Paris {
+        display: block;
+        top: 19px;
+        left: 8px;
+      }
+
+      #map-world .location.CZ_Prague {
+        display: block;
+        top: 19px;
+        left: 13px;
+      }
+      #map-world .location.LV_Riga {
+        display: block;
+        top: 11px;
+        left: 16px;
+      }
+      #map-world .location.SA_Riyadh {
+        display: block;
+        top: 37px;
+        left: 34px;
+      }
+
+      #map-world .location.CL_Santiago {
+        display: block;
+        top: 68px;
+        left: 180px;
+      }
+
+      #map-world .location.US_SanJose {
+        display: block;
+        top: 25px;
+        left: 147px;
+      }
+
+      #map-world .location.BR_Sao_Paulo {
+        display: block;
+        top: 64px;
+        left: 191px;
+      }
+      #map-world .location.US_Seattle {
+        display: block;
+        top: 20px;
+        left: 147px;
+      }
+      #map-world .location.BA_Sarajevo {
+        display: block;
+        top: 24px;
+        left: 18px;
+      }
+      #map-world .location.KR_Seoul {
+        display: block;
+        top: 28px;
+        left: 83px;
+      }
+
+
+      #map-world .location.US_SF {
+        display: block;
+        top: 22px;
+        left: 147px;
+      }
+
+      #map-world .location.SG_SG {
+        display: block;
+        top: 53px;
+        left: 68px; 
+      }
+      #map-world .location.BG_Sofia {
+        display: block;
+        top: 25px;
+        left: 19px;
+      }
+      #map-world .location.SE_Stockholm {
+        display: block;
+        top: 9px;
+        left: 14px;
+      }
+
+      #map-world .location.AU_Sydney {
+        display: block;
+        top: 72px;
+        left: 97px;
+      }
+
+
+      #map-world .location.TW_Taipei {
+        display: block;
+        top: 34px;
+        left: 78px;
+      }
+
+      #map-world .location.TW_Taichung {
+        display: block;
+        top: 35px;
+        left: 78px;
+      }
+
+      #map-world .location.EE_Tallinn {
+        display: block;
+        top: 9px;
+        left: 17px;
+      }
+      #map-world .location.GE_Tbilisi {
+        display: block;
+        top: 23px;
+        left: 31px;
+      }
+      #map-world .location.IR_Tehran {
+        display: block;
+        top: 27px;
+        left: 33px;
+      }
+      #map-world .location.JP_Tokyo {
+            display: block;
+            top: 27px;
+            left: 89px;
+      }
+
+      #map-world .location.CA_Toronto {
+        display: block;
+        top: 16px;
+        left: 176px;
+      }
+      #map-world .location.MN_Ulaanbaatar {
+        display: block;
+        top: 17px;
+        left: 62px;
+      }
+      #map-world .location.CA_Vancouver {
+        display: block;
+        top: 17px;
+        left: 146px;
+      }
+
+      #map-world .location.AT_Vienna {
+        display: block;
+        top: 19px;
+        left: 15px;
+      }
+      #map-world .location.LT_Vilnius {
+        display: block;
+        top: 12px;
+        left: 17px;
+      }
+      #map-world .location.RU_Vladivostok {
+        display: block;
+        top: 24px;
+        left: 87px;
+      }
+
+      #map-world .location.PL_Warsaw {
+        display: block;
+        top: 17px;
+        left: 16px;
+      }
+
+      #map-world .location.US_WashingtonDC {
+        display: block;
+        top: 23px;
+        left: 175px;
+      }
+
+      #map-world .location.NZ_Wellington {
+        display: block;
+        top: 72px;
+        left: 113px;
+      }
+
+      #map-world .location.AM_Yerevan {
+        display: block;
+        top: 25px;
+        left: 31px;
+      }
+
+      #map-world .location.CH_Zurich {
+        display: block;
+        top: 19px;
+        left: 12px;
+      }
+
+
+
+/*
+
+#select-country {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 260px;
+    left: 15px;
+    width: 206px;
+    z-index: 1;
+}
+#select-country #select-style {
+    padding: 0;
+    margin: 0;
+    border: 1px solid rgba(255, 255, 255, 0.38);
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    text-indent: 27px;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 1px;
+    background-color: transparent;
+}
+
+#select-country #select-style:hover {
+  opacity: 0.8;
+}
+
+#select-country  #country-selected {
+    color: #fff;
+    padding: 5px 8px;
+    width: 190px;
+    border: none;
+    box-shadow: none;
+    
+    background-color: transparent;
+    background-image: none;
+    
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    
+};
+
+#select-country div#country-selected::after {
+    background: transparent url(/img/select_arrow.png) no-repeat;
+    content: " ";
+    display: block;
+    right: 10px;
+    width: 17px;
+    height: 7px;
+    position: absolute;
+    top: 12px;
+    
+    transition: all .4s ease-in-out;
+}
+
+#select-country #country-selected.opened::after {
+    transform: rotate(180deg);
+}
+
+
+#select-country ul#choices {
+    display: none;
+    list-style-type: none;
+    background: white;
+    border-radius: 4px;
+    padding-left: 0;
+    height: 89px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.67);
+    z-index: 2;
+    width: 208px;
+    transition: all .4s ease-in-out;
+    
+    margin-top: 10px;
+}
+
+#select-country ul#choices li {
+    border-bottom: solid 1px rgba(0, 0, 0, 0.07);
+    color: #464646;
+    padding: 5px 0;
+    cursor: pointer;
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background-position: 9px 0;
+    background-repeat: no-repeat;
+    text-indent: 40px;
+
+}
+
+#select-country ul#choices li:hover { 
+    background-color: #f1f1f1;
+}
+
+#select-country ul#choices::before {
+    background: white;
+    display: block;
+    height: 12px;
+    width: 12px;
+    top: 34px;
+    left: 184px;
+    content: ' ';
+    position: absolute;
+    transform: rotate(45deg);
+    z-index: 0;
+}
+
+#select-country ul#choices.opened {
+    display: block;
+}
+
+*/
+
+ .disconnected #select-style {
+    padding: 0;
+    margin: 0;
+    border: 1px solid rgba(255, 255, 255, 0.38);
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    text-indent: 27px;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 1px;
+    background-color: transparent; }
+  .disconnected #country-selected {
+    color: #fff;
+    padding: 5px 8px;
+    width: 190px;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; }
+    .disconnected #country-selected::after {
+      background: transparent url("/img/select_arrow.png") no-repeat;
+      content: " ";
+      display: block;
+      right: 10px;
+      width: 17px;
+      height: 7px;
+      position: absolute;
+      top: 12px;
+      transition: all .4s ease-in-out; }
+    .disconnected #country-selected.opened::after {
+      transform: rotate(180deg); }
+
+#select-country #select-style:hover {
+  opacity: 0.8;
+}
+
+  .disconnected #select-country {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 270px;;
+    left: 15px;
+    width: 206px;
+    height:300px;
+    z-index: 1; 
+
+  }
+    .disconnected #select-country ul#choices {
+      display: none;
+      list-style-type: none;
+      background: white;
+      border-radius: 4px;
+      padding-left: 0;
+      height: 89px;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      box-shadow: 0 1px 10px rgba(0, 0, 0, 0.67);
+      z-index: 5;
+      width: 208px;
+      transition: all .4s ease-in-out;
+       margin-top: 10px;
+
+      /**
+       * To fix the issue with the ugly scrollbar on Windows
+       */ }
+      .disconnected #select-country ul#choices.opened {
+        display: block; }
+      .disconnected #select-country ul#choices::before {
+        background: white;
+        display: block;
+        height: 12px;
+        width: 12px;
+        top: 34px;
+        left: 184px;
+        content: ' ';
+        position: absolute;
+        transform: rotate(45deg);
+        z-index: 0; }
+
+      .disconnected #select-country ul#choices li {
+        border-bottom: solid 1px rgba(0, 0, 0, 0.07);
+        z-index: 5;
+        color: #464646;
+        padding: 5px 0;
+        cursor: pointer;
+        -webkit-font-smoothing: antialiased;
+        font-size: 14px;
+        letter-spacing: 1px;
+        background-position: 9px 0;
+        background-repeat: no-repeat;
+        text-indent: 40px; }
+        #select-country ul#choices li:hover { 
+    background-color: #f1f1f1;
+}
+      .disconnected #select-country ul#choices::-webkit-scrollbar {
+        -webkit-appearance: none; }
+      .disconnected #select-country ul#choices::-webkit-scrollbar:vertical {
+        width: 11px; }
+      .disconnected #select-country ul#choices::-webkit-scrollbar:horizontal {
+        height: 11px; }
+      .disconnected #select-country ul#choices::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        border: 2px solid white;
+        /* should match background, can't be transparent */
+        background-color: rgba(0, 0, 0, 0.5); }
+      .disconnected #select-country ul#choices::-webkit-scrollbar-track {
+        background-color: #fff;
+        border-radius: 8px; }
+
+
+.flag-24.intl {
+  background: url("/img/flags/24/INTL.png") no-repeat 1px 1px; }
+.flag-24.ae {
+  background: url("/img/flags/24/AE.png") no-repeat 1px 1px; }
+.flag-24.am {
+  background: url("/img/flags/24/AM.png") no-repeat 1px 1px; }
+.flag-24.ar {
+  background: url("/img/flags/24/AR.png") no-repeat 1px 1px; }
+.flag-24.at {
+  background: url("/img/flags/24/AT.png") no-repeat 1px 1px; }
+.flag-24.au {
+  background: url("/img/flags/24/AU.png") no-repeat 1px 1px; }
+.flag-24.az {
+  background: url("/img/flags/24/AZ.png") no-repeat 1px 1px; }
+.flag-24.ba {
+  background: url("/img/flags/24/BA.png") no-repeat 1px 1px; }
+.flag-24.bd {
+  background: url("/img/flags/24/BD.png") no-repeat 1px 1px; }
+.flag-24.be {
+  background: url("/img/flags/24/BE.png") no-repeat 1px 1px; }
+.flag-24.bg {
+  background: url("/img/flags/24/BG.png") no-repeat 1px 1px; }
+.flag-24.bh {
+  background: url("/img/flags/24/BH.png") no-repeat 1px 1px; }
+.flag-24.br {
+  background: url("/img/flags/24/BR.png") no-repeat 1px 1px; }
+.flag-24.ca {
+  background: url("/img/flags/24/CA.png") no-repeat 1px 1px; }
+.flag-24.ch {
+  background: url("/img/flags/24/CH.png") no-repeat 1px 1px; }
+.flag-24.cl {
+  background: url("/img/flags/24/CL.png") no-repeat 1px 1px; }
+.flag-24.cy {
+  background: url("/img/flags/24/CY.png") no-repeat 1px 1px; }
+.flag-24.cz {
+  background: url("/img/flags/24/CZ.png") no-repeat 1px 1px; }
+.flag-24.de {
+  background: url("/img/flags/24/DE.png") no-repeat 1px 1px; }
+.flag-24.dk {
+  background: url("/img/flags/24/DK.png") no-repeat 1px 1px; }
+.flag-24.ee {
+  background: url("/img/flags/24/EE.png") no-repeat 1px 1px; }
+.flag-24.eg {
+  background: url("/img/flags/24/EG.png") no-repeat 1px 1px; }
+.flag-24.es {
+  background: url("/img/flags/24/ES.png") no-repeat 1px 1px; }
+.flag-24.fi {
+  background: url("/img/flags/24/FI.png") no-repeat 1px 1px; }
+.flag-24.fr {
+  background: url("/img/flags/24/FR.png") no-repeat 1px 1px; }
+.flag-24.gb {
+  background: url("/img/flags/24/GB.png") no-repeat 1px 1px; }
+.flag-24.ge {
+  background: url("/img/flags/24/GE.png") no-repeat 1px 1px; }
+.flag-24.gr {
+  background: url("/img/flags/24/GR.png") no-repeat 1px 1px; }
+.flag-24.hk {
+  background: url("/img/flags/24/HK.png") no-repeat 1px 1px; }
+.flag-24.hu {
+  background: url("/img/flags/24/HU.png") no-repeat 1px 1px; }
+.flag-24.id {
+  background: url("/img/flags/24/ID.png") no-repeat 1px 1px; }
+.flag-24.ie {
+  background: url("/img/flags/24/IE.png") no-repeat 1px 1px; }
+.flag-24.il {
+  background: url("/img/flags/24/IL.png") no-repeat 1px 1px; }
+.flag-24.in {
+  background: url("/img/flags/24/IN.png") no-repeat 1px 1px; }
+.flag-24.iq {
+  background: url("/img/flags/24/IQ.png") no-repeat 1px 1px; }
+.flag-24.ir {
+  background: url("/img/flags/24/IR.png") no-repeat 1px 1px; }
+.flag-24.is {
+  background: url("/img/flags/24/IS.png") no-repeat 1px 1px; }
+.flag-24.it {
+  background: url("/img/flags/24/IT.png") no-repeat 1px 1px; }
+.flag-24.jp {
+  background: url("/img/flags/24/JP.png") no-repeat 1px 1px; }
+.flag-24.kh {
+  background: url("/img/flags/24/KH.png") no-repeat 1px 1px; }
+.flag-24.kr {
+  background: url("/img/flags/24/KR.png") no-repeat 1px 1px; }
+.flag-24.kw {
+  background: url("/img/flags/24/KW.png") no-repeat 1px 1px; }
+.flag-24.kz {
+  background: url("/img/flags/24/KZ.png") no-repeat 1px 1px; }
+.flag-24.lt {
+  background: url("/img/flags/24/LT.png") no-repeat 1px 1px; }
+.flag-24.lv {
+  background: url("/img/flags/24/LV.png") no-repeat 1px 1px; }
+.flag-24.md {
+  background: url("/img/flags/24/MD.png") no-repeat 1px 1px; }
+.flag-24.mn {
+  background: url("/img/flags/24/MN.png") no-repeat 1px 1px; }
+.flag-24.mo {
+  background: url("/img/flags/24/MO.png") no-repeat 1px 1px; }
+.flag-24.mx {
+  background: url("/img/flags/24/MX.png") no-repeat 1px 1px; }
+.flag-24.my {
+  background: url("/img/flags/24/MY.png") no-repeat 1px 1px; }
+.flag-24.nl {
+  background: url("/img/flags/24/NL.png") no-repeat 1px 1px; }
+.flag-24.no {
+  background: url("/img/flags/24/NO.png") no-repeat 1px 1px; }
+.flag-24.np {
+  background: url("/img/flags/24/NP.png") no-repeat 1px 1px; }
+.flag-24.nz {
+  background: url("/img/flags/24/NZ.png") no-repeat 1px 1px; }
+.flag-24.om {
+  background: url("/img/flags/24/OM.png") no-repeat 1px 1px; }
+.flag-24.ph {
+  background: url("/img/flags/24/PH.png") no-repeat 1px 1px; }
+.flag-24.pk {
+  background: url("/img/flags/24/PK.png") no-repeat 1px 1px; }
+.flag-24.pl {
+  background: url("/img/flags/24/PL.png") no-repeat 1px 1px; }
+.flag-24.pt {
+  background: url("/img/flags/24/PT.png") no-repeat 1px 1px; }
+.flag-24.ro {
+  background: url("/img/flags/24/RO.png") no-repeat 1px 1px; }
+.flag-24.rs {
+  background: url("/img/flags/24/RS.png") no-repeat 1px 1px; }
+.flag-24.ru {
+  background: url("/img/flags/24/RU.png") no-repeat 1px 1px; }
+.flag-24.sa {
+  background: url("/img/flags/24/SA.png") no-repeat 1px 1px; }
+.flag-24.se {
+  background: url("/img/flags/24/SE.png") no-repeat 1px 1px; }
+.flag-24.sg {
+  background: url("/img/flags/24/SG.png") no-repeat 1px 1px; }
+.flag-24.sk {
+  background: url("/img/flags/24/SK.png") no-repeat 1px 1px; }
+.flag-24.th {
+  background: url("/img/flags/24/TH.png") no-repeat 1px 1px; }
+.flag-24.tr {
+  background: url("/img/flags/24/TR.png") no-repeat 1px 1px; }
+.flag-24.tw {
+  background: url("/img/flags/24/TW.png") no-repeat 1px 1px; }
+.flag-24.ua {
+  background: url("/img/flags/24/UA.png") no-repeat 1px 1px; }
+.flag-24.uk {
+  background: url("/img/flags/24/UK.png") no-repeat 1px 1px; }
+.flag-24.us {
+  background: url("/img/flags/24/US.png") no-repeat 1px 1px; }
+.flag-24.vn {
+  background: url("/img/flags/24/VN.png") no-repeat 1px 1px; }
+.flag-24.za {
+  background: url("/img/flags/24/ZA.png") no-repeat 1px 1px; }
+
+
+.flag-32.intl {
+  background: url("/img/flags/32/INTL.png") no-repeat 1px 1px; }
+.flag-32.ae {
+  background: url("/img/flags/32/AE.png") no-repeat 1px 1px; }
+.flag-32.am {
+  background: url("/img/flags/32/AM.png") no-repeat 1px 1px; }
+.flag-32.ar {
+  background: url("/img/flags/32/AR.png") no-repeat 1px 1px; }
+.flag-32.at {
+  background: url("/img/flags/32/AT.png") no-repeat 1px 1px; }
+.flag-32.au {
+  background: url("/img/flags/32/AU.png") no-repeat 1px 1px; }
+.flag-32.az {
+  background: url("/img/flags/32/AZ.png") no-repeat 1px 1px; }
+.flag-32.ba {
+  background: url("/img/flags/32/BA.png") no-repeat 1px 1px; }
+.flag-32.bd {
+  background: url("/img/flags/32/BD.png") no-repeat 1px 1px; }
+.flag-32.be {
+  background: url("/img/flags/32/BE.png") no-repeat 1px 1px; }
+.flag-32.bg {
+  background: url("/img/flags/32/BG.png") no-repeat 1px 1px; }
+.flag-32.bh {
+  background: url("/img/flags/32/BH.png") no-repeat 1px 1px; }
+.flag-32.br {
+  background: url("/img/flags/32/BR.png") no-repeat 1px 1px; }
+.flag-32.ca {
+  background: url("/img/flags/32/CA.png") no-repeat 1px 1px; }
+.flag-32.ch {
+  background: url("/img/flags/32/CH.png") no-repeat 1px 1px; }
+.flag-32.cl {
+  background: url("/img/flags/32/CL.png") no-repeat 1px 1px; }
+.flag-32.cy {
+  background: url("/img/flags/32/CY.png") no-repeat 1px 1px; }
+.flag-32.cz {
+  background: url("/img/flags/32/CZ.png") no-repeat 1px 1px; }
+.flag-32.de {
+  background: url("/img/flags/32/DE.png") no-repeat 1px 1px; }
+.flag-32.dk {
+  background: url("/img/flags/32/DK.png") no-repeat 1px 1px; }
+.flag-32.ee {
+  background: url("/img/flags/32/EE.png") no-repeat 1px 1px; }
+.flag-32.eg {
+  background: url("/img/flags/32/EG.png") no-repeat 1px 1px; }
+.flag-32.es {
+  background: url("/img/flags/32/ES.png") no-repeat 1px 1px; }
+.flag-32.fi {
+  background: url("/img/flags/32/FI.png") no-repeat 1px 1px; }
+.flag-32.fr {
+  background: url("/img/flags/32/FR.png") no-repeat 1px 1px; }
+.flag-32.gb {
+  background: url("/img/flags/32/GB.png") no-repeat 1px 1px; }
+.flag-32.ge {
+  background: url("/img/flags/32/GE.png") no-repeat 1px 1px; }
+.flag-32.gr {
+  background: url("/img/flags/32/GR.png") no-repeat 1px 1px; }
+.flag-32.hk {
+  background: url("/img/flags/32/HK.png") no-repeat 1px 1px; }
+.flag-32.hu {
+  background: url("/img/flags/32/HU.png") no-repeat 1px 1px; }
+.flag-32.id {
+  background: url("/img/flags/32/ID.png") no-repeat 1px 1px; }
+.flag-32.ie {
+  background: url("/img/flags/32/IE.png") no-repeat 1px 1px; }
+.flag-32.il {
+  background: url("/img/flags/32/IL.png") no-repeat 1px 1px; }
+.flag-32.in {
+  background: url("/img/flags/32/IN.png") no-repeat 1px 1px; }
+.flag-32.iq {
+  background: url("/img/flags/32/IQ.png") no-repeat 1px 1px; }
+.flag-32.ir {
+  background: url("/img/flags/32/IR.png") no-repeat 1px 1px; }
+.flag-32.is {
+  background: url("/img/flags/32/IS.png") no-repeat 1px 1px; }
+.flag-32.it {
+  background: url("/img/flags/32/IT.png") no-repeat 1px 1px; }
+.flag-32.jp {
+  background: url("/img/flags/32/JP.png") no-repeat 1px 1px; }
+.flag-32.kh {
+  background: url("/img/flags/32/KH.png") no-repeat 1px 1px; }
+.flag-32.kr {
+  background: url("/img/flags/32/KR.png") no-repeat 1px 1px; }
+.flag-32.kw {
+  background: url("/img/flags/32/KW.png") no-repeat 1px 1px; }
+.flag-32.kz {
+  background: url("/img/flags/32/KZ.png") no-repeat 1px 1px; }
+.flag-32.lt {
+  background: url("/img/flags/32/LT.png") no-repeat 1px 1px; }
+.flag-32.lv {
+  background: url("/img/flags/32/LV.png") no-repeat 1px 1px; }
+.flag-32.md {
+  background: url("/img/flags/32/MD.png") no-repeat 1px 1px; }
+.flag-32.mn {
+  background: url("/img/flags/32/MN.png") no-repeat 1px 1px; }
+.flag-32.mo {
+  background: url("/img/flags/32/MO.png") no-repeat 1px 1px; }
+.flag-32.mx {
+  background: url("/img/flags/32/MX.png") no-repeat 1px 1px; }
+.flag-32.my {
+  background: url("/img/flags/32/MY.png") no-repeat 1px 1px; }
+.flag-32.nl {
+  background: url("/img/flags/32/NL.png") no-repeat 1px 1px; }
+.flag-32.no {
+  background: url("/img/flags/32/NO.png") no-repeat 1px 1px; }
+.flag-32.np {
+  background: url("/img/flags/32/NP.png") no-repeat 1px 1px; }
+.flag-32.nz {
+  background: url("/img/flags/32/NZ.png") no-repeat 1px 1px; }
+.flag-32.om {
+  background: url("/img/flags/32/OM.png") no-repeat 1px 1px; }
+.flag-32.ph {
+  background: url("/img/flags/32/PH.png") no-repeat 1px 1px; }
+.flag-32.pk {
+  background: url("/img/flags/32/PK.png") no-repeat 1px 1px; }
+.flag-32.pl {
+  background: url("/img/flags/32/PL.png") no-repeat 1px 1px; }
+.flag-32.pt {
+  background: url("/img/flags/32/PT.png") no-repeat 1px 1px; }
+.flag-32.ro {
+  background: url("/img/flags/32/RO.png") no-repeat 1px 1px; }
+.flag-32.rs {
+  background: url("/img/flags/32/RS.png") no-repeat 1px 1px; }
+.flag-32.ru {
+  background: url("/img/flags/32/RU.png") no-repeat 1px 1px; }
+.flag-32.sa {
+  background: url("/img/flags/32/SA.png") no-repeat 1px 1px; }
+.flag-32.se {
+  background: url("/img/flags/32/SE.png") no-repeat 1px 1px; }
+.flag-32.sg {
+  background: url("/img/flags/32/SG.png") no-repeat 1px 1px; }
+.flag-32.sk {
+  background: url("/img/flags/32/SK.png") no-repeat 1px 1px; }
+.flag-32.th {
+  background: url("/img/flags/32/TH.png") no-repeat 1px 1px; }
+.flag-32.tr {
+  background: url("/img/flags/32/TR.png") no-repeat 1px 1px; }
+.flag-32.tw {
+  background: url("/img/flags/32/TW.png") no-repeat 1px 1px; }
+.flag-32.ua {
+  background: url("/img/flags/32/UA.png") no-repeat 1px 1px; }
+.flag-32.uk {
+  background: url("/img/flags/32/UK.png") no-repeat 1px 1px; }
+.flag-32.us {
+  background: url("/img/flags/32/US.png") no-repeat 1px 1px; }
+.flag-32.vn {
+  background: url("/img/flags/32/VN.png") no-repeat 1px 1px; }
+.flag-32.za {
+  background: url("/img/flags/32/ZA.png") no-repeat 1px 1px; }
+
+  
+/* Retina */
+@media only screen and (-webkit-min-device-pixel-ratio: 2), not all, not all, not all {
+.flag-24.intl {
+  background: url("/img/flags/48/INTL.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.ae {
+  background: url("/img/flags/48/AE.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.am {
+  background: url("/img/flags/48/AM.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.ar {
+  background: url("/img/flags/48/AR.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.at {
+  background: url("/img/flags/48/AT.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.au {
+  background: url("/img/flags/48/AU.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.az {
+  background: url("/img/flags/48/AZ.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.ba {
+  background: url("/img/flags/48/BA.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.bd {
+  background: url("/img/flags/48/BD.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.be {
+  background: url("/img/flags/48/BE.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.bg {
+  background: url("/img/flags/48/BG.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.bh {
+  background: url("/img/flags/48/BH.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.br {
+  background: url("/img/flags/48/BR.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.ca {
+  background: url("/img/flags/48/CA.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.ch {
+  background: url("/img/flags/48/CH.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.cl {
+  background: url("/img/flags/48/CL.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.cy {
+  background: url("/img/flags/48/CY.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.cz {
+  background: url("/img/flags/48/CZ.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.de {
+  background: url("/img/flags/48/DE.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.dk {
+  background: url("/img/flags/48/DK.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.ee {
+  background: url("/img/flags/48/EE.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.eg {
+  background: url("/img/flags/48/EG.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.es {
+  background: url("/img/flags/48/ES.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.fi {
+  background: url("/img/flags/48/FI.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.fr {
+  background: url("/img/flags/48/FR.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.gb {
+  background: url("/img/flags/48/GB.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.ge {
+  background: url("/img/flags/48/GE.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.gr {
+  background: url("/img/flags/48/GR.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.hk {
+  background: url("/img/flags/48/HK.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.hu {
+  background: url("/img/flags/48/HU.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.id {
+  background: url("/img/flags/48/ID.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.il {
+  background: url("/img/flags/48/IL.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.in {
+  background: url("/img/flags/48/IN.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.ie {
+  background: url("/img/flags/48/IE.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.iq {
+  background: url("/img/flags/48/IQ.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.ir {
+  background: url("/img/flags/48/IR.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.is {
+  background: url("/img/flags/48/IS.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.it {
+  background: url("/img/flags/48/IT.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.jp {
+  background: url("/img/flags/48/JP.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.kh {
+  background: url("/img/flags/48/KH.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.kr {
+  background: url("/img/flags/48/KR.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.kw {
+  background: url("/img/flags/48/KW.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.kz {
+  background: url("/img/flags/48/KZ.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.lt {
+  background: url("/img/flags/48/LT.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.lv {
+  background: url("/img/flags/48/LV.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.md {
+  background: url("/img/flags/48/MD.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.mn {
+  background: url("/img/flags/48/MN.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.mo {
+  background: url("/img/flags/48/MO.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.mx {
+  background: url("/img/flags/48/MX.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.my {
+  background: url("/img/flags/48/MY.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.nl {
+  background: url("/img/flags/48/NL.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.no {
+  background: url("/img/flags/48/NO.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.np {
+  background: url("/img/flags/48/NP.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.nz {
+  background: url("/img/flags/48/NZ.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.om {
+  background: url("/img/flags/48/OM.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.ph {
+  background: url("/img/flags/48/PH.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.pk {
+  background: url("/img/flags/48/PK.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.pl {
+  background: url("/img/flags/48/PL.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.pt {
+  background: url("/img/flags/48/PT.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.ro {
+  background: url("/img/flags/48/RO.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.rs {
+  background: url("/img/flags/48/RS.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.ru {
+  background: url("/img/flags/48/RU.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.sa {
+  background: url("/img/flags/48/SA.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.se {
+  background: url("/img/flags/48/SE.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.sg {
+  background: url("/img/flags/48/SG.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.sk {
+  background: url("/img/flags/48/SK.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.th {
+  background: url("/img/flags/48/TH.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.tr {
+  background: url("/img/flags/48/TR.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.tw {
+  background: url("/img/flags/48/TW.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.ua {
+  background: url("/img/flags/48/UA.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.uk {
+  background: url("/img/flags/48/UK.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.us {
+  background: url("/img/flags/48/US.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.vn {
+  background: url("/img/flags/48/VN.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-24.za {
+  background: url("/img/flags/48/ZA.png") no-repeat 1px 1px; background-size: 24px 24px; }
+
+
+
+.flag-32.intl {
+  background: url("/img/flags/64/INTL.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.ae {
+  background: url("/img/flags/64/AE.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.am {
+  background: url("/img/flags/64/AM.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.ar {
+  background: url("/img/flags/64/AR.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.at {
+  background: url("/img/flags/64/AT.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.au {
+  background: url("/img/flags/64/AU.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.az {
+  background: url("/img/flags/64/AZ.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.ba {
+  background: url("/img/flags/64/BA.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.bd {
+  background: url("/img/flags/64/BD.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.be {
+  background: url("/img/flags/64/BE.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.bg {
+  background: url("/img/flags/64/BG.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.bh {
+  background: url("/img/flags/64/BH.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.br {
+  background: url("/img/flags/64/BR.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.ca {
+  background: url("/img/flags/64/CA.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.ch {
+  background: url("/img/flags/64/CH.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.cl {
+  background: url("/img/flags/64/CL.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.cy {
+  background: url("/img/flags/64/CY.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.cz {
+  background: url("/img/flags/64/CZ.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.de {
+  background: url("/img/flags/64/DE.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.dk {
+  background: url("/img/flags/64/DK.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.ee {
+  background: url("/img/flags/64/EE.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.eg {
+  background: url("/img/flags/64/EG.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.es {
+  background: url("/img/flags/64/ES.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.fi {
+  background: url("/img/flags/64/FI.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.fr {
+  background: url("/img/flags/64/FR.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.gb {
+  background: url("/img/flags/64/GB.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.ge {
+  background: url("/img/flags/64/GE.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.gr {
+  background: url("/img/flags/64/GR.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.hk {
+  background: url("/img/flags/64/HK.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.hu {
+  background: url("/img/flags/64/HU.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.id {
+  background: url("/img/flags/64/ID.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.il {
+  background: url("/img/flags/64/IL.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.in {
+  background: url("/img/flags/64/IN.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.ie {
+  background: url("/img/flags/64/IE.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.iq {
+  background: url("/img/flags/64/IQ.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.ir {
+  background: url("/img/flags/64/IR.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.is {
+  background: url("/img/flags/64/IS.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.it {
+  background: url("/img/flags/64/IT.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.jp {
+  background: url("/img/flags/64/JP.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.kh {
+  background: url("/img/flags/64/KH.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.kr {
+  background: url("/img/flags/64/KR.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.kw {
+  background: url("/img/flags/64/KW.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.kz {
+  background: url("/img/flags/64/KZ.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.lt {
+  background: url("/img/flags/64/LT.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.lv {
+  background: url("/img/flags/64/LV.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.md {
+  background: url("/img/flags/64/MD.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.mn {
+  background: url("/img/flags/64/MN.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.mo {
+  background: url("/img/flags/64/MO.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.mx {
+  background: url("/img/flags/64/MX.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.my {
+  background: url("/img/flags/64/MY.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.nl {
+  background: url("/img/flags/64/NL.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.no {
+  background: url("/img/flags/64/NO.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.np {
+  background: url("/img/flags/64/NP.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.nz {
+  background: url("/img/flags/64/NZ.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.om {
+  background: url("/img/flags/64/OM.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.ph {
+  background: url("/img/flags/64/PH.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.pk {
+  background: url("/img/flags/64/PK.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.pl {
+  background: url("/img/flags/64/PL.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.pt {
+  background: url("/img/flags/64/PT.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.ro {
+  background: url("/img/flags/64/RO.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.rs {
+  background: url("/img/flags/64/RS.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.ru {
+  background: url("/img/flags/64/RU.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.sa {
+  background: url("/img/flags/64/SA.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.se {
+  background: url("/img/flags/64/SE.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.sg {
+  background: url("/img/flags/64/SG.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.sk {
+  background: url("/img/flags/64/SK.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.th {
+  background: url("/img/flags/64/TH.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.tr {
+  background: url("/img/flags/64/TR.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.tw {
+  background: url("/img/flags/64/TW.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.ua {
+  background: url("/img/flags/64/UA.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.uk {
+  background: url("/img/flags/64/UK.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.us {
+  background: url("/img/flags/64/US.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.vn {
+  background: url("/img/flags/64/VN.png") no-repeat 1px 1px; background-size: 24px 24px; }
+.flag-32.za {
+  background: url("/img/flags/64/ZA.png") no-repeat 1px 1px; background-size: 24px 24px; }
+
+
+}
+
+/*
+  #map-world .location.US_LA {
+        display: block;
+        top: 28px;
+        left: 150px;
+  }
+  #map-world .location.US_SF {
+        display: block;
+    top: 22px;
+    left: 147px;
+  }
+  #map-world .location.US_Fremont {
+        display: block;
+    top: 24px;
+    left: 148px;
+  }
+
+
+  #map-world .location.JP_Toykyo {
+        display: block;
+        top: 27px;
+        left: 89px;
+  }
+       #map-world .location.JP_Osaka {
+        display: block;
+        top: 28px;
+        left: 90px;
+         }
+       #map-world .location.JP_Kyodo {
+        display: block;
+        top: 27px;
+        left: 90px;}
+       #map-world .location.HK_HK {
+        display: block;
+        top: 35px;
+        left: 77px;
+       }
+       #map-world .location.SG_SG {
+        display: block;
+        top: 53px;
+        left: 68px; }
+*/

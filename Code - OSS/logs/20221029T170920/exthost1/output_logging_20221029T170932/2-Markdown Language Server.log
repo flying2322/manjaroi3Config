@@ -1,0 +1,13 @@
+[Trace 09:09:33.349] Server: connection.languages.diagnostics.on: file:///home/dom/Dev/olas/readme.md
+[Trace 09:09:33.597] Server: connection.languages.diagnostics.on: file:///home/dom/Dev/olas/readme.md
+[Trace 09:09:33.691] VsCodeClientWorkspace: TextDocument.onDidOpen: file:///home/dom/Dev/olas/readme.md
+[Trace 09:09:33.692] VsCodeClientWorkspace: TextDocument.onDidChanceContent: file:///home/dom/Dev/olas/readme.md
+[Trace 09:09:33.757] Server: connection.languages.diagnostics.on: file:///home/dom/Dev/olas/readme.md
+[Trace 09:10:03.578] VsCodeClientWorkspace: onDidChangeWatchedFiles: 2: file:///home/dom/Dev/olas/readme.md
+[Trace 09:10:03.592] VsCodeClientWorkspace: onDidChangeWatchedFiles: 2: file:///home/dom/Dev/olas/readme.md
+[Trace 09:52:02.314] Server: connection.languages.diagnostics.on: file:///home/dom/Dev/olas/readme.md
+[Trace 09:52:02.315] DocumentSymbolProvider: provideDocumentSymbols — file:///home/dom/Dev/olas/readme.md 1
+[Debug 09:52:02.315] LinkProvider: compute - file:///home/dom/Dev/olas/readme.md
+[Debug 09:52:02.319] TableOfContentsProvider: create - file:///home/dom/Dev/olas/readme.md
+[Debug 09:52:03.567] MdFoldingProvider: provideFoldingRanges — file:///home/dom/Dev/olas/readme.md 1
+[Trace 09:52:34.944] Server: connection.languages.diagnostics.on: file:///home/dom/Dev/olas/readme.md

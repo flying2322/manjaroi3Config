@@ -1,0 +1,122 @@
+{
+   "app_command": {
+      "message": "Alihkan Tampilan Pembaca"
+   },
+   "app_description": {
+      "message": "Lepaskan kekacauan seperti tombol, gambar latar belakang, dan ubah ukuran teks, kontras, dan tata letak halaman untuk keterbacaan yang lebih baik"
+   },
+   "app_name": {
+      "message": "Tampilan Pembaca"
+   },
+   "app_title": {
+      "message": "Memuat ... :: Tampilan Pembaca"
+   },
+   "app_ui_btn_fullscreen": {
+      "message": "Beralih ke pembacaan layar penuh"
+   },
+   "app_ui_btn_imgs": {
+      "message": "Beralih gambar"
+   },
+   "app_ui_btn_next": {
+      "message": "pindah ke halaman berikutnya (Meta + Tombol Panah Kanan)"
+   },
+   "app_ui_btn_prev": {
+      "message": "pindah ke halaman sebelumnya (Meta + Tombol Panah Kiri)"
+   },
+   "app_ui_btn_print": {
+      "message": "Cetak di Tampilan Pembaca"
+   },
+   "app_ui_btn_rateUs": {
+      "message": "Silakan Beri Nilai Kami! ⭑⭑⭑⭑⭑"
+   },
+   "app_ui_btn_site_gd": {
+      "message": "Di situs kami, Anda dapat menyimpan artikel di drive Google Anda"
+   },
+   "app_ui_btn_site_pc": {
+      "message": "Di situs kami, Anda dapat menyimpan artikel di Komputer Anda"
+   },
+   "app_ui_btn_speech": {
+      "message": "Baca Artikel ini"
+   },
+   "app_ui_label1": {
+      "message": "Lebar Penuh"
+   },
+   "app_ui_label2": {
+      "message": "Tidak Tinggi"
+   },
+   "app_ui_label3": {
+      "message": "Cahaya"
+   },
+   "app_ui_label4": {
+      "message": "Gelap"
+   },
+   "app_ui_label5": {
+      "message": "Biru"
+   },
+   "app_ui_label6": {
+      "message": "Menyembunyikan"
+   },
+   "app_ui_label7": {
+      "message": "Menunjukkan"
+   },
+   "app_ui_notify_wrong_content": {
+      "message": "Maaf, konten aslinya tidak dapat diakses lagi. Harap muat konten asal dan coba lagi"
+   },
+   "options_header": {
+      "message": "Kustomisasi UI"
+   },
+   "options_opt1": {
+      "message": "Tampilkan \"tombol pencetakan\" di tampilan pembaca"
+   },
+   "options_opt10": {
+      "message": "Secara otomatis beralih ke mode layar penuh"
+   },
+   "options_opt11": {
+      "message": "Penataan gaya"
+   },
+   "options_opt12": {
+      "message": "Gaya pengguna untuk tampilan pembaca aktual"
+   },
+   "options_opt13": {
+      "message": "Pembukaan Tautan"
+   },
+   "options_opt14": {
+      "message": "Buka tautan di tab baru"
+   },
+   "options_opt15": {
+      "message": "Buka tautan dalam mode tampilan pembaca"
+   },
+   "options_opt16": {
+      "message": "Lain-lain"
+   },
+   "options_opt17": {
+      "message": "Buka halaman FAQ tentang pembaruan"
+   },
+   "options_opt2": {
+      "message": "Tampilkan \"tombol simpan\" di tampilan pembaca"
+   },
+   "options_opt3": {
+      "message": "Tampilkan \"tombol layar penuh\" pada tampilan pembaca"
+   },
+   "options_opt4": {
+      "message": "Tampilkan \"tombol bicara\" di tampilan pembaca"
+   },
+   "options_opt5": {
+      "message": "Tampilkan \"beralih tombol gambar\" di tampilan pembaca"
+   },
+   "options_opt6": {
+      "message": "Tampilkan \"tombol navigasi\" di tampilan pembaca"
+   },
+   "options_opt7": {
+      "message": "Tampilkan \"Buka di Tampilan Pembaca\" item menu konteks (diperlukan restart) (memerlukan izin chrome.tabs)"
+   },
+   "options_opt8": {
+      "message": "Tampilkan \"Buka di latar belakang Lihat Pustaka\" item menu konteks (harus dihidupkan ulang) (memerlukan izin chrome.tabs)"
+   },
+   "options_opt9": {
+      "message": "Tampilkan \"Alihkan ke Tampilan Pustaka\" item menu konteks (diperlukan restart)"
+   },
+   "options_title": {
+      "message": "Tampilan Pembaca :: Opsi"
+   }
+}

@@ -1,0 +1,122 @@
+{
+   "app_command": {
+      "message": "Togol Lihat Pembaca"
+   },
+   "app_description": {
+      "message": "Jalur seperti kekunci seperti gambar latar belakang, dan ubah saiz teks, kontras dan susun atur untuk pembacaan yang lebih baik"
+   },
+   "app_name": {
+      "message": "Pandangan Pustaka"
+   },
+   "app_title": {
+      "message": "Memuatkan ... :: Lihat Pustaka"
+   },
+   "app_ui_btn_fullscreen": {
+      "message": "Beralih ke bacaan skrin penuh"
+   },
+   "app_ui_btn_imgs": {
+      "message": "Togol imej"
+   },
+   "app_ui_btn_next": {
+      "message": "beralih ke halaman seterusnya (Meta + Kekunci Panah Kanan)"
+   },
+   "app_ui_btn_prev": {
+      "message": "beralih ke halaman sebelumnya (Kunci Meta + Kiri Left)"
+   },
+   "app_ui_btn_print": {
+      "message": "Cetak dalam Paparan Pustaka"
+   },
+   "app_ui_btn_rateUs": {
+      "message": "Sila Berikan Kami! ⭑⭑⭑⭑⭑"
+   },
+   "app_ui_btn_site_gd": {
+      "message": "Di laman web kami, anda boleh menyimpan artikel pada pemacu Google anda"
+   },
+   "app_ui_btn_site_pc": {
+      "message": "Di laman web kami, anda boleh menyimpan artikel di Komputer anda"
+   },
+   "app_ui_btn_speech": {
+      "message": "Baca Artikel ini"
+   },
+   "app_ui_label1": {
+      "message": "Kelebaran penuh"
+   },
+   "app_ui_label2": {
+      "message": "Tiada Ketinggian"
+   },
+   "app_ui_label3": {
+      "message": "Cahaya"
+   },
+   "app_ui_label4": {
+      "message": "Gelap"
+   },
+   "app_ui_label5": {
+      "message": "Biru"
+   },
+   "app_ui_label6": {
+      "message": "Sembunyikan"
+   },
+   "app_ui_label7": {
+      "message": "Tunjukkan"
+   },
+   "app_ui_notify_wrong_content": {
+      "message": "Maaf kandungan asal tidak boleh diakses lagi. Sila muatkan kandungan asal dan cuba lagi"
+   },
+   "options_header": {
+      "message": "Ubahsuaian UI"
+   },
+   "options_opt1": {
+      "message": "Tunjukkan \"butang percetakan\" di paparan pembaca"
+   },
+   "options_opt10": {
+      "message": "Beralih secara automatik ke mod skrin penuh"
+   },
+   "options_opt11": {
+      "message": "Gaya tersuai"
+   },
+   "options_opt12": {
+      "message": "Gaya pengguna untuk melihat pembaca sebenar"
+   },
+   "options_opt13": {
+      "message": "Pembukaan Pautan"
+   },
+   "options_opt14": {
+      "message": "Buka pautan dalam tab baharu"
+   },
+   "options_opt15": {
+      "message": "Buka pautan dalam mod pandangan pembaca"
+   },
+   "options_opt16": {
+      "message": "Misc"
+   },
+   "options_opt17": {
+      "message": "Buka halaman FAQ mengenai kemas kini"
+   },
+   "options_opt2": {
+      "message": "Tunjukkan \"butang simpan\" dalam pandangan pembaca"
+   },
+   "options_opt3": {
+      "message": "Papar \"butang skrin penuh\" di paparan pembaca"
+   },
+   "options_opt4": {
+      "message": "Tunjukkan \"butang pertuturan\" di paparan pembaca"
+   },
+   "options_opt5": {
+      "message": "Tunjukkan \"butang imej togol\" di paparan pembaca"
+   },
+   "options_opt6": {
+      "message": "Papar \"butang navigasi\" di paparan pembaca"
+   },
+   "options_opt7": {
+      "message": "Paparkan \"Buka dalam Paparan Pustaka\" item menu konteks (mula semula diperlukan) (memerlukan kebenaran chrome.tabs)"
+   },
+   "options_opt8": {
+      "message": "Paparkan \"Buka dalam latar belakang Pustaka Lihat\" item menu konteks (mula semula diperlukan) (memerlukan kebenaran chrome.tabs)"
+   },
+   "options_opt9": {
+      "message": "Papar item konteks \"Tukar kepada Pustaka\" item (dimulakan semula diperlukan)"
+   },
+   "options_title": {
+      "message": "Pandangan Pandang :: Pilihan"
+   }
+}

@@ -1,0 +1,122 @@
+{
+   "app_command": {
+      "message": "Comutați vizualizarea cititorului"
+   },
+   "app_description": {
+      "message": "Îndepărtează aglomerația precum butoanele, imaginile de fundal și modifică dimensiunea textului, contrastul și aspectul paginii pentru o mai bună lizibilitate"
+   },
+   "app_name": {
+      "message": "Vizualizare cititor"
+   },
+   "app_title": {
+      "message": "Se încarcă ... :: Vizualizare cititor"
+   },
+   "app_ui_btn_fullscreen": {
+      "message": "Comutați la citirea pe ecran complet"
+   },
+   "app_ui_btn_imgs": {
+      "message": "Comutați imagini"
+   },
+   "app_ui_btn_next": {
+      "message": "treceți la pagina următoare (Meta + Săgeată dreapta)"
+   },
+   "app_ui_btn_prev": {
+      "message": "treceți la pagina anterioară (meta + săgeată stângă)"
+   },
+   "app_ui_btn_print": {
+      "message": "Tipăriți în Viewer Reader"
+   },
+   "app_ui_btn_rateUs": {
+      "message": "Vă rugăm să ne evaluați! ⭑⭑⭑⭑⭑"
+   },
+   "app_ui_btn_site_gd": {
+      "message": "Pe site-ul nostru puteți salva articol pe unitatea dvs. Google"
+   },
+   "app_ui_btn_site_pc": {
+      "message": "Pe site-ul nostru puteți salva articol pe computer"
+   },
+   "app_ui_btn_speech": {
+      "message": "Citiți acest articol"
+   },
+   "app_ui_label1": {
+      "message": "Lățime maximă"
+   },
+   "app_ui_label2": {
+      "message": "Fără înălțime"
+   },
+   "app_ui_label3": {
+      "message": "Ușoară"
+   },
+   "app_ui_label4": {
+      "message": "Întuneric"
+   },
+   "app_ui_label5": {
+      "message": "Albastru"
+   },
+   "app_ui_label6": {
+      "message": "Ascunde"
+   },
+   "app_ui_label7": {
+      "message": "Spectacol"
+   },
+   "app_ui_notify_wrong_content": {
+      "message": "Ne pare rău, conținutul original nu mai este accesibil. Vă rugăm să încărcați conținutul de origine și să încercați din nou"
+   },
+   "options_header": {
+      "message": "Personalizare UI"
+   },
+   "options_opt1": {
+      "message": "Afișați „butonul de imprimare” în vizualizarea cititorului"
+   },
+   "options_opt10": {
+      "message": "Treceți automat la modul ecran complet"
+   },
+   "options_opt11": {
+      "message": "Stilizare personalizată"
+   },
+   "options_opt12": {
+      "message": "Stiluri de utilizator pentru vizualizarea efectivă a cititorului"
+   },
+   "options_opt13": {
+      "message": "Deschiderea linkului"
+   },
+   "options_opt14": {
+      "message": "Deschideți legături în filele noi"
+   },
+   "options_opt15": {
+      "message": "Deschideți legături în modul vizualizare cititor"
+   },
+   "options_opt16": {
+      "message": "Diverse"
+   },
+   "options_opt17": {
+      "message": "Deschideți pagina cu întrebări frecvente despre actualizări"
+   },
+   "options_opt2": {
+      "message": "Afișați „butonul de salvare” în vizualizarea cititorului"
+   },
+   "options_opt3": {
+      "message": "Afișați „butonul ecran complet” în vizualizarea cititorului"
+   },
+   "options_opt4": {
+      "message": "Afișați „butonul de vorbire” în vizualizarea cititorului"
+   },
+   "options_opt5": {
+      "message": "Afișați „butonul de comutare a imaginilor” în vizualizarea cititorului"
+   },
+   "options_opt6": {
+      "message": "Afișați „butoanele de navigare” în vizualizarea cititorului"
+   },
+   "options_opt7": {
+      "message": "Afișați „Deschideți în vizualizarea cititorului” elementul din meniul contextual (este necesară repornirea) (necesită permisiunea chrome.tabs)"
+   },
+   "options_opt8": {
+      "message": "Afișați „Deschideți în fundal cititorul în fundal” elementul din meniul contextual (este necesară repornirea) (necesită permisiunea chrome.tabs)"
+   },
+   "options_opt9": {
+      "message": "Afișați „Comutați la vizualizarea cititorului” element din meniul contextual (este necesară repornirea)"
+   },
+   "options_title": {
+      "message": "Vizualizare cititor :: Opțiuni"
+   }
+}

@@ -1,0 +1,47 @@
+{
+   "action": {
+      "default_icon": {
+         "38": "res/icon.png"
+      },
+      "default_title": "__MSG_BrowserActionTitle__"
+   },
+   "author": "Evernote",
+   "background": {
+      "service_worker": "ServiceWorkerExtension.js"
+   },
+   "content_scripts": [ {
+      "css": [ "content.css", "SkitchStyles.css", "TopFrames.css" ],
+      "js": [ "commons.js", "content.js" ],
+      "matches": [ "http://*/*", "https://*/*", "ftp://*/*" ]
+   }, {
+      "all_frames": true,
+      "js": [ "ContentScriptFrames.js" ],
+      "matches": [ "http://*/*", "https://*/*", "ftp://*/*" ]
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_ExtensionDescription__",
+   "host_permissions": [ "\u003Call_urls>" ],
+   "icons": {
+      "128": "res/icon128.png",
+      "38": "res/icon.png"
+   },
+   "incognito": "split",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhzcCnVbEnkcxdo7UL5Ay7s6cUU5LcVs9es8FAIhx9+aShvQUAL1P0zKDC6Kk0BFue4CbRWwJnhA3nNiLJyWbnxOK4pPeaeHBTu1homEmZv0RG/RjMK+6uQPLTNvhixqYkfsn1FgGw0JkH2XemqAhEX3SIjtgqlDyib/uDSjH1OUCt1ih33E2GnJDN24q1vDkvt+u9nu/sRRxkkSvzwye4GXmiHl+UgroYHhuTlcMVBZv/YtgMOGIBv/TC0ifVFyXMVSKGmuTsfzPE2wssEVojyZbAZxOnqjL0Ly12SeUbro4jOsVnbJw2OxNj5QGPOcxTjacTAl6MU6Aj3SXDPlgFQIDAQAB",
+   "manifest_version": 3,
+   "minimum_chrome_version": "88",
+   "name": "__MSG_ExtensionName__",
+   "options_page": "OptionsFrame.html",
+   "options_ui": {
+      "page": "OptionsFrame.html#newStylePage"
+   },
+   "permissions": [ "activeTab", "tabs", "cookies", "contextMenus", "storage", "notifications", "scripting" ],
+   "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+   "version": "7.35.0",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "consent.html", "consentStyles.css", "ContentFrame.html", "OptionsFrame.html", "SimSearchFrame.html", "PdfPageButtonFrame.html", "content.css", "ClearlyReformatStyles.css", "ClearlyCustomStyles.css", "PreloaderStyles.css", "SkitchStyles.css", "HighlightStyles.css", "BookmarkStyles.css", "ScreenshotPreviewerManagerBox.css", "ContentScriptFrames.js", "res/snap.wav", "res/*" ]
+   }, {
+      "matches": [ "https://mail.google.com/*" ],
+      "resources": [ "GmailInjectedScript.js" ]
+   } ]
+}

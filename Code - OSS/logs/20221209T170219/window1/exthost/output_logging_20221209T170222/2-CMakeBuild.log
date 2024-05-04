@@ -1,0 +1,5 @@
+[rollbar] "sourceDirectory" is not a directory {"sourceDirectory":"/home/dom/Dev/olas/Lession01"}
+[variant] Loaded new set of variants
+[kit] Successfully loaded 3 kits from /home/dom/.local/share/CMakeTools/cmake-tools-kits.json
+[rollbar] "sourceDirectory" is not a directory {"sourceDirectory":"/home/dom/Dev/olas/Lession01"}
+[rollbar] Unhandled exception: Unhandled Promise rejection: Post-folder-open Canceled: Canceled {"folder":{"uri":{"$mid":1,"fsPath":"/home/dom/Dev/olas","external":"file:///home/dom/Dev/olas","path":"/home/dom/Dev/olas","scheme":"file"},"name":"olas","index":0}}

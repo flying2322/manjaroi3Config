@@ -1,0 +1,27 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "js/vendor/axios.min.js", "js/vendor/forge_listen1_fork.min.js", "js/github.js", "js/background.js", "js/vendor/howler.core.min.js", "js/bridge.js", "js/vendor/async.min.js", "js/vendor/lru-cache.min.js", "js/lowebutil.js", "js/provider/xiami.js", "js/provider/qq.js", "js/provider/netease.js", "js/provider/kugou.js", "js/provider/kuwo.js", "js/provider/bilibili.js", "js/provider/migu.js", "js/provider/taihe.js", "js/provider/localmusic.js", "js/myplaylist.js", "js/loweb.js", "js/player_thread.js" ]
+   },
+   "browser_action": {
+      "default_icon": "images/logo.png",
+      "default_title": "Listen 1"
+   },
+   "content_scripts": [ {
+      "js": [ "js/oauth_callback.js" ],
+      "matches": [ "https://listen1.github.io/listen1/*" ]
+   } ],
+   "description": "One for all free music in China",
+   "icons": {
+      "128": "images/logo.png",
+      "16": "images/logo_16.png",
+      "48": "images/logo_48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzHYOhYvK8yetdo5iHcCghcH5jRUyO5mzgH8iLJ30R9VYhTro/DET+ENaZKWKTvnH+mBR5s4nsFhbNzxA1PP+RDr8dpOSXjCuVqrf+9vyQy4PeojGqVUeCwnxaT4x8U+6m4aa65Z+1Up6Qqg9B0rwl40rkLEvPcdmEkmm6WDu1Ew3YknYPIjl6sx+Z9lnG3UksXFSqDgpbI2Rv7iAtQmuHFXNPk9HYO/QLHJwFHPtQhuQqPMLcOWnJ4gTgznUEZ+Yb+0f56Qx2lImINtLn0zMXatj3YcTzXlyZu2uV6WmrTsb7RDh4CtEmIpdWy1J/zait3Vs3fA1defbbppCNzqBZQIDAQAB",
+   "manifest_version": 2,
+   "name": "Listen 1",
+   "permissions": [ "notifications", "unlimitedStorage", "cookies", "*://music.163.com/*", "*://*.music.163.com/*", "*://*.xiami.com/*", "*://*.qq.com/*", "*://*.kugou.com/", "*://*.kuwo.cn/", "*://*.bilibili.com/*", "*://*.bilivideo.com/*", "*://*.bilivideo.cn/*", "*://*.migu.cn/*", "*://*.taihe.com/*", "*://music.91q.com/*", "*://api.github.com/*", "*://github.com/*", "*://gist.githubusercontent.com/*", "webRequest", "webRequestBlocking" ],
+   "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+   "version": "2.28.0",
+   "web_accessible_resources": [ "images/*" ]
+}

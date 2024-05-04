@@ -1,0 +1,122 @@
+{
+   "app_command": {
+      "message": "Váltás a Olvasó nézetre"
+   },
+   "app_description": {
+      "message": "Elvonja a rendetlenségeket, például a gombokat, a háttérképeket, és megváltoztatja az oldal szövegméretet, kontrasztját és elrendezését a jobb olvashatóság érdekében"
+   },
+   "app_name": {
+      "message": "Olvasó nézet"
+   },
+   "app_title": {
+      "message": "Betöltés ... :: Olvasó nézet"
+   },
+   "app_ui_btn_fullscreen": {
+      "message": "Váltás a teljes képernyős olvasásra"
+   },
+   "app_ui_btn_imgs": {
+      "message": "Képek váltása"
+   },
+   "app_ui_btn_next": {
+      "message": "lépjen a következő oldalra (Meta + jobbra mutató nyíl)"
+   },
+   "app_ui_btn_prev": {
+      "message": "ugrás az előző oldalra (Meta + Bal nyíl gomb)"
+   },
+   "app_ui_btn_print": {
+      "message": "Nyomtasson a Reader nézetben"
+   },
+   "app_ui_btn_rateUs": {
+      "message": "Kérjük, értékelje minket! ⭑⭑⭑⭑⭑"
+   },
+   "app_ui_btn_site_gd": {
+      "message": "Webhelyünkön cikket menthet a Google meghajtóra"
+   },
+   "app_ui_btn_site_pc": {
+      "message": "Webhelyünkön cikket menthet számítógépére"
+   },
+   "app_ui_btn_speech": {
+      "message": "Olvassa el ezt a cikket"
+   },
+   "app_ui_label1": {
+      "message": "Teljes szélesség"
+   },
+   "app_ui_label2": {
+      "message": "Nincs magasság"
+   },
+   "app_ui_label3": {
+      "message": "Könnyű"
+   },
+   "app_ui_label4": {
+      "message": "Sötét"
+   },
+   "app_ui_label5": {
+      "message": "Kék"
+   },
+   "app_ui_label6": {
+      "message": "Elrejt"
+   },
+   "app_ui_label7": {
+      "message": "Előadás"
+   },
+   "app_ui_notify_wrong_content": {
+      "message": "Sajnáljuk, az eredeti tartalom már nem érhető el. Töltse be az eredeti tartalmat, és próbálja újra"
+   },
+   "options_header": {
+      "message": "UI testreszabása"
+   },
+   "options_opt1": {
+      "message": "Mutassa a \"nyomtatási gombot\" az olvasó nézetében"
+   },
+   "options_opt10": {
+      "message": "Automatikusan átvált a teljes képernyős módra"
+   },
+   "options_opt11": {
+      "message": "Egyéni stílus"
+   },
+   "options_opt12": {
+      "message": "Felhasználói stílusok az aktuális olvasói nézethez"
+   },
+   "options_opt13": {
+      "message": "Link megnyitása"
+   },
+   "options_opt14": {
+      "message": "Nyisson meg linkeket új lapokon"
+   },
+   "options_opt15": {
+      "message": "Nyisson meg linkeket olvasó nézet módban"
+   },
+   "options_opt16": {
+      "message": "Egyéb"
+   },
+   "options_opt17": {
+      "message": "Nyissa meg a GYIK oldalt a frissítésekről"
+   },
+   "options_opt2": {
+      "message": "Mutassa a \"Mentés gombot\" az olvasó nézetében"
+   },
+   "options_opt3": {
+      "message": "Mutassa a \"teljes képernyős gombot\" az olvasó nézetében"
+   },
+   "options_opt4": {
+      "message": "Mutassa a \"beszédgombot\" az olvasó nézetében"
+   },
+   "options_opt5": {
+      "message": "Mutassa a \"képek váltása gombot\" az olvasó nézetben"
+   },
+   "options_opt6": {
+      "message": "A \"navigációs gombok\" megjelenítése az olvasó nézetében"
+   },
+   "options_opt7": {
+      "message": "Az \"Open in Reader View\" kontextus menüelem megjelenítése (újraindítás szükséges) (a chrome.tabs engedélyhez van szüksége)"
+   },
+   "options_opt8": {
+      "message": "Mutassa a \"Megnyitás a háttérolvasó nézetben\" helyi menü elemet (újraindítás szükséges) (a chrome.tabs engedélyhez van szüksége)"
+   },
+   "options_opt9": {
+      "message": "Mutassa a \"Váltás a Reader View-hoz\" helyi menüpontot (újraindítás szükséges)"
+   },
+   "options_title": {
+      "message": "Olvasó nézet :: Opciók"
+   }
+}

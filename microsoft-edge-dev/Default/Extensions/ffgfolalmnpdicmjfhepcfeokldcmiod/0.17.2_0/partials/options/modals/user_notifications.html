@@ -1,0 +1,84 @@
+<div class="modal"  tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content" ng-controller="UserNotificationModalController">
+         
+            <div class="modal-header" style="background-color: #eeeeee;">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                    ng-click="closeModal()">
+                    &times;
+                </button>
+                <h4 class="modal-title">{{'options.layout.notifications.title'|translate}}<small style="color:#999;padding-left:12px;cursor:pointer" ng-click="reload_notifications()">(refresh)</small></h4>
+            </div>
+       
+            <form ng-submit="onSubmit()" style="">
+                <div class="modal-body" style= "overflow: auto;max-height: 500px;min-height: 200px;">
+                    <!--
+                    <div class="alert {{alertStyle}} text-center">{{alertText}}</div>
+                    -->
+
+                    <div ng-repeat="notification in notifications" class="row clearfix multi-section-renderer" style="margin-left:-15px;padding: 12px 12px 12px 0;" ng-mouseover="notification_mouseover=true" ng-mouseleave="notification_mouseover=false">
+                        <ng-init ng-init="notification_mouseover=false"> </ng-init>
+                        <div class="col-md-2">
+                            <div ng-class="{'link_div' : clickable(notification)}" ng-click="$root.showTourGuide()" ng-if="isRegister(notification)">
+                                <div class="" aria-hidden="true" title="{{'options.layout.frequent_domain_alert.website.google'|translate}}">
+                                    <img class="" alt="" src="{{notification.avatar}}" width="86">
+                                </div>
+                            </div>
+                            <div ng-class="{'link_div' : clickable(notification)}" ng-click="notification_click(notification)"  ng-if="!isRegister(notification)">
+                                <div class="" aria-hidden="true" title="{{'options.layout.frequent_domain_alert.website.google'|translate}}">
+                                    <img class="" alt="" src="{{notification.avatar}}" width="86">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8 link_div" style="padding-right:0px;" ng-click="$root.showTourGuide()" ng-if="isRegister(notification)">
+                            <div style="margin-left:12px;">
+                                <div style="margin-bottom:8px;">
+                                    {{ notification.title }}
+                                </div>
+                                <div style="font-size:12px;color:#999">
+                                    {{ notification.shortDescription }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8" style="padding-right:0px;" ng-class="{'link_div' : clickable(notification)}" ng-click="notification_click(notification)" ng-if="!isRegister(notification)">
+                            <div style="margin-left:12px;">
+                                <div style="margin-bottom:8px;">
+                                    {{ notification.title }}
+                                </div>
+                                <div style="font-size:12px;color:#999">
+                                    {{ notification.shortDescription }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+
+                            <i class="fa fa-close fa-renderer" ng-show="notification_mouseover" ng-click="markHided(notification)" style="cursor:pointer; font-size: 14px; right: 4px;float: right; color: #5e5e5e;margin-right: 0px;padding:3px"></i>
+                            <i class="fa fa-thumbs-down fa-renderer"  ng-class="{'accent' : notification.thumbdown == true}" ng-click="markThumbdown(notification)" style="cursor:pointer; font-size: 14px; right: 4px;float: right; color: #5e5e5e;margin-right: 0px;padding:3px"></i>
+                            <i class="fa fa-thumbs-up fa-renderer" ng-class="{'accent' : notification.thumbup == true}" ng-click="markThumbup(notification)" style="cursor:pointer; font-size: 14px; right: 4px;float: right; color: #5e5e5e;margin-right: 0px;padding:3px"></i>
+                            
+ 
+                        </div>
+                    </div>
+                    <div class="" style="position: absolute; top: 40px; bottom: 0; left: 0; right: 0;text-align: center;" ng-show="!notifications.length"> 
+                        <i class="fa fa-bell" style="font-size: 36px;color: #eeeeee;margin-top: 12px;margin-right: 2px;padding:4px"></i>
+                        <div style="margin-top:8px">
+                            {{'options.layout.no_more_notifications'|translate}}
+                        </div>
+                    </div>
+                    <div class="sarsha-spinner-container" style="" ng-show="notifications_loading"> 
+                        <div class="sarsha-spinner"> <div class="spinner ng-scope"> <div class="rect1"></div> <div class="rect2"></div> <div class="rect3"></div> <div class="rect4"></div> <div class="rect5"></div> </div> </div> 
+                    </div>
+                </div>
+     
+
+
+                <div class="modal-footer" style="margin-top:0;">
+                    <button type="submit" class="btn btn-primary pull-right" ng-click="close()">
+                        {{'common.close'|translate}}
+                    </button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

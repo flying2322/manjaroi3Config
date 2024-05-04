@@ -1,0 +1,7 @@
+2022/10/30-10:46:22.803 ab1c Reusing MANIFEST /home/dom/.config/microsoft-edge-dev/Default/IndexedDB/https_blog.csdn.net_0.indexeddb.leveldb/MANIFEST-000001
+2022/10/30-10:46:22.803 ab1c Recovering log #3
+2022/10/30-10:46:22.803 ab1c Reusing old log /home/dom/.config/microsoft-edge-dev/Default/IndexedDB/https_blog.csdn.net_0.indexeddb.leveldb/000003.log 
+2022/10/30-10:46:25.023 ab1f Level-0 table #5: started
+2022/10/30-10:46:25.024 ab1f Level-0 table #5: 1353 bytes OK
+2022/10/30-10:46:25.026 ab1f Delete type=0 #3
+2022/10/30-10:46:25.026 ab1f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

@@ -1,0 +1,130 @@
+<form name="register" class="register step" novalidate>
+
+
+    <div class="form-group" id="signup-host" ng-class="{'show': show_server_addr}" form-state="register.host">
+        <div class="errors">
+            <span class="error" ng-if="register.host.$error.required" translate="login.errors.server_required"></span>
+            <span class="error" ng-if="register.host.$error.format" translate="login.errors.serverFormat"></span>
+
+
+        </div>
+
+
+
+        <label>{{ "login.server" | translate}} {{ "login.server_example" | translate}}</label>
+
+                <input name="host" class="form-control font-ya-hei"
+                       type="text" 
+                       ng-model="$root.server_address"
+                       placeholder="{{'login.host_placeholder'|translate}}"
+                       focus-bind="focuses.host"
+                       ng-disabled="checkingHost || submitting"
+                       ng-change="clearFormValidity()"
+                       ng-disabled="disableInput"
+                       
+                       required>
+                <i class="form-control-feedback glyphicon glyphicon-ok"></i>
+                <img class="form-control-feedback loading" src="/img/loading-bars-gray.svg" alt="loading"/>
+
+    </div>
+
+
+
+
+
+
+
+    <div class="form-group" ng-class="{'is-loading': checkingName}" form-state="register.name">
+        <div class="errors">
+            <span class="error" ng-if="register.name.$error.required">{{'login.errors.name_required'|translate}}</span>
+            <span class="error" ng-if="register.name.$error.format">{{'login.errors.format'|translate}}</span>
+            <span class="error" ng-if="register.name.$error.notTaken">{{'login.errors.notTaken'|translate}}</span>
+            <span class="error" ng-if="register.name.$error.server">{{'login.errors.server'|translate}}</span>
+        </div><!--       ng-blur="checkEmailExistence()"-->
+        <label>{{'login.account'|translate}}</label>
+        <input name="name" class="form-control font-ya-hei" type="text"
+               placeholder="{{'login.name_placeholder'|translate}}"
+               ng-model="name"
+               focus-bind="focuses.name"
+               ng-disabled="checkingName || submitting"
+        
+               ui-validate="{format: 'validateEmailFormat($value)'}"
+               required
+                >
+        <i class="form-control-feedback glyphicon glyphicon-ok"></i>
+        <img class="form-control-feedback loading" src="/img/loading-bars-gray.svg" alt="loading"/>
+    </div>
+
+    <div class="form-group" form-state="register.password">
+        <div class="errors">
+            <span class="error"
+                  ng-if="register.password.$error.required">{{'login.errors.password_required'|translate}}</span>
+            <span class="error" ng-if="register.password.$error.minlength">{{'login.errors.minlength'|translate}}</span>
+        </div>
+        <label>{{'login.password'|translate}}</label>
+        <input name="password" class="form-control font-ya-hei"
+               type="password"
+               ng-model="password"
+               focus-bind="focuses.password"
+               ng-disabled="submitting"
+               required
+               ng-minlength="6"
+               placeholder="{{'login.password_placeholder'|translate}}">
+        <a class="form-control-feedback glyphicon glyphicon-ok"></a>
+    </div>
+
+    <div class="form-group" form-state="register.password2">
+        <div class="errors">
+            <span class="error" ng-if="register.password2.$error.required">{{'login.errors.password2_required'|translate}}</span>
+            <span class="error"
+                  ng-if="register.password2.$error.minlength">{{'login.errors.minlength'|translate}}</span>
+            <span class="error"
+                  ng-if="register.password2.$error.equals">{{'login.errors.password_not_same'|translate}}</span>
+        </div>
+        <label>{{'login.confirm_password'|translate}}</label>
+        <input name="password2" class="form-control font-ya-hei"
+               type="password"
+               ng-model="password2"
+               focus-bind="focuses.password2"
+               ng-disabled="submitting"
+               required
+               ng-minlength="6"
+               equals="{{password}}"
+               placeholder="{{'login.confirm_password_placeholder'|translate}}">
+        <a class="form-control-feedback glyphicon glyphicon-ok"></a>
+    </div>
+
+    <div class="form-group" form-state="register.invitation_code">
+        <div class="errors">
+            <span class="error" ng-if="register.invitation_code.$error.notValid">{{'login.errors.password2_required'|translate}}</span>
+        </div>
+        <label ng-click="toggleShowInvitationCode()">
+          {{'login.invitation_code'|translate}}
+          <small style="color:#999;cursor:pointer" ng-hide="showInvitationCode">&nbsp;({{'login.show_invitation_code'|translate}})</small>
+          <small ng-show="showInvitationCode">&nbsp;({{'login.invitation_code_is_optional'|translate}})</small>
+        </label>
+        <div ng-show="showInvitationCode">
+        <input name="invitation_code" class="form-control font-ya-hei"
+               type="text"
+               ng-model="invitation_code"
+               focus-bind="focuses.invitation_code"
+               ng-disabled="submitting"
+               placeholder="{{'login.invitation_code_placeholder'|translate}}">
+        <a class="form-control-feedback glyphicon glyphicon-ok"></a>
+        </div>
+    </div>
+    <div class="form-group login_checkbox_wrapper" ng-class="{'red_dashed_border' : alertAgreeToS}" style="margin-top:12px;padding-top: 5px;">
+        <a class="unchecked" ng-class="{'checked': agreeToS}" tabindex="4"   href=""  ng-click="toggleAgreeToS()"></a>
+        <label class="font-kai" ng-click="toggleAgreeToS()">{{ "login.agreeToS" | translate}}</label>
+        <label class="font-kai"><a ng-click="openToS()">{{ "login.ToS" | translate}}</a></label>
+
+    </div>
+
+
+
+
+    <button  ng-click="registerEmail()" class="btn btn-block btn-success" ng-disabled="submitting">
+        <span ng-hide="submitting">{{'login.register'|translate}}</span>
+        <img src="/img/loading-bars.svg" alt="loading" ng-show="submitting"/>
+    </button>
+</form>

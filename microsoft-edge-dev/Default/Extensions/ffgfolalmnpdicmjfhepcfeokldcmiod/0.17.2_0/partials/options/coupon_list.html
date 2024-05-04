@@ -1,0 +1,74 @@
+<div class="page-header">
+    <h2 class="page-header-title">
+        {{ 'options.coupon_history.title' | translate }}
+        <a href="javascript:void()" class="btn ng-scope" style="padding: 0;color: black;cursor:point" ng-click="reloadCoupons()" ng-mouseenter="hovering_CT=true" ng-mouseleave="hovering_CT=false" bs-tooltip="{title: ('common.reload'|translate)}" data-placement="bottom">
+            <i class="fa fa-refresh" ng-class="{'color_emphasis':hovering_CT}" aria-hidden="true"></i>
+        </a>
+    </h2>
+
+    <div class="clearfix"></div>
+</div>
+
+<div>
+    <span class="">
+        {{ 'options.coupon_history.explain' | translate }}
+        <a href="{{$root.cartUrl()}}" target="_blank">{{ 'options.coupon_history.cart' | translate }}</a>
+        {{ 'options.coupon_history.explain_suffix' | translate }}
+    <span>
+</div>
+
+<table class="orders table" style="margin-top:20px">
+    <thead>
+        <tr>
+        <th class="plan" translate="options.coupon_history.description"></th>
+        <th class="code" translate="options.coupon_history.code"></th>
+        <th class="extension_time" translate="options.coupon_history.reward" style="width: 80px;"></th>
+        
+        <th class="expire-at" translate="options.coupon_history.expire" style="width: 120px;"></th>
+        <th class="status" translate="options.coupon_history.status" style="width: 220px;"></th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr ng-repeat="coupon in $root.coupons" ng-init="expire = expireAt(coupon); status = couponStatus(coupon); statusMessage = statusMessage(coupon); statusTooltip = statusTooltip(coupon)" class="coupon_row">
+            <td class="plan">{{coupon.description}}</td>
+            <td class="code"><span style="font-size:0.8em">{{coupon.id}}</span></td>
+            <td class="extension_time" style="width: 80px;">{{coupon.sender_extension_time | milliSecondsToDaysText}}</td>
+            <td class="expire-at"><span style="font-size:0.8em" style="width: 120px;">{{expire}}</span></td>
+            <td class="status" style="width: 220px;" ng-switch="status">
+                <span ng-switch-when="usedup" style="color: green;">
+                    {{statusMessage}}
+                </span>
+                <span ng-switch-when="created" data-title="{{statusTooltip}}" bs-tooltip>
+                    {{statusMessage}}
+                </span>
+                <span ng-switch-when="expired" style="color: gray;">
+                    {{statusMessage}}
+                </span>
+                <span ng-switch-when="cart">
+                    {{statusMessage}}
+                </span>
+                <span ng-switch-when="invoice">
+                    {{statusMessage}}
+                </span>
+                <span ng-switch-when="processing">
+                    {{statusMessage}}
+                </span>
+                <span ng-switch-when="succeeded" style="color: green;">
+                    {{statusMessage}}
+                </span>
+                <span ng-switch-when="payment_failed" style="color: red;">
+                    {{statusMessage}}
+                </span>
+            </td>
+        </tr>
+        <tr ng-show="!$root.coupons || !$root.coupons.length">
+            <td colspan="5">
+                <span class="text-muted">{{'common.no_record' | translate}}</span>
+            </td>
+        </tr>
+    </tbody>
+        <div class="sarsha-spinner-container" style="" ng-show="$root.coupons_loading"> 
+            <div class="sarsha-spinner"> <div class="spinner ng-scope"> <div class="rect1"></div> <div class="rect2"></div> <div class="rect3"></div> <div class="rect4"></div> <div class="rect5"></div> </div> </div> 
+        </div>
+</table>

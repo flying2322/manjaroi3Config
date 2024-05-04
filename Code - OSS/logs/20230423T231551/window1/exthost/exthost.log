@@ -1,0 +1,122 @@
+2023-04-23 23:15:54.324 [info] Extension host with pid 14249 started
+2023-04-23 23:15:54.324 [info] Skipping acquiring lock for /home/dom/.config/Code - OSS/User/workspaceStorage/b12581e40b13362918833df891045619.
+2023-04-23 23:15:54.483 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2023-04-23 23:15:54.485 [info] ExtensionService#_doActivateExtension franneck94.c-cpp-runner, startup: false, activationEvent: 'onLanguage:cpp'
+2023-04-23 23:15:54.862 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2023-04-23 23:15:54.883 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2023-04-23 23:15:54.884 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2023-04-23 23:15:55.035 [info] ExtensionService#_doActivateExtension ms-vscode.cmake-tools, startup: true, activationEvent: 'workspaceContains:*/CMakeLists.txt,*/*/CMakeLists.txt,*/*/*/CMakeLists.txt'
+2023-04-23 23:15:55.476 [info] Eager extensions activated
+2023-04-23 23:15:55.492 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2023-04-23 23:15:55.492 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2023-04-23 23:16:22.457 [info] ExtensionService#_doActivateExtension vadimcn.vscode-lldb, startup: false, activationEvent: 'onStartupFinished'
+2023-04-23 23:16:45.596 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2023-04-23 23:16:45.596 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2023-04-23 23:16:45.597 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2023-04-23 23:17:24.051 [info] Extension host terminating: received terminate message from renderer
+2023-04-23 23:17:24.076 [error] Canceled: Canceled
+	at new l (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:98:105190)
+	at c.O (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:108:11692)
+	at G.<computed>.Q.charCodeAt.G.<computed> (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:108:8967)
+	at m.g (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:98:125211)
+	at m.executeCommand (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:98:124587)
+	at L.registerCommand.description (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:98:123880)
+	at m.h (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:98:125797)
+	at m.g (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:98:124687)
+	at m.executeCommand (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:98:124587)
+	at Object.executeCommand (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:114:23801)
+	at D (/usr/lib/code/extensions/git/dist/main.js:2:1467156)
+	at E.invoke (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:63:145)
+	at h.deliver (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:63:2121)
+	at n.fire (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:63:1729)
+	at Object.m [as dispose] (/usr/lib/code/extensions/git/dist/main.js:2:1481885)
+	at /usr/lib/code/extensions/git/dist/main.js:2:1485952
+	at Array.forEach (<anonymous>)
+	at g.dispose (/usr/lib/code/extensions/git/dist/main.js:2:1485938)
+	at t.<anonymous> (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:96:12398)
+	at t.dispose (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:96:12533)
+	at t.<anonymous> (/usr/lib/code/extensions/git/dist/main.js:2:1469286)
+	at t.dispose (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:96:12533)
+	at C (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:10:12084)
+	at E.Y (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:110:11147)
+	at /usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:110:9131
+	at Array.map (<anonymous>)
+	at E.R (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:110:9118)
+	at E.terminate (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:110:9389)
+	at d.terminate (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:114:1544)
+	at p (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:124:18690)
+	at /usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:124:16600
+	at E.invoke (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:63:145)
+	at h.deliver (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:63:2121)
+	at n.fire (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:63:1729)
+	at p.fire (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:72:14916)
+	at s.E (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:72:18982)
+	at /usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:72:16970
+	at E.invoke (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:63:145)
+	at h.deliver (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:63:2121)
+	at n.fire (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:63:1729)
+	at d.acceptChunk (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:72:12647)
+	at /usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:72:11934
+	at Socket.s (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:72:22469)
+	at Socket.emit (node:events:526:28)
+	at addChunk (node:internal/streams/readable:315:12)
+	at readableAddChunk (node:internal/streams/readable:289:9)
+	at Readable.push (node:internal/streams/readable:228:10)
+	at Pipe.onStreamRead (node:internal/stream_base_commons:190:23) setContext undefined
+2023-04-23 23:17:24.077 [error] Canceled: Canceled
+	at new l (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:98:105190)
+	at c.O (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:108:11692)
+	at G.<computed>.Q.charCodeAt.G.<computed> (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:108:8967)
+	at m.g (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:98:125211)
+	at m.executeCommand (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:98:124587)
+	at L.registerCommand.description (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:98:123880)
+	at m.h (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:98:125797)
+	at m.g (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:98:124687)
+	at m.executeCommand (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:98:124587)
+	at Object.executeCommand (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:114:23801)
+	at Object.setContextValue (/home/dom/.vscode-oss/extensions/franneck94.c-cpp-runner-3.0.0-universal/dist/main.js:5720:28)
+	at Object.deactivate (/home/dom/.vscode-oss/extensions/franneck94.c-cpp-runner-3.0.0-universal/dist/main.js:3299:19)
+	at E.Y (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:110:10948)
+	at /usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:110:9131
+	at Array.map (<anonymous>)
+	at E.R (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:110:9118)
+	at E.terminate (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:110:9389)
+	at d.terminate (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:114:1544)
+	at p (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:124:18690)
+	at /usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:124:16600
+	at E.invoke (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:63:145)
+	at h.deliver (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:63:2121)
+	at n.fire (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:63:1729)
+	at p.fire (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:72:14916)
+	at s.E (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:72:18982)
+	at /usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:72:16970
+	at E.invoke (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:63:145)
+	at h.deliver (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:63:2121)
+	at n.fire (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:63:1729)
+	at d.acceptChunk (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:72:12647)
+	at /usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:72:11934
+	at Socket.s (/usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:72:22469)
+	at Socket.emit (node:events:526:28)
+	at addChunk (node:internal/streams/readable:315:12)
+	at readableAddChunk (node:internal/streams/readable:289:9)
+	at Readable.push (node:internal/streams/readable:228:10)
+	at Pipe.onStreamRead (node:internal/stream_base_commons:190:23) setContext undefined
+2023-04-23 23:17:24.079 [info] Extension host with pid 14249 exiting with code 0
+2023-04-23 23:17:25.936 [info] Extension host with pid 14508 started
+2023-04-23 23:17:25.936 [info] Skipping acquiring lock for /home/dom/.config/Code - OSS/User/workspaceStorage/b12581e40b13362918833df891045619.
+2023-04-23 23:17:26.162 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2023-04-23 23:17:26.163 [info] ExtensionService#_doActivateExtension vadimcn.vscode-lldb, startup: false, activationEvent: 'onLanguage:cpp', root cause: franneck94.c-cpp-runner
+2023-04-23 23:17:26.223 [info] ExtensionService#_doActivateExtension franneck94.c-cpp-runner, startup: false, activationEvent: 'onLanguage:cpp'
+2023-04-23 23:17:26.283 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2023-04-23 23:17:26.317 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2023-04-23 23:17:26.317 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2023-04-23 23:17:26.317 [info] ExtensionService#_doActivateExtension ms-vscode.cmake-tools, startup: true, activationEvent: 'workspaceContains:*/CMakeLists.txt,*/*/CMakeLists.txt,*/*/*/CMakeLists.txt'
+2023-04-23 23:17:26.941 [info] Eager extensions activated
+2023-04-23 23:17:26.967 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2023-04-23 23:17:26.967 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2023-04-23 23:17:45.961 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:json'
+2023-04-23 23:17:45.962 [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:json'
+2023-04-23 23:17:45.962 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:json'
+2023-04-23 23:17:45.962 [info] ExtensionService#_doActivateExtension vscode.npm, startup: false, activationEvent: 'onLanguage:json'
+2023-04-23 23:17:48.529 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2023-04-23 23:18:04.655 [info] ExtensionService#_doActivateExtension vscode.media-preview, startup: false, activationEvent: 'onCustomEditor:imagePreview.previewEditor'

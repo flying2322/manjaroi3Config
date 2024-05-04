@@ -1,0 +1,1495 @@
+<div class="nr-ext" id="nr-ext" ext-theme="light" immersive="false" ext-settings="init" dir="ltr">
+    <div class="nr-ext-container" id="nr-ext-container" ext-size="max" play-state="init" menu-status="init">
+        <button class="nr-btn ext-btn-relocate" id="nr-ext-btn-relocate">
+            <svg>
+                <use xlink:href="#ext_soundwave"></use>
+            </svg>
+            <span>Back to Reading</span>
+            <svg id="nr-ext-relocate-close">
+                <use xlink:href="#ext_close"></use>
+            </svg>
+        </button>
+        <div class="nr-ext-main-container" id="nr-ext-main-container">
+            <div class="nr-ext-actions">
+                <button class="nr-btn-icon nr-ext-actions-btn nr-ext-drag" id="nr-ext-drag">
+                    <svg>
+                        <use xlink:href="#ext_drag_indicator"></use>
+                    </svg>
+                </button>
+                <div>
+                    <button class="nr-btn-icon nr-ext-actions-btn" id="nr-ext-settings-trigger">
+                        <svg class="ext-editable-secondary">
+                            <use xlink:href="#ext_settings"></use>
+                        </svg>
+                    </button>
+                    <button class="nr-btn-icon nr-ext-actions-btn" id="nr-ext-cc-toggle">
+                        <svg>
+                            <use xlink:href="#ext_icon_cc"></use>
+                        </svg>
+                    </button>
+                    <button class="nr-btn-icon nr-ext-actions-btn" id="nr-ext-immersive-toggle">
+                        <svg class="ext-editable-secondary">
+                            <use xlink:href="#ext_book"></use>
+                        </svg>
+                    </button>
+                    <button class="nr-btn-icon nr-ext-actions-btn" id="nr-ext-min">
+                        <svg>
+                            <use xlink:href="#ext_min"></use>
+                        </svg>
+                    </button>
+                    <button class="nr-btn-icon nr-ext-actions-btn nr-ext-max" id="nr-ext-max">
+                        <svg>
+                            <use xlink:href="#ext_max"></use>
+                        </svg>
+                    </button>
+                    <button class="nr-btn-icon nr-ext-actions-btn" id="nr-ext-exit">
+                        <svg>
+                            <use xlink:href="#ext_power"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="nr-ext-controls">
+                <button class="nr-btn-icon voices" id="nr-ext-voice-trigger">
+                    <svg class="ext-voices-bg">
+                        <use xlink:href="#ext_v_bg"></use>
+                    </svg>
+                    <img class="ext-voices-icon icon-svg"
+                        src="chrome-extension://kohfgcgbkjodfcfkcackpagifgbcmimk/assets/img/prem.svg"
+                        alt="current voice icon" id="nr-ext-voice-icon">
+                    <svg class="nr-ext-voice-icon-edit">
+                        <use xlink:href="#ext_voice_edit"></use>
+                    </svg>
+                </button>
+                <div class="nr-ext-play-controls">
+                    <button class="nr-btn-icon rewind" id="nr-ext-rewind">
+                        <svg>
+                            <use xlink:href="#ext_replay"></use>
+                        </svg>
+                    </button>
+                    <button class="nr-btn-icon btn-play" id="nr-ext-play">
+                        <svg class="ext-icon-play">
+                            <use xlink:href="#ext_play"></use>
+                        </svg>
+                        <svg class="ext-icon-pause">
+                            <use xlink:href="#ext_pause"></use>
+                        </svg>
+                    </button>
+                    <button class="nr-btn-icon forward" id="nr-ext-forward">
+                        <svg>
+                            <use xlink:href="#ext_forward"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="nr-ext-progress" id="nr-ext-progress">
+                <div class="nr-ext-progress-label" id="nr-ext-progress-label">
+                    <span class="nr-ext-timer-left" id="nr-ext-progress-time-curr">07:00</span>
+                    <span class="nr-ext-timer-middle">/</span>
+                    <span class="nr-ext-timer-right" id="nr-ext-progress-time-total">11:11</span>
+                </div>
+                <input type="range" min="0" max="100" value="0" step="1" id="nr-ext-progress-bar" />
+            </div>
+        </div>
+        <div class="nr-ext-voice-menu ext-dropmenu ext-min-hide" id="nr-ext-voice-menu" voice-status="init">
+            <div class="nr-ext-voices" id="nr-ext-voices">
+                <div class="nr-ext-menu-header nr-ext-voices-header">
+                    <div class="nr-ext-menu-header-actions"></div>
+                    <div>Voices</div>
+                    <button class="nr-btn-icon" id="nr-ext-voice-close">
+                        <svg>
+                            <use xlink:href="#ext_close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="nr-ext-voice-actions" id="nr-ext-voice-actions">
+                    <div class="nr-ext-voice-select">
+                        <select class="nr-ext-voice-input" name="ext-language" id="nr-ext-language">
+                        </select>
+                    </div>
+                    <div class="nr-ext-input-search nr-ext-voice-input">
+                        <input class="nr-ext-search-input" type="text" name="nr-ext-input-search"
+                            id="nr-ext-input-search" placeholder="search for voices">
+                        <button class="nr-btn-icon" id="nr-ext-voice-search-close">
+                            <svg>
+                                <use xlink:href="#ext_close"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="nr-ext-voice-action">
+                        <button class="nr-btn-icon nr-ext-voice-search" id="nr-ext-voice-search">
+                            <svg>
+                                <use xlink:href="#ext_search"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="nr-ext-voice-list" id="nr-ext-voice-list">
+                </div>
+                <select id="nr-ext-voice-list-mapper" class="nr-ext-voice-list-mapper">
+                </select>
+                <div class="nr-ext-voice-speed">
+                    <div class="nr-ext-speed-label">
+                        <div>Speed:</div>
+                        <button class="nr-btn-icon nr-ext-speed-sub" id="nr-ext-speed-sub">
+                            <svg>
+                                <use xlink:href="#ext_remove"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <input id="nr-ext-speed-slider" class="nr-ext-speed-slider" type="range" min="50" max="540"
+                        value="180" step="5" />
+                    <!-- <input type="text" style="display:'none';" value="" tabindex="-1" readonly=""
+                    id="nr-ext-speed-slider-value-sender" /> -->
+                    <div class="nr-ext-speed-label right">
+                        <button class="nr-btn-icon nr-ext-speed-add" id="nr-ext-speed-add">
+                            <svg>
+                                <use xlink:href="#ext_add"></use>
+                            </svg>
+                        </button>
+                        <div id="nr-ext-speed-text">200<br>wpm</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nr-ext-read-settings ext-min-hide" id="nr-ext-read-settings">
+            <div class="nr-ext-menu-header">
+                <div class="nr-ext-menu-header-actions"></div>
+                <div>READER SETTINGS</div>
+                <button class="nr-btn-icon" id="nr-ext-settings-close">
+                    <svg>
+                        <use xlink:href="#ext_close"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="nr-ext-settings-header">
+                <button class="nr-btn nr-ext-pdf" id="nr-ext-pdf">
+                    <svg>
+                        <use xlink:href="#ext_pdf"></use>
+                    </svg>
+                    <span>PDF</span>
+                </button>
+                <button class="nr-btn nr-ext-mp3" id="nr-ext-mp3">
+                    <svg>
+                        <use xlink:href="#ext_mp3"></use>
+                    </svg>
+                    <span>MP3</span>
+                </button>
+                <button class="nr-btn nr-ext-mobile" id="nr-ext-mobile">
+                    <svg>
+                        <use xlink:href="#ext_mobile"></use>
+                    </svg>
+                    <span>MOBILE</span>
+                </button>
+            </div>
+            <div class="nr-ext-settings-cell">
+                <div class="settings-cell-text">Autoscroll</div>
+                <label class="nr-ext-toggle">
+                    <input type="checkbox" id="nr-ext-autoscroll-toggle">
+                    <span class="nr-ext-toggle-slider"></span>
+                </label>
+            </div>
+            <div class="nr-ext-settings-cell">
+                <div class="settings-cell-text">Click to Read</div>
+                <label class="nr-ext-toggle">
+                    <input type="checkbox" id="nr-ext-click-to-read-toggle">
+                    <span class="nr-ext-toggle-slider"></span>
+                </label>
+            </div>
+            <div class="nr-ext-settings-cell" id="nr-ext-settings-speed-trigger">
+                <div class="settings-cell-text">Reading Speed (<span id="nr-ext-settings-speed-text">180 wpm</span>)</div>
+                <svg class="ext-icon-volume">
+                    <use xlink:href="#ext_arrow_forward"></use>
+                </svg>
+            </div>
+            <div class="nr-ext-settings-cell" id="nr-ext-settings-speed">
+                <div class="settings-cell-text"> <span id="nr-ext-settings-speed-factor-text">1</span> x</div>
+                <button class="nr-btn-icon nr-ext-volume-sub" id="nr-ext-settings-speed-sub">
+                    <svg>
+                        <use xlink:href="#ext_remove"></use>
+                    </svg>
+                </button>
+                <input id="nr-ext-settings-speed-slider" class="nr-ext-volume-slider" type="range" min="50" max="540"
+                value="180" step="5" />
+                <button class="nr-btn-icon nr-ext-volume-add" id="nr-ext-settings-speed-add">
+                    <svg>
+                        <use xlink:href="#ext_add"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="nr-ext-settings-cell" id="nr-ext-hotkey-trigger">
+                <div class="settings-cell-text">Hotkeys</div>
+                <svg>
+                    <use xlink:href="#ext_arrow_forward"></use>
+                </svg>
+            </div>
+            <div class="nr-ext-settings-cell" id="nr-ext-theme-trigger">
+                <div class="settings-cell-text">Dark Mode and Colours</div>
+                <svg>
+                    <use xlink:href="#ext_arrow_forward"></use>
+                </svg>
+            </div>
+            <div class="nr-ext-settings-cell" id="nr-ext-highlight-trigger">
+                <div class="settings-cell-text">Highlight to Read </div>
+                <div>
+                    <svg class="ext-icon-primary">
+                        <use xlink:href="#ext_headphone"></use>
+                    </svg>
+                    <svg>
+                        <use xlink:href="#ext_arrow_forward"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="nr-ext-settings-cell" id="nr-ext-pe">
+                <div class="settings-cell-text">Pronunciation</div>
+                <div>
+                    <svg class="ext-light-icon">
+                        <use xlink:href="#ext_mic"></use>
+                    </svg>
+                    <svg class="ext-dark-icon">
+                        <use xlink:href="#ext_mic_d"></use>
+                    </svg>
+                    <svg>
+                        <use xlink:href="#ext_arrow_forward"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="nr-ext-settings-cell" id="nr-ext-account-trigger">
+                <div class="settings-cell-text">Accounts & Billing</div>
+                <svg>
+                    <use xlink:href="#ext_arrow_forward"></use>
+                </svg>
+            </div>
+            <div class="nr-ext-settings-cell" id="nr-ext-more-trigger">
+                <div class="settings-cell-text">Other Settings, Help & Contact</div>
+                <svg>
+                    <use xlink:href="#ext_arrow_forward"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="nr-ext-account ext-min-hide" id="nr-ext-account">
+            <div class="nr-ext-menu-header">
+                <button class="nr-btn-icon" id="nr-ext-account-close">
+                    <svg class="ext-editable-secondary">
+                        <use xlink:href="#ext_arrow_left"></use>
+                    </svg>
+                </button>
+                <div>ACCOUNT</div>
+                <button class="nr-btn-icon" id="nr-ext-account-back">
+                    <svg>
+                        <use xlink:href="#ext_close"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="nr-ext-account-content">
+                <div class="ext-account-email" id="nr-ext-account-info">
+                    <div class="ext-account-email-icon">
+                        U
+                    </div>
+                    <div class="ext-account-email-text" id="nr-ext-account-email">
+                        user@gmail.com
+                    </div>
+                    <button class="nr-btn btn-flat-blue" id="nr-ext-account-billing">
+                        SUBSCRIPTION & BILLING
+                    </button>
+                    <button class="nr-btn btn-outline-blue" id="nr-ext-account-logout">
+                        LOG OUT
+                    </button>
+                </div>
+                <div class="ext-account-actions" id="nr-ext-account-actions">
+                    <button class="nr-btn btn-outline-blue" id="nr-ext-account-login">
+                        Login
+                    </button>
+
+                    <button class="nr-btn btn-flat-blue" id="nr-ext-account-signup">
+                        Sign Up
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="nr-ext-mobile-menu ext-min-hide" id="nr-ext-mobile-menu" save-status="init">
+            <div class="nr-ext-menu-header">
+                <button class="nr-btn-icon" id="nr-ext-mobile-close">
+                    <svg class="ext-editable-secondary">
+                        <use xlink:href="#ext_arrow_left"></use>
+                    </svg>
+                </button>
+                <div>SAVE TO MOBILE</div>
+                <button class="nr-btn-icon" id="nr-ext-mobile-back">
+                    <svg>
+                        <use xlink:href="#ext_close"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="nr-ext-mobile-content">
+                <div class="nr-ext-mobile-text">
+                    Android & iOS<br>
+                    Scan to install
+                </div>
+                <img src="chrome-extension://kohfgcgbkjodfcfkcackpagifgbcmimk/assets/img/qr_code.png"
+                    alt="qr code for naturalreader app">
+                <div id="nr-ext-mobile-init">
+                    <button class="nr-btn btn-flat-blue" id="nr-ext-save-to-mobile">
+                        SAVE TO MOBILE
+                    </button>
+                    <button class="nr-btn btn-flat-blue" id="nr-ext-mobile-login">
+                        Login
+                    </button>
+                </div>
+                <div id="nr-ext-mobile-saving">Saving file ...</div>
+                <div id="nr-ext-mobile-finish">
+                    <div>File saved to mobile!</div>
+                    <button class="nr-btn btn-flat-blue" id="nr-ext-btn-convert-to-pdf-again">Save
+                        Again</button>
+                </div>
+                <div id="nr-ext-mobile-error">Server error: display full message here</div>
+            </div>
+        </div>
+        <div class="nr-ext-toggle-voices ext-min-hide" id="nr-ext-toggle-voices">
+            <div class="nr-ext-menu-header">
+                <button class="nr-btn-icon" id="nr-ext-toggle-close">
+                    <svg class="ext-editable-secondary">
+                        <use xlink:href="#ext_arrow_left"></use>
+                    </svg>
+                </button>
+                <div>TOGGLE VOICES</div>
+                <button class="nr-btn-icon" id="nr-ext-toggle-back">
+                    <svg>
+                        <use xlink:href="#ext_close"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="nr-ext-toggle-voices-content">
+                <div class="nr-ext-toggle-voices-text">
+                    You can toggle between 2 different<br>
+                    voices when reader is playing
+                </div>
+                <div class="nr-ext-toggle-voices-cell">
+                    <select class="nr-ext-voice-input" name="ext-toggle-voices" id="nr-ext-preset1-voice">
+                    </select>
+                </div>
+                <div class="nr-ext-toggle-voices-cell">
+                    <select class="nr-ext-voice-input" name="ext-toggle-voices" id="nr-ext-preset2-voice">
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="nr-ext-others ext-min-hide" id="nr-ext-others">
+            <div class="nr-ext-menu-header">
+                <button class="nr-btn-icon" id="nr-ext-other-close">
+                    <svg class="ext-editable-secondary">
+                        <use xlink:href="#ext_arrow_left"></use>
+                    </svg>
+                </button>
+                <div>OTHER SETTINGS</div>
+                <button class="nr-btn-icon" id="nr-ext-other-back">
+                    <svg>
+                        <use xlink:href="#ext_close"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="nr-ext-settings-cell">
+                <div class="settings-cell-text">Auto-Detect Voice by Language</div>
+                <label class="nr-ext-toggle">
+                    <input type="checkbox" id="nr-ext-auto-select-voice">
+                    <span class="nr-ext-toggle-slider"></span>
+                </label>
+            </div>
+            <div class="nr-ext-settings-cell" id="nr-ext-quick-trigger">
+                <div class="settings-cell-text">Quick Start</div>
+                <svg>
+                    <use xlink:href="#ext_arrow_forward"></use>
+                </svg>
+            </div>
+            <div class="nr-ext-settings-cell" id="nr-ext-volume-trigger">
+                <div class="settings-cell-text">Volume</div>
+                <svg class="ext-icon-volume">
+                    <use xlink:href="#ext_arrow_forward"></use>
+                </svg>
+            </div>
+            <div class="nr-ext-settings-cell" id="nr-ext-volume">
+                <div class="settings-cell-text" id="nr-ext-volume-text">75%</div>
+                <button class="nr-btn-icon nr-ext-volume-sub" id="nr-ext-volume-sub">
+                    <svg>
+                        <use xlink:href="#ext_remove"></use>
+                    </svg>
+                </button>
+                <input id="nr-ext-volume-slider" class="nr-ext-volume-slider" type="range" min="0.2" max="1"
+                    value="0.75" step="0.01" />
+                <!-- <input type="text" style="display:'none';" value="" tabindex="-1" readonly=""
+                    id="nr-ext-volume-slider-value-sender" /> -->
+                <button class="nr-btn-icon nr-ext-volume-add" id="nr-ext-volume-add">
+                    <svg>
+                        <use xlink:href="#ext_add"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="nr-ext-settings-cell" id="nr-ext-toggle-trigger">
+                <div class="settings-cell-text">Voice Toggling</div>
+                <div>
+                    <svg>
+                        <use xlink:href="#ext_arrow_forward"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="nr-ext-settings-cell" id="nr-ext-settings-help">
+                <div class="settings-cell-text">Help and Documentation</div>
+                <div>
+                    <svg>
+                        <use xlink:href="#ext_open_in_new"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="nr-ext-settings-cell" id="nr-ext-settings-feedback">
+                <div class="settings-cell-text">Send Feedback</div>
+                <svg>
+                    <use xlink:href="#ext_open_in_new"></use>
+                </svg>
+            </div>
+            <div class="nr-ext-settings-cell" id="nr-ext-reset">
+                <div class="settings-cell-text">Reset NaturalReader</div>
+                <svg>
+                    <use xlink:href="#ext_replay"></use>
+                </svg>
+            </div>
+            <div class="nr-ext-settings-cell" id="nr-ext-version">
+                <div class="settings-cell-text">Version Number</div>
+            </div>
+
+        </div>
+        <div class="nr-ext-hotkeys ext-min-hide" id="nr-ext-hotkeys">
+            <div class="nr-ext-menu-header">
+                <button class="nr-btn-icon" id="nr-ext-hotkeys-close">
+                    <svg class="ext-editable-secondary">
+                        <use xlink:href="#ext_arrow_left"></use>
+                    </svg>
+                </button>
+                <div>HOT KEYS</div>
+                <button class="nr-btn-icon" id="nr-ext-hotkeys-back">
+                    <svg>
+                        <use xlink:href="#ext_close"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="nr-ext-settings-cell nr-ext-hotkey-cell">
+                <div class="settings-cell-text">Activate to Start</div>
+                <div class="settings-cell-subtext" id="nr-ext-hotkey-activate-text">Option + R</div>
+            </div>
+            <div class="nr-ext-settings-cell nr-ext-hotkey-cell">
+                <div class="settings-cell-text">Pause / Resume</div>
+                <div class="settings-cell-subtext">Spacebar</div>
+            </div>
+            <div class="nr-ext-settings-cell nr-ext-hotkey-cell">
+                <div class="settings-cell-text">Prev Sentence</div>
+                <div class="settings-cell-subtext">Up</div>
+            </div>
+            <div class="nr-ext-settings-cell nr-ext-hotkey-cell">
+                <div class="settings-cell-text">Next Sentence</div>
+                <div class="settings-cell-subtext">Down</div>
+            </div>
+            <div class="nr-ext-settings-cell" id="nr-ext-settings-hotkey">
+                <div class="settings-cell-text">Customize Hot keys</div>
+                <svg>
+                    <use xlink:href="#ext_open_in_new"></use>
+                </svg>
+            </div>
+
+        </div>
+        <div class="nr-ext-theme ext-min-hide" id="nr-ext-theme">
+            <div class="nr-ext-menu-header">
+                <button class="nr-btn-icon" id="nr-ext-theme-close">
+                    <svg class="ext-editable-secondary">
+                        <use xlink:href="#ext_arrow_left"></use>
+                    </svg>
+                </button>
+                <div>DARK MODE AND COLOURS</div>
+                <button class="nr-btn-icon" id="nr-ext-theme-back">
+                    <svg>
+                        <use xlink:href="#ext_close"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="nr-ext-theme-content">
+                <div class="theme-group">
+                    <div class="theme-group-title">Theme</div>
+                    <select class="nr-ext-voice-input" name="ext-theme" id="nr-ext-theme-select">
+                        <option value="dark">Dark</option>
+                        <option value="light">Light</option>
+                        <option value="system">System Default</option>
+                    </select>
+                </div>
+
+                <div class="theme-group">
+                    <div class="theme-group-title">Text on highlight</div>
+                    <select class="nr-ext-voice-input" name="ext-highlight-text" id="nr-ext-highlight-type-menu">
+                        <option value="both">Sentence & Word</option>
+                        <option value="sentence">Sentence Only</option>
+                        <option value="word">Word Only</option>
+                        <option value="none">None</option>
+                    </select>
+                </div>
+
+                <div class="theme-group">
+                    <div class="theme-group-title">Highlight Colour</div>
+                    <select class="nr-ext-voice-input" name="ext-highlight-color" id="nr-ext-highlight-color-menu">
+                        <option value="light">Light</option>
+                        <option value="dark">Dark</option>
+                        <option value="ice">Ice</option>
+                        <option value="warm">Warm</option>
+                    </select>
+                </div>
+                <div class="theme-group">
+                    <div class="theme-group-title">Preview</div>
+                    <div class="nr-ext-highlight-preview" id="nr-ext-highlight-preview">
+                        <div class="nr-ext-sentence nr-sentence-highlight-light">
+                            &nbsp;This is a <span class="nr-ext-word nr-word-highlight-light">preview</span> to show
+                            highlighted text
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nr-ext-read-option ext-min-hide" id="nr-ext-read-option">
+            <div class="nr-ext-menu-header">
+                <button class="nr-btn-icon" id="nr-ext-read-option-close">
+                    <svg class="ext-editable-secondary">
+                        <use xlink:href="#ext_arrow_left"></use>
+                    </svg>
+                </button>
+                <div>HIGHLIGHT TO READ</div>
+                <button class="nr-btn-icon" id="nr-ext-read-option-back">
+                    <svg>
+                        <use xlink:href="#ext_close"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="nr-ext-read-option-content">
+                <div class="nr-ext-settings-cell">
+                    <div class="settings-cell-text">Highlight and show icon</div>
+                    <div>
+                        <svg class="ext-icon-primary">
+                            <use xlink:href="#ext_headphone"></use>
+                        </svg>
+                        <label class="nr-ext-toggle">
+                            <input type="checkbox" id="nr-ext-read-icon-toggle">
+                            <span class="nr-ext-toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="nr-ext-char-limit">
+                    <div>Show icon only when text goes over:</div>
+                    <select class="nr-ext-voice-input" id="nr-ext-rs-char-limit" name="nr-ext-read-selection"
+                        aria-labelledby="nr-ext-read-selection">
+                        <option value="1">1 characters</option>
+                        <option value="10">10 characters</option>
+                        <option value="15">15 characters</option>
+                        <option value="20">20 characters</option>
+                        <option value="30">30 characters</option>
+                        <option value="50">50 characters</option>
+                        <option value="100">100 characters</option>
+                        <option value="200">200 characters</option>
+                        <option value="300">300 characters</option>
+                        <option value="400">400 characters</option>
+                        <option value="500">500 characters</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="nr-ext-quick-start-option ext-min-hide" id="nr-ext-quick-start-option">
+            <div class="nr-ext-menu-header">
+                <button class="nr-btn-icon" id="nr-ext-start-option-close">
+                    <svg>
+                        <use xlink:href="#ext_arrow_left"></use>
+                    </svg>
+                </button>
+                <div>Quick Start</div>
+                <button class="nr-btn-icon" id="nr-ext-start-option-back">
+                    <svg>
+                        <use xlink:href="#ext_close"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="nr-ext-start-option-content">
+                <div class="nr-ext-settings-cell">
+                    <div class="settings-cell-text">Display quick start widget</div>
+                    <label class="nr-ext-toggle">
+                        <input type="checkbox" id="nr-ext-quick-start-toggle">
+                        <span class="nr-ext-toggle-slider"></span>
+                    </label>
+                </div>
+                <div class="nr-ext-cell-group-list" id="nr-ext-quick-start-group">
+                    <div class="nr-ext-checkbox-cell">
+                        <input class="nr-ext-input-checkbox" type="checkbox" name="nr-ext-quick-start"
+                            id="nr-ext-quick-start-webpage">
+                        <label class="nr-ext-checkbox-label" for="nr-ext-quick-start-webpages">
+                            All webpages
+                        </label>
+                    </div>
+                    <div class="nr-ext-checkbox-cell">
+                        <input class="nr-ext-input-checkbox" type="checkbox" name="nr-ext-quick-start"
+                            id="nr-ext-quick-start-googledocs">
+                        <label class="nr-ext-checkbox-label" for="nr-ext-quick-start-googledocs">
+                            Google Docs
+                        </label>
+                    </div>
+                    <div class="nr-ext-checkbox-cell">
+                        <input class="nr-ext-input-checkbox" type="checkbox" name="nr-ext-quick-start"
+                            id="nr-ext-quick-start-email">
+                        <label class="nr-ext-checkbox-label" for="nr-ext-quick-start-email">
+                            Email
+                        </label>
+                    </div>
+                    <div class="nr-ext-checkbox-cell">
+                        <input class="nr-ext-input-checkbox" type="checkbox" name="nr-ext-quick-start"
+                            id="nr-ext-quick-start-pdf">
+                        <label class="nr-ext-checkbox-label" for="nr-ext-quick-start-pdf">
+                            Online PDF
+                        </label>
+                    </div>
+                    <div class="nr-ext-checkbox-cell">
+                        <input class="nr-ext-input-checkbox" type="checkbox" name="nr-ext-quick-start"
+                            id="nr-ext-quick-start-website">
+                        <label class="nr-ext-checkbox-label" for="nr-ext-quick-start-website">
+                            This website
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="nr-ext-msg-bar" id="nr-ext-msg-bar" msg-type="signup">
+            <div class="ext-msg-bar">
+                <div class="ext-msg-label">
+                    <a class="msg-account-link" href="https://www.naturalreaders.com/login-service/signup/"
+                        target="view_window">
+                        Create a NaturalReader Account
+                    </a>
+                    <a class="msg-app-link" id="nr-ext-msg-download-mobile">
+                        Download Free Mobile App
+                    </a>
+                </div>
+
+                <button class="nr-btn-icon ext-msg-close nr-ext-msg-close">
+                    <svg>
+                        <use xlink:href="#ext_close"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="nr-ext-msg-box" id="nr-ext-msg-box" msg-type="signup">
+            <div class="nr-ext-msg-card continue-card">
+                <div class="ext-msg-card-header">
+                    <div class="ext-msg-card-title">Continue Listening on the Go</div>
+                    <button class="nr-btn-icon ext-msg-card-close nr-ext-msg-close">
+                        <svg>
+                            <use xlink:href="#ext_close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="ext-msg-card-content">
+                    <div class="msg-continue-qr"></div>
+                    <div class="msg-continue-app">
+                        <button class="ext-icon-button" id="nr-ext-msg-android">
+                            <svg class="ext-icon">
+                                <use xlink:href="#ext_icon_android"></use>
+                            </svg>
+                        </button>
+                        <button class="ext-icon-button" id="nr-ext-msg-ios">
+                            <svg class="ext-icon">
+                                <use xlink:href="#ext_icon_apple"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="msg-hide" id="ext-msg-hide">
+                        <label class="ext-msg-hide-label" for="ext-msg-hide">Don’t show again</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nr-ext-msg-card rate-card">
+                <div class="ext-msg-card-header">
+                    <div class="ext-msg-card-title">Do You Like NaturalReader?</div>
+                    <button class="nr-btn-icon ext-msg-card-close nr-ext-msg-close">
+                        <svg>
+                            <use xlink:href="#ext_close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="ext-msg-card-content">
+
+                    <div class="ext-msg-rating">
+                        <div class="msg-rating-item" id="nr-ext-rate-yes">
+                            <svg class="ext-icon">
+                                <use xlink:href="#ext_thumb_up"></use>
+                            </svg>
+                            <div class="msg-rating-text">yes</div>
+                        </div>
+                        <div class="msg-rating-item" id="nr-ext-rate-no">
+                            <svg class="ext-icon">
+                                <use xlink:href="#ext_thumb_down"></use>
+                            </svg>
+                            <div class="msg-rating-text">no</div>
+                        </div>
+                    </div>
+
+                    <div>
+                        Thank you for your feedback, it helps us grow!
+                    </div>
+                </div>
+            </div>
+
+            <div class="nr-ext-msg-card review-card">
+                <div class="ext-msg-card-header">
+                    <div class="ext-msg-card-title">Do You Mind Leaving a Review?</div>
+                    <button class="ext-icon-button ext-msg-card-close nr-ext-msg-close">
+                        <svg class="ext-icon">
+                            <use xlink:href="#ext_close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="ext-msg-card-content">
+                    <div>
+                        It helps us improve our products to<br>better meet the needs of our users.
+                    </div>
+                    <button class="ext-primary-button" id="nr-ext-msg-leave-review">
+                        Leave a review
+                    </button>
+                </div>
+            </div>
+
+            <div class="nr-ext-msg-card thanks-card">
+                <div class="ext-msg-card-header">
+                    <div class="ext-msg-card-title">Thank You</div>
+                    <button class="ext-icon-button ext-msg-card-close nr-ext-msg-close">
+                        <svg class="ext-icon">
+                            <use xlink:href="#ext_close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="ext-msg-card-content">
+                    <div>
+                        Thank you for leaving the<br>feedbacks for us.
+                    </div>
+                    <button class="ext-primary-button nr-ext-msg-close">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="nr-immersive-reader" id="nr-ext-immersive-reader" menu-status="close">
+        <div class="nr-immersive-reader-text" text-scale="1" id="nr-ext-immersive-text">
+            <div class="container" id="nr-ext-immersive-text-container">
+            </div>
+        </div>
+        <div class="nr-immersive-reader-pages" id="nr-ext-immersive-reader-pages">
+            <button class="nr-btn btn-link-blue ext-link-button" id="nr-ext-immersive-prev-page">
+                <svg class="ext-icon">
+                    <use xlink:href="#chevron_left"></use>
+                </svg>
+                <span>Previous</span>
+            </button>
+            <div class="nr-immersive-reader-pages-inputs">
+                <div class="nr-immersive-reader-pages-input">
+                    <input type="number" min="1" id="nr-ext-immersive-current-page">
+                </div>
+                <div class="nr-immersive-reader-pages-middle">of</div>
+                <div class="nr-immersive-reader-pages-text" id="nr-ext-immersive-all-page">
+
+                </div>
+            </div>
+            <button class="nr-btn btn-link-blue ext-link-button" id="nr-ext-immersive-next-page">
+                <span>Next</span>
+                <svg class="ext-icon">
+                    <use xlink:href="#chevron_right"></use>
+                </svg>
+            </button>
+        </div>
+        <div class="nr-immersive-reader-bar">
+            <button class="ext-icon-button" id="nr-ext-immersive-close">
+                <svg class="ext-icon">
+                    <use xlink:href="#ext_close"></use>
+                </svg>
+            </button>
+            <button class="ext-icon-button ext-icon-button-md" id="nr-ext-immersive-trigger">
+                <svg class="ext-icon">
+                    <use xlink:href="#ext_icon_text_fields"></use>
+                </svg>
+            </button>
+        </div>
+        <div class="nr-immersive-reader-menu" id="nr-ext-immersive-menu">
+            <div class="immersive-reader-menu-header">Text Preferences</div>
+            <div class="immersive-reader-content">
+                <div class="nr-immersive-cell">
+                    <div>Text Size</div>
+                    <div class="nr-immersive-cell-detail nr-progress">
+                        <svg class="ext-icon-sm">
+                            <use xlink:href="#ext_icon_text_format"></use>
+                        </svg>
+                        <div class="nr-ext-progress-bar">
+                            <input id="nr-ext-immersive-textsize" class="nr-ext-speed-slider" type="range" min="0.75"
+                                max="2" value="1" step="0.25" />
+                        </div>
+                        <svg class="ext-icon">
+                            <use xlink:href="#ext_icon_text_format"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="nr-immersive-cell">
+                    <div>Text Spacing</div>
+                    <label class="nr-ext-toggle">
+                        <input type="checkbox" id="nr-ext-immersive-toggle-text-spacing">
+                        <span class="nr-ext-toggle-slider"></span>
+                    </label>
+                    <!-- <button class="nr-ext-toggle" toggle-status="off"
+                        id="nr-ext-immersive-toggle-text-spacing">
+                        <svg class="ext-icon icon-toggle-on">
+                            <use xlink:href="#ext_icon_toggle_on"></use>
+                        </svg>
+                        <svg class="ext-icon icon-toggle-off">
+                            <use xlink:href="#ext_icon_toggle_off"></use>
+                        </svg>
+                    </button> -->
+                </div>
+                <div class="nr-immersive-cell">
+                    <div>Dyslexia Font</div>
+                    <label class="nr-ext-toggle">
+                        <input type="checkbox" id="nr-ext-immersive-toggle-dyslexia">
+                        <span class="nr-ext-toggle-slider"></span>
+                    </label>
+
+                    <!-- <button class="nr-ext-toggle" toggle-status="off"
+                        id="nr-ext-immersive-toggle-dyslexia">
+                        <svg class="ext-icon icon-toggle-on">
+                            <use xlink:href="#ext_icon_toggle_on"></use>
+                        </svg>
+                        <svg class="ext-icon icon-toggle-off">
+                            <use xlink:href="#ext_icon_toggle_off"></use>
+                        </svg>
+                    </button> -->
+
+                </div>
+                <div class="nr-immersive-cell">
+                    <div>Blur Text</div>
+                    <label class="nr-ext-toggle">
+                        <input type="checkbox" id="nr-ext-immersive-toggle-toggle-blur-text">
+                        <span class="nr-ext-toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="nr-ext-onboard" id="nr-ext-onboard" onboard-step="1">
+        <div class="nr-ext-onboard-card ext-onboard-voice">
+            <div class="nr-ext-onboard-header">
+                <button class="nr-btn-icon btn-onboard-close">
+                    <svg>
+                        <use xlink:href="#ext_close"></use>
+                    </svg>
+                </button>
+                <svg class="ext-onboard-logo">
+                    <use xlink:href="#nr_logo"></use>
+                </svg>
+                <div class="nr-ext-onboard-title">Welcome to NaturalReader</div>
+            </div>
+
+            <div class="nr-ext-onboard-body">
+                <div class="nr-ext-onboard-voices">
+                    <audio id="ext-voice-preview" src="" preload="none"
+                        style="display: none; visibility:hidden;"></audio>
+
+                    <div class="ext-voices-row">
+                        <div class="ext-onboard-title">Select a Language and Reading Voice</div>
+                        <div class="ext-voices-select">
+                            <svg class="ext-voices-select-arrow">
+                                <use xlink:href="#ext_expand_more"></use>
+                            </svg>
+                            <select name="ext_languages" id="nr_ext_onboard_languages"
+                                aria-label="choose voice language">
+                            </select>
+                            <span class="focus"></span>
+                        </div>
+                    </div>
+
+                    <div class="ext-voice-content">
+                        <button class="nr-btn-icon" id="nr-ext-onboard-voice-prev" aria-label="prev voice item">
+                            <svg>
+                                <use xlink:href="#ext_load_left"></use>
+                            </svg>
+                        </button>
+
+                        <div class="ext-voice-list" id="nr-ext-onboard-voice-list"></div>
+
+                        <button class="nr-btn-icon" id="nr-ext-onboard-voice-next" aria-label="next voice item">
+                            <svg>
+                                <use xlink:href="#ext_load_right"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nr-ext-onboard-footer">
+                <button class="nr-btn btn-outline-blue nr-ext-onboard-skip">Skip</button>
+                <button class="nr-btn btn-flat-blue nr-ext-onboard-next">Next</button>
+            </div>
+        </div>
+
+        <div class="nr-ext-onboard-card ext-onboard-pin">
+            <div class="nr-ext-onboard-header">
+                <button class="nr-btn-icon btn-onboard-close">
+                    <svg>
+                        <use xlink:href="#ext_close"></use>
+                    </svg>
+                </button>
+                <svg class="ext-onboard-logo">
+                    <use xlink:href="#nr_logo"></use>
+                </svg>
+                <div class="nr-ext-onboard-title">Welcome to NaturalReader</div>
+            </div>
+
+            <div class="nr-ext-onboard-body">
+                <div class="nr-onboard-pin">
+                    <div class="nr-onboard-pin-img">
+                        <img alt="NaturalReader Extension">
+                    </div>
+                </div>
+            </div>
+
+            <div class="nr-ext-onboard-footer">
+                <button class="nr-btn btn-outline-blue nr-ext-onboard-skip">Skip</button>
+                <button class="nr-btn btn-flat-blue nr-ext-onboard-next">Next</button>
+            </div>
+        </div>
+
+        <div class="nr-ext-onboard-card ext-onboard-access">
+            <div class="nr-ext-onboard-header">
+                <button class="nr-btn-icon btn-onboard-close">
+                    <svg>
+                        <use xlink:href="#ext_close"></use>
+                    </svg>
+                </button>
+                <svg class="ext-onboard-logo">
+                    <use xlink:href="#nr_logo"></use>
+                </svg>
+                <div class="nr-ext-onboard-title">Welcome to NaturalReader</div>
+            </div>
+
+            <div class="nr-ext-onboard-body">
+                <div>Register With us for More Access</div>
+                <p>After registering you can read PDF files, Kindle Ebooks and access more secured services.</p>
+            </div>
+            <div class="nr-ext-onboard-footer">
+                <button class="nr-btn btn-outline-blue nr-ext-onboard-skip">Skip</button>
+                <div>
+                    <button class="nr-btn btn-outline-blue" id="nr-ext-onboard-signup">Register</button>
+                    <button class="nr-btn btn-flat-blue" id="nr-ext-onboard-login">Log In</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="nr-ext-cc" id="nr-ext-cc">
+        <div class="nr-ext-cc-content">
+            <div class="nr-ext-cc-panel">
+                <div class="nr-ext-cc-text" id="nr-ext-cc-text">
+                </div>
+                <button class="nr-btn-icon nr-ext-close" id="btn-close-cc">
+                    <svg>
+                        <use xlink:href="#ext_close"></use>
+                    </svg>
+                </button>
+                <div class="nr-cc-icon"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<svg class="nr-ext-icons" width="0" height="0" style="display: none; visibility:hidden;">
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 23" id="ext_free">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M9.33701 0.929871C6.51337 0.929871 4.22101 3.22244 4.22101 6.04616C4.22101 8.86989 6.51349 11.1622 9.33701 11.1622C12.1605 11.1622 14.4533 8.86968 14.4533 6.04616C14.4533 3.22265 12.1607 0.929871 9.33701 0.929871ZM9.33701 1.86007C11.6472 1.86007 13.523 3.73584 13.523 6.04611C13.523 8.35622 11.6473 10.2321 9.33701 10.2321C7.02689 10.2321 5.15097 8.35637 5.15097 6.04611C5.15097 3.73587 7.02674 1.86007 9.33701 1.86007Z">
+        </path>
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M9.36543 12.0924H9.33705C4.46004 12.0924 0.5 16.0522 0.5 20.9295C0.5 21.7001 1.12465 22.3247 1.89536 22.3247H16.7787C17.5494 22.3247 18.1739 21.7 18.1739 20.9295C18.1739 16.0622 14.2298 12.1084 9.36523 12.0924H9.36543ZM9.31154 13.0226C4.95919 13.0366 1.43017 16.5741 1.43017 20.9294C1.43017 21.1862 1.63857 21.3944 1.89533 21.3944H16.7786C17.0354 21.3944 17.2438 21.1861 17.2438 20.9294C17.2438 16.5652 13.7009 13.0226 9.33701 13.0226H9.31154Z">
+        </path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="ext_add">
+        <path d="M0 0h24v24H0V0z" fill="none"></path>
+        <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="ext_remove">
+        <path d="M0 0h24v24H0V0z" fill="none"></path>
+        <path d="M19 13H5v-2h14v2z"></path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51 51" id="ext_voice_edit">
+        <g>
+            <rect x="0.297363" width="51" height="51" rx="25.5" fill="white" fill-opacity="0.8"></rect>
+        </g>
+        <text fill="black" fill-opacity="0.87" xml:space="preserve" font-family="Arial" font-size="10"
+            letter-spacing="0em">
+            <tspan x="8" y="37">Change</tspan>
+        </text>
+        <path
+            d="M26.363 10.2197C26.6803 9.92677 27.1947 9.92677 27.512 10.2197L30.762 13.2197C31.0792 13.5126 31.0792 13.9874 30.762 14.2803L27.512 17.2803C27.1947 17.5732 26.6803 17.5732 26.363 17.2803C26.0457 16.9874 26.0457 16.5126 26.363 16.2197L28.2258 14.5001H18.8125C18.3638 14.5001 18 14.1643 18 13.7501C18 13.3359 18.3638 13.0001 18.8125 13.0001H28.2258L26.363 11.2805C26.0457 10.9876 26.0457 10.5127 26.363 10.2198V10.2197ZM22.637 17.7197C22.9543 18.0126 22.9543 18.4874 22.637 18.7803L20.7742 20.4999H30.1875C30.6362 20.4999 31 20.8357 31 21.2499C31 21.6641 30.6362 21.9999 30.1875 21.9999H20.7742L22.637 23.7195C22.9543 24.0124 22.9543 24.4873 22.637 24.7802C22.3197 25.0731 21.8053 25.0731 21.488 24.7802L18.238 21.7802C18.0857 21.6396 18.0001 21.4488 18.0001 21.2499C18.0001 21.051 18.0857 20.8602 18.238 20.7196L21.488 17.7196C21.8053 17.4267 22.3197 17.4267 22.637 17.7196V17.7197Z"
+            fill="black" fill-opacity="0.87"></path>
+    </symbol>
+
+    <symbol viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg" id="ext_v_bg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M29.7275 0.17543C33.2708 0.0998667 37.1144 -0.533115 40.2213 1.18862C43.3569 2.92626 46.0148 6.41757 48.661 8.84746C51.3107 11.2805 53.8017 12.4227 55.7559 15.4533C57.6858 18.4462 56.9898 22.4024 57.3222 25.9581C57.6549 29.5178 58.3982 33.0738 57.7309 36.5852C57.0458 40.1906 55.8905 43.9158 53.4012 46.5916C50.9262 49.252 48.6879 49.7789 45.5 51.5C42.4724 53.1345 38.185 55.5091 34.9168 56.5707C31.4929 57.6828 27.8716 58.2747 24.2967 57.875C20.6426 57.4664 17.1191 56.1526 13.9748 54.2291C10.8201 52.2993 7.97769 49.7803 5.96387 46.6601C3.98636 43.5961 3.44853 39.8921 2.45232 36.376C1.45515 32.8565 -0.296781 29.4072 0.0430834 25.7626C0.382896 22.1185 2.63526 19.0043 4.37186 15.7915C6.07002 12.6498 7.62861 9.3751 10.2206 6.93368C12.8211 4.48422 16.0401 2.79798 19.404 1.63257C22.7187 0.484151 26.2238 0.250149 29.7275 0.17543Z"
+            fill="#0078D4" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24"
+        id="ext_arrow_forward">
+        <g>
+            <path d="M0,0h24v24H0V0z" fill="none"></path>
+        </g>
+        <g>
+            <polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12"></polygon>
+        </g>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 -2 15 20" id="ext_arrow_left">
+        <path d="M9.73344 0.293765C9.31871 -0.0979217 8.65007 -0.0979217 8.23534 0.293765L1.20191 6.93645C0.871824 7.2482 0.871824 7.7518 1.20191 8.06355L8.23534 14.7062C8.65007 15.0979 9.31871 15.0979 9.73344 14.7062C10.1482 14.3145 10.1482 13.6831 9.73344 13.2914L3.60564 7.496L9.7419 1.70064C10.1482 1.31695 10.1482 0.677458 9.73344 0.293765Z"></path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 22" id="ext_mobile">
+        <path
+            d="M10.9942 1.14996H2.57419C1.93423 1.14996 1.37419 1.68993 1.37419 2.34996V3.84996C1.17419 3.84996 1.01416 4.00999 1.01416 4.21V5.89C1.01416 6.09 1.17419 6.25003 1.37419 6.25003V6.78995C1.17419 6.78995 1.01416 6.94997 1.01416 7.14998V7.73C1.01416 7.93 1.17419 8.09003 1.37419 8.09003V19.65C1.37419 20.29 1.91416 20.85 2.57419 20.85H5.79419C5.85422 20.77 5.93417 20.7101 6.03416 20.7101H7.51418C7.61418 20.7101 7.71418 20.7701 7.75414 20.85H10.9741C11.6141 20.85 12.1741 20.3101 12.1741 19.65L12.1742 2.35003C12.1942 1.71 11.6342 1.15003 10.9942 1.15003L10.9942 1.14996ZM11.5742 19.65C11.5742 19.9899 11.3342 20.23 10.9942 20.23L2.57419 20.2299C2.23423 20.2299 1.99418 19.9899 1.99418 19.6499V2.3499C1.99418 2.00993 2.23414 1.76988 2.57419 1.76988H3.75421L3.79418 2.70985C3.79418 2.90985 3.95421 3.04982 4.13415 3.04982L9.41415 3.04988C9.61415 3.04988 9.75412 2.88985 9.75412 2.70991L9.81414 1.76995H10.9942C11.3341 1.76995 11.5742 2.00991 11.5742 2.34996L11.5742 19.65Z">
+        </path>
+        <path
+            d="M11.1464 1.00933L11.1465 0.999963H10.9942H2.57419C1.85301 0.999963 1.22419 1.60547 1.22419 2.34996V3.72215C1.01515 3.78582 0.86416 3.97941 0.86416 4.21V5.89C0.86416 6.12058 1.01515 6.31418 1.22419 6.37784V6.66213C1.01515 6.7258 0.86416 6.91939 0.86416 7.14998V7.73C0.86416 7.96058 1.01515 8.15418 1.22419 8.21784V19.65C1.22419 20.3712 1.8297 21 2.57419 21H5.79419H5.86918L5.91418 20.94C5.95982 20.8792 6.00057 20.8601 6.03416 20.8601H7.51418C7.56258 20.8601 7.60767 20.8925 7.61998 20.9171L7.66143 21H7.75414H10.9741C11.6953 21 12.3241 20.3945 12.3241 19.65L12.3242 2.35228C12.3439 1.67745 11.8015 1.0895 11.1464 1.00933ZM11.4242 19.65C11.4242 19.7837 11.3776 19.8894 11.3056 19.9614C11.2337 20.0334 11.128 20.08 10.9942 20.08L2.5742 20.0799C2.44045 20.0799 2.33473 20.0333 2.26276 19.9614C2.19079 19.8894 2.14418 19.7837 2.14418 19.6499V2.3499C2.14418 2.21616 2.19077 2.11043 2.26274 2.03846C2.3347 1.96649 2.44042 1.91988 2.57419 1.91988H3.61045L3.6442 2.7133C3.64604 3.00002 3.87824 3.19982 4.13415 3.19982L9.41415 3.19988C9.70077 3.19988 9.90139 2.96999 9.90409 2.71513L9.95487 1.91995H10.9942C11.1279 1.91995 11.2336 1.96654 11.3056 2.03851C11.3776 2.11047 11.4242 2.21619 11.4242 2.34996L11.4242 19.65Z">
+        </path>
+        <path
+            d="M9.59421 14.09H4.07421C3.91418 14.09 3.79419 14.21 3.79419 14.37C3.79419 14.53 3.91418 14.65 4.07421 14.65H9.61421C9.77423 14.65 9.89422 14.53 9.89422 14.37C9.87424 14.21 9.75419 14.09 9.59422 14.09H9.59421Z">
+        </path>
+        <path
+            d="M10.0442 14.37V14.3607L10.0431 14.3514C10.015 14.1265 9.83968 13.94 9.59422 13.94H9.59421H4.07421C3.83134 13.94 3.64419 14.1271 3.64419 14.37C3.64419 14.6129 3.83133 14.8 4.07421 14.8H9.61421C9.85707 14.8 10.0442 14.6129 10.0442 14.37Z">
+        </path>
+        <path
+            d="M6.65414 13.25C6.71417 13.2899 6.77413 13.33 6.83416 13.33C6.89419 13.33 6.97413 13.31 7.01418 13.25L9.03418 11.39C9.0942 11.3299 9.11419 11.27 9.11419 11.19C9.11419 11.1099 9.0942 11.05 9.03418 10.99C8.97415 10.9299 8.91419 10.9099 8.83418 10.9099C8.75416 10.9099 8.6942 10.9299 8.63418 10.99L7.09421 12.4099V7.82994C7.09421 7.66992 6.97422 7.54993 6.81419 7.54993C6.65416 7.54993 6.53418 7.66991 6.53418 7.82994V12.4099L5.01419 10.97C4.95417 10.91 4.89421 10.89 4.81419 10.89C4.73418 10.89 4.67422 10.9299 4.61419 10.97C4.55417 11.03 4.53418 11.09 4.53418 11.17C4.53418 11.25 4.57415 11.31 4.61419 11.37L6.65414 13.25Z">
+        </path>
+        <path
+            d="M6.55249 13.3603L6.56117 13.3683L6.571 13.3748L6.57438 13.3771C6.60221 13.3956 6.63875 13.42 6.67704 13.4391C6.71726 13.4592 6.77133 13.48 6.83416 13.48C6.90921 13.48 7.04357 13.4579 7.12673 13.3502L9.13578 11.5003L9.13587 11.5004L9.14024 11.496C9.18262 11.4537 9.2155 11.4064 9.23669 11.3513C9.25763 11.2969 9.26419 11.2425 9.26419 11.19C9.26419 11.1374 9.25763 11.0831 9.23669 11.0286C9.2155 10.9735 9.18262 10.9263 9.14024 10.8839C9.09787 10.8415 9.05063 10.8086 8.99553 10.7874C8.94109 10.7665 8.8867 10.7599 8.83418 10.7599C8.78166 10.7599 8.72727 10.7665 8.67283 10.7874C8.61873 10.8083 8.57222 10.8403 8.53045 10.8816L7.24421 12.0676V7.82994C7.24421 7.58707 7.05707 7.39993 6.81419 7.39993C6.57132 7.39993 6.38418 7.58707 6.38418 7.82994V12.0612L5.11871 10.8624C5.07673 10.8207 5.02998 10.7884 4.97554 10.7675C4.9211 10.7465 4.86671 10.74 4.81419 10.74C4.68797 10.74 4.59447 10.8026 4.53827 10.8403C4.53575 10.842 4.53332 10.8436 4.53096 10.8452L4.51862 10.8534L4.50813 10.8639C4.46575 10.9063 4.43287 10.9535 4.41168 11.0086C4.39074 11.0631 4.38418 11.1175 4.38418 11.17C4.38418 11.2962 4.44684 11.3897 4.48452 11.4459C4.4862 11.4484 4.48783 11.4509 4.48941 11.4532L4.49936 11.4681L4.51254 11.4803L6.55249 13.3603Z">
+        </path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 18" id="ext_mp3">
+        <path
+            d="M15.5824 18H2.75357C1.25019 18 0.0141602 16.7639 0.0141602 15.2606C0.0141602 13.7573 1.25024 12.5212 2.75357 12.5212H15.5491C17.0524 12.5212 18.2885 13.7573 18.2885 15.2606C18.2885 16.7639 17.0858 18 15.5824 18ZM2.75357 14.3919C2.28582 14.3919 1.88491 14.7928 1.88491 15.2605C1.88491 15.7283 2.28582 16.1292 2.75357 16.1292H15.5491C16.0168 16.1292 16.4177 15.7283 16.4177 15.2605C16.4177 14.7928 16.0168 14.3919 15.5491 14.3919H2.75357Z">
+        </path>
+        <path
+            d="M13.2102 3.59129L9.8694 0.250538C9.53535 -0.0835127 8.90053 -0.0835127 8.56647 0.250538L5.22572 3.59129C4.85819 3.95882 4.85819 4.5267 5.22572 4.89422C5.59324 5.26175 6.16112 5.26175 6.52865 4.89422L8.29932 3.12354V10.4067C8.29932 10.9078 8.63338 11.3421 9.1345 11.3421C9.63563 11.3421 9.96968 10.9412 9.96968 10.4067V2.95667L11.874 4.86095C12.041 5.02802 12.2749 5.12825 12.5422 5.12825C12.8095 5.12825 13.0099 5.02802 13.2104 4.86095C13.5443 4.5268 13.5443 3.95892 13.2103 3.59139L13.2102 3.59129Z">
+        </path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 20" id="ext_pdf">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M13.1353 0.882284H3.15482V9.00889C3.15482 9.25243 2.95725 9.44999 2.71372 9.44999C2.47017 9.44999 2.27261 9.25242 2.27261 9.00889V0.441104C2.27261 0.197559 2.47018 0 2.71372 0H13.4294C13.5474 0 13.6593 0.0471743 13.7426 0.13045L16.6031 2.99097C16.686 3.07385 16.7324 3.18565 16.7324 3.30284V9.00908C16.7324 9.25262 16.5348 9.45018 16.2913 9.45018C16.0477 9.45018 15.8502 9.25261 15.8502 9.00908V3.59696H14.8605C14.3859 3.59696 13.9546 3.40298 13.6421 3.09052C13.3297 2.77807 13.1357 2.34672 13.1357 1.87209V0.882448L13.1353 0.882284ZM3.15482 19.1177H15.8497V16.8191C15.8497 16.5756 16.0473 16.378 16.2908 16.378C16.5344 16.378 16.7319 16.5756 16.7319 16.8191V19.5589C16.7319 19.8024 16.5344 20 16.2908 20H2.71356C2.47002 20 2.27246 19.8024 2.27246 19.5589V16.8191C2.27246 16.5756 2.47003 16.378 2.71356 16.378C2.95711 16.378 3.15467 16.5756 3.15467 16.8191V19.1177H3.15482Z">
+        </path>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.23145 5.06714H13.7717V5.80246H5.23145V5.06714Z"></path>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.23145 6.81183H13.7717V7.54705H5.23145V6.81183Z"></path>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.23145 3.32214H11.2696V4.05747H5.23145V3.32214Z"></path>
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M4.597 14.7802V11.0475H5.80586C6.26384 11.0475 6.56281 11.0667 6.70185 11.104C6.91568 11.1596 7.0956 11.2813 7.2398 11.469C7.38411 11.6567 7.45621 11.8992 7.45621 12.1955C7.45621 12.425 7.41453 12.6179 7.33105 12.7735C7.24758 12.93 7.14246 13.0524 7.0138 13.142C6.88605 13.2307 6.75571 13.2897 6.62356 13.3184C6.44364 13.354 6.18294 13.3723 5.84135 13.3723H5.35039V14.7802H4.59691L4.597 14.7802ZM8.07232 11.0475H9.44981C9.76006 11.0475 9.99643 11.071 10.1599 11.1188C10.3789 11.1832 10.5666 11.2978 10.7222 11.463C10.8786 11.6272 10.9976 11.8289 11.0794 12.067C11.1602 12.3059 11.2011 12.5997 11.2011 12.95C11.2011 13.2568 11.1629 13.5218 11.0864 13.7443C10.9934 14.0155 10.8604 14.2353 10.6867 14.4031C10.5563 14.5308 10.3799 14.6299 10.1574 14.7012C9.99144 14.7542 9.76893 14.7803 9.48988 14.7803H8.07238V11.0476L8.07232 11.0475ZM11.8451 14.7802V11.0475H14.4046V11.6793H12.5996V12.5623H14.1577V13.1941H12.5996V14.7802L11.8451 14.7802ZM3.15321 17.1131H18.2072C18.3697 17.1131 18.5013 16.9815 18.5013 16.819V9.00872C18.5013 8.84626 18.3697 8.7146 18.2072 8.7146H0.79412C0.631657 8.7146 0.5 8.84624 0.5 9.00872V16.819C0.5 16.9815 0.631644 17.1131 0.79412 17.1131H3.15321Z">
+        </path>
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M5.34873 11.6795V12.738H5.76062C6.05783 12.738 6.2569 12.7189 6.35683 12.6798C6.45676 12.6407 6.53495 12.5799 6.5924 12.4964C6.64884 12.4129 6.67757 12.3165 6.67757 12.2061C6.67757 12.0705 6.63757 11.9583 6.55759 11.8698C6.4785 11.782 6.37678 11.7264 6.2551 11.7046C6.16474 11.6873 5.98393 11.6794 5.71276 11.6794H5.34863L5.34873 11.6795Z">
+        </path>
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M8.82521 11.6794V14.151H9.38748C9.59782 14.151 9.7499 14.1398 9.84375 14.1154C9.96542 14.085 10.0671 14.0338 10.1479 13.9608C10.2287 13.8877 10.2939 13.767 10.3452 13.6001C10.3957 13.4333 10.4217 13.2047 10.4217 12.9162C10.4217 12.6276 10.3957 12.4068 10.3452 12.2521C10.2939 12.0975 10.2226 11.9767 10.1314 11.8906C10.0392 11.8038 9.92284 11.7455 9.78201 11.7151C9.67689 11.6908 9.47083 11.6795 9.16328 11.6795H8.8252L8.82521 11.6794Z">
+        </path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="ext_search">
+        <path d="M0 0h24v24H0V0z" fill="none"></path>
+        <path
+            d="M15.5 14h-.79l-.28-.27c1.2-1.4 1.82-3.31 1.48-5.34-.47-2.78-2.79-5-5.59-5.34-4.23-.52-7.79 3.04-7.27 7.27.34 2.8 2.56 5.12 5.34 5.59 2.03.34 3.94-.28 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+        </path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 14" id="ext_pin_outline">
+        <path
+            d="M6.42857 1.8V5.05C6.42857 5.778 6.69286 6.454 7.14286 7H2.85714C3.32143 6.441 3.57143 5.765 3.57143 5.05V1.8H6.42857ZM8.57143 0.5H1.42857C1.03571 0.5 0.714286 0.7925 0.714286 1.15C0.714286 1.5075 1.03571 1.8 1.42857 1.8H2.14286V5.05C2.14286 6.129 1.18571 7 0 7V8.3H4.26429V12.85L4.97857 13.5L5.69286 12.85V8.3H10V7C8.81429 7 7.85714 6.129 7.85714 5.05V1.8H8.57143C8.96429 1.8 9.28571 1.5075 9.28571 1.15C9.28571 0.7925 8.96429 0.5 8.57143 0.5Z"
+            fill="#1E88E5"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 20" id="ext_pinned">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M11 7V2H12C12.55 2 13 1.55 13 1C13 0.45 12.55 0 12 0H2C1.45 0 1 0.45 1 1C1 1.55 1.45 2 2 2H3V7C3 8.66 1.66 10 0 10V12H5.97V19L6.97 20L7.97 19V12H14V10C12.34 10 11 8.66 11 7Z"
+            fill="#1E88E5"></path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="ext_close">
+        <path d="M0 0h24v24H0V0z" fill="none"></path>
+        <path
+            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z">
+        </path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="ext_drag_indicator">
+        <path d="M0 0h24v24H0V0z" fill="none"></path>
+        <path
+            d="M11 18c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2zm-2-8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm6 4c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z">
+        </path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="ext_locate">
+        <path d="M0 0h24v24H0z" fill="none"></path>
+        <path
+            d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z">
+        </path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="ext_auto_stories">
+        <path d="M0 0h24v24H0V0z" fill="none"></path>
+        <path
+            d="M19 1l-5 5v11l5-4.5V1zM1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5V6c-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6zm22 13.5V6c-.6-.45-1.25-.75-2-1v13.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5v2c1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5v-1.1z">
+        </path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 14" id="ext_book">
+        <path
+            d="M4.27415 1C3.14935 1 2.00709 1.568 1.1326 2.51678C1.04538 2.61108 1 2.73725 1 2.86571V12.7261C1 12.9288 1.22189 13.0531 1.39478 12.9465C2.63712 12.1833 4.03619 11.5117 4.84315 11.5117C5.89343 11.5117 6.65762 12.2145 7.17088 13.3059C7.21423 13.3978 7.30507 13.4583 7.40617 13.4583H7.5941C7.69505 13.4583 7.7858 13.3978 7.82897 13.3059C8.34205 12.2145 9.1067 11.5117 10.1569 11.5117C10.9639 11.5117 12.363 12.1833 13.6049 12.9465C13.7781 13.0531 14 12.9288 14 12.7261V2.86576C14 2.73716 13.9543 2.61099 13.8674 2.51669C12.9926 1.56803 11.8504 1.00014 10.7256 1.00014C9.51035 1.00014 8.31652 1.68215 7.50004 2.81697C6.6835 1.68216 5.48989 1 4.27415 1ZM4.2744 1.38944C5.48869 1.38944 6.66592 2.1793 7.23996 3.33603V12.4201C6.50387 11.3893 5.56453 11.0777 4.84242 11.0775C3.89084 11.0775 2.8013 11.6121 1.51972 12.4201V2.94635C1.51972 2.81009 1.57102 2.67599 1.66848 2.58066C2.39231 1.87533 3.32263 1.38944 4.2744 1.38944ZM13.4798 12.4201C12.198 11.6121 11.1088 11.0774 10.1565 11.0774C9.00892 11.0774 8.25215 11.7309 7.75959 12.4201L7.75964 3.33597C8.2256 2.26532 9.51115 1.38938 10.7252 1.38938C11.6769 1.38938 12.6072 1.87532 13.3306 2.58071C13.4284 2.67604 13.4797 2.81014 13.4797 2.9464L13.4798 12.4201Z">
+        </path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="ext_icon_cc">
+        <path d="M0 0h24v24H0V0z" fill="none" color="transparent" />
+        <path
+            d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H5V6h14v12zM7 15h3c.55 0 1-.45 1-1v-1H9.5v.5h-2v-3h2v.5H11v-1c0-.55-.45-1-1-1H7c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1zm7 0h3c.55 0 1-.45 1-1v-1h-1.5v.5h-2v-3h2v.5H18v-1c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="ext_min">
+        <path
+            d="M11.975 0.961426L8.72054 4.29302V1.63515H7.27411V6.81763H12.3366V5.33692H9.74027L12.9947 2.00533L11.975 0.961426ZM0.765181 8.29834V9.77905H3.36152L0.107056 13.1107L1.12679 14.1546L4.38125 10.823V13.4808H5.82768V8.29834H0.765181Z">
+        </path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="ext_power">
+        <path d="M0 0h24v24H0z" fill="none"></path>
+        <path
+            d="M13 3h-2v10h2V3zm4.83 2.17l-1.42 1.42C17.99 7.86 19 9.81 19 12c0 3.87-3.13 7-7 7s-7-3.13-7-7c0-2.19 1.01-4.14 2.58-5.42L6.17 5.17C4.23 6.82 3 9.26 3 12c0 4.97 4.03 9 9 9s9-4.03 9-9c0-2.74-1.23-5.18-3.17-6.83z">
+        </path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="ext_voices">
+        <path d="M0 0h24v24H0z" fill="none"></path>
+        <circle cx="9" cy="9" r="4"></circle>
+        <path
+            d="M9 15c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4zm7.76-9.64l-1.68 1.69c.84 1.18.84 2.71 0 3.89l1.68 1.69c2.02-2.02 2.02-5.07 0-7.27zM20.07 2l-1.63 1.63c2.77 3.02 2.77 7.56 0 10.74L20.07 16c3.9-3.89 3.91-9.95 0-14z">
+        </path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" id="ext_replay">
+        <g>
+            <rect fill="none" height="24" width="24"></rect>
+            <rect fill="none" height="24" width="24"></rect>
+            <rect fill="none" height="24" width="24"></rect>
+        </g>
+        <g>
+            <g></g>
+            <path
+                d="M12,5V1L7,6l5,5V7c3.31,0,6,2.69,6,6s-2.69,6-6,6s-6-2.69-6-6H4c0,4.42,3.58,8,8,8s8-3.58,8-8S16.42,5,12,5z">
+            </path>
+        </g>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="ext_forward">
+        <path
+            d="M18 13C18 16.31 15.31 19 12 19C8.69 19 6 16.31 6 13C6 9.69 8.69 7 12 7V11L17 6L12 1V5C7.58 5 4 8.58 4 13C4 17.42 7.58 21 12 21C16.42 21 20 17.42 20 13H18Z">
+        </path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" id="ext_settings">
+        <path
+            d="M13.3307 6.0556H12.1145C11.919 6.0556 11.758 5.94798 11.6831 5.76741C11.6083 5.58684 11.6463 5.39666 11.7842 5.25849L12.6441 4.39882C12.7705 4.27242 12.8401 4.10417 12.8401 3.92554C12.8401 3.74666 12.7705 3.57862 12.6441 3.45201L11.548 2.3559C11.2953 2.10313 10.8545 2.10263 10.6012 2.3559L9.74155 3.21557C9.60339 3.35352 9.41271 3.39203 9.23264 3.31692C9.05203 3.24206 8.94442 3.081 8.94442 2.8855V1.66925C8.94442 1.3002 8.64422 1 8.27517 1H6.72483C6.35578 1 6.05558 1.3002 6.05558 1.66925V2.8855C6.05558 3.08096 5.94797 3.24202 5.76739 3.31688C5.58733 3.39224 5.39665 3.35348 5.25848 3.21553L4.39881 2.35585C4.14553 2.10258 3.70476 2.10309 3.452 2.35585L2.35589 3.45196C2.22949 3.57836 2.15992 3.74662 2.15992 3.92549C2.15992 4.10411 2.22949 4.27216 2.35589 4.39878L3.21582 5.25845C3.35378 5.39662 3.39157 5.58683 3.31692 5.76737C3.24227 5.94798 3.081 6.05558 2.8855 6.05558H1.66925C1.3002 6.05558 1 6.35578 1 6.72483V8.27496C1 8.64422 1.3002 8.94442 1.66925 8.94442H2.8855C3.08096 8.94442 3.24202 9.05204 3.31688 9.23261C3.39174 9.41318 3.35369 9.60336 3.21578 9.74152L2.35585 10.6012C2.22945 10.7276 2.15987 10.8959 2.15987 11.0745C2.15987 11.2534 2.22944 11.4214 2.35585 11.548L3.45196 12.6441C3.70497 12.8971 4.14553 12.8976 4.39876 12.6441L5.25844 11.7842C5.3966 11.6462 5.58656 11.6082 5.76735 11.6831C5.94792 11.758 6.05554 11.919 6.05554 12.1145V13.3307C6.05554 13.6998 6.35574 14 6.72478 14H8.27491C8.64396 14 8.94416 13.6998 8.94416 13.3307V12.1145C8.94416 11.919 9.05177 11.758 9.23235 11.6831C9.41313 11.608 9.60309 11.6463 9.74126 11.7842L10.6009 12.6441C10.8542 12.8974 11.295 12.8969 11.5477 12.6441L12.6438 11.548C12.7703 11.4216 12.8398 11.2534 12.8398 11.0745C12.8398 10.8959 12.7703 10.7278 12.6438 10.6012L11.7839 9.74152C11.646 9.60336 11.6082 9.41315 11.6828 9.23261C11.7575 9.05204 11.919 8.94442 12.1145 8.94442H13.3308C13.6998 8.94442 14 8.64422 14 8.27518V6.72483C14 6.35578 13.6998 6.05558 13.3308 6.05558L13.3307 6.0556ZM13.5185 8.27522C13.5185 8.37873 13.4343 8.46303 13.3307 8.46303H12.1145C11.7235 8.46303 11.3877 8.68739 11.2382 9.04849C11.0885 9.40958 11.1672 9.80584 11.4438 10.0822L12.3037 10.9419C12.3771 11.0153 12.3771 11.1345 12.3037 11.2077L11.2076 12.3038C11.1344 12.377 11.0153 12.3775 10.9418 12.3038L10.0821 11.4439C9.80549 11.1672 9.40948 11.089 9.04839 11.2383C8.68729 11.3878 8.46292 11.7236 8.46292 12.1146V13.3308C8.46297 13.4343 8.37867 13.5186 8.27516 13.5186H6.72482C6.62131 13.5186 6.53701 13.4343 6.53701 13.3308V12.1146C6.53701 11.7236 6.31264 11.3877 5.95155 11.2382C5.83043 11.1879 5.70576 11.1634 5.5825 11.1634C5.33837 11.1634 5.10173 11.2597 4.91783 11.4436L4.05815 12.3035C3.98448 12.3772 3.86531 12.3767 3.79236 12.3035L2.69625 11.2074C2.62283 11.134 2.62283 11.0148 2.69625 10.9416L3.55618 10.082C3.83256 9.80558 3.91153 9.40932 3.76177 9.04823C3.6123 8.68738 3.27647 8.46301 2.8855 8.46301H1.66925C1.56574 8.46301 1.48148 8.37872 1.48148 8.27521V6.72486C1.48148 6.62135 1.56574 6.53706 1.66925 6.53706H2.8855C3.27647 6.53706 3.6123 6.31269 3.76181 5.95159C3.91153 5.5905 3.83282 5.19424 3.55623 4.91786L2.69629 4.05819C2.62287 3.98477 2.62287 3.86561 2.69629 3.7924L3.7924 2.69629C3.86557 2.62287 3.98474 2.62287 4.0582 2.69629L4.91787 3.55596C5.19399 3.83208 5.59 3.9113 5.9516 3.76154C6.31265 3.61234 6.53702 3.2765 6.53702 2.88553V1.66928C6.53702 1.56577 6.62132 1.48152 6.72483 1.48152H8.27496C8.37868 1.48152 8.46297 1.56577 8.46297 1.66928V2.88553C8.46297 3.2765 8.68734 3.61234 9.04843 3.76185C9.41003 3.91156 9.80578 3.83264 10.0822 3.55626L10.9418 2.69659C11.0155 2.62317 11.1347 2.62317 11.2076 2.69659L12.3037 3.7927C12.3772 3.86612 12.3772 3.98528 12.3037 4.05849L11.4438 4.91817C11.1674 5.19454 11.0885 5.5908 11.2382 5.9519C11.3877 6.31299 11.7236 6.53736 12.1145 6.53736H13.3308C13.4343 6.53706 13.5185 6.62136 13.5185 6.72487V8.27522Z">
+        </path>
+        <path
+            d="M7.50028 5.33334C6.30548 5.33334 5.33363 6.30521 5.33363 7.5C5.33363 8.69479 6.30549 9.66665 7.50028 9.66665C8.69507 9.66665 9.66693 8.69479 9.66693 7.5C9.66693 6.30521 8.69507 5.33334 7.50028 5.33334ZM7.50028 9.18511C6.57129 9.18511 5.81517 8.42894 5.81517 7.5C5.81517 6.57105 6.57134 5.81488 7.50028 5.81488C8.42922 5.81488 9.1854 6.57105 9.1854 7.5C9.1854 8.42894 8.42922 9.18511 7.50028 9.18511Z">
+        </path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" fill="#0078D4" viewBox="0 0 24 24" id="ext_play">
+        <path d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"></path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" fill="#0078D4" viewBox="0 0 24 24"
+        id="ext_pause">
+        <g>
+            <rect fill="none" height="24" width="24"></rect>
+            <rect fill="none" height="24" width="24"></rect>
+            <rect fill="none" height="24" width="24"></rect>
+        </g>
+        <g>
+            <g></g>
+            <path
+                d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2z M11,16H9V8h2V16z M15,16h-2V8h2V16z">
+            </path>
+        </g>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 15" id="ext_speaker">
+        <mask id="path-1-inside-1_2886_9696" fill="white">
+            <path
+                d="M11.97 10.1264L12.5605 10.7692C13.0821 10.3268 13.4999 9.78282 13.786 9.1733C14.0722 8.56377 14.2202 7.90267 14.2202 7.23392C14.2202 6.56516 14.0722 5.90407 13.786 5.29454C13.4999 4.68501 13.0821 4.14101 12.5605 3.69867L11.97 4.34144C12.3968 4.70336 12.7386 5.14845 12.9727 5.64715C13.2068 6.14586 13.3279 6.68676 13.3279 7.23392C13.3279 7.78108 13.2068 8.32198 12.9727 8.82068C12.7386 9.31939 12.3968 9.76448 11.97 10.1264Z">
+            </path>
+        </mask>
+        <path
+            d="M11.97 10.1264L12.5605 10.7692C13.0821 10.3268 13.4999 9.78282 13.786 9.1733C14.0722 8.56377 14.2202 7.90267 14.2202 7.23392C14.2202 6.56516 14.0722 5.90407 13.786 5.29454C13.4999 4.68501 13.0821 4.14101 12.5605 3.69867L11.97 4.34144C12.3968 4.70336 12.7386 5.14845 12.9727 5.64715C13.2068 6.14586 13.3279 6.68676 13.3279 7.23392C13.3279 7.78108 13.2068 8.32198 12.9727 8.82068C12.7386 9.31939 12.3968 9.76448 11.97 10.1264Z"
+            mask="url(#path-1-inside-1_2886_9696)"></path>
+        <mask id="path-2-inside-2_2886_9696" fill="white">
+            <path
+                d="M15.3144 11.6584L15.916 12.2904C16.6455 11.6481 17.2281 10.8668 17.6266 9.99633C18.0252 9.12582 18.231 8.18509 18.231 7.23397C18.231 6.28284 18.0252 5.34212 17.6266 4.47161C17.2281 3.60109 16.6455 2.81983 15.916 2.17749L15.3144 2.80955C15.9527 3.3716 16.4624 4.0552 16.8112 4.8169C17.1599 5.5786 17.34 6.40173 17.34 7.23397C17.34 8.0662 17.1599 8.88934 16.8112 9.65104C16.4624 10.4127 15.9527 11.0963 15.3144 11.6584Z">
+            </path>
+        </mask>
+        <path
+            d="M15.3144 11.6584L15.916 12.2904C16.6455 11.6481 17.2281 10.8668 17.6266 9.99633C18.0252 9.12582 18.231 8.18509 18.231 7.23397C18.231 6.28284 18.0252 5.34212 17.6266 4.47161C17.2281 3.60109 16.6455 2.81983 15.916 2.17749L15.3144 2.80955C15.9527 3.3716 16.4624 4.0552 16.8112 4.8169C17.1599 5.5786 17.34 6.40173 17.34 7.23397C17.34 8.0662 17.1599 8.88934 16.8112 9.65104C16.4624 10.4127 15.9527 11.0963 15.3144 11.6584Z"
+            mask="url(#path-2-inside-2_2886_9696)"></path>
+        <mask id="path-3-inside-3_2886_9696" fill="white">
+            <path
+                d="M9.93067 0.289893C9.86292 0.252283 9.78607 0.232483 9.70784 0.232483C9.62961 0.232483 9.55276 0.252283 9.48501 0.289893L3.66028 3.77372H0.676614C0.558418 3.77372 0.445064 3.81887 0.361487 3.89923C0.27791 3.97959 0.230957 4.08858 0.230957 4.20223V10.2657C0.230957 10.3794 0.27791 10.4884 0.361487 10.5687C0.445064 10.6491 0.558418 10.6942 0.676614 10.6942H3.66028L9.47833 14.1673C9.54585 14.2079 9.62345 14.2304 9.70305 14.2323C9.78265 14.2343 9.86135 14.2157 9.93096 14.1786C10.0006 14.1414 10.0585 14.0869 10.0989 14.0209C10.1392 13.9549 10.1603 13.8797 10.1602 13.8031V0.662701C10.1598 0.586557 10.1384 0.511879 10.098 0.446354C10.0577 0.380829 9.99993 0.326823 9.93067 0.289893ZM1.12227 4.63075H3.35055V9.8372H1.12227V4.63075ZM9.26887 13.0339L4.24855 10.0343V4.43577L9.26887 1.43617V13.0339Z">
+            </path>
+        </mask>
+        <path
+            d="M9.93067 0.289893C9.86292 0.252283 9.78607 0.232483 9.70784 0.232483C9.62961 0.232483 9.55276 0.252283 9.48501 0.289893L3.66028 3.77372H0.676614C0.558418 3.77372 0.445064 3.81887 0.361487 3.89923C0.27791 3.97959 0.230957 4.08858 0.230957 4.20223V10.2657C0.230957 10.3794 0.27791 10.4884 0.361487 10.5687C0.445064 10.6491 0.558418 10.6942 0.676614 10.6942H3.66028L9.47833 14.1673C9.54585 14.2079 9.62345 14.2304 9.70305 14.2323C9.78265 14.2343 9.86135 14.2157 9.93096 14.1786C10.0006 14.1414 10.0585 14.0869 10.0989 14.0209C10.1392 13.9549 10.1603 13.8797 10.1602 13.8031V0.662701C10.1598 0.586557 10.1384 0.511879 10.098 0.446354C10.0577 0.380829 9.99993 0.326823 9.93067 0.289893ZM1.12227 4.63075H3.35055V9.8372H1.12227V4.63075ZM9.26887 13.0339L4.24855 10.0343V4.43577L9.26887 1.43617V13.0339Z"
+            mask="url(#path-3-inside-3_2886_9696)"></path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="ext_open_in_new">
+        <path d="M0 0h24v24H0V0z" fill="none"></path>
+        <path
+            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z">
+        </path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 23" id="ext_prem">
+        <path
+            d="M8.75561 22.4648C3.80754 22.4648 0.5 20.5861 0.5 17.8078C0.5 14.1827 2.5374 11.4309 5.8979 10.3724C4.23086 9.3669 3.17249 7.56765 3.17249 5.58312C3.1724 2.51373 5.68622 0 8.75561 0C11.825 0 14.3387 2.51373 14.3387 5.58312C14.3387 7.56765 13.2539 9.39341 11.5869 10.3989C11.9838 10.5312 12.3807 10.7164 12.7511 10.9017C12.9363 11.0075 13.0157 11.2457 12.9099 11.4309C12.804 11.6161 12.5659 11.6955 12.3807 11.5896C11.7192 11.2456 11.0577 11.0075 10.3697 10.8487C10.1845 10.8222 10.0787 10.6635 10.0522 10.4782C10.0522 10.293 10.1581 10.1342 10.3168 10.0813C12.2485 9.39337 13.545 7.59405 13.545 5.5566C13.545 2.91057 11.4017 0.767287 8.75568 0.767287C6.10963 0.767287 3.96637 2.91055 3.96637 5.5566C3.96637 7.594 5.26295 9.39335 7.19453 10.0813C7.35327 10.1342 7.45913 10.3195 7.45913 10.4782C7.43269 10.6634 7.32683 10.7957 7.14165 10.8487C3.54305 11.5366 1.29392 14.2091 1.29392 17.7813C1.29392 20.4538 5.05129 21.6445 8.75573 21.6445C12.3543 21.6445 14.6564 20.9565 15.6354 19.6335C15.7677 19.4483 16.0059 19.4218 16.1911 19.5541C16.3762 19.6864 16.4028 19.9246 16.2705 20.1098C15.1326 21.6976 12.6719 22.4649 8.75574 22.4649L8.75561 22.4648Z"
+            fill="black" fill-opacity="0.6"></path>
+        <path
+            d="M16.4026 18.9191C16.3497 18.9191 16.2703 18.8927 16.2174 18.8662L14.18 17.8078L12.1691 18.8662C12.0368 18.9457 11.878 18.9191 11.7457 18.8398C11.6134 18.7604 11.5605 18.6016 11.587 18.4429L11.9839 16.1938L10.3434 14.6062C10.2375 14.5003 10.1847 14.3416 10.2375 14.2093C10.2904 14.0769 10.4227 13.9711 10.555 13.9446L12.8306 13.6272L13.8361 11.5632C13.889 11.4309 14.0479 11.3515 14.1802 11.3515C14.3389 11.3515 14.4712 11.4309 14.5506 11.5632L15.5562 13.6272L17.8318 13.9446C17.9905 13.9711 18.0964 14.0769 18.1492 14.2093C18.2021 14.3416 18.1492 14.5003 18.0434 14.6062L16.4029 16.1938L16.7998 18.4429C16.8262 18.6016 16.7733 18.7339 16.641 18.8398C16.5615 18.8927 16.4821 18.9191 16.4027 18.9191L16.4026 18.9191ZM14.18 16.961C14.2328 16.961 14.3123 16.9875 14.3651 17.0139L15.8733 17.8077L15.5823 16.1408C15.5559 16.0085 15.6087 15.8762 15.6882 15.7968L16.9053 14.606L15.2118 14.3679C15.0795 14.3414 14.9737 14.262 14.9208 14.1562L14.1799 12.648L13.4389 14.1562C13.386 14.2885 13.2802 14.3679 13.1479 14.3679L11.4544 14.606L12.6716 15.7968C12.7774 15.8762 12.8039 16.0085 12.7774 16.1408L12.5129 17.7813L13.9946 16.9875C14.0476 16.9875 14.127 16.961 14.1799 16.961L14.18 16.961Z"
+            fill="#0078D4"></path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="ext_done">
+        <path d="M0 0h24v24H0V0z" fill="none"></path>
+        <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 18" id="ext_headphone">
+        <g clip-path="url(#clip0_2717_8650)">
+            <path
+                d="M9.5 18C4.532 18 0.5 13.968 0.5 9C0.5 4.032 4.532 0 9.5 0C14.468 0 18.5 4.032 18.5 9C18.5 13.968 14.468 18 9.5 18ZM9.5 0.504C4.82 0.504 1.004 4.32 1.004 9C1.004 13.68 4.82 17.496 9.5 17.496C14.18 17.496 17.996 13.68 17.996 9C17.996 4.32 14.18 0.504 9.5 0.504Z">
+            </path>
+            <path
+                d="M13.352 8.98198C13.208 8.98198 13.1 8.874 13.1 8.72997C13.1 6.22797 11.57 4.30197 9.39196 4.30197C7.21396 4.30197 5.68396 6.24597 5.68396 8.72997C5.68396 8.87399 5.57597 8.98198 5.43195 8.98198C5.28792 8.98198 5.17993 8.874 5.17993 8.72997C5.17993 5.92197 6.90793 3.77997 9.39193 3.77997C11.8759 3.77997 13.6039 5.92197 13.6039 8.72997C13.6039 8.85595 13.4779 8.98198 13.3519 8.98198H13.352Z">
+            </path>
+            <path
+                d="M6.06205 12.726H4.53205C4.08205 12.726 3.72205 12.366 3.72205 11.916V9.50397C3.72205 9.05397 4.08205 8.69397 4.53205 8.69397H6.06205C6.20607 8.69397 6.31406 8.80196 6.31406 8.94599V12.474C6.31406 12.6 6.20601 12.7259 6.06205 12.7259V12.726ZM4.53205 9.19797C4.37003 9.19797 4.24406 9.32395 4.24406 9.48595V11.898C4.24406 12.06 4.37004 12.1859 4.53205 12.1859H5.81003V9.19794L4.53205 9.19797Z">
+            </path>
+            <path
+                d="M6.06205 12.726H4.53205C4.08205 12.726 3.72205 12.366 3.72205 11.916V9.50397C3.72205 9.05397 4.08205 8.69397 4.53205 8.69397H6.06205C6.20607 8.69397 6.31406 8.80196 6.31406 8.94599V12.474C6.31406 12.6 6.20601 12.7259 6.06205 12.7259V12.726ZM4.53205 9.19797C4.37003 9.19797 4.24406 9.32395 4.24406 9.48595V11.898C4.24406 12.06 4.37004 12.1859 4.53205 12.1859H5.81003V9.19794L4.53205 9.19797Z">
+            </path>
+            <path
+                d="M14.3059 12.726H12.7759C12.6319 12.726 12.5239 12.618 12.5239 12.474L12.524 8.94598C12.524 8.80196 12.632 8.69397 12.776 8.69397H14.306C14.756 8.69397 15.116 9.05397 15.116 9.50397V11.916C15.1159 12.366 14.7559 12.726 14.3059 12.726L14.3059 12.726ZM13.028 12.204H14.3059C14.468 12.204 14.5939 12.0781 14.5939 11.9161L14.594 9.50406C14.594 9.34204 14.468 9.21607 14.306 9.21607H13.028L13.028 12.204Z">
+            </path>
+        </g>
+        <defs>
+            <clipPath id="clip0_2717_8650">
+                <rect width="18" height="18" fill="white" transform="translate(0.5)"></rect>
+            </clipPath>
+        </defs>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 20" id="ext_mic">
+        <path
+            d="M10.6807 8.07196C10.5037 8.07196 10.36 8.21671 10.36 8.39501V11.1819H9.63387L9.63379 4.51057C9.63379 2.57487 8.07172 1 6.1516 1H5.3611C3.44093 1 1.87891 2.57494 1.87891 4.51057V11.1822H1.15274L1.15266 8.39523C1.15266 8.21702 1.00907 8.07218 0.831952 8.07218C0.655426 8.07218 0.511841 8.21693 0.511841 8.39523V12.3133C0.511841 14.6881 2.61935 16.6206 5.20899 16.6206H5.37265V18.1014C5.37265 18.1267 5.37531 18.1514 5.37977 18.1755L5.3977 18.2655H3.14563C2.92321 18.2655 2.74884 18.4265 2.74884 18.6323C2.74884 18.8382 2.92331 19 3.14563 19H8.32872C8.55114 19 8.72501 18.8385 8.72501 18.6323C8.72501 18.4267 8.55105 18.2655 8.32872 18.2655H6.07446L6.09393 18.1741C6.09865 18.1513 6.10105 18.1263 6.10105 18.1013V16.6205H6.30288C8.89311 16.6205 11 14.6882 11 12.3132V8.39514C11.0006 8.21702 10.857 8.07196 10.6807 8.07196ZM5.37293 15.9743H5.20927C2.97257 15.9743 1.15265 14.3317 1.15265 12.3132V12.0498H1.89992L1.90807 12.1157C2.12019 13.8375 3.5776 15.1589 5.29913 15.1895L5.37264 15.1905L5.37293 15.9743ZM5.36109 14.5465C3.79406 14.5465 2.51988 13.2614 2.51988 11.6824V9.54562H4.36962C4.58783 9.54562 4.76487 9.36741 4.76487 9.14717C4.76487 8.92694 4.58783 8.74872 4.36962 8.74872H2.51988V7.534H4.36962C4.58783 7.534 4.76487 7.35579 4.76487 7.13555C4.76487 6.91532 4.58783 6.7371 4.36962 6.7371H2.51988V5.52212H4.36962C4.58783 5.52212 4.76487 5.34391 4.76487 5.12367C4.76487 4.90343 4.58783 4.72522 4.36962 4.72522H2.51988V4.51086C2.51988 2.93141 3.79415 1.64623 5.36109 1.64623H6.1516C7.71812 1.64623 8.99281 2.93134 8.99281 4.51086V4.72522H7.14358C6.92536 4.72522 6.74832 4.90343 6.74832 5.12367C6.74832 5.34391 6.92536 5.52212 7.14358 5.52212H8.99281V6.7371H7.14358C6.92536 6.7371 6.74832 6.91532 6.74832 7.13555C6.74832 7.35579 6.92536 7.534 7.14358 7.534H8.99281V8.74872H7.14358C6.92536 8.74872 6.74832 8.92694 6.74832 9.14717C6.74832 9.36741 6.92536 9.54562 7.14358 9.54562H8.99281V11.6824C8.99281 13.2615 7.71801 14.5465 6.1516 14.5465H5.36109ZM10.36 12.3132C10.36 14.332 8.54023 15.9743 6.30333 15.9743H6.1015V15.1918L6.17553 15.1912C7.916 15.1791 9.39004 13.857 9.60413 12.1154L9.61228 12.0495H10.3596L10.36 12.3132Z"
+            fill="black" fill-opacity="0.6"></path>
+        <path
+            d="M10.26 8.39501V11.0819H9.73387L9.73379 4.51056C9.73379 2.52041 8.12772 0.9 6.1516 0.9H5.3611C3.38494 0.9 1.77891 2.52048 1.77891 4.51057V11.0822H1.25274L1.25266 8.39523C1.25266 8.16252 1.06502 7.97218 0.831952 7.97218C0.599367 7.97218 0.411841 8.16253 0.411841 8.39523V12.3133C0.411841 14.7513 2.57246 16.7206 5.20899 16.7206H5.27265V18.1014C5.27265 18.1235 5.27424 18.1449 5.27696 18.1655H3.14563C2.87556 18.1655 2.64884 18.364 2.64884 18.6323C2.64884 18.9005 2.87537 19.1 3.14563 19.1H8.32872C8.59921 19.1 8.82501 18.9006 8.82501 18.6323C8.82501 18.3644 8.59889 18.1655 8.32872 18.1655H6.19677C6.19965 18.1443 6.20105 18.1227 6.20105 18.1013V16.7205H6.30288C8.94 16.7205 11.1 14.7514 11.1 12.3132L11.1 8.39548L11 8.39514H11.1V8.39516C11.1006 8.16259 10.913 7.97196 10.6807 7.97196C10.4478 7.97196 10.26 8.16217 10.26 8.39501ZM1.81158 12.1498C2.03826 13.9016 3.5188 15.2456 5.27267 15.2889L5.27289 15.8743H5.20927C3.01791 15.8743 1.25265 14.267 1.25265 12.3132V12.1498H1.81158ZM5.36109 14.4465C3.85006 14.4465 2.61988 13.207 2.61988 11.6824V9.64562H4.36962C4.64378 9.64562 4.86487 9.42192 4.86487 9.14717C4.86487 8.87243 4.64378 8.64872 4.36962 8.64872H2.61988V7.634H4.36962C4.64378 7.634 4.86487 7.4103 4.86487 7.13555C4.86487 6.86081 4.64378 6.6371 4.36962 6.6371H2.61988V5.62212H4.36962C4.64378 5.62212 4.86487 5.39842 4.86487 5.12367C4.86487 4.84892 4.64378 4.62522 4.36962 4.62522H2.61988V4.51086C2.61988 2.98585 3.85016 1.74623 5.36109 1.74623H6.1516C7.66212 1.74623 8.89281 2.9858 8.89281 4.51086V4.62522H7.14358C6.86942 4.62522 6.64832 4.84892 6.64832 5.12367C6.64832 5.39842 6.86942 5.62212 7.14358 5.62212H8.89281V6.6371H7.14358C6.86942 6.6371 6.64832 6.86081 6.64832 7.13555C6.64832 7.4103 6.86942 7.634 7.14358 7.634H8.89281V8.64872H7.14358C6.86942 8.64872 6.64832 8.87243 6.64832 9.14717C6.64832 9.42192 6.86942 9.64562 7.14358 9.64562H8.89281V11.6824C8.89281 13.2071 7.66203 14.4465 6.1516 14.4465H5.36109ZM10.26 12.3132C10.26 14.2674 8.4949 15.8743 6.30333 15.8743H6.2015V15.291C7.97449 15.266 9.47194 13.9211 9.70062 12.1495H10.2597L10.26 12.3132Z"
+            stroke="black" stroke-opacity="0.6" stroke-width="0.2"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 20" id="ext_mic_d">
+        <path
+            d="M10.6807 8.07196C10.5037 8.07196 10.36 8.21671 10.36 8.39501V11.1819H9.63387L9.63379 4.51057C9.63379 2.57487 8.07172 1 6.1516 1H5.3611C3.44093 1 1.87891 2.57494 1.87891 4.51057V11.1822H1.15274L1.15266 8.39523C1.15266 8.21702 1.00907 8.07218 0.831952 8.07218C0.655426 8.07218 0.511841 8.21693 0.511841 8.39523V12.3133C0.511841 14.6881 2.61935 16.6206 5.20899 16.6206H5.37265V18.1014C5.37265 18.1267 5.37531 18.1514 5.37977 18.1755L5.3977 18.2655H3.14563C2.92321 18.2655 2.74884 18.4265 2.74884 18.6323C2.74884 18.8382 2.92331 19 3.14563 19H8.32872C8.55114 19 8.72501 18.8385 8.72501 18.6323C8.72501 18.4267 8.55105 18.2655 8.32872 18.2655H6.07446L6.09393 18.1741C6.09865 18.1513 6.10105 18.1263 6.10105 18.1013V16.6205H6.30288C8.89311 16.6205 11 14.6882 11 12.3132V8.39514C11.0006 8.21702 10.857 8.07196 10.6807 8.07196ZM5.37293 15.9743H5.20927C2.97257 15.9743 1.15265 14.3317 1.15265 12.3132V12.0498H1.89992L1.90807 12.1157C2.12019 13.8375 3.5776 15.1589 5.29913 15.1895L5.37264 15.1905L5.37293 15.9743ZM5.36109 14.5465C3.79406 14.5465 2.51988 13.2614 2.51988 11.6824V9.54562H4.36962C4.58783 9.54562 4.76487 9.36741 4.76487 9.14717C4.76487 8.92694 4.58783 8.74872 4.36962 8.74872H2.51988V7.534H4.36962C4.58783 7.534 4.76487 7.35579 4.76487 7.13555C4.76487 6.91532 4.58783 6.7371 4.36962 6.7371H2.51988V5.52212H4.36962C4.58783 5.52212 4.76487 5.34391 4.76487 5.12367C4.76487 4.90343 4.58783 4.72522 4.36962 4.72522H2.51988V4.51086C2.51988 2.93141 3.79415 1.64623 5.36109 1.64623H6.1516C7.71812 1.64623 8.99281 2.93134 8.99281 4.51086V4.72522H7.14358C6.92536 4.72522 6.74832 4.90343 6.74832 5.12367C6.74832 5.34391 6.92536 5.52212 7.14358 5.52212H8.99281V6.7371H7.14358C6.92536 6.7371 6.74832 6.91532 6.74832 7.13555C6.74832 7.35579 6.92536 7.534 7.14358 7.534H8.99281V8.74872H7.14358C6.92536 8.74872 6.74832 8.92694 6.74832 9.14717C6.74832 9.36741 6.92536 9.54562 7.14358 9.54562H8.99281V11.6824C8.99281 13.2615 7.71801 14.5465 6.1516 14.5465H5.36109ZM10.36 12.3132C10.36 14.332 8.54023 15.9743 6.30333 15.9743H6.1015V15.1918L6.17553 15.1912C7.916 15.1791 9.39004 13.857 9.60413 12.1154L9.61228 12.0495H10.3596L10.36 12.3132Z"
+            fill="white" fill-opacity="0.6"></path>
+        <path
+            d="M10.26 8.39501V11.0819H9.73387L9.73379 4.51056C9.73379 2.52041 8.12772 0.9 6.1516 0.9H5.3611C3.38494 0.9 1.77891 2.52048 1.77891 4.51057V11.0822H1.25274L1.25266 8.39523C1.25266 8.16252 1.06502 7.97218 0.831952 7.97218C0.599367 7.97218 0.411841 8.16253 0.411841 8.39523V12.3133C0.411841 14.7513 2.57246 16.7206 5.20899 16.7206H5.27265V18.1014C5.27265 18.1235 5.27424 18.1449 5.27696 18.1655H3.14563C2.87556 18.1655 2.64884 18.364 2.64884 18.6323C2.64884 18.9005 2.87537 19.1 3.14563 19.1H8.32872C8.59921 19.1 8.82501 18.9006 8.82501 18.6323C8.82501 18.3644 8.59889 18.1655 8.32872 18.1655H6.19677C6.19965 18.1443 6.20105 18.1227 6.20105 18.1013V16.7205H6.30288C8.94 16.7205 11.1 14.7514 11.1 12.3132L11.1 8.39548L11 8.39514H11.1V8.39516C11.1006 8.16259 10.913 7.97196 10.6807 7.97196C10.4478 7.97196 10.26 8.16217 10.26 8.39501ZM1.81158 12.1498C2.03826 13.9016 3.5188 15.2456 5.27267 15.2889L5.27289 15.8743H5.20927C3.01791 15.8743 1.25265 14.267 1.25265 12.3132V12.1498H1.81158ZM5.36109 14.4465C3.85006 14.4465 2.61988 13.207 2.61988 11.6824V9.64562H4.36962C4.64378 9.64562 4.86487 9.42192 4.86487 9.14717C4.86487 8.87243 4.64378 8.64872 4.36962 8.64872H2.61988V7.634H4.36962C4.64378 7.634 4.86487 7.4103 4.86487 7.13555C4.86487 6.86081 4.64378 6.6371 4.36962 6.6371H2.61988V5.62212H4.36962C4.64378 5.62212 4.86487 5.39842 4.86487 5.12367C4.86487 4.84892 4.64378 4.62522 4.36962 4.62522H2.61988V4.51086C2.61988 2.98585 3.85016 1.74623 5.36109 1.74623H6.1516C7.66212 1.74623 8.89281 2.9858 8.89281 4.51086V4.62522H7.14358C6.86942 4.62522 6.64832 4.84892 6.64832 5.12367C6.64832 5.39842 6.86942 5.62212 7.14358 5.62212H8.89281V6.6371H7.14358C6.86942 6.6371 6.64832 6.86081 6.64832 7.13555C6.64832 7.4103 6.86942 7.634 7.14358 7.634H8.89281V8.64872H7.14358C6.86942 8.64872 6.64832 8.87243 6.64832 9.14717C6.64832 9.42192 6.86942 9.64562 7.14358 9.64562H8.89281V11.6824C8.89281 13.2071 7.66203 14.4465 6.1516 14.4465H5.36109ZM10.26 12.3132C10.26 14.2674 8.4949 15.8743 6.30333 15.8743H6.2015V15.291C7.97449 15.266 9.47194 13.9211 9.70062 12.1495H10.2597L10.26 12.3132Z"
+            stroke="white" stroke-opacity="0.6" stroke-width="0.2"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 18" id="ext_edit">
+        <path opacity="0.66"
+            d="M10.893 1.87225L9.85165 1.20639C9.2187 0.810997 8.40197 0.998297 7.99359 1.64337L7.34024 2.72541L0.744988 13.5462V13.567V13.5878C0.744988 13.6086 0.744988 13.6086 0.724583 13.6294V13.6502V13.6918V13.7126L0.5 17.1671C0.5 17.2711 0.540809 17.3959 0.6429 17.4584C0.683709 17.5 0.744991 17.5 0.806273 17.5C0.867555 17.5 0.908364 17.4792 0.949173 17.4584L3.93023 15.7312C3.93023 15.7312 3.95064 15.7312 3.95064 15.7104H3.97104C3.99145 15.6896 4.03232 15.6688 4.05273 15.6272L10.6478 4.82718L11.3012 3.74514C11.4849 3.433 11.5461 3.0584 11.4645 2.70468C11.4033 2.37175 11.1992 2.05955 10.893 1.87225ZM1.15347 16.6468L1.27603 14.2537L3.19535 15.4607L1.15347 16.6468ZM3.70575 15.0445L1.43933 13.6087L7.70772 3.32891L8.07528 3.5578L9.99459 4.76476L3.70575 15.0445ZM10.7909 3.43298L10.3008 4.24455L9.93325 4.01567L8.01394 2.8087L8.50399 1.99712C8.70818 1.6434 9.15734 1.53935 9.5045 1.76824L10.5458 2.4341C10.7092 2.53814 10.8317 2.70465 10.8725 2.89187C10.9337 3.05837 10.893 3.26648 10.7909 3.43298Z">
+        </path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 16" id="ext_exit">
+        <path
+            d="M1.88808 15H9.6245C9.8331 15 10 14.8342 10 14.6269C10 14.4196 9.83311 14.2538 9.6245 14.2538H1.88808C1.81059 14.2538 1.75099 14.1946 1.75099 14.1176V1.88242C1.75099 1.80543 1.8106 1.74621 1.88808 1.74621H9.6245C9.8331 1.74621 10 1.58039 10 1.3731C10 1.16582 9.83311 1 9.6245 1H1.88808C1.39933 1 1 1.39678 1 1.8824V14.1176C1 14.6032 1.39933 15 1.88808 15V15Z">
+        </path>
+        <path
+            d="M5 7.99933C5 8.18688 5.16878 8.33692 5.37978 8.33692H12.8305L10.4796 10.4267C10.3289 10.5606 10.3289 10.7749 10.4796 10.9035C10.5519 10.9678 10.6483 11 10.7448 11C10.8412 11 10.9377 10.9679 11.016 10.9035L13.795 8.43877C13.9277 8.32089 14 8.1655 14 8.00475C14 7.84401 13.9277 7.68326 13.795 7.57074L11.016 5.10047C10.8653 4.96651 10.6302 4.96651 10.4796 5.10047C10.3289 5.23443 10.3289 5.44875 10.4796 5.57735L12.8305 7.6671H5.37978C5.16879 7.66174 5 7.81177 5 7.99931V7.99933Z">
+        </path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="ext_expand_more">
+        <path d="M24 24H0V0h24v24z" fill="none" opacity=".87"></path>
+        <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"></path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13" id="ext_soundwave">
+        <g clip-path="url(#clip0_2886_9792)">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M0.650024 5.84999H1.43002V7.40999H0.650024V5.84999ZM2.47002 5.06999H3.25002V8.18999H2.47002V5.06999ZM4.29002 3.50999H5.07002V9.74999H4.29002V3.50999ZM6.11002 0.649994H6.89002V12.35H6.11002V0.649994ZM7.93002 1.94999H8.71002V11.31H7.93002V1.94999ZM9.75002 4.28999H10.53V8.96999H9.75002V4.28999ZM11.57 5.84999H12.35V7.40999H11.57V5.84999Z">
+            </path>
+        </g>
+        <defs>
+            <clipPath id="clip0_2886_9792">
+                <rect width="13" height="13" fill="white"></rect>
+            </clipPath>
+        </defs>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="ext_max">
+        <path
+            d="M15.5056 4.75293V0.850255C15.5056 0.382615 15.118 0 14.6442 0H10.6903C9.9236 0 9.53596 0.918276 10.0787 1.45394L11.4483 2.80584L2.83408 11.3084L1.46442 9.95649C0.930337 9.42083 0 9.79494 0 10.5517V14.4543C0 14.922 0.38764 15.3046 0.861423 15.3046H4.81536C5.58202 15.3046 5.96966 14.3863 5.42697 13.8507L4.0573 12.4988L12.6715 3.9962L14.0412 5.34811C14.5753 5.88377 15.5056 5.50965 15.5056 4.75293Z">
+        </path>
+    </symbol>
+
+    <symbol xmlns="http://www.w3.org/2000/svg" fill="#0078D4" viewBox="0 0 32 32" id="nr_logo">
+        <rect width="2.31884" height="32" rx="1.15942"></rect>
+        <rect x="3.70996" width="2.31884" height="32" rx="1.15942"></rect>
+        <rect x="7.41992" width="2.31884" height="32" rx="1.15942"></rect>
+        <rect x="11.1309" y="4.85318" width="2.31884" height="15.0142" rx="1.15942"></rect>
+        <path
+            d="M14.8408 10.5404C14.8408 9.91223 15.3599 9.40298 16.0002 9.40298C16.6406 9.40298 17.1597 9.91223 17.1597 10.5404V22.9764C17.1597 23.6046 16.6406 24.1139 16.0002 24.1139C15.3599 24.1139 14.8408 23.6046 14.8408 22.9764V10.5404Z">
+        </path>
+        <rect x="18.5508" y="13.346" width="2.31884" height="15.1659" rx="1.15942"></rect>
+        <rect x="22.2607" width="2.31884" height="32" rx="1.15942"></rect>
+        <rect x="25.9707" width="2.31884" height="32" rx="1.15942"></rect>
+        <rect x="29.6816" width="2.31884" height="32" rx="1.15942"></rect>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="ext_load_left">
+        <path d="M0 0h24v24H0V0z" fill="none"></path>
+        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12l4.58-4.59z"></path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="ext_load_right">
+        <path d="M0 0h24v24H0V0z" fill="none"></path>
+        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 294 30" id="ext_load_wave">
+        <line x1="1.25" y1="6.25" x2="1.25" y2="24.75" stroke="url(#paint0_linear_5722_91827)" stroke-width="2.5"
+            stroke-linecap="round"></line>
+        <line x1="10.25" y1="11.25" x2="10.25" y2="21.75" stroke="#0078D4" stroke-width="2.5" stroke-linecap="round">
+        </line>
+        <line x1="18.25" y1="14.25" x2="18.25" y2="19.75" stroke="#0078D4" stroke-width="2.5" stroke-linecap="round">
+        </line>
+        <line x1="26.25" y1="15.25" x2="26.25" y2="18.75" stroke="#0078D4" stroke-width="2.5" stroke-linecap="round">
+        </line>
+        <path d="M34.25 11.25L34.25 19.75" stroke="#0078D4" stroke-width="2.5" stroke-linecap="round"></path>
+        <path d="M42 8L42 23" stroke="#0078D4" stroke-width="2.5" stroke-linecap="round"></path>
+        <path d="M52 2V28" stroke="#0078D4" stroke-width="2.5" stroke-linecap="round"></path>
+        <path d="M60 7V23" stroke="#0078D4" stroke-width="2.5" stroke-linecap="round"></path>
+        <path d="M69 10V21" stroke="#0078D4" stroke-width="2.5" stroke-linecap="round"></path>
+        <path d="M77 13V20" stroke="#0078D4" stroke-width="2.5" stroke-linecap="round"></path>
+        <path d="M85 14V17" stroke="#0078D4" stroke-width="2.5" stroke-linecap="round"></path>
+        <path d="M94 11V20" stroke="#0078D4" stroke-width="2.5" stroke-linecap="round"></path>
+        <path d="M102 7V23" stroke="#0078D4" stroke-width="2.5" stroke-linecap="round"></path>
+        <path d="M111 13V20" stroke="#0078D4" stroke-width="2.5" stroke-linecap="round"></path>
+        <path d="M120 12V17" stroke="#0078D4" stroke-width="2.5" stroke-linecap="round"></path>
+        <path d="M129 11V16" stroke="#0078D4" stroke-width="2.5" stroke-linecap="round"></path>
+        <path d="M138 7V23" stroke="#0078D4" stroke-width="2.5" stroke-linecap="round"></path>
+        <path d="M147 2V28" stroke="#0078D4" stroke-width="2.5" stroke-linecap="round"></path>
+        <path d="M156 8V21" stroke="#0078D4" stroke-width="2.5" stroke-linecap="round"></path>
+        <path d="M165 11V20" stroke="#0078D4" stroke-width="2.5" stroke-linecap="round"></path>
+        <path d="M174 13V17" stroke="#0078D4" stroke-width="2.5" stroke-linecap="round"></path>
+        <path d="M183 11L183 17" stroke="#0078D4" stroke-width="2.5" stroke-linecap="round"></path>
+        <path d="M191 7L191 23" stroke="#0078D4" stroke-width="2.5" stroke-linecap="round"></path>
+        <path d="M199 11L199 20" stroke="#0078D4" stroke-width="2.5" stroke-linecap="round"></path>
+        <path d="M208 13L208 17" stroke="#0078D4" stroke-width="2.5" stroke-linecap="round"></path>
+        <path d="M217 13L217 17" stroke="#0078D4" stroke-width="2.5" stroke-linecap="round"></path>
+        <path d="M225 10L225 20" stroke="#0078D4" stroke-width="2.5" stroke-linecap="round"></path>
+        <path d="M233 6L233 26" stroke="#0078D4" stroke-width="2.5" stroke-linecap="round"></path>
+        <path d="M242 2L242 28" stroke="#0078D4" stroke-width="2.5" stroke-linecap="round"></path>
+        <path d="M252 7L252 23" stroke="#0078D4" stroke-width="2.5" stroke-linecap="round"></path>
+        <path d="M260 10L260 20" stroke="#0078D4" stroke-width="2.5" stroke-linecap="round"></path>
+        <path d="M268 13L268 23" stroke="#0078D4" stroke-width="2.5" stroke-linecap="round"></path>
+        <path d="M276 13L276 21" stroke="#0078D4" stroke-width="2.5" stroke-linecap="round"></path>
+        <path d="M284 11L284 19" stroke="#0078D4" stroke-width="2.5" stroke-linecap="round"></path>
+        <path d="M292 7L292 26" stroke="#0078D4" stroke-width="2.5" stroke-linecap="round"></path>
+        <defs>
+            <linearGradient id="paint0_linear_5722_91827" x1="-4.5897e-07" y1="15.5" x2="-1" y2="15.5"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="#0078D4"></stop>
+                <stop offset="1" stop-color="#0078D4" stop-opacity="0"></stop>
+            </linearGradient>
+        </defs>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="ext_icon_text_fields">
+        <path
+            d="M2.5 5.5C2.5 6.33 3.17 7 4 7h3.5v10.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V7H14c.83 0 1.5-.67 1.5-1.5S14.83 4 14 4H4c-.83 0-1.5.67-1.5 1.5zM20 9h-6c-.83 0-1.5.67-1.5 1.5S13.17 12 14 12h1.5v5.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V12H20c.83 0 1.5-.67 1.5-1.5S20.83 9 20 9z">
+        </path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="ext_icon_text_format">
+        <path
+            d="M5 18c0 .55.45 1 1 1h12c.55 0 1-.45 1-1s-.45-1-1-1H6c-.55 0-1 .45-1 1zm4.5-5.2h5l.66 1.6c.15.36.5.6.89.6.69 0 1.15-.71.88-1.34l-3.88-8.97C12.87 4.27 12.46 4 12 4c-.46 0-.87.27-1.05.69l-3.88 8.97c-.27.63.2 1.34.89 1.34.39 0 .74-.24.89-.6l.65-1.6zM12 5.98L13.87 11h-3.74L12 5.98z">
+        </path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 28" id="ext_icon_toggle_off">
+        <rect x="4" y="5" width="36" height="16" rx="8" fill="#E9EAEA" color="#E9EAEA"></rect>
+        <g filter="url(#filter0_dd_264:600)">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M14 23C19.5228 23 24 18.5228 24 13C24 7.47715 19.5228 3 14 3C8.47715 3 4 7.47715 4 13C4 18.5228 8.47715 23 14 23Z"
+                fill="white" color="white"></path>
+        </g>
+        <defs>
+            <filter id="filter0_dd_264:600" x="0" y="0" width="28" height="28" filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"></feColorMatrix>
+                <feOffset dy="1"></feOffset>
+                <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"></feColorMatrix>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_264:600"></feBlend>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"></feColorMatrix>
+                <feOffset dy="2"></feOffset>
+                <feGaussianBlur stdDeviation="0.5"></feGaussianBlur>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"></feColorMatrix>
+                <feBlend mode="normal" in2="effect1_dropShadow_264:600" result="effect2_dropShadow_264:600">
+                </feBlend>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_264:600" result="shape"></feBlend>
+            </filter>
+        </defs>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 28" id="ext_icon_toggle_on">
+        <rect y="5" width="36" height="16" rx="8" fill="#B9CEF3" color="#B9CEF3"></rect>
+        <g filter="url(#filter0_dd_264:601)">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M26 23C31.5228 23 36 18.5228 36 13C36 7.47715 31.5228 3 26 3C20.4772 3 16 7.47715 16 13C16 18.5228 20.4772 23 26 23Z"
+                fill="#175DD6" color="#175DD6"></path>
+        </g>
+        <defs>
+            <filter id="filter0_dd_264:601" x="12" y="0" width="28" height="28" filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"></feColorMatrix>
+                <feOffset dy="1"></feOffset>
+                <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"></feColorMatrix>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_264:601"></feBlend>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"></feColorMatrix>
+                <feOffset dy="2"></feOffset>
+                <feGaussianBlur stdDeviation="0.5"></feGaussianBlur>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"></feColorMatrix>
+                <feBlend mode="normal" in2="effect1_dropShadow_264:601" result="effect2_dropShadow_264:601">
+                </feBlend>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_264:601" result="shape"></feBlend>
+            </filter>
+        </defs>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="chevron_left">
+        <path
+            d="M14.71 6.71a.996.996 0 00-1.41 0L8.71 11.3a.996.996 0 000 1.41l4.59 4.59a.996.996 0 101.41-1.41L10.83 12l3.88-3.88c.39-.39.38-1.03 0-1.41z">
+        </path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="chevron_right">
+        <path
+            d="M9.29 6.71a.996.996 0 000 1.41L13.17 12l-3.88 3.88a.996.996 0 101.41 1.41l4.59-4.59a.996.996 0 000-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z">
+        </path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="ext_icon_error">
+        <path
+            d="M10.0003 1.66666C5.40033 1.66666 1.66699 5.39999 1.66699 9.99999C1.66699 14.6 5.40033 18.3333 10.0003 18.3333C14.6003 18.3333 18.3337 14.6 18.3337 9.99999C18.3337 5.39999 14.6003 1.66666 10.0003 1.66666ZM10.0003 10.8333C9.54199 10.8333 9.16699 10.4583 9.16699 9.99999V6.66666C9.16699 6.20832 9.54199 5.83332 10.0003 5.83332C10.4587 5.83332 10.8337 6.20832 10.8337 6.66666V9.99999C10.8337 10.4583 10.4587 10.8333 10.0003 10.8333ZM10.8337 14.1667H9.16699V12.5H10.8337V14.1667Z"
+            fill="#EF6262" color="#EF6262"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61 60" id="ext_thumb_down">
+        <path
+            d="M28.1709 54.8501L41.9959 41.0001C42.9209 40.0751 43.4459 38.8001 43.4459 37.4751V12.5001C43.4459 9.75012 41.1959 7.50012 38.4459 7.50012H15.9709C13.9709 7.50012 12.1709 8.70012 11.3959 10.5251L3.24594 29.5501C1.12094 34.5001 4.74594 40.0001 10.1209 40.0001H24.2459L21.8709 51.4501C21.6209 52.7001 21.9959 53.9751 22.8959 54.8751C24.3709 56.3251 26.7209 56.3251 28.1709 54.8501V54.8501ZM53.4709 7.50012C50.7209 7.50012 48.4709 9.75012 48.4709 12.5001V32.5001C48.4709 35.2501 50.7209 37.5001 53.4709 37.5001C56.2209 37.5001 58.4709 35.2501 58.4709 32.5001V12.5001C58.4709 9.75012 56.2209 7.50012 53.4709 7.50012Z"
+            fill="#1A7DF9"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" id="ext_thumb_up">
+        <path
+            d="M32.8 5.15014L18.95 19.0001C18.025 19.9251 17.5 21.2001 17.5 22.5251V47.5001C17.5 50.2501 19.75 52.5001 22.5 52.5001H45C47 52.5001 48.8 51.3001 49.6 49.4751L57.75 30.4501C59.85 25.5001 56.225 20.0001 50.85 20.0001H36.725L39.1 8.55014C39.35 7.30014 38.975 6.02514 38.075 5.12514C36.6 3.67514 34.25 3.67514 32.8 5.15014V5.15014ZM7.5 52.5001C10.25 52.5001 12.5 50.2501 12.5 47.5001V27.5001C12.5 24.7501 10.25 22.5001 7.5 22.5001C4.75 22.5001 2.5 24.7501 2.5 27.5001V47.5001C2.5 50.2501 4.75 52.5001 7.5 52.5001Z"
+            fill="#1A7DF9"></path>
+    </symbol>
+</svg>

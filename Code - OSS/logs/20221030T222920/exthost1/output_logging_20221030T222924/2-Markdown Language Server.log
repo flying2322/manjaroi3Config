@@ -1,0 +1,8 @@
+[Trace 14:29:25.467] VsCodeClientWorkspace: TextDocument.onDidOpen: file:///home/dom/Dev/olas/readme.md
+[Trace 14:29:25.469] VsCodeClientWorkspace: TextDocument.onDidChanceContent: file:///home/dom/Dev/olas/readme.md
+[Trace 14:29:25.472] Server: connection.languages.diagnostics.on: file:///home/dom/Dev/olas/readme.md
+[Trace 14:29:25.501] Server: connection.languages.diagnostics.on: file:///home/dom/Dev/olas/readme.md
+[Debug 14:29:25.541] LinkProvider: compute - file:///home/dom/Dev/olas/readme.md
+[Trace 14:29:26.202] DocumentSymbolProvider: provideDocumentSymbols — file:///home/dom/Dev/olas/readme.md 1
+[Debug 14:29:26.203] TableOfContentsProvider: create - file:///home/dom/Dev/olas/readme.md
+[Debug 14:29:27.000] MdFoldingProvider: provideFoldingRanges — file:///home/dom/Dev/olas/readme.md 1

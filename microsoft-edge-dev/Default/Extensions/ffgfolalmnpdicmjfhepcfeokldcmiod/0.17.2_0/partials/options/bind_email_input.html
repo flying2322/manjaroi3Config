@@ -1,0 +1,17 @@
+<form class="input-group input-group-sm"
+      ng-submit="setEmail()">
+    <input type="text" class="form-control" placeholder="{{'options.edu_email_placeholder'|translate}}"
+           manual-focus="focusEmailInput" ng-model="tempEmail"
+           ui-keydown="{esc: 'showEmailInput=false'}"  ng-disabled='disableInput'>
+
+    <div class="input-group-btn">
+        <button class="btn btn-success" ng-disabled="disableInput">
+                            <span ng-hide="disableInput">
+                                {{submit_button_text}}
+                            </span>
+                            <span ng-show="disableInput">
+                                <img src="/img/loading-bars.svg" alt="loading"/>
+                            </span>
+        </button>
+    </div>
+</form>

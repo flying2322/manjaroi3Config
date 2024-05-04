@@ -1,0 +1,15 @@
+<div class="header-divider-left header-divider-right header-languages languages pull-left">
+    <div class="js-languages" data-tv-accordion="" accordion-panel=".languages-title" accordion-content=".languages-menu" accordion-type="dropdown" accordion-is-responsive="true">
+        <div class="languages-title">
+            <i class="languages-icon fa fa-globe"></i>
+            <span class="languages-chosen">{{currentLocaleDisplayName}}</span>
+            <i class="languages-dropdown-icon dropdown-icon"></i>
+        </div>
+
+        <ul class="languages-menu header-languages-menu">
+            <li class="languages-menu-item" ng-repeat="localesDisplayName in localesDisplayNames">
+            	<a class="languages-menu-item-link" href="" ng-class="{'current': localesDisplayName == currentLocaleDisplayName}" ng-click="changeLanguage(localesDisplayName)">{{localesDisplayName}}</a>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,58 @@
+<div class="page-header">
+    <h2 class="page-header-title">
+        {{ 'options.invoice_history.title' | translate }}
+        <a href="javascript:void()" class="btn ng-scope" style="padding: 0;color: black;cursor:point" ng-click="reloadInvoices()" ng-mouseenter="hovering_CT=true" ng-mouseleave="hovering_CT=false" bs-tooltip="{title: ('common.reload'|translate)}" data-placement="bottom">
+            <i class="fa fa-refresh" ng-class="{'color_emphasis':hovering_CT}" aria-hidden="true"></i>
+        </a>
+    </h2>
+    <div class="clearfix"></div>
+</div>
+
+<table class="orders table">
+    <thead>
+        <tr>
+        <th class="number" translate="options.invoice_history.invoice_no"></th>
+        <th class="created-at" translate="options.invoice_history.create_time"></th>
+        
+
+        <th class="expire-at" translate="options.invoice_history.expire_paid_time"></th>
+
+        <th class="price" translate="options.invoice_history.amount"></th>
+        <th class="status" translate="options.invoice_history.status"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="invoice in $root.invoices" ng-init="currencySign = currencySign(invoice); amount = currencyAmount(invoice); created = createdAt(invoice); expire = expireAt(invoice); status = invoiceStatus(invoice)" ng-click="invoiceClicked(invoice)" class="invoice_row" style="cursor:pointer" >
+            <td class="number">{{invoice.seq}}</td>
+            <td class="created-at"><span style="font-size:0.8em">{{created}}</span></td>
+            <td class="expire-at"><span style="font-size:0.8em">{{expire}}</span></td>
+            <td class="price">
+                {{currencySign}}
+                {{amount}}
+            </td>
+            <td class="status" ng-switch="status">
+
+                    <span ng-switch-when="created" class="btn btn-sm btn-checkout" style="background-image: linear-gradient(160deg,#ff8e2b,#ff6c2c);font-weight: 400;font-size: 12px;color: white;">
+                        {{'options.invoice_history.pay_now'|translate}}
+                        <i class="fa fa-arrow-right"></i>
+                    </span>
+        
+                <span ng-switch-when="processing" translate="options.invoice_history.status_name.processing"></span>
+                <span ng-switch-when="expired" translate="options.invoice_history.status_name.expired" style="color: gray;"></span>
+                <span ng-switch-when="succeeded" translate="options.invoice_history.status_name.succeeded" style="color: green;"></span>
+                <span ng-switch-when="payment_failed" translate="options.invoice_history.status_name.payment_failed" style="color: red;"></span>
+                <span ng-switch-when="awaiting_manual_confirmation" translate="options.invoice_history.status_name.awaiting_manual_confirmation"></span>
+            </td>
+        
+        </tr>
+        <tr ng-show="!$root.invoices || !$root.invoices.length">
+            <td colspan="5">
+                <span class="text-muted">{{'common.no_record' | translate}}</span>
+                <a href="{{$root.orderUrl()}}" target="_blank">{{'common.order_now' | translate}}</a>
+            </td>
+        </tr>
+    </tbody>
+        <div class="sarsha-spinner-container" style="" ng-show="$root.invoices_loading"> 
+            <div class="sarsha-spinner"> <div class="spinner ng-scope"> <div class="rect1"></div> <div class="rect2"></div> <div class="rect3"></div> <div class="rect4"></div> <div class="rect5"></div> </div> </div> 
+        </div>
+</table>

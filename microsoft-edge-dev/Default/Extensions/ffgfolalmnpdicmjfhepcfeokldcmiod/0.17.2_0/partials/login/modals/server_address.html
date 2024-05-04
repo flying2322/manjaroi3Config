@@ -1,0 +1,41 @@
+<div class="modal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content" ng-controller="ServerAddressModalController">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                        ng-click="closeModal()">
+                    &times;
+                </button>
+                <h4 class="modal-title">{{'login.server_address.title'|translate}}</h4>
+            </div>
+            <div>
+                <form name="passwordForm" class="modify-password" ng-submit="submitServerAddress()">
+                    <div class="modal-body">
+                        <div class="alert {{alertStyle}} text-center">{{alertText}}</div>
+                        <div class="row">
+                            <div class="register col-xs-12">
+                                <div class="form-group">
+                                    <input name="serverAddress" type="input" class="form-control"
+                                           placeholder="{{'login.server_address.server_address_placeholder'|translate}}"
+                                           ng-model="server_address" 
+                                           
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary pull-left" ng-disabled='disableInput'>
+                            {{'options.change_password.confirm_update'|translate}}
+                        </button>
+                        <button class="cancel btn btn-link pull-left"
+                                ng-click="closeModal()" ng-disabled='disableInput'>
+                            {{'common.cancel'|translate}}
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,3233 @@
+html {
+  min-height: 450px;
+  height: 100%;
+}
+
+.article-content p {
+    margin: 0 0 15px 0;
+}
+blockquote{
+  font-size: 12px;
+}
+
+.color_light_gree{
+    color: #5CB85C;
+}
+.color_emphasis{
+    color: #FF3E84;
+}
+.ng-invalid  { border: 1px solid red; }
+.panel-body.ribbon-holder{
+  min-height: 100px;
+  overflow: hidden;
+  position: relative;
+}
+.ribbon-holder .ribbon{
+    position: absolute;
+    background: #23377c;
+    color: white;
+    transform: rotate(45deg);
+    text-align: center;
+    top: 10px;
+    right: -45px;
+    width: 120px;
+}
+
+.ribbon-holder .vvip-ribbon{
+  background: #E91E63!important;
+}
+
+.panel-footer .btn-primary{
+      background-color: #23377c;
+          border-color: #23377c;
+}
+
+.panel-footer .btn-primary:hover{
+opacity: 0.9
+  }
+
+.form-con .locked{
+  cursor: not-allowed;
+}
+.btn-primary-blue {
+    color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;
+}
+.container {
+  width: 1024px;
+  min-height: 450px;
+  height: 100%;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+.container > .row {
+  min-height: 450px;
+  height: 100%;
+}
+
+.container.panel-footer{
+min-height:220px;
+height: 100%;
+}
+.container.panel-footer.non-vip {
+min-height: 160px;
+    height: 160px;
+}
+
+.alert {
+  font-size: 13px;
+}
+.alert p {
+  line-height: 25px;
+}
+.app-alert {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+.text-align-center{
+  text-align: center;
+}
+.text-align-right{
+  text-align: right;
+}
+
+.tips-box {
+  position: relative;
+}
+.tips-box .tips {
+  position: absolute;
+  z-index: 100;
+  background: black;
+  width: 100%;
+  border-radius: 5px;
+  bottom: 5px;
+  opacity: 0.9;
+}
+.tips-box .tips .content {
+  font-size: 12px;
+  color: white;
+  margin: 10px 10px;
+}
+
+/*
+.modal-dialog {
+  width: 400px;
+}
+*/
+ul.dropdown-menu:focus {
+  outline: none;
+}
+.modal-backdrop.am-fade {
+  opacity: .7;
+  transition: opacity .15s linear;
+}
+.modal-backdrop.am-fade.ng-enter {
+  opacity: 0;
+}
+.modal-backdrop.am-fade.ng-enter.ng-enter-active {
+  opacity: .7;
+}
+.modal-backdrop.am-fade.ng-leave {
+  opacity: .7;
+}
+.modal-backdrop.am-fade.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+.nav-col {
+  min-height: 850px;
+  height: 100%;
+  background: #e5e5e5;
+      margin-top: 4px;
+}
+.nav-col h1 {
+  display: inline-block;
+  font-size: 13px;
+  color: #888;
+  margin-top:10px;
+}
+.nav-col h1 small {
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+
+.nav-col .head-dropdown {
+  display: inline-block;
+  float: right;
+  margin-right:3px;
+  width: 120px;
+}
+
+.nav-col .head-dropdown-menu{
+    display: inline-block;
+  float: right;
+  margin-right:3px;
+  width: 120px;
+}
+
+.nav-col .head-dropdown-lang{
+    float: left!important;
+    width: 120px;
+    display:contents;
+}
+.nav-col .head-dropdown-menu a {
+  font-size: 13px;
+}
+.nav-col .head-dropdown-menu .head.btn {
+  float: right;
+  margin-top: 12px;
+}
+.nav-col .head-dropdown-menu .dropdown-menu {
+  margin-top: 14px;
+}
+.nav-col .head-dropdown-menu .dropdown-menu:focus {
+  outline: none;
+}
+.nav-col .disabled.list-group-item {
+  color: #888;
+  background: #eee;
+  cursor: default;
+}
+.nav-col .disabled.list-group-item .badge {
+  font-weight: normal;
+  background: #ccc;
+}
+.nav-col hr {
+  border-color: #bbb;
+  border-style: dotted;
+  margin: 8px 0 8px 0;
+}
+.nav-col .profile {
+  font-size: 13px;
+}
+.nav-col .profile img.avatar {
+  float: left;
+    width: 64px;
+    height: 64px;
+  border-radius: 5px;
+}
+.nav-col .profile .role {
+  float: left;
+  width: 50px;
+  height: 50px;
+  background-color: #eee;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(/img/logo.png);
+  -webkit-background-size: 50%;
+  background-size: 75%;
+  border-radius: 5px;
+  font-size: 40px;
+  text-align: center;
+  color: #888;
+}
+.nav-col .profile .role.U {
+  -webkit-filter: grayscale(1);
+  opacity: 0.5;
+}
+.nav-col .profile .info {
+  float: right;
+  width: 135px;
+  min-height: 60px;
+  overflow: hidden;
+  
+}
+
+
+.nav-col .profile .info .nickname {
+  display: block;
+  margin-top: 12px;
+}
+
+.nav-col .profile .info .name {
+  display: block;
+  margin-bottom: 5px;
+  margin-top: 3px;
+}
+
+
+.nav-col .profile .info .label {
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+.nav-col .profile .table .key {
+  width: 100px;
+
+}
+
+.nav-col .profile .table .key span{
+    font-size: 12px;
+}
+
+.nav-col .profile ul {
+  list-style-type: none;
+  padding: 0;
+  padding-left: 10px;
+}
+.nav-col .profile .progress {
+  padding: 0;
+  margin: 0;
+  margin-top: 5px;
+  height: 10px;
+  opacity: 0.7;
+}
+.nav-col .profile .panel-footer .text-muted {
+  margin-top: 7px;
+}
+.nav-col .anonymous-warning {
+  font-size: 12px;
+}
+.nav-col .anonymous-warning .btn {
+  font-size: 12px;
+}
+.nav-col .nav-menu {
+  font-size: 12px;
+}
+.nav-col .nav-menu a.selected {
+  color: #5CB85C;
+}
+.nav-col .nav-menu a.selected:before {
+  font-family: 'Glyphicons Halflings';
+  content: "\e080";
+  font-size: 10px;
+  margin-right: 5px;
+  color: #5CB85C;
+}
+.main-col {
+  min-height: 1200px;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: white;
+}
+.main-col .page-header {
+  margin-top: 0px;
+}
+.main-col .page-header h2 {
+  /*
+  float: left;
+  */
+  font-family: "Microsoft Yahei", simhei, simsun;
+  font-size: 15px;
+}
+.main-col .page-header .right {
+  display: inline-block;
+  float: right;
+  margin: 20px 0 0 10px;
+  font-size: 12px;
+}
+.main-col div.rules {
+  font-size: 13px;
+}
+.main-col div.rules h3 {
+  font-size: 13px;
+}
+.main-col div.rules ul.steps {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 5px;
+}
+.main-col div.rules ul.steps li {
+  margin-bottom: 10px;
+}
+.main-col div.rules ul.steps li .label {
+  font-size: 12px;
+  font-weight: normal;
+}
+.main-col div.rules .alert {
+  font-size: 12px;
+}
+.main-col .inviter-input {
+  margin-top: 15px;
+}
+.main-col .invitation.table {
+  font-size: 13px;
+}
+.main-col .invitation.table .action {
+  width: 100px;
+}
+.main-col .invitation.table .label {
+  font-size: 13px;
+  font-weight: normal;
+}
+
+.invitationCount.badge{
+  background-color: #23377c;
+}
+
+.main-col .sort ul li {
+  font-size: 12px;
+}
+.main-col .sort ul li span {
+  margin-left: 10px;
+}
+.main-col .domains {
+  margin-bottom: 15px;
+}
+.main-col form.add-domain {
+  margin-bottom: 25px;
+}
+.main-col .domain {
+  border: 1px solid #ddd;
+  margin-top: -1px;
+}
+.main-col .domain div.paused .name {
+  text-decoration: line-through;
+}
+.main-col .domain div.locked,
+.main-col .domain form {
+  padding: 5px;
+}
+.main-col .domain div.locked .name,
+.main-col .domain form .name {
+  padding: 7px 10px;
+  display: block;
+  margin-right: 25px;
+}
+.main-col .domain div.locked .glyphicon-pause,
+.main-col .domain form .glyphicon-pause,
+.main-col .domain div.locked .glyphicon-trash,
+.main-col .domain form .glyphicon-trash {
+  float: right;
+  font-size: 12px;
+  line-height: 32px;
+  margin-right: 5px;
+}
+
+.domain .glyphicon-lock,
+.domain .glyphicon-trash {
+  float: right;
+  font-size: 12px;
+  line-height: 32px;
+  margin-right: 5px;
+}
+
+.multi-section-renderer:hover{
+  background-color: #e6e6e6; 
+}
+
+.link_lable:hover {
+    opacity: 0.8;
+}
+
+.link_div {
+    cursor:pointer;
+}
+
+i.fa-renderer.accent{
+  color: #23377c !important;
+}
+
+i.fa-renderer:hover{
+  color: #ff3e84 !important; 
+  font-size: 110% !important;
+}
+
+.notifications:hover{
+  opacity: 0.9;
+}
+
+.badge1 {
+   position:relative;
+}
+.badge1:hover{
+  opacity: 0.9;
+}
+.badge1[data-badge]:after {
+   content:attr(data-badge);
+   position:absolute;
+   top:-2px;
+   left:0px;
+   font-size:.5em;
+   background:#ff3e84;
+   color:white;
+   width:12px;height:12px;
+   text-align:center;
+   line-height:12px;
+   border-radius:50%;
+   box-shadow:0 0 1px #333;
+}
+
+.sr-only {
+    border: 0 none;
+    clip: rect(0px, 0px, 0px, 0px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.pagination {
+    border-radius: 4px;
+    display: inline-block;
+    margin: 20px 0;
+    padding-left: 0;
+}
+.pagination > li {
+    display: inline;
+} 
+
+.pagination > li > a, .pagination > li > span {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #337ab7;
+    float: left;
+    line-height: 1.4;
+    margin-left: -1px;
+    padding: 6px 12px;
+    position: relative;
+    text-decoration: none;
+}
+.pagination > li > a:focus, .pagination > li > a:hover, .pagination > li > span:focus, .pagination > li > span:hover {
+    background-color: #eee;
+    border-color: #ddd;
+    color: #23527c;
+}
+.pagination > li > a:focus, .pagination > li > a:hover, .pagination > li > span:focus, .pagination > li > span:hover {
+    background-color: #eee;
+    border-color: #ddd;
+    color: #23527c;
+}
+
+.pagination > li:first-child > a, .pagination > li:first-child > span {
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    margin-left: 0;
+}
+
+.pagination > .disabled > a, .pagination > .disabled > a:focus, .pagination > .disabled > a:hover, .pagination > .disabled > span, .pagination > .disabled > span:focus, .pagination > .disabled > span:hover {
+    background-color: #fff;
+    border-color: #ddd;
+    color: #777;
+    cursor: not-allowed;
+}
+.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+    background-color: #337ab7;
+    border-color: #337ab7;
+    color: #fff;
+    cursor: default;
+    z-index: 2;
+}
+.pagination > li:last-child > a, .pagination > li:last-child > span {
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.domain div.locked{
+  cursor: not-allowed;
+}
+
+
+.main-col .domain div.locked {
+  background: #eee;
+}
+.main-col .domain div.locked .glyphicon-pause {
+  opacity: 0.5;
+}
+.main-col .domain form .form-group {
+  margin: 0;
+}
+.main-col .domain form .name {
+  cursor: text;
+}
+.main-col .domain form .name .glyphicon-pencil {
+  display: none;
+  font-size: 12px;
+  margin-left: 5px;
+  opacity: 0.3;
+}
+.main-col .domain form .name:hover {
+  background-color: lightyellow;
+}
+.main-col .domain form .name:hover .glyphicon-pencil {
+  display: inline;
+}
+.main-col .domain form .remove {
+  display: none;
+  color: red;
+  text-decoration: none;
+}
+.main-col .domain form:hover .remove {
+  display: inline-block;
+  opacity: 0.3;
+}
+.main-col .domain form:hover .remove:hover {
+  opacity: 1;
+}
+.main-col .orders.table {
+  font-size: 13px;
+}
+.main-col .orders.table .created-at {
+  width: 170px;
+}
+.main-col .orders.table .order {
+  width: 170px;
+}
+.main-col .orders.table .plan {
+  text-align: left;
+  width: 180px;
+}
+.main-col .orders.table .extension_time {
+  text-align: right;
+  width: 100px;
+}
+.main-col .orders.table .price {
+  text-align: right;
+  width: 100px;
+}
+.main-col .orders.table .status {
+  text-align: right;
+}
+.main-col .register-or-login .switch.btn {
+  margin: 90px auto;
+  width: 200px;
+  font-size: 13px;
+  padding: 20px;
+  color: #428BCA;
+}
+.main-col .register-or-login .block-btn {
+  display: block;
+}
+.main-col .register-or-login .vertical-hr {
+  width: 1px;
+  background: #ccc;
+  height: 300px;
+  float: left;
+  margin-right: -1px;
+  margin-left: -15px;
+}
+.main-col .register-or-login .vertical-hr span {
+  color: #aaa;
+  display: block;
+  margin-top: 120px;
+  background: white;
+  margin-left: -6px;
+  padding: 10px 0;
+}
+.main-col .register-or-login form {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.main-col .register-or-login form label {
+  font-weight: normal;
+}
+.main-col .register-or-login form button {
+  margin-top: 40px;
+}
+.main-col .register-or-login .register form {
+  margin-right: 20px;
+}
+.main-col .register-or-login .login form {
+  margin-left: 20px;
+}
+.main-col .register-or-login .switch.btn {
+  display: none;
+  margin: 110px auto;
+  width: 200px;
+  font-size: 13px;
+  padding: 20px;
+  color: #428BCA;
+}
+.main-col .register-or-login .off form {
+  display: none;
+}
+.main-col .register-or-login .off .switch {
+  display: block;
+}
+.help-block {
+  font-size: 12px;
+  color: #aaa;
+  padding-left: 3px;
+}
+.errors {
+  color: #C6371D;
+  float: right;
+  display: none;
+}
+.errors:after {
+  font-family: 'Glyphicons Halflings';
+  content: "\e101";
+  font-size: 14px;
+}
+.errors span {
+  font-size: 12px;
+  float: left;
+  margin: 2px 3px 0;
+}
+.has-error > .errors {
+  display: block;
+}
+.form-control-feedback {
+  display: none;
+  float: right;
+  margin: -30px 15px 0 0;
+}
+.has-success > .form-control-feedback {
+  display: block;
+}
+
+.nav-col .profile.panel .info ul.badges {
+    list-style: none;
+    padding: 0;
+    margin: -3px 0 0 0;
+}
+
+
+
+.nav-col .profile.panel .info ul.badges .signal.level0 {
+  background-image: url(/img/signal0.svg);
+}
+.nav-col .profile.panel .info ul.badges .signal.level1 {
+  background-image: url(/img/signal1.svg);
+}
+.nav-col .profile.panel .info ul.badges .signal.level2 {
+  background-image: url(/img/signal2.svg);
+}
+.nav-col .profile.panel .info ul.badges .signal.level3 {
+  background-image: url(/img/signal3.svg);
+}
+.nav-col .profile.panel .info ul.badges .signal.level4 {
+  background-image: url(/img/signal4.svg);
+}
+.nav-col .profile.panel .info ul.badges .signal.level5 {
+  background-image: url(/img/signal5.svg);
+}
+
+
+.nav-col .profile.panel .info ul.badges .signal {
+    display: inline-block;
+    width: 12px;
+    height: 14px;
+}
+
+/*
+.map_wrapper_600 {
+    background: url("../img/world_map_600.jpg");
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    z-index: 0; 
+    margin:20px;
+  }
+*/
+
+
+.main-col .servers.table {
+  font-size: 13px;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+.main-col .servers.table .primary {
+  color:green;
+}
+.main-col .servers.table .name {
+  width: 200px;
+}
+.main-col .servers.table .city {
+  width: 120px;
+}
+.main-col .servers.table .country {
+  width: 120px;
+}
+
+.main-col .servers.table .speed {
+  text-align: right;
+  width: 80px;
+}
+
+.main-col .servers.table .ping {
+  text-align: right;
+  width: 80px;
+}
+
+.main-col .servers.table .score {
+  text-align: right;
+
+}
+
+.main-col .servers.table .score span{
+
+}
+.main-col .servers.table .score.fadeInRight
+{
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(8px);
+        -ms-transform: translateX(8px);
+        transform: translateX(8px)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0)
+    }
+}
+
+
+
+.tabs {
+    overflow: hidden;
+}
+.tabs li {
+    display: inline-block;
+    cursor: pointer;
+}
+.icon-tabs .tabs li.tabs-li{
+    color: #333;
+    background-color: #fff;
+    border: solid #ccc 1px;
+    margin-bottom:0;
+    padding: 6px 12px;
+    width: auto;
+    background-color:hsla(0,0%,96%,.6);
+}
+
+
+
+
+.icon-tabs .tabs li {
+    width: 30%;
+    margin-bottom: 24px;
+    border-radius:4px;
+}
+.icon-tabs .tabs li.active{
+    color: #ffffff !important; 
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+    z-index: 2;
+}
+.icon-tabs .tabs li:hover, .icon-tabs .tabs li:focus{
+  opacity: 0.8;
+}
+
+.icon-tabs .tabs>li:first-child:not(:last-child) {
+    border-bottom-right-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
+.icon-tabs .tabs>li:not(:first-child) {
+    margin-left: -5px;
+}
+
+.icon-tabs .tabs>li:last-child:not(:first-child){
+    border-bottom-left-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+}
+
+.icon-tabs .tabs>li:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+    border-radius: 0 !important;
+}
+
+.icon-tabs .tab-title {
+    text-align: center;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    opacity: .5;
+}
+
+.icon-tabs .tab-title:hover {
+    color: #23377c;
+    opacity: .8;
+}
+
+.icon-tabs .active .tab-title {
+    color: #23377c;
+    opacity: 1;
+}
+
+.icon-tabs .active .tab-title i {
+    color: #23377c;
+}
+
+.icon-tabs .active .tab-title i {
+    color: #23377c;
+}
+.icon-tabs .active .tab-title {
+    color: #23377c;
+    opacity: 1;
+}
+
+
+
+.servers .score .fa-arrow-up{
+  color:green;
+}
+
+.servers .score .fa-arrow-down{
+  color:red;
+}
+
+.main-col .servers.table .status {
+  text-align: right;
+}
+
+.table.expire .value{
+  width:68%;
+}
+.table.total_invitation .value{
+  width:68%;
+}
+.table.wheat_score .value{
+  width:68%;
+}
+.table.wheat_score .exchangable{
+  color: #5CB85C;
+}
+
+.table.wheat .value{
+  width:70%;
+}
+.table.data .value{
+  width:68%;
+}
+.table.speed .value{
+  width:68%;
+}
+
+.table.ss_subscription .time{
+    width:15%;
+}
+
+.table.ss_subscription .location{
+    width:20%;
+}
+
+.table.ss_subscription .ip{
+    width:12%;
+}
+
+.map_wrapper_600 {
+   position: relative;
+}
+
+.map_wrapper_600 img {
+    width: 600px;
+}
+
+.map_wrapper_600 .glyphicon {
+  position: absolute;
+
+  font-size: 16px;
+  color: #f0ad4e;
+  z-index: 50;
+}
+.map_wrapper_600 .glyphicon.primary {
+  position: absolute;
+
+  font-size: 16px;
+  
+  color: #ff3e84;
+  /*
+  color: #6db85c;
+  */
+  z-index: 100;
+}
+
+    .map_wrapper_600 .glyphicon.AU_Adelaide {
+        display: block;
+          top: 262px;
+        left: 269px;
+      }
+
+    .map_wrapper_600 .glyphicon.NL_Amsterdam {
+        display: block;
+        top: 65px;
+        left: 31px;
+      }
+    .map_wrapper_600 .glyphicon.KZ_Astana {
+        display: block;
+        top: 67px;
+        left: 140px;
+      }
+    .map_wrapper_600 .glyphicon.GR_Athens {
+        display: block;
+        top: 101px;
+        left: 65px;
+      }
+    .map_wrapper_600 .glyphicon.US_Atlanta {
+        display: block;
+        top: 116px;
+        left: 513px;
+    }
+    .map_wrapper_600 .glyphicon.IQ_Baghdad {
+        display: block;
+        top: 110px;
+        left: 100px;
+    }
+    .map_wrapper_600 .glyphicon.BH_Bahrain {
+        display: block;
+        top: 131px;
+        left: 113px;
+    }
+    .map_wrapper_600 .glyphicon.AZ_Baku {
+        display: block;
+        top: 93px;
+        left: 112px;
+    }
+    .map_wrapper_600 .glyphicon.IN_Bangalore {
+        display: block;
+        top: 158px;
+        left: 160px;
+    }
+    .map_wrapper_600 .glyphicon.TH_Bangkok {
+        display: block;
+        top: 156px;
+        left: 200px;
+    }
+    .map_wrapper_600 .glyphicon.ES_Barcelona {
+        display: block;
+        top: 96px;
+        left: 21px;
+    }
+
+    .map_wrapper_600 .glyphicon.SK_Bratislava {
+        display: block;
+        top: 77px;
+        left: 53px;
+    }
+
+    .map_wrapper_600 .glyphicon.BE_Brussels {
+        display: block;
+        top: 71px;
+        left: 31px;
+    }
+
+    .map_wrapper_600 .glyphicon.RO_Bucharest {
+        display: block;
+        top: 88px;
+        left: 67px;
+    }
+
+    .map_wrapper_600 .glyphicon.HU_Budapest {
+        display: block;
+        top: 79px;
+        left: 56px;
+    }
+
+    .map_wrapper_600 .glyphicon.AR_Buenos_Aires {
+        display: block;
+        top: 256px;
+        left: 557px;
+    }
+    .map_wrapper_600 .glyphicon.EG_Cairo {
+        display: block;
+        top: 120px;
+        left: 76px;
+    }
+
+    .map_wrapper_600 .glyphicon.ZA_Cape_Town {
+        display: block;
+        top: 256px;
+        left: 56px;
+    }
+    .map_wrapper_600 .glyphicon.US_Chicago {
+        display: block;
+        top: 89px;
+        left: 505px;
+    }
+    .map_wrapper_600 .glyphicon.IN_Chennai {
+        display: block;
+        top: 158px;
+        left: 162px;
+    }
+    .map_wrapper_600 .glyphicon.MD_Chisinau {
+        display: block;
+        top: 78px;
+        left: 75px;
+    }
+    .map_wrapper_600 .glyphicon.US_Cleveland {
+        display: block;
+        top: 92px;
+        left: 515px;
+    }
+
+    .map_wrapper_600 .glyphicon.DK_Copenhagen {
+        display: block;
+        top: 55px;
+        left: 41px;
+    }
+
+    .map_wrapper_600 .glyphicon.US_Dallas {
+        display: block;
+        top: 115px;
+        left: 490px;
+    }
+    .map_wrapper_600 .glyphicon.US_Denver {
+        display: block;
+        top: 100px;
+        left: 470px;
+    }
+    .map_wrapper_600 .glyphicon.BD_Dhaka {
+        display: block;
+        top: 132px;
+        left: 183px;
+    }
+    .map_wrapper_600 .glyphicon.AE_Dubai {
+        display: block;
+        top: 131px;
+        left: 119px;
+    }
+
+    .map_wrapper_600 .glyphicon.IE_Dublin {
+        display: block;
+        top: 65px;
+        left: 7px;
+    }
+    .map_wrapper_600 .glyphicon.DE_Frankfurt {
+        display: block;
+        top: 74px;
+        left: 37px;
+    }
+
+    .map_wrapper_600 .glyphicon.US_Fremont {
+        display: block;
+        top: 103px;
+        left: 447px;
+    }
+
+    .map_wrapper_600 .glyphicon.VN_Hanoi {
+        display: block;
+        top: 141px;
+        left: 208px;
+    }
+
+    .map_wrapper_600 .glyphicon.FI_Helsinki {
+        display: block;
+        top: 44px;
+        left: 67px;
+    }
+
+    .map_wrapper_600 .glyphicon.HK_HK {
+        display: block;
+        top: 136px;
+        left: 230px;
+    }
+    .map_wrapper_600 .glyphicon.VN_Hochiminh {
+        display: block;
+        top: 160px;
+        left: 212px;
+    }
+
+    .map_wrapper_600 .glyphicon.TR_Istanbul {
+        display: block;
+        top: 96px;
+        left: 70px;
+    }
+
+    .map_wrapper_600 .glyphicon.ID_Jakarta {
+        display: block;
+        top: 198px;
+        left: 211px;
+    }
+    .map_wrapper_600 .glyphicon.IL_Jerusalem {
+        display: block;
+        top: 113px;
+        left: 85px;
+    }
+
+    .map_wrapper_600 .glyphicon.TW_Kaohsiung {
+      display: block;
+        top: 135px;
+        left: 235px;
+    }
+    .map_wrapper_600 .glyphicon.PK_Karachi {
+      display: block;
+        top: 130px;
+        left: 140px;
+    }
+    .map_wrapper_600 .glyphicon.NP_Kathmandu {
+      display: block;
+        top: 122px;
+        left: 175px;
+    }
+    .map_wrapper_600 .glyphicon.RU_Khabarovsk {
+        display: block;
+        top: 70px;
+        left: 257px;
+    }
+    .map_wrapper_600 .glyphicon.MY_Kuala_Lumpur {
+        display: block;
+        top: 174px;
+        left: 201px;
+    }
+    .map_wrapper_600 .glyphicon.UA_Kyiv {
+        display: block;
+        top: 73px;
+        left: 78px;
+    }
+
+    .map_wrapper_600 .glyphicon.US_LA {
+        display: block;
+        top: 110px;
+        left: 450px;
+    }
+    .map_wrapper_600 .glyphicon.US_Las_Vegas {
+        display: block;
+        top: 103px;
+        left: 453px;
+    }
+    .map_wrapper_600 .glyphicon.PT_Lisbon {
+        display: block;
+        top: 99px;
+        left: 7px;
+    }
+    .map_wrapper_600 .glyphicon.UK_London {
+        display: block;
+        top: 67px;
+        left: 22px;
+    }
+
+    .map_wrapper_600 .glyphicon.MO_Macao {
+        display: block;
+        top: 136px;
+        left: 226px;
+    }
+
+    .map_wrapper_600 .glyphicon.PH_Manila {
+        display: block;
+        top: 147px;
+        left: 234px;
+    }
+
+    .map_wrapper_600 .glyphicon.MX_Mexico_City {
+        display: block;
+        top: 142px;
+        left: 484px;
+    }
+    .map_wrapper_600 .glyphicon.US_Miami {
+        display: block;
+        top: 128px;
+        left: 518px;
+    }
+
+    .map_wrapper_600 .glyphicon.IT_Milan {
+        display: block;
+        top: 84px;
+        left: 40px;
+    }
+     
+    .map_wrapper_600 .glyphicon.CA_Montreal {
+        display: block;
+        top: 80px;
+        left: 530px;
+    }
+
+    .map_wrapper_600 .glyphicon.RU_Moscow {
+        display: block;
+        top: 55px;
+        left: 95px;
+    }
+
+    .map_wrapper_600 .glyphicon.IN_Mumbai {
+        display: block;
+        top: 146px;
+        left: 151px;
+    }
+
+    .map_wrapper_600 .glyphicon.US_Newark {
+        display: block;
+        top: 97px;
+        left: 528px;
+    }
+    .map_wrapper_600 .glyphicon.CY_Nicosia {
+        display: block;
+        top: 105px;
+        left: 80px;
+    }
+    .map_wrapper_600 .glyphicon.RU_Novosibirsk {
+        display: block;
+        top: 48px;
+        left: 150px;
+    }
+
+    .map_wrapper_600 .glyphicon.US_NYC {
+        display: block;
+        top: 95px;
+        left: 530px;
+    }
+
+    .map_wrapper_600 .glyphicon.JP_Osaka {
+        display: block;
+        top: 108px;
+        left: 266px;
+    }
+
+    .map_wrapper_600 .glyphicon.NO_Oslo {
+        display: block;
+        top: 45px;
+        left: 42px;
+    }
+
+    .map_wrapper_600 .glyphicon.KH_Phnom_Penh {
+        display: block;
+        top: 154px;
+        left: 202px;
+    }
+    .map_wrapper_600 .glyphicon.US_Portland {
+        display: block;
+        top: 98px;
+        left: 443px;
+    }
+
+    .map_wrapper_600 .glyphicon.FR_Paris {
+        display: block;
+        top: 78px;
+        left: 25px;
+    }
+
+    .map_wrapper_600 .glyphicon.CZ_Prague {
+        display: block;
+        top: 74px;
+        left: 39px;
+    }
+    .map_wrapper_600 .glyphicon.LV_Riga {
+        display: block;
+        top: 50px;
+        left: 66px;
+    }
+    .map_wrapper_600 .glyphicon.SA_Riyadh {
+        display: block;
+        top: 131px;
+        left: 105px;
+    }
+
+    .map_wrapper_600 .glyphicon.CL_Santiago {
+        display: block;
+        top: 256px;
+        left: 536px;
+    }
+
+      .map_wrapper_600 .glyphicon.US_SanJose {
+        display: block;
+        top: 104px;
+        left: 446px;
+      }
+
+     .map_wrapper_600 .glyphicon.BR_Sao_Paulo {
+        display: block;
+        top: 230px;
+        left: 572px;
+      }
+
+      .map_wrapper_600 .glyphicon.US_Seattle {
+        display: block;
+        top: 94px;
+        left: 442px;
+      }
+    .map_wrapper_600 .glyphicon.BA_Sarajevo {
+        display: block;
+        top: 89px;
+        left: 61px;
+    }
+      .map_wrapper_600 .glyphicon.KR_Seoul {
+        display: block;
+        top: 103px;
+        left: 248px;
+      }
+      .map_wrapper_600 .glyphicon.US_SF {
+        display: block;
+        top: 102px;
+        left: 445px;
+      }
+      .map_wrapper_600 .glyphicon.SG_SG {
+        display: block;
+        top: 178px;
+        left: 205px;
+      }
+    .map_wrapper_600 .glyphicon.BG_Sofia {
+        display: block;
+        top: 91px;
+        left: 65px;
+    }
+      .map_wrapper_600 .glyphicon.SE_Stockholm {
+        display: block;
+        top: 48px;
+        left: 55px;
+      }
+      .map_wrapper_600 .glyphicon.AU_Sydney {
+        display: block;
+        top: 254px;
+        left: 289px;
+      }
+      .map_wrapper_600 .glyphicon.TW_Taipei {
+        display: block;
+        top: 131px;
+        left: 235px;
+      }
+      .map_wrapper_600 .glyphicon.TW_Taichung {
+        display: block;
+        top: 133px;
+        left: 235px;
+      }
+      .map_wrapper_600 .glyphicon.EE_Tallinn {
+          display: block;
+          top: 48px;
+          left: 67px;
+      }
+      .map_wrapper_600 .glyphicon.GE_Tbilisi {
+          display: block;
+          top: 90px;
+          left: 102px;
+      }
+      .map_wrapper_600 .glyphicon.IR_Tehran {
+        display: block;
+        top: 104px;
+        left: 114px;
+      }
+      .map_wrapper_600 .glyphicon.JP_Tokyo {
+        display: block;
+        top: 107px;
+        left: 270px;
+      }
+
+      .map_wrapper_600 .glyphicon.CA_Toronto {
+        display: block;
+        top: 88px;
+        left: 520px;
+      }
+      .map_wrapper_600 .glyphicon.MN_Ulaanbaatar {
+        display: block;
+        top: 70px;
+        left: 197px;
+      }
+      .map_wrapper_600 .glyphicon.CA_Vancouver {
+        display: block;
+        top: 88px;
+        left: 440px;
+      }
+
+      .map_wrapper_600 .glyphicon.AT_Vienna {
+        display: block;
+        top: 77px;
+        left: 52px;
+      }
+      .map_wrapper_600 .glyphicon.LT_Vilnius {
+          display: block;
+          top: 53px;
+          left: 68px;
+      }
+      .map_wrapper_600 .glyphicon.RU_Vladivostok {
+        display: block;
+        top: 88px;
+        left: 258px;
+      }
+
+      .map_wrapper_600 .glyphicon.PL_Warsaw {
+        display: block;
+        top: 70px;
+        left: 46px;
+      }
+
+     .map_wrapper_600 .glyphicon.US_WashingtonDC {
+        display: block;
+        top: 105px;
+        left: 522px;
+      }
+
+     .map_wrapper_600 .glyphicon.NZ_Wellington {
+        display: block;
+        top: 272px;
+        left: 331px;
+      }
+      .map_wrapper_600 .glyphicon.AM_Yerevan {
+          display: block;
+          top: 95px;
+          left: 102px;
+      }
+      .map_wrapper_600 .glyphicon.CH_Zurich {
+        display: block;
+        top: 78px;
+        left: 37px;
+      }
+
+
+
+.app-contents{
+      margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.app-contents .title{
+  font-size: 12px;
+}
+.app-contents .app-img-container {
+    -webkit-mask-size: 100% 100%;
+
+        
+}
+
+
+
+/* invitation list */
+
+.reward-header {
+  /*
+    padding-bottom: 9px;
+  */
+    margin: 10px 0 10px;
+    /*
+    border-bottom: 1px solid #eee;
+    */
+}
+
+.reward-header h2 {
+  /*
+  float: left;
+  */
+  font-family: "Microsoft Yahei", simhei, simsun;
+  font-size: 18px;
+  cursor: pointer;
+}
+.reward-header h3 {
+  font-size: 14px;
+}
+.reward-wrapper .rules{
+  /*
+border-top: 1px solid #eee;
+*/
+}
+.reward-wrapper .reward-header .right {
+    display: inline-block;
+    float: right;
+    margin: 10px 0 0 10px;
+    font-size: 12px;
+}
+.toggle-reward{
+  font-size: 12px;
+  color:#eee;
+  cursor: pointer;
+  text-decoration: none;
+}
+.toggle-reward:hover{
+  color:#23377c;
+  text-decoration: none;
+}
+.toggle-reward.glyphicon-chevron-up{
+    color: #555;
+}
+.toggle-reward.glyphicon-chevron-up{
+    color: #555;
+}
+.toggle-reward.glyphicon-chevron-up:hover{
+  color:#23377c;
+  text-decoration: none;
+
+}
+.reward-wrapper{
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+}
+.reward-wrapper.slide-up{
+  margin-bottom: 10px;
+  padding-bottom: 0px;
+}
+.reward-wrapper.slide-up .rules{
+  display: none
+}
+
+.slide-down .for_more_detail{
+  visibility: hidden;
+}
+
+.slide-up .for_more_detail{
+  visibility: visible;
+}
+
+.reward-list-wrapper{
+  padding:8px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  background-color: #f8f8f8;
+}
+
+    .avatar-upload {
+      width: 64px;
+      height: 64px;
+      overflow: hidden;
+    }
+    .avatar-upload img {
+      max-width: 64px;
+      max-height: 64px;
+    }
+#gl-avatar-edit-pane{
+  background:url("/img/ed_white.gif") no-repeat scroll 8px 8px #000000;
+    color: #ffffff;
+    height: 23px;
+    left: 0;
+    opacity: 0.7;
+    padding: 4px 0 0;
+    position: absolute;
+    text-indent: 20px;
+    width: 100%;
+    z-index: 10;
+    top: 44px;
+    width: 64px;
+    font-size: 10px;
+}
+
+
+/*滑动验证码*/
+.verify-bar-area {
+    position: relative;
+    background: #FFFFFF;
+    text-align: center;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 4px;
+}
+ 
+.verify-bar-area .verify-move-block {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    background: #fff;
+    cursor: pointer;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    box-shadow: 0 0 2px #888888;
+    -webkit-border-radius: 1px;
+}
+
+.verify-bar-area .verify-move-block:hover {
+    background-color: #337ab7;
+    color: #FFFFFF;
+}
+
+.verify-bar-area .verify-left-bar {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    background: #f0fff0;
+    cursor: pointer;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    border: 1px solid #ddd;
+}
+
+.verify-img-panel {
+  margin:0;
+  -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  position: relative;
+}
+
+.verify-img-panel .verify-refresh {
+  width: 25px;
+  height: 25px;
+  text-align:center;
+  padding: 5px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.verify-img-panel .icon-refresh {
+  font-size: 20px;
+  color: #fff;
+}
+
+.verify-img-panel .verify-gap {
+  background-color: #fff;
+  position: relative;
+  z-index: 2;
+  border:1px solid #fff;
+}
+
+.verify-bar-area .verify-move-block .verify-sub-block {
+  position: absolute;
+    text-align: center;
+  z-index: 3;
+  border: 1px solid #fff;
+}
+
+.verify-bar-area .verify-move-block .verify-icon {
+  font-size: 18px;
+}
+
+.verify-bar-area .verify-msg {
+  z-index : 3;
+}
+
+#servers-div{
+  margin-top:30px;
+  min-height:380px;
+}
+
+#servers-div.non-vip{
+  margin-top:0px;
+  min-height:0px;
+}
+
+#servers-div #dragdrop .well{padding: 8px; border: 0; background: #e0e0e0; }
+#servers-div #dragdrop .well .header{ color: #000; font-size: 14px; font-weight: bold; margin-bottom: 6px;}
+#servers-div #dragdrop .well .subheader{ color: #969696; font-size: 12px; padding: 8px; border-bottom: 1px solid #ccc; background: #fff; -webkit-border-top-left-radius: 5px;
+-webkit-border-top-right-radius: 2px;
+-moz-border-radius-topleft: 2px;
+-moz-border-radius-topright: 2px;
+border-top-left-radius: 2px;
+border-top-right-radius: 2px;}
+#servers-div #dragdrop .well .subheader .buttonsml{ background: #5bb95b; padding:3px; color: #fff; font-size: 11px; line-height: 9px;}
+#servers-div .draglist-shift{ margin-left: -3%!important; width: 53%!important;}
+
+
+
+#servers-div .placeholder {
+  /*background-color: Yellow;*/
+  border: 1px dashed #666;
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+#servers-div .servers-list {
+  padding-inline-start:0;
+  background-color: #fff;
+  list-style: none;
+  margin-bottom:0px;
+  min-height: 40px;
+  /*padding: 5px;*/
+  
+}
+#servers-div .servers-list:last-child{ margin-bottom: 0;}
+
+
+
+#servers-div .server-item {
+  /* background:#f1f1f1 url(/img/dragListicon.png) 10px 16px no-repeat; */
+  cursor: move;
+  /*
+  display: block; 
+  
+  margin-bottom: 2px;
+  padding: 12px 10px 10px 24px;
+
+  */
+  /*color: #5a5a5a;*/
+  font-size: 13px;
+  height: 40px;
+  
+}
+
+#servers-div .server-item:hover{
+  background-color: #f1f1f1
+}
+
+
+#servers-div .server-item .server-country{
+  background-position-y:8px;
+}
+
+#servers-div .server-item.ui-sortable-helper .server-country{
+    background-position-y:-6px;
+}
+
+
+.server-item.ui-sortable-helper .drag-icon{
+  display:none;
+}
+
+.isp-section .btn-danger {
+    background-color: #888;
+    border: 1px solid #777;
+}
+
+
+.servers-list .score .fa-arrow-up{
+  color:green;
+}
+
+.servers-list .score .fa-arrow-down{
+  color:red;
+}
+
+.server-header .server-name{
+  width: 250px;
+}
+
+.servers-list .server-name{
+  width: 250px;
+}
+
+.server-header .server-name-en{
+  width: 320px;
+}
+
+.servers-list .server-name-en{
+  width: 320px;
+}
+
+.server-header .server-name-non-vip{
+  width: 350px;
+}
+
+.servers-list .server-name-non-vip{
+  width: 350px;
+}
+
+.server-header .network-status{
+  width: 100px;
+}
+
+.servers-list .network-status{
+  width: 100px;
+}
+
+.server-header .network-status-en{
+  width: 135px;
+}
+
+.servers-list .network-status-en{
+  width: 135px;
+}
+
+.invoice_row:hover{
+  background-color: #f1f1f1;
+}
+
+.coupon_row{
+  background-color: #f1f1f1;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #4ED164;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.switch input:checked + .slider {
+  background-color: #23377c;
+}
+
+.switch input:focus + .slider {
+  box-shadow: 0 0 1px #23377c;
+}
+
+.switch input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.switch .slider.round {
+  border-radius: 34px;
+}
+
+.switch .slider.round:before {
+  border-radius: 50%;
+}
+
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0,0,0,.03);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+    background-color: #fff;
+    border-radius: 3px;
+    border: none;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.card-header:first-child {
+    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+}
+.card .card-header {
+    line-height: 30px;
+}
+
+.card .card-header, .card .card-body, .card .card-footer {
+    background-color: transparent;
+    padding: 20px 25px;
+}
+
+.os-card {
+    border: none;
+        border-bottom-color: currentcolor;
+    border-radius: 3px !important;
+
+    /*cursor: pointer;*/
+}
+.card.card-hero .card-header .card-icon {
+    float: right;
+    color: #8c98f3;
+    margin: -60px;
+}
+.card .card-header {
+    border-bottom-color: #f9f9f9;
+    line-height: 30px;
+    -ms-grid-row-align: center;
+    align-self: center;
+    width: 100%;
+    min-height: 70px;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+}
+.card.card-hero .card-header {
+    padding: 40px;
+    background-image: linear-gradient(to bottom, #6777ef, #95a0f4);
+    color: #fff;
+    overflow: hidden;
+    height: auto;
+    min-height: auto;
+    display: block;
+}
+
+.card .card-header h4 {
+    font-size: 16px;
+    line-height: 28px;
+    color: #6777ef;
+    padding-right: 10px;
+    margin-bottom: 0;
+}
+
+.card .card-header h4 {
+    font-size: 16px;
+    line-height: 28px;
+    color: #6777ef;
+    padding-right: 10px;
+    margin-bottom: 0;
+}
+
+.card.card-hero .card-header h4 {
+    font-size: 40px;
+    line-height: 1;
+    color: #fff;
+}
+
+.windows-card {
+    background-image: linear-gradient(to bottom, #0178d7, #2FA1E6) !important;
+    box-shadow: 0 2px 6px #2FA1E6ad;
+}
+.windows-card i {
+    color: #2FA1E6;
+    font-size: 140px;
+}
+.android-card {
+    background-image: linear-gradient(to bottom, #6AB344, #98DC47) !important;
+    box-shadow: 0 2px 6px #98DC47ad;
+}
+.android-card i {
+    color: #98DC47;
+    font-size: 140px;
+}
+
+.ios-card {
+    background-image: linear-gradient(to bottom, black, #363636) !important;
+    box-shadow: 0 2px 6px #36363683;
+}
+
+.ios-card i {
+    color: #363636;
+    font-size: 140px;
+}
+
+.mac-card {
+    background-image: linear-gradient(to top, #b2b6bc, #848484) !important;
+    box-shadow: 0 2px 6px #b2b6bc83;
+}
+
+.mac-card i {
+    color: #b2b6bc;
+    font-size: 140px;
+}
+
+.linux-card {
+    background-image: linear-gradient(to bottom, #ffa425, #fdbe67) !important;
+    box-shadow: 0 2px 6px #ffb349ad;
+}
+
+.linux-card i {
+    color: #fdbe67;
+    font-size: 140px;
+}
+
+.os-faq i {
+    font-size: 140px;
+}
+
+
+
+ .disconnected #select-style {
+    padding: 0;
+    margin: 0;
+    border: 1px solid rgba(255, 255, 255, 0.38);
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    text-indent: 27px;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 1px;
+    background-color: transparent; }
+
+
+    .disconnected #select-style:hover{
+      opacity: 0.8;
+    }
+  .disconnected #country-selected {
+    color: #fff;
+    padding: 5px 8px;
+
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; }
+    .disconnected #country-selected::after {
+      background: transparent url("/img/select_arrow_invert.png") no-repeat;
+      content: " ";
+      display: block;
+      right: 10px;
+      width: 17px;
+      height: 7px;
+      position: absolute;
+      top: 12px;
+      transition: all .4s ease-in-out; }
+    .disconnected #country-selected.opened::after {
+      transform: rotate(180deg); }
+
+#select-country #select-style:hover {
+  opacity: 0.8;
+}
+
+  .disconnected #select-country {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 270px;;
+    left: 15px;
+    width: 360px;
+    height:300px;
+
+
+  }
+    .disconnected #select-country ul#choices {
+      display: none;
+      list-style-type: none;
+      background: white;
+      border-radius: 4px;
+      padding-left: 0;
+      height: 300px;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      box-shadow: 0 1px 10px rgba(0, 0, 0, 0.67);
+      z-index: 5;
+      width: 360px;
+      transition: all .4s ease-in-out;
+       margin-top: 10px;
+
+      /**
+       * To fix the issue with the ugly scrollbar on Windows
+       */ }
+      .disconnected #select-country ul#choices.opened {
+        display: block; }
+      .disconnected #select-country ul#choices::before {
+        background: white;
+        display: block;
+        height: 12px;
+        width: 12px;
+        top: 34px;
+        left: 184px;
+        content: ' ';
+        position: absolute;
+        transform: rotate(45deg);
+        z-index: 0; }
+
+      .disconnected #select-country ul#choices li {
+        border-bottom: solid 1px rgba(0, 0, 0, 0.07);
+        z-index: 5;
+        color: #464646;
+        padding: 5px 0;
+        cursor: pointer;
+        -webkit-font-smoothing: antialiased;
+        font-size: 14px;
+        letter-spacing: 1px;
+        background-position: 9px 0;
+        background-repeat: no-repeat;
+        text-indent: 40px; }
+        #select-country ul#choices li:hover { 
+          opacity: 0.9;
+          background-color: #f1f1f1;
+        }
+      .disconnected #select-country ul#choices::-webkit-scrollbar {
+        -webkit-appearance: none; }
+      .disconnected #select-country ul#choices::-webkit-scrollbar:vertical {
+        width: 11px; }
+      .disconnected #select-country ul#choices::-webkit-scrollbar:horizontal {
+        height: 11px; }
+      .disconnected #select-country ul#choices::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        border: 2px solid white;
+        /* should match background, can't be transparent */
+        background-color: rgba(0, 0, 0, 0.5); }
+      .disconnected #select-country ul#choices::-webkit-scrollbar-track {
+        background-color: #fff;
+        border-radius: 8px; }
+
+.flag-24.intl {
+  background: url("/img/flags/24/INTL.png") no-repeat 8px 1px; }
+.flag-24.ae {
+  background: url("/img/flags/24/AE.png") no-repeat 8px 1px; }
+.flag-24.am {
+  background: url("/img/flags/24/AM.png") no-repeat 8px 1px; }
+.flag-24.ar {
+  background: url("/img/flags/24/AR.png") no-repeat 8px 1px; }
+.flag-24.at {
+  background: url("/img/flags/24/AT.png") no-repeat 8px 1px; }
+.flag-24.au {
+  background: url("/img/flags/24/AU.png") no-repeat 8px 1px; }
+.flag-24.az {
+  background: url("/img/flags/24/AZ.png") no-repeat 8px 1px; }
+.flag-24.ba {
+  background: url("/img/flags/24/BA.png") no-repeat 8px 1px; }
+.flag-24.bd {
+  background: url("/img/flags/24/BD.png") no-repeat 8px 1px; }
+.flag-24.be {
+  background: url("/img/flags/24/BE.png") no-repeat 8px 1px; }
+.flag-24.bg {
+  background: url("/img/flags/24/BG.png") no-repeat 8px 1px; }
+.flag-24.bh {
+  background: url("/img/flags/24/BH.png") no-repeat 8px 1px; }
+.flag-24.br {
+  background: url("/img/flags/24/BR.png") no-repeat 8px 1px; }
+.flag-24.ca {
+  background: url("/img/flags/24/CA.png") no-repeat 8px 1px; }
+.flag-24.ch {
+  background: url("/img/flags/24/CH.png") no-repeat 8px 1px; }
+.flag-24.cl {
+  background: url("/img/flags/24/CL.png") no-repeat 8px 1px; }
+.flag-24.cy {
+  background: url("/img/flags/24/CY.png") no-repeat 8px 1px; }
+.flag-24.cz {
+  background: url("/img/flags/24/CZ.png") no-repeat 8px 1px; }
+.flag-24.de {
+  background: url("/img/flags/24/DE.png") no-repeat 8px 1px; }
+.flag-24.dk {
+  background: url("/img/flags/24/DK.png") no-repeat 8px 1px; }
+.flag-24.ee {
+  background: url("/img/flags/24/EE.png") no-repeat 8px 1px; }
+.flag-24.eg {
+  background: url("/img/flags/24/EG.png") no-repeat 8px 1px; }
+.flag-24.es {
+  background: url("/img/flags/24/ES.png") no-repeat 8px 1px; }
+.flag-24.fi {
+  background: url("/img/flags/24/FI.png") no-repeat 8px 1px; }
+.flag-24.fr {
+  background: url("/img/flags/24/FR.png") no-repeat 8px 1px; }
+.flag-24.gb {
+  background: url("/img/flags/24/GB.png") no-repeat 8px 1px; }
+.flag-24.ge {
+  background: url("/img/flags/24/GE.png") no-repeat 8px 1px; }
+.flag-24.gr {
+  background: url("/img/flags/24/GR.png") no-repeat 8px 1px; }
+.flag-24.hk {
+  background: url("/img/flags/24/HK.png") no-repeat 8px 1px; }
+.flag-24.hu {
+  background: url("/img/flags/24/HU.png") no-repeat 8px 1px; }
+.flag-24.id {
+  background: url("/img/flags/24/ID.png") no-repeat 8px 1px; }
+.flag-24.ie {
+  background: url("/img/flags/24/IE.png") no-repeat 8px 1px; }
+.flag-24.il {
+  background: url("/img/flags/24/IL.png") no-repeat 8px 1px; }
+.flag-24.in {
+  background: url("/img/flags/24/IN.png") no-repeat 8px 1px; }
+.flag-24.iq {
+  background: url("/img/flags/24/IQ.png") no-repeat 8px 1px; }
+.flag-24.ir {
+  background: url("/img/flags/24/IR.png") no-repeat 8px 1px; }
+.flag-24.is {
+  background: url("/img/flags/24/IS.png") no-repeat 8px 1px; }
+.flag-24.it {
+  background: url("/img/flags/24/IT.png") no-repeat 8px 1px; }
+.flag-24.jp {
+  background: url("/img/flags/24/JP.png") no-repeat 8px 1px; }
+.flag-24.kh {
+  background: url("/img/flags/24/KH.png") no-repeat 8px 1px; }
+.flag-24.kr {
+  background: url("/img/flags/24/KR.png") no-repeat 8px 1px; }
+.flag-24.kw {
+  background: url("/img/flags/24/KW.png") no-repeat 8px 1px; }
+.flag-24.kz {
+  background: url("/img/flags/24/KZ.png") no-repeat 8px 1px; }
+.flag-24.lt {
+  background: url("/img/flags/24/LT.png") no-repeat 8px 1px; }
+.flag-24.lv {
+  background: url("/img/flags/24/LV.png") no-repeat 8px 1px; }
+.flag-24.md {
+  background: url("/img/flags/24/MD.png") no-repeat 8px 1px; }
+.flag-24.mn {
+  background: url("/img/flags/24/MN.png") no-repeat 8px 1px; }
+.flag-24.mo {
+  background: url("/img/flags/24/MO.png") no-repeat 8px 1px; }
+.flag-24.mx {
+  background: url("/img/flags/24/MX.png") no-repeat 8px 1px; }
+.flag-24.my {
+  background: url("/img/flags/24/MY.png") no-repeat 8px 1px; }
+.flag-24.nl {
+  background: url("/img/flags/24/NL.png") no-repeat 8px 1px; }
+.flag-24.no {
+  background: url("/img/flags/24/NO.png") no-repeat 8px 1px; }
+.flag-24.np {
+  background: url("/img/flags/24/NP.png") no-repeat 8px 1px; }
+.flag-24.nz {
+  background: url("/img/flags/24/NZ.png") no-repeat 8px 1px; }
+.flag-24.om {
+  background: url("/img/flags/24/OM.png") no-repeat 8px 1px; }
+.flag-24.ph {
+  background: url("/img/flags/24/PH.png") no-repeat 8px 1px; }
+.flag-24.pk {
+  background: url("/img/flags/24/PK.png") no-repeat 8px 1px; }
+.flag-24.pl {
+  background: url("/img/flags/24/PL.png") no-repeat 8px 1px; }
+.flag-24.pt {
+  background: url("/img/flags/24/PT.png") no-repeat 8px 1px; }
+.flag-24.ro {
+  background: url("/img/flags/24/RO.png") no-repeat 8px 1px; }
+.flag-24.rs {
+  background: url("/img/flags/24/RS.png") no-repeat 8px 1px; }
+.flag-24.ru {
+  background: url("/img/flags/24/RU.png") no-repeat 8px 1px; }
+.flag-24.sa {
+  background: url("/img/flags/24/SA.png") no-repeat 8px 1px; }
+.flag-24.se {
+  background: url("/img/flags/24/SE.png") no-repeat 8px 1px; }
+.flag-24.sg {
+  background: url("/img/flags/24/SG.png") no-repeat 8px 1px; }
+.flag-24.sk {
+  background: url("/img/flags/24/SK.png") no-repeat 8px 1px; }
+.flag-24.th {
+  background: url("/img/flags/24/TH.png") no-repeat 8px 1px; }
+.flag-24.tr {
+  background: url("/img/flags/24/TR.png") no-repeat 8px 1px; }
+.flag-24.tw {
+  background: url("/img/flags/24/TW.png") no-repeat 8px 1px; }
+.flag-24.ua {
+  background: url("/img/flags/24/UA.png") no-repeat 8px 1px; }
+.flag-24.uk {
+  background: url("/img/flags/24/UK.png") no-repeat 8px 1px; }
+.flag-24.us {
+  background: url("/img/flags/24/US.png") no-repeat 8px 1px; }
+.flag-24.vn {
+  background: url("/img/flags/24/VN.png") no-repeat 8px 1px; }
+.flag-24.za {
+  background: url("/img/flags/24/ZA.png") no-repeat 8px 1px; }
+
+.flag-32.intl {
+  background: url("/img/flags/32/INTL.png") no-repeat 8px 1px; }
+.flag-32.ae {
+  background: url("/img/flags/32/AE.png") no-repeat 8px 1px; }
+.flag-32.am {
+  background: url("/img/flags/32/AM.png") no-repeat 8px 1px; }
+.flag-32.ar {
+  background: url("/img/flags/32/AR.png") no-repeat 8px 1px; }
+.flag-32.at {
+  background: url("/img/flags/32/AT.png") no-repeat 8px 1px; }
+.flag-32.au {
+  background: url("/img/flags/32/AU.png") no-repeat 8px 1px; }
+.flag-32.az {
+  background: url("/img/flags/32/AZ.png") no-repeat 8px 1px; }
+.flag-32.ba {
+  background: url("/img/flags/32/BA.png") no-repeat 8px 1px; }
+.flag-32.bd {
+  background: url("/img/flags/32/BD.png") no-repeat 8px 1px; }
+.flag-32.be {
+  background: url("/img/flags/32/BE.png") no-repeat 8px 1px; }
+.flag-32.bg {
+  background: url("/img/flags/32/BG.png") no-repeat 8px 1px; }
+.flag-32.bh {
+  background: url("/img/flags/32/BH.png") no-repeat 8px 1px; }
+.flag-32.br {
+  background: url("/img/flags/32/BR.png") no-repeat 8px 1px; }
+.flag-32.ca {
+  background: url("/img/flags/32/CA.png") no-repeat 8px 1px; }
+.flag-32.ch {
+  background: url("/img/flags/32/CH.png") no-repeat 8px 1px; }
+.flag-32.cl {
+  background: url("/img/flags/32/CL.png") no-repeat 8px 1px; }
+.flag-32.cy {
+  background: url("/img/flags/32/CY.png") no-repeat 8px 1px; }
+.flag-32.cz {
+  background: url("/img/flags/32/CZ.png") no-repeat 8px 1px; }
+.flag-32.de {
+  background: url("/img/flags/32/DE.png") no-repeat 8px 1px; }
+.flag-32.dk {
+  background: url("/img/flags/32/DK.png") no-repeat 8px 1px; }
+.flag-32.ee {
+  background: url("/img/flags/32/EE.png") no-repeat 8px 1px; }
+.flag-32.eg {
+  background: url("/img/flags/32/EG.png") no-repeat 8px 1px; }
+.flag-32.es {
+  background: url("/img/flags/32/ES.png") no-repeat 8px 1px; }
+.flag-32.fi {
+  background: url("/img/flags/32/FI.png") no-repeat 8px 1px; }
+.flag-32.fr {
+  background: url("/img/flags/32/FR.png") no-repeat 8px 1px; }
+.flag-32.gb {
+  background: url("/img/flags/32/GB.png") no-repeat 8px 1px; }
+.flag-32.ge {
+  background: url("/img/flags/32/GE.png") no-repeat 8px 1px; }
+.flag-32.gr {
+  background: url("/img/flags/32/GR.png") no-repeat 8px 1px; }
+.flag-32.hk {
+  background: url("/img/flags/32/HK.png") no-repeat 8px 1px; }
+.flag-32.hu {
+  background: url("/img/flags/32/HU.png") no-repeat 8px 1px; }
+.flag-32.id {
+  background: url("/img/flags/32/ID.png") no-repeat 8px 1px; }
+.flag-32.ie {
+  background: url("/img/flags/32/IE.png") no-repeat 8px 1px; }
+.flag-32.il {
+  background: url("/img/flags/32/IL.png") no-repeat 8px 1px; }
+.flag-32.in {
+  background: url("/img/flags/32/IN.png") no-repeat 8px 1px; }
+.flag-32.iq {
+  background: url("/img/flags/32/IQ.png") no-repeat 8px 1px; }
+.flag-32.ir {
+  background: url("/img/flags/32/IR.png") no-repeat 8px 1px; }
+.flag-32.is {
+  background: url("/img/flags/32/IS.png") no-repeat 8px 1px; }
+.flag-32.it {
+  background: url("/img/flags/32/IT.png") no-repeat 8px 1px; }
+.flag-32.jp {
+  background: url("/img/flags/32/JP.png") no-repeat 8px 1px; }
+.flag-32.kh {
+  background: url("/img/flags/32/KH.png") no-repeat 8px 1px; }
+.flag-32.kr {
+  background: url("/img/flags/32/KR.png") no-repeat 8px 1px; }
+.flag-32.kw {
+  background: url("/img/flags/32/KW.png") no-repeat 8px 1px; }
+.flag-32.kz {
+  background: url("/img/flags/32/KZ.png") no-repeat 8px 1px; }
+.flag-32.lt {
+  background: url("/img/flags/32/LT.png") no-repeat 8px 1px; }
+.flag-32.lv {
+  background: url("/img/flags/32/LV.png") no-repeat 8px 1px; }
+.flag-32.md {
+  background: url("/img/flags/32/MD.png") no-repeat 8px 1px; }
+.flag-32.mn {
+  background: url("/img/flags/32/MN.png") no-repeat 8px 1px; }
+.flag-32.mo {
+  background: url("/img/flags/32/MO.png") no-repeat 8px 1px; }
+.flag-32.mx {
+  background: url("/img/flags/32/MX.png") no-repeat 8px 1px; }
+.flag-32.my {
+  background: url("/img/flags/32/MY.png") no-repeat 8px 1px; }
+.flag-32.nl {
+  background: url("/img/flags/32/NL.png") no-repeat 8px 1px; }
+.flag-32.no {
+  background: url("/img/flags/32/NO.png") no-repeat 8px 1px; }
+.flag-32.np {
+  background: url("/img/flags/32/NP.png") no-repeat 8px 1px; }
+.flag-32.nz {
+  background: url("/img/flags/32/NZ.png") no-repeat 8px 1px; }
+.flag-32.om {
+  background: url("/img/flags/32/OM.png") no-repeat 8px 1px; }
+.flag-32.ph {
+  background: url("/img/flags/32/PH.png") no-repeat 8px 1px; }
+.flag-32.pk {
+  background: url("/img/flags/32/PK.png") no-repeat 8px 1px; }
+.flag-32.pl {
+  background: url("/img/flags/32/PL.png") no-repeat 8px 1px; }
+.flag-32.pt {
+  background: url("/img/flags/32/PT.png") no-repeat 8px 1px; }
+.flag-32.ro {
+  background: url("/img/flags/32/RO.png") no-repeat 8px 1px; }
+.flag-32.rs {
+  background: url("/img/flags/32/RS.png") no-repeat 8px 1px; }
+.flag-32.ru {
+  background: url("/img/flags/32/RU.png") no-repeat 8px 1px; }
+.flag-32.sa {
+  background: url("/img/flags/32/SA.png") no-repeat 8px 1px; }
+.flag-32.se {
+  background: url("/img/flags/32/SE.png") no-repeat 8px 1px; }
+.flag-32.sg {
+  background: url("/img/flags/32/SG.png") no-repeat 8px 1px; }
+.flag-32.sk {
+  background: url("/img/flags/32/SK.png") no-repeat 8px 1px; }
+.flag-32.th {
+  background: url("/img/flags/32/TH.png") no-repeat 8px 1px; }
+.flag-32.tr {
+  background: url("/img/flags/32/TR.png") no-repeat 8px 1px; }
+.flag-32.tw {
+  background: url("/img/flags/32/TW.png") no-repeat 8px 1px; }
+.flag-32.ua {
+  background: url("/img/flags/32/UA.png") no-repeat 8px 1px; }
+.flag-32.uk {
+  background: url("/img/flags/32/UK.png") no-repeat 8px 1px; }
+.flag-32.us {
+  background: url("/img/flags/32/US.png") no-repeat 8px 1px; }
+.flag-32.vn {
+  background: url("/img/flags/32/VN.png") no-repeat 8px 1px; }
+.flag-32.za {
+  background: url("/img/flags/32/ZA.png") no-repeat 8px 1px; }
+
+
+.destination-32.intl {
+  background: url("/img/flags/32/INTL.png") no-repeat 1px 1px; }
+.destination-32.ae {
+  background: url("/img/flags/32/AE.png") no-repeat 1px 1px; }
+.destination-32.am {
+  background: url("/img/flags/32/AM.png") no-repeat 1px 1px; }
+.destination-32.ar {
+  background: url("/img/flags/32/AR.png") no-repeat 1px 1px; }
+.destination-32.at {
+  background: url("/img/flags/32/AT.png") no-repeat 1px 1px; }
+.destination-32.au {
+  background: url("/img/flags/32/AU.png") no-repeat 1px 1px; }
+.destination-32.az {
+  background: url("/img/flags/32/AZ.png") no-repeat 1px 1px; }
+.destination-32.ba {
+  background: url("/img/flags/32/BA.png") no-repeat 1px 1px; }
+.destination-32.bd {
+  background: url("/img/flags/32/BD.png") no-repeat 1px 1px; }
+.destination-32.be {
+  background: url("/img/flags/32/BE.png") no-repeat 1px 1px; }
+.destination-32.bg {
+  background: url("/img/flags/32/BG.png") no-repeat 1px 1px; }
+.destination-32.bh {
+  background: url("/img/flags/32/BH.png") no-repeat 1px 1px; }
+.destination-32.br {
+  background: url("/img/flags/32/BR.png") no-repeat 1px 1px; }
+.destination-32.ca {
+  background: url("/img/flags/32/CA.png") no-repeat 1px 1px; }
+.destination-32.ch {
+  background: url("/img/flags/32/CH.png") no-repeat 1px 1px; }
+.destination-32.cl {
+  background: url("/img/flags/32/CL.png") no-repeat 1px 1px; }
+.destination-32.cy {
+  background: url("/img/flags/32/CY.png") no-repeat 1px 1px; }
+.destination-32.cz {
+  background: url("/img/flags/32/CZ.png") no-repeat 1px 1px; }
+.destination-32.de {
+  background: url("/img/flags/32/DE.png") no-repeat 1px 1px; }
+.destination-32.dk {
+  background: url("/img/flags/32/DK.png") no-repeat 1px 1px; }
+.destination-32.ee {
+  background: url("/img/flags/32/EE.png") no-repeat 1px 1px; }
+.destination-32.eg {
+  background: url("/img/flags/32/EG.png") no-repeat 1px 1px; }
+.destination-32.es {
+  background: url("/img/flags/32/ES.png") no-repeat 1px 1px; }
+.destination-32.fi {
+  background: url("/img/flags/32/FI.png") no-repeat 1px 1px; }
+.destination-32.fr {
+  background: url("/img/flags/32/FR.png") no-repeat 1px 1px; }
+.destination-32.gb {
+  background: url("/img/flags/32/GB.png") no-repeat 1px 1px; }
+.destination-32.ge {
+  background: url("/img/flags/32/GE.png") no-repeat 1px 1px; }
+.destination-32.gr {
+  background: url("/img/flags/32/GR.png") no-repeat 1px 1px; }
+.destination-32.hk {
+  background: url("/img/flags/32/HK.png") no-repeat 1px 1px; }
+.destination-32.hu {
+  background: url("/img/flags/32/HU.png") no-repeat 1px 1px; }
+.destination-32.ie {
+  background: url("/img/flags/32/IE.png") no-repeat 1px 1px; }
+.destination-32.id {
+  background: url("/img/flags/32/ID.png") no-repeat 1px 1px; }
+.destination-32.il {
+  background: url("/img/flags/32/IL.png") no-repeat 1px 1px; }
+.destination-32.in {
+  background: url("/img/flags/32/IN.png") no-repeat 1px 1px; }
+.destination-32.iq {
+  background: url("/img/flags/32/IQ.png") no-repeat 1px 1px; }
+.destination-32.ir {
+  background: url("/img/flags/32/IR.png") no-repeat 1px 1px; }
+.destination-32.is {
+  background: url("/img/flags/32/IS.png") no-repeat 1px 1px; }
+.destination-32.it {
+  background: url("/img/flags/32/IT.png") no-repeat 1px 1px; }
+.destination-32.jp {
+  background: url("/img/flags/32/JP.png") no-repeat 1px 1px; }
+.destination-32.kh {
+  background: url("/img/flags/32/KH.png") no-repeat 1px 1px; }
+.destination-32.kr {
+  background: url("/img/flags/32/KR.png") no-repeat 1px 1px; }
+.destination-32.kw {
+  background: url("/img/flags/32/KW.png") no-repeat 1px 1px; }
+.destination-32.kz {
+  background: url("/img/flags/32/KZ.png") no-repeat 1px 1px; }
+.destination-32.lt {
+  background: url("/img/flags/32/LT.png") no-repeat 1px 1px; }
+.destination-32.lv {
+  background: url("/img/flags/32/LV.png") no-repeat 1px 1px; }
+.destination-32.md {
+  background: url("/img/flags/32/MD.png") no-repeat 1px 1px; }
+.destination-32.mn {
+  background: url("/img/flags/32/MN.png") no-repeat 1px 1px; }
+.destination-32.mo {
+  background: url("/img/flags/32/MO.png") no-repeat 1px 1px; }
+.destination-32.mx {
+  background: url("/img/flags/32/MX.png") no-repeat 1px 1px; }
+.destination-32.my {
+  background: url("/img/flags/32/MY.png") no-repeat 1px 1px; }
+.destination-32.nl {
+  background: url("/img/flags/32/NL.png") no-repeat 1px 1px; }
+.destination-32.no {
+  background: url("/img/flags/32/NO.png") no-repeat 1px 1px; }
+.destination-32.np {
+  background: url("/img/flags/32/NP.png") no-repeat 1px 1px; }
+.destination-32.nz {
+  background: url("/img/flags/32/NZ.png") no-repeat 1px 1px; }
+.destination-32.om {
+  background: url("/img/flags/32/OM.png") no-repeat 1px 1px; }
+.destination-32.ph {
+  background: url("/img/flags/32/PH.png") no-repeat 1px 1px; }
+.destination-32.pl {
+  background: url("/img/flags/32/PL.png") no-repeat 1px 1px; }
+.destination-32.pk {
+  background: url("/img/flags/32/PK.png") no-repeat 1px 1px; }
+.destination-32.pt {
+  background: url("/img/flags/32/PT.png") no-repeat 1px 1px; }
+.destination-32.ro {
+  background: url("/img/flags/32/RO.png") no-repeat 1px 1px; }
+.destination-32.rs {
+  background: url("/img/flags/32/RS.png") no-repeat 1px 1px; }
+.destination-32.ru {
+  background: url("/img/flags/32/RU.png") no-repeat 1px 1px; }
+.destination-32.sa {
+  background: url("/img/flags/32/SA.png") no-repeat 1px 1px; }
+.destination-32.se {
+  background: url("/img/flags/32/SE.png") no-repeat 1px 1px; }
+.destination-32.sg {
+  background: url("/img/flags/32/SG.png") no-repeat 1px 1px; }
+.destination-32.sk {
+  background: url("/img/flags/32/SK.png") no-repeat 1px 1px; }
+.destination-32.th {
+  background: url("/img/flags/32/TH.png") no-repeat 1px 1px; }
+.destination-32.tr {
+  background: url("/img/flags/32/TR.png") no-repeat 1px 1px; }
+.destination-32.tw {
+  background: url("/img/flags/32/TW.png") no-repeat 1px 1px; }
+.destination-32.ua {
+  background: url("/img/flags/32/UA.png") no-repeat 1px 1px; }
+.destination-32.uk {
+  background: url("/img/flags/32/UK.png") no-repeat 1px 1px; }
+.destination-32.us {
+  background: url("/img/flags/32/US.png") no-repeat 1px 1px; }
+.destination-32.vn {
+  background: url("/img/flags/32/VN.png") no-repeat 1px 1px; }
+.destination-32.za {
+  background: url("/img/flags/32/ZA.png") no-repeat 1px 1px; }
+
+.destination-32.united-nations {
+  background: url("/img/flags/32/_united-nations.png") no-repeat 1px 1px; }
+
+
+  
+/* Retina */
+@media only screen and (-webkit-min-device-pixel-ratio: 2), not all, not all, not all {
+.flag-24.intl {
+  background: url("/img/flags/48/INTL.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.ae {
+  background: url("/img/flags/48/AE.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.am {
+  background: url("/img/flags/48/AM.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.ar {
+  background: url("/img/flags/48/AR.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.at {
+  background: url("/img/flags/48/AT.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.au {
+  background: url("/img/flags/48/AU.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.az {
+  background: url("/img/flags/48/AZ.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.ba {
+  background: url("/img/flags/48/BA.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.bd {
+  background: url("/img/flags/48/BD.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.be {
+  background: url("/img/flags/48/BE.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.bg {
+  background: url("/img/flags/48/BG.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.bh {
+  background: url("/img/flags/48/BH.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.br {
+  background: url("/img/flags/48/BR.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.ca {
+  background: url("/img/flags/48/CA.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.ch {
+  background: url("/img/flags/48/CH.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.cl {
+  background: url("/img/flags/48/CL.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.cy {
+  background: url("/img/flags/48/CY.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.cz {
+  background: url("/img/flags/48/CZ.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.de {
+  background: url("/img/flags/48/DE.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.dk {
+  background: url("/img/flags/48/DK.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.ee {
+  background: url("/img/flags/48/EE.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.eg {
+  background: url("/img/flags/48/EG.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.es {
+  background: url("/img/flags/48/ES.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.fi {
+  background: url("/img/flags/48/FI.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.fr {
+  background: url("/img/flags/48/FR.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.gb {
+  background: url("/img/flags/48/GB.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.ge {
+  background: url("/img/flags/48/GE.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.gr {
+  background: url("/img/flags/48/GR.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.hk {
+  background: url("/img/flags/48/HK.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.hu {
+  background: url("/img/flags/48/HU.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.id {
+  background: url("/img/flags/48/ID.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.il {
+  background: url("/img/flags/48/IL.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.in {
+  background: url("/img/flags/48/IN.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.ie {
+  background: url("/img/flags/48/IE.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.iq {
+  background: url("/img/flags/48/IQ.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.ir {
+  background: url("/img/flags/48/IR.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.is {
+  background: url("/img/flags/48/IS.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.it {
+  background: url("/img/flags/48/IT.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.jp {
+  background: url("/img/flags/48/JP.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.kh {
+  background: url("/img/flags/48/KH.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.kr {
+  background: url("/img/flags/48/KR.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.kw {
+  background: url("/img/flags/48/KW.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.kz {
+  background: url("/img/flags/48/KZ.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.lt {
+  background: url("/img/flags/48/LT.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.lv {
+  background: url("/img/flags/48/LV.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.md {
+  background: url("/img/flags/48/MD.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.mn {
+  background: url("/img/flags/48/MN.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.mo {
+  background: url("/img/flags/48/MO.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.mx {
+  background: url("/img/flags/48/MX.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.my {
+  background: url("/img/flags/48/MY.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.nl {
+  background: url("/img/flags/48/NL.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.no {
+  background: url("/img/flags/48/NO.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.np {
+  background: url("/img/flags/48/NP.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.nz {
+  background: url("/img/flags/48/NZ.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.om {
+  background: url("/img/flags/48/OM.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.ph {
+  background: url("/img/flags/48/PH.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.pk {
+  background: url("/img/flags/48/PK.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.pl {
+  background: url("/img/flags/48/PL.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.pt {
+  background: url("/img/flags/48/PT.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.ro {
+  background: url("/img/flags/48/RO.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.rs {
+  background: url("/img/flags/48/RS.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.ru {
+  background: url("/img/flags/48/RU.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.sa {
+  background: url("/img/flags/48/SA.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.se {
+  background: url("/img/flags/48/SE.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.sg {
+  background: url("/img/flags/48/SG.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.sk {
+  background: url("/img/flags/48/SK.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.th {
+  background: url("/img/flags/48/TH.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.tr {
+  background: url("/img/flags/48/TR.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.tw {
+  background: url("/img/flags/48/TW.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.ua {
+  background: url("/img/flags/48/UA.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.uk {
+  background: url("/img/flags/48/UK.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.us {
+  background: url("/img/flags/48/US.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.vn {
+  background: url("/img/flags/48/VN.png") no-repeat 8px 1px; background-size: 24px 24px; }
+.flag-24.za {
+  background: url("/img/flags/48/ZA.png") no-repeat 8px 1px; background-size: 24px 24px; }
+
+.flag-32.intl {
+  background: url("/img/flags/64/INTL.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.ae {
+  background: url("/img/flags/64/AE.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.am {
+  background: url("/img/flags/64/AM.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.ar {
+  background: url("/img/flags/64/AR.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.at {
+  background: url("/img/flags/64/AT.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.au {
+  background: url("/img/flags/64/AU.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.az {
+  background: url("/img/flags/64/AZ.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.ba {
+  background: url("/img/flags/64/BA.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.bd {
+  background: url("/img/flags/64/BD.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.be {
+  background: url("/img/flags/64/BE.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.bg {
+  background: url("/img/flags/64/BG.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.bh {
+  background: url("/img/flags/64/BH.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.br {
+  background: url("/img/flags/64/BR.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.ca {
+  background: url("/img/flags/64/CA.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.ch {
+  background: url("/img/flags/64/CH.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.cl {
+  background: url("/img/flags/64/CL.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.cy {
+  background: url("/img/flags/64/CY.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.cz {
+  background: url("/img/flags/64/CZ.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.de {
+  background: url("/img/flags/64/DE.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.dk {
+  background: url("/img/flags/64/DK.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.ee {
+  background: url("/img/flags/64/EE.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.eg {
+  background: url("/img/flags/64/EG.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.es {
+  background: url("/img/flags/64/ES.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.fi {
+  background: url("/img/flags/64/FI.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.fr {
+  background: url("/img/flags/64/FR.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.gb {
+  background: url("/img/flags/64/GB.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.ge {
+  background: url("/img/flags/64/GE.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.gr {
+  background: url("/img/flags/64/GR.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.hk {
+  background: url("/img/flags/64/HK.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.hu {
+  background: url("/img/flags/64/HU.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.id {
+  background: url("/img/flags/64/ID.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.il {
+  background: url("/img/flags/64/IL.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.in {
+  background: url("/img/flags/64/IN.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.ie {
+  background: url("/img/flags/64/IE.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.iq {
+  background: url("/img/flags/64/IQ.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.ir {
+  background: url("/img/flags/64/IR.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.is {
+  background: url("/img/flags/64/IS.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.it {
+  background: url("/img/flags/64/IT.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.jp {
+  background: url("/img/flags/64/JP.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.kh {
+  background: url("/img/flags/64/KH.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.kr {
+  background: url("/img/flags/64/KR.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.kw {
+  background: url("/img/flags/64/KW.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.kz {
+  background: url("/img/flags/64/KZ.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.lt {
+  background: url("/img/flags/64/LT.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.lv {
+  background: url("/img/flags/64/LV.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.md {
+  background: url("/img/flags/64/MD.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.mn {
+  background: url("/img/flags/64/MN.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.mo {
+  background: url("/img/flags/64/MO.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.mx {
+  background: url("/img/flags/64/MX.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.my {
+  background: url("/img/flags/64/MY.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.nl {
+  background: url("/img/flags/64/NL.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.no {
+  background: url("/img/flags/64/NO.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.np {
+  background: url("/img/flags/64/NP.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.nz {
+  background: url("/img/flags/64/NZ.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.om {
+  background: url("/img/flags/64/OM.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.ph {
+  background: url("/img/flags/64/PH.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.pk {
+  background: url("/img/flags/64/PK.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.pl {
+  background: url("/img/flags/64/PL.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.pt {
+  background: url("/img/flags/64/PT.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.ro {
+  background: url("/img/flags/64/RO.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.rs {
+  background: url("/img/flags/64/RS.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.ru {
+  background: url("/img/flags/64/RU.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.sa {
+  background: url("/img/flags/64/SA.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.se {
+  background: url("/img/flags/64/SE.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.sg {
+  background: url("/img/flags/64/SG.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.sk {
+  background: url("/img/flags/64/SK.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.th {
+  background: url("/img/flags/64/TH.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.tr {
+  background: url("/img/flags/64/TR.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.tw {
+  background: url("/img/flags/64/TW.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.ua {
+  background: url("/img/flags/64/UA.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.uk {
+  background: url("/img/flags/64/UK.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.us {
+  background: url("/img/flags/64/US.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.vn {
+  background: url("/img/flags/64/VN.png") no-repeat 8px 1px; background-size: 32px 32px; }
+.flag-32.za {
+  background: url("/img/flags/64/ZA.png") no-repeat 8px 1px; background-size: 32px 32px; }
+
+
+
+
+.destination-32.intl {
+  background: url("/img/flags/64/INTL.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.ae {
+  background: url("/img/flags/64/AE.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.am {
+  background: url("/img/flags/64/AM.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.ar {
+  background: url("/img/flags/64/AR.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.at {
+  background: url("/img/flags/64/AT.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.au {
+  background: url("/img/flags/64/AU.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.az {
+  background: url("/img/flags/64/AZ.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.ba {
+  background: url("/img/flags/64/BA.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.bd {
+  background: url("/img/flags/64/BD.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.be {
+  background: url("/img/flags/64/BE.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.bg {
+  background: url("/img/flags/64/BG.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.bh {
+  background: url("/img/flags/64/BH.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.br {
+  background: url("/img/flags/64/BR.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.ca {
+  background: url("/img/flags/64/CA.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.ch {
+  background: url("/img/flags/64/CH.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.cl {
+  background: url("/img/flags/64/CL.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.cy {
+  background: url("/img/flags/64/CY.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.cz {
+  background: url("/img/flags/64/CZ.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.de {
+  background: url("/img/flags/64/DE.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.dk {
+  background: url("/img/flags/64/DK.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.ee {
+  background: url("/img/flags/64/EE.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.eg {
+  background: url("/img/flags/64/EG.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.es {
+  background: url("/img/flags/64/ES.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.fi {
+  background: url("/img/flags/64/FI.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.fr {
+  background: url("/img/flags/64/FR.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.gb {
+  background: url("/img/flags/64/GB.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.ge {
+  background: url("/img/flags/64/GE.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.gr {
+  background: url("/img/flags/64/GR.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.hk {
+  background: url("/img/flags/64/HK.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.hu {
+  background: url("/img/flags/64/HU.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.ie {
+  background: url("/img/flags/64/IE.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.id {
+  background: url("/img/flags/64/ID.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.il {
+  background: url("/img/flags/64/IL.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.in {
+  background: url("/img/flags/64/IN.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.iq {
+  background: url("/img/flags/64/IQ.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.ir {
+  background: url("/img/flags/64/IR.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.is {
+  background: url("/img/flags/64/IS.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.it {
+  background: url("/img/flags/64/IT.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.jp {
+  background: url("/img/flags/64/JP.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.kh {
+  background: url("/img/flags/64/KH.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.kr {
+  background: url("/img/flags/64/KR.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.kw {
+  background: url("/img/flags/64/KW.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.kz {
+  background: url("/img/flags/64/KZ.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.lt {
+  background: url("/img/flags/64/LT.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.lv {
+  background: url("/img/flags/64/LV.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.md {
+  background: url("/img/flags/64/MD.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.mn {
+  background: url("/img/flags/64/MN.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.mo {
+  background: url("/img/flags/64/MO.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.mx {
+  background: url("/img/flags/64/MX.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.my {
+  background: url("/img/flags/64/MY.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.nl {
+  background: url("/img/flags/64/NL.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.no {
+  background: url("/img/flags/64/NO.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.np {
+  background: url("/img/flags/64/NP.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.nz {
+  background: url("/img/flags/64/NZ.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.om {
+  background: url("/img/flags/64/OM.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.ph {
+  background: url("/img/flags/64/PH.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.pl {
+  background: url("/img/flags/64/PL.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.pk {
+  background: url("/img/flags/64/PK.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.pt {
+  background: url("/img/flags/64/PT.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.ro {
+  background: url("/img/flags/64/RO.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.rs {
+  background: url("/img/flags/64/RS.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.ru {
+  background: url("/img/flags/64/RU.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.sa {
+  background: url("/img/flags/64/SA.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.se {
+  background: url("/img/flags/64/SE.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.sg {
+  background: url("/img/flags/64/SG.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.sk {
+  background: url("/img/flags/64/SK.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.th {
+  background: url("/img/flags/64/TH.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.tr {
+  background: url("/img/flags/64/TR.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.tw {
+  background: url("/img/flags/64/TW.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.ua {
+  background: url("/img/flags/64/UA.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.uk {
+  background: url("/img/flags/64/UK.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.us {
+  background: url("/img/flags/64/US.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.vn {
+  background: url("/img/flags/64/VN.png") no-repeat 1px 1px; background-size: 32px 32px; }
+.destination-32.za {
+  background: url("/img/flags/64/ZA.png") no-repeat 1px 1px; background-size: 32px 32px; }
+
+.destination-32.united-nations {
+  background: url("/img/flags/32/_united-nations.png") no-repeat 1px 1px; background-size: 32px 32px; }
+
+
+
+}
+
+
+
+
+
+ul.destination-list  > li {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.destination-32{
+  height: 38px;
+  width: 38px;
+  margin-left:2px;
+  margin-top:2px;
+  padding-right:4px;
+  margin-right:4px;
+}
+
+.destination-32.selected{
+  opacity: 0.8;
+  border:2px solid #5cb85c;
+  margin-left:0px;
+  margin-top:0px;
+  height: 40px;
+  width: 40px;
+}
+
+.destination-32:hover{
+  opacity: 0.8;
+  border:2px solid #FF3E84;
+  margin-left:0px;
+  margin-top:0px;
+  height: 40px;
+  width: 40px;
+}
+
+#slideVerify .drag{
+    width: 300px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #e8e8e8;
+    position: relative;
+    margin:0 auto;
+}
+#slideVerify .bg{
+    width:40px;
+    height: 100%;
+    position: absolute;
+    background-color: #75CDF9;
+}
+#slideVerify .text{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    user-select: none;
+}
+#slideVerify .btn{
+    width:40px;
+    height: 40px;
+    position: absolute;
+    border:1px solid #ccc;
+    cursor: pointer;
+    font-family: "宋体";
+    text-align: center;
+    background-color: #fff;
+    user-select: none;
+    color:#666;
+}
+#slideVerify .chip{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+}
+#slideVerify .chip2{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    -webkit-filter: brightness(0.5) opacity(0.5);
+}
+#slideVerify .image{
+    width: 300px; 
+    height: 200px; 
+    position:relative;
+    margin: 0 auto
+}
+
+
+/* Firefox old*/
+@-moz-keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+} 
+
+@-webkit-keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+/* IE */
+@-ms-keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+} 
+/* Opera and prob css3 final iteration */
+@keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+} 
+.blink-image {
+    -moz-animation: blink normal 2s infinite ease-in-out; /* Firefox */
+    -webkit-animation: blink normal 2s infinite ease-in-out; /* Webkit */
+    -ms-animation: blink normal 2s infinite ease-in-out; /* IE */
+    animation: blink normal 2s infinite ease-in-out; /* Opera and prob css3 final iteration */
+}
+
+
+.introjs-nextbutton{
+    color: #fff;
+    background-color: #47a447;
+    border-color: #398439;
+}
+.introjs-nextbutton:focus{
+  color: #fff;
+}
+
+.introjs-donebutton{
+    color: #fff;
+    background-color: #47a447;
+    border-color: #398439;
+}
+.introjs-donebutton:focus{
+  color: #fff;
+}
+
+
+.introjs-prevbutton {
+    color: #fff;
+    background-color: #f0ad4e;
+    border-color: #eea236;
+}
+.introjs-prevbutton:focus{
+  color: #fff;
+}
+
+.start-fade{
+    transition: opacity 20s;
+}
+
+
+    .number-gutter {
+        position: relative;
+        width: 55px;
+        background-color:#f5f5f5;
+        float: left;
+        
+    }
+     .numbered-text-box {
+        overflow:hidden;
+        position: relative;
+        /*
+        margin-left: 57px;
+        */
+    }

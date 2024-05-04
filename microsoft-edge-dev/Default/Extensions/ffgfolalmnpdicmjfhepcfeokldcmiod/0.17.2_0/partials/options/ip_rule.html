@@ -1,0 +1,32 @@
+<div class="domain">
+
+    <form ng-submit="updateIpRule()">
+
+        <div class="form-group" ng-if="!editing">
+            <a ng-click="deleteIpRule()" href="" class="remove glyphicon glyphicon-trash"
+               title="{{'options.ip_rule.delete_ip_rule'|translate}}"></a>
+            <span ng-click="edit()" class="name form-control-static">
+                {{ ipRule.name }}
+                <span class="glyphicon glyphicon-pencil"></span>
+            </span>
+        </div>
+
+        <div class="input-group" ng-if="editing">
+            <input ng-model="edition.name"
+                   ng-pattern='/^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\/([0-9]|[1-2][0-9]|3[0-2]))?$/' 
+                   focus-bind="focusInput"
+                   ui-keydown="{esc:'edit(false)'}"
+                   type="text" class="form-control">
+
+            <div class="input-group-btn">
+                <button type="submit" class="btn btn-default" title="{{'common.ok'|translate}}">
+                    <span class="glyphicon glyphicon-ok"></span>
+                </button>
+                <button ng-click="edit(false)" type="button" class="btn btn-default"
+                        title="{{'common.cancel'|translate}}">
+                    <span class="glyphicon glyphicon-ban-circle"></span>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

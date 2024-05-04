@@ -1,0 +1,35 @@
+<div class="modal"  tabindex="-1">
+    <div class="modal-dialog" style="width: 600px;">
+        <div class="modal-content" ng-controller="AboutDataTrafficModalController">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                    ng-click="closeModal()">
+                    &times;
+                </button>
+
+                <h4 ng-show="isGuest()" class="modal-title">{{'options.layout.about_data_traffic_modal.guest_title'|translate}}</h4>
+                <h4 ng-show="isUser()" class="modal-title">{{'options.layout.about_data_traffic_modal.title'|translate}}</h4>
+                <h4 ng-show="isVIP()" class="modal-title">{{'options.layout.about_data_traffic_modal.title'|translate}}</h4>
+            </div>
+         
+                <div class="modal-body">
+                    <div ng-hide="isGuest()" style="margin-bottom:10px">
+                        <div class="alert alert-warning" style="padding-top:12px">
+                            <span ng-bind-html="'{{'options.ss_subscription.data_traffic_notice' | translate}}'"></span>
+                        </div>
+                    </div>
+                    <div ng-show="isGuest()" style="margin-bottom:10px">
+                        <div class="alert alert-warning" style="padding-top:12px">
+                            <span ng-bind-html="'{{'options.ss_subscription.data_traffic_notice_anonymous' | translate}}'"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="margin-top:0;">
+                    <button type="button" class="btn btn-primary pull-right" ng-click="closeModal()">
+                        {{'common.got_it'|translate}}
+                    </button>
+                </div>
+          
+        </div>
+    </div>
+</div>

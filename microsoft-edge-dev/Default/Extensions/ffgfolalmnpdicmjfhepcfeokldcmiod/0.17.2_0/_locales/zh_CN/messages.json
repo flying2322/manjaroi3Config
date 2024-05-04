@@ -1,0 +1,11 @@
+{
+   "DESCRIPTION": {
+      "message": "HTTP/2网络加速工具。全新HTTP/2技术，快到飞起; TLS1.3 4096位加密技术，极致安全，稳定\n\nChrome限制同一时间只能有一个插件控制代理设置。如果代理设置被其他网络类或者去广告插件占用，需关闭这些插件后，重试或者重裝"
+   },
+   "EXT_NAME": {
+      "message": "麦殼兒 (Maikr)"
+   },
+   "POPUP_TITLE": {
+      "message": "麦殼兒 (Maikr)"
+   }
+}

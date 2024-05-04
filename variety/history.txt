@@ -1,0 +1,4 @@
+0
+/home/dom/.config/variety/Downloaded/Bing/OHR.SwedishAntenna_ZH-CN9163420082_1920x1080.jpg
+/home/dom/.config/variety/Downloaded/Earth View/Mauritania (ID-6302).jpg
+/usr/share/backgrounds/gnome/adwaita-timed.xml

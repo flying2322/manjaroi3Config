@@ -1,0 +1,33 @@
+files:
+  - url: ""
+    time: 1657032158229.yml
+    name: config.yaml
+    selected: []
+  - time: 1657032659996.yml
+    name: TulOZ8.yaml
+    url: https://oss.v2rayse.com/proxies/data/2022-07-05/TulOZ8.yaml
+    selected:
+      - name: GLOBAL
+        now: DIRECT
+      - name: 🚀 节点选择
+        now: ♻️ 自动选择
+      - name: 🌍 国外媒体
+        now: 🚀 节点选择
+      - name: 📲 电报信息
+        now: 🚀 节点选择
+      - name: Ⓜ️ 微软服务
+        now: 🎯 全球直连
+      - name: 🍎 苹果服务
+        now: 🚀 节点选择
+      - name: 🎯 全球直连
+        now: 🚀 节点选择
+      - name: 🛑 全球拦截
+        now: REJECT
+      - name: 🍃 应用净化
+        now: REJECT
+      - name: 🐟 漏网之鱼
+        now: 🚀 节点选择
+    interval: 0
+    subInfo: {}
+    mode: global
+index: 1

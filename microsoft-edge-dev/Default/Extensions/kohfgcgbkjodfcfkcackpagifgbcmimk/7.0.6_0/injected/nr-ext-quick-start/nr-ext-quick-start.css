@@ -1,0 +1,286 @@
+.nr-ext *,
+.nr-ext *::before,
+.nr-ext *::after {
+  box-sizing: border-box;
+  position: relative;
+  line-height: 1;
+}
+
+.nr-ext .nr-ext-quick-bar {
+  position: fixed;
+  top: 70px;
+  right: 34px;
+  width: 54px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  z-index: 999;
+
+}
+
+.nr-ext .nr-ext-quick-bar .nr-ext-quick-backdrop {
+  position: absolute;
+  top: 40px;
+  left: 1px;
+  width: 52px;
+  height: 68px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(188, 193, 204, 0.5);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(40px);
+  border-radius: 10px;
+  transition: all ease-in-out 0.25s;
+}
+
+.nr-ext .nr-ext-quick-bar button {
+  box-sizing: border-box;
+  position: relative;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  display: inline-block;
+  white-space: nowrap;
+  text-decoration: none;
+  vertical-align: baseline;
+  text-align: center;
+  padding: 0;
+  line-height: 1;
+  background: transparent;
+}
+
+.nr-ext .nr-ext-quick-bar .nr-ext-drag {
+  cursor: grab;
+}
+
+.nr-ext .nr-ext-quick-bar .ext-icon-button {
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  margin: 8px 0;
+}
+
+.nr-ext .nr-ext-quick-bar .ext-icon-button img,
+.nr-ext .nr-ext-quick-bar .ext-icon-button svg {
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+}
+
+.nr-ext .nr-ext-quick-bar .ext-icon-button-md {
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+}
+
+.nr-ext .nr-ext-quick-bar .ext-icon-button-md img,
+.nr-ext .nr-ext-quick-bar .ext-icon-button-md svg {
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+}
+
+.nr-ext .nr-ext-quick-bar .ext-icon-button svg {
+  fill: #67686b;
+  color: #67686b;
+}
+
+.nr-ext .nr-ext-quick-bar #nr-ext-quick-max,
+.nr-ext .nr-ext-quick-bar #nr-ext-quick-exit {
+  display: none;
+}
+
+.nr-ext .nr-ext-quick-bar:hover .nr-ext-quick-backdrop {
+  top: 4px;
+  height: 132px;
+  transition: all ease-in-out 0.2s;
+}
+
+.nr-ext .nr-ext-quick-bar .nr-ext-quick-backdrop.stay-max {
+  top: 3px;
+  height: 132px;
+}
+
+.nr-ext .nr-ext-quick-bar:hover #nr-ext-quick-max,
+.nr-ext .nr-ext-quick-bar:hover #nr-ext-quick-exit,
+.nr-ext .nr-ext-quick-bar #nr-ext-quick-max.stay-max,
+.nr-ext .nr-ext-quick-bar #nr-ext-quick-exit.stay-max {
+  display: block;
+}
+
+
+.nr-ext .nr-ext-quick-bar[data-play="init"] #nr-ext-quick-play .icon-play {
+  display: block;
+}
+
+.nr-ext .nr-ext-quick-bar[data-play="init"] #nr-ext-quick-play .icon-pause {
+  display: none;
+}
+
+.nr-ext .nr-ext-quick-bar[data-play="pause"] #nr-ext-quick-play .icon-play {
+  display: block;
+}
+
+.nr-ext .nr-ext-quick-bar[data-play="pause"] #nr-ext-quick-play .icon-pause {
+  display: none;
+}
+
+.nr-ext .nr-ext-quick-bar[data-play="play"] #nr-ext-quick-play .icon-play {
+  display: none;
+}
+
+.nr-ext .nr-ext-quick-bar[data-play="play"] #nr-ext-quick-play .icon-pause {
+  display: block;
+}
+
+
+
+.nr-ext[ext-theme="dark"] .nr-ext-quick-bar .ext-icon-button svg {
+  fill: #e0e6ef;
+  color: #e0e6ef;
+}
+
+.nr-ext-quick-start-exit-options {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 123;
+  display: none;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+}
+
+.nr-ext-quick-start-exit-options .nr-ext-quick-start-exit-options-content {
+  width: 438px;
+  padding: 16px;
+  background-color: white;
+  color: #323232;
+  font-size: 13px;
+  line-height: 20px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+}
+
+.nr-ext-quick-start-exit-options .nr-ext-quick-start-exit-options-content .nr-ext-quick-start-exit-options-header {
+  font-size: 15px;
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+
+.nr-ext-quick-start-exit-options .nr-ext-quick-start-exit-options-content .nr-ext-quick-start-exit-options-footer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nr-ext-quick-start-exit-options .nr-ext-quick-start-exit-options-content .nr-ext-quick-start-exit-options-footer button {
+  margin: 0 8px;
+}
+
+.nr-ext-quick-start-exit-options .nr-ext-quick-start-exit-options-content .nr-ext-quick-start-exit-options-box {
+  padding: 5px 0 20px;
+}
+
+.nr-ext-quick-start-exit-options .nr-ext-quick-start-exit-options-content .nr-ext-quick-start-exit-options-box .nr-ext-quick-start-exit-options-cell {
+  width: 100%;
+  height: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.nr-ext-quick-start-exit-options .nr-ext-quick-start-exit-options-content .nr-ext-quick-start-exit-options-box .nr-ext-quick-start-exit-options-cell>label {
+  margin-left: 8px;
+  margin-bottom: 0 !important;
+  cursor: pointer;
+}
+
+.nr-btn {
+  box-sizing: border-box;
+  position: relative;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  display: inline-block;
+  white-space: nowrap;
+  text-decoration: none;
+  vertical-align: baseline;
+  text-align: center;
+  margin: 0;
+  min-width: 12px;
+  line-height: 36px;
+  padding: 0 16px;
+  border-radius: 4px;
+  overflow: visible;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: transparent;
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.35s cubic-bezier(0.25, 0.8, 0.25, 1), color 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.nr-rtl {
+  direction: rtl;
+  text-align: right;
+  unicode-bidi: bidi-override;
+}
+
+.btn-link-blue {
+  color: #0078D4;
+}
+
+.btn-link-blue svg {
+  fill: #0078D4;
+}
+
+.btn-link-blue.disabled,
+.btn-link-blue:disabled {
+  background: transparent;
+  color: rgba(0, 0, 0, 0.38);
+}
+
+.btn-link-blue:not(:disabled):not(.disabled):hover,
+.btn-link-blue:not(:disabled):not(.disabled):active {
+  color: #134DCD;
+}
+
+.btn-flat-blue {
+  background-color: #0078D4;
+  color: #ffffff;
+}
+
+.btn-flat-blue.disabled,
+.btn-flat-blue:disabled {
+  background: #E3F2FD;
+}
+
+.btn-flat-blue:not(:disabled):not(.disabled):hover {
+  background: #134DCD;
+  color: rgba(255, 255, 255, 0.87);
+  transition: background, color 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.btn-flat-blue:not(:disabled):not(.disabled):active,
+.btn-flat-blue:not(:disabled):not(.disabled).active {
+  color: white;
+  background: #1a7bf9;
+  transition: background 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+}

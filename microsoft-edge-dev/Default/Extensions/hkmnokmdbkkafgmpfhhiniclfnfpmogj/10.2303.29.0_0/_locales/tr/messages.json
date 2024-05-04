@@ -1,0 +1,59 @@
+{
+   "appDesc": {
+      "message": "Amazon’un resmi tarayıcı uzantısı. Amazon Asistan’ı yükleyerek amazon.com.tr/aa/TOU adresindeki Kullanım Koşulları’nı kabul etmiş olursunuz"
+   },
+   "appName": {
+      "message": "Amazon Assistant"
+   },
+   "appTitle": {
+      "message": "Amazon Assistant"
+   },
+   "changeMarketplaceString": {
+      "message": "Uzantıyı yeniden yüklemek için yakında bir konum seçmeyi deneyin."
+   },
+   "deprecationMessage": {
+      "message": "Amazon'da ürünlerimizin potansiyelini her zaman deniyor ve değerlendiriyoruz. \u003Cb>28 Mart 2023'te Amazon Assistant'ı durdurma kararı aldık.\u003C/b> Bu tarihten itibaren artık Amazon Assistant'ı kullanamayacaksınız. Amazon Assistant’la önceden oluşturduğunuz listelere Amazon'da erişmeye devam edeceksiniz ve daha önce başka sitelerden eklediğiniz ürünler muhafaza edilecek. Bu kararın size verebileceği rahatsızlıktan dolayı özür dileriz."
+   },
+   "emailBody1": {
+      "message": "Gelişmeme yardım edin! Sorunu düzeltebilmem için lütfen bana ne olduğunu anlatın."
+   },
+   "emailBody2": {
+      "message": "Ne oldu?"
+   },
+   "emailBody3": {
+      "message": "Bilgisayarınız, tarayıcınız veya ağ bağlantınız hakkında paylaşabileceğiniz başka bir şey var mı?"
+   },
+   "emailBody4": {
+      "message": "Referans Kimliği: "
+   },
+   "emailSubject": {
+      "message": "Amazon Assistant Geri Bildirimi"
+   },
+   "feedbackMessage": {
+      "message": "Amazon Assistant’a geri bildirim gönder"
+   },
+   "feedbackString": {
+      "message": "Geri Bildirim"
+   },
+   "improveString": {
+      "message": "Daha iyi hizmet verebilmem için neler olduğunu anlatabilir misiniz?"
+   },
+   "noLuckString": {
+      "message": "Sorun çözülmedi mi?"
+   },
+   "resetAgainString": {
+      "message": "Tekrar kapatıp sıfırlamayı deneyin"
+   },
+   "resetString": {
+      "message": "Kapat ve sıfırla"
+   },
+   "sorryString1": {
+      "message": "Bunun için üzgünüz,"
+   },
+   "sorryString2": {
+      "message": "Yükleme sorunu yaşıyorum."
+   },
+   "uninstallButton": {
+      "message": "Amazon Asistant'ı kaldır"
+   }
+}

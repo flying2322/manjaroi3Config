@@ -1,0 +1,122 @@
+{
+   "app_command": {
+      "message": "Vaihda lukijanäkymä"
+   },
+   "app_description": {
+      "message": "Poistaa sotkua, kuten painikkeet, taustakuvat, ja muuttaa sivun tekstin kokoa, kontrastia ja asettelua paremman luettavuuden vuoksi"
+   },
+   "app_name": {
+      "message": "Reader View"
+   },
+   "app_title": {
+      "message": "Ladataan ... :: Reader View"
+   },
+   "app_ui_btn_fullscreen": {
+      "message": "Vaihda koko näytön lukemiseen"
+   },
+   "app_ui_btn_imgs": {
+      "message": "Vaihda kuvia"
+   },
+   "app_ui_btn_next": {
+      "message": "siirry seuraavalle sivulle (Meta + oikea nuolinäppäin)"
+   },
+   "app_ui_btn_prev": {
+      "message": "siirry edelliselle sivulle (Meta + vasen nuolinäppäin)"
+   },
+   "app_ui_btn_print": {
+      "message": "Tulosta lukunäkymässä"
+   },
+   "app_ui_btn_rateUs": {
+      "message": "Arvioi meitä! ⭑⭑⭑⭑⭑"
+   },
+   "app_ui_btn_site_gd": {
+      "message": "Sivustollemme voit tallentaa artikkelin Google-asemaan"
+   },
+   "app_ui_btn_site_pc": {
+      "message": "Sivustollemme voit tallentaa artikkelin tietokoneellesi"
+   },
+   "app_ui_btn_speech": {
+      "message": "Lue tämä artikkeli"
+   },
+   "app_ui_label1": {
+      "message": "Täysi leveys"
+   },
+   "app_ui_label2": {
+      "message": "Ei korkeutta"
+   },
+   "app_ui_label3": {
+      "message": "valo"
+   },
+   "app_ui_label4": {
+      "message": "Tumma"
+   },
+   "app_ui_label5": {
+      "message": "Sininen"
+   },
+   "app_ui_label6": {
+      "message": "Piilottaa"
+   },
+   "app_ui_label7": {
+      "message": "Näytä"
+   },
+   "app_ui_notify_wrong_content": {
+      "message": "Valitettavasti alkuperäinen sisältö ei ole enää käytettävissä. Lataa alkuperäissisältö ja yritä uudelleen"
+   },
+   "options_header": {
+      "message": "UI-räätälöinti"
+   },
+   "options_opt1": {
+      "message": "Näytä \"tulostuspainike\" lukijanäkymässä"
+   },
+   "options_opt10": {
+      "message": "Vaihda automaattisesti koko näytön tilaan"
+   },
+   "options_opt11": {
+      "message": "Mukautettu tyyli"
+   },
+   "options_opt12": {
+      "message": "Käyttäjän tyylit todelliselle lukijalle"
+   },
+   "options_opt13": {
+      "message": "Linkin avaaminen"
+   },
+   "options_opt14": {
+      "message": "Avaa linkit uusissa välilehdissä"
+   },
+   "options_opt15": {
+      "message": "Avaa linkit lukijanäkymätilassa"
+   },
+   "options_opt16": {
+      "message": "Muut"
+   },
+   "options_opt17": {
+      "message": "Avaa päivitysten UKK-sivu"
+   },
+   "options_opt2": {
+      "message": "Näytä \"tallenna painike\" lukijanäkymässä"
+   },
+   "options_opt3": {
+      "message": "Näytä \"koko näytön painike\" lukijanäkymässä"
+   },
+   "options_opt4": {
+      "message": "Näytä \"puhepainike\" lukijanäkymässä"
+   },
+   "options_opt5": {
+      "message": "Näytä lukitusnäkymässä \"kuvanvaihtopainike\""
+   },
+   "options_opt6": {
+      "message": "Näytä \"navigointipainikkeet\" lukijanäkymässä"
+   },
+   "options_opt7": {
+      "message": "Näytä \"Avaa lukijanäkymässä\" -valikkokohta (uudelleenkäynnistys vaaditaan) (vaatii chrome.tabs-luvan)"
+   },
+   "options_opt8": {
+      "message": "Näytä \"Avaa taustan Reader-näkymässä\" -valikkokohta (uudelleenkäynnistys vaaditaan) (vaatii chrome.tabs-luvan)"
+   },
+   "options_opt9": {
+      "message": "Näytä \"Vaihda lukijanäkymään\" pikavalikkokohta (uudelleenkäynnistys vaaditaan)"
+   },
+   "options_title": {
+      "message": "Reader View :: Asetukset"
+   }
+}

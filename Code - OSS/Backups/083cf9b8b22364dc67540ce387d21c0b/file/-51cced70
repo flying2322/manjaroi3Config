@@ -1,0 +1,1290 @@
+file:///home/dom/Documents/git_study/groups/hal/halp/halp_conflictmanager.t.cpp {"mtime":1656975064625,"ctime":1656975064625,"size":48728,"etag":"391j3bg7s1jlr","orphaned":false,"typeId":""}
+// halp_conflictmanager.t.cpp                                         -*-C++-*-
+
+#include <halp_conflictmanager.h>
+#include <halp_executionpathcutter.h>
+#include <halp_conflictsolver.h>
+#include <GUnit.h>
+
+using namespace HaiRobotics;
+using namespace HaiRobotics::halp;
+using namespace ::testing;
+
+GTEST("HALP ConflictManager Test") {
+    auto [cm, mocks] = make<ConflictManager<>, NiceGMock>();
+    auto& elementInfoQuerierMock = mocks.mock<halp::IElementInfoQuerier<int, double>>();
+    ON_CALL(elementInfoQuerierMock,
+            (getTransferTimeOfPoses)(_, _)).WillByDefault(Return(2.0));
+    ON_CALL(elementInfoQuerierMock, (isCanStopPose)(_)).WillByDefault(Return(true));
+    ON_CALL(elementInfoQuerierMock, (getConflictElements)(_)).
+        WillByDefault(
+            Invoke([](int element) {return std::vector<int>{element};}));
+    ON_CALL(elementInfoQuerierMock, (isValidSuccessor)(_, _)).WillByDefault(Return(true));
+
+    auto [cutter, mocks2] = make<ExecutionPathCutter<int>, NiceGMock>();
+    auto& dist_query_mock = mocks2.mock<hblm::IPoseDistanceQuery<int>>();
+    auto& must_stop_query_mock =
+        mocks2.mock<hblm::IMustStopPoseQuery<int>>();
+    auto& config_mock = mocks2.mock<halp::IExecutionPathCutterConfig>();
+    ON_CALL(dist_query_mock, (getManhattanDistOfPosesInMeter)(_, _)).
+        WillByDefault(Return(1.0));
+    ON_CALL(must_stop_query_mock, (isMustStopPose)(_, _, _)).
+        WillByDefault(Return(false));
+    ON_CALL(config_mock, (getIssuePathLengthLimitInMeter)()).
+        WillByDefault(Return(3.0));
+    ON_CALL(config_mock, (isIssueNextPoseAfterAMustStopPose)()).
+        WillByDefault(Return(false));
+
+    SHOULD("Have empty robot when init") {
+        auto robots = cm.getAllRobots();
+
+        ASSERT_THAT(robots.size(), Eq(0));
+    }
+
+    SHOULD("Get empty robot status when init") {
+        std::vector<RobotStatus<int, int, double>> result = cm.getRobotStatusAtTime(0);
+        ASSERT_TRUE(result.empty());
+    }
+
+    SHOULD("Get robot status case 1: static robot") {
+        int robot_a = 1, robot_b = 2;
+        cm.setRobot(robot_a, {3}, 0.0, {});
+        cm.setRobot(robot_b, {4}, 0.0, {});
+
+        std::vector<RobotStatus<int, int, double>> result =
+            cm.getRobotStatusAtTime(0);
+        EXPECT_THAT(result.size(), Eq(2));
+        auto status_a = result.at(0);
+        auto status_b = result.at(1);
+
+        ASSERT_THAT(status_a.getTime(), DoubleEq(0));
+        ASSERT_THAT(status_a.getRobotId(), Eq(robot_a));
+        ASSERT_THAT(status_a.isMovable(), Eq(true));
+        ASSERT_THAT(status_a.getOccupiedIndex(), Eq(0));
+        ASSERT_THAT(status_a.getIssuedPoses(), ElementsAre(3));
+        ASSERT_THAT(status_a.getStandstillTime(), DoubleEq(0.0));
+        ASSERT_TRUE(status_a.getRemainingTasks().empty());
+
+        ASSERT_THAT(status_b.getTime(), DoubleEq(0));
+        ASSERT_THAT(status_b.getRobotId(), Eq(robot_b));
+        ASSERT_THAT(status_b.isMovable(), Eq(true));
+        ASSERT_THAT(status_b.getOccupiedIndex(), Eq(0));
+        ASSERT_THAT(status_b.getIssuedPoses(), ElementsAre(4));
+        ASSERT_THAT(status_b.getStandstillTime(), DoubleEq(0.0));
+        ASSERT_TRUE(status_b.getRemainingTasks().empty());
+
+        result = cm.getRobotLastStatus();
+        status_a = result.at(0);
+        status_b = result.at(1);
+
+        ASSERT_THAT(status_a.getTime(), DoubleEq(0));
+        ASSERT_THAT(status_a.getRobotId(), Eq(robot_a));
+        ASSERT_THAT(status_a.isMovable(), Eq(true));
+        ASSERT_THAT(status_a.getIssuedPoses(), ElementsAre(3));
+        ASSERT_THAT(status_a.getStandstillTime(), DoubleEq(0.0));
+        ASSERT_TRUE(status_a.getRemainingTasks().empty());
+
+        ASSERT_THAT(status_b.getTime(), DoubleEq(0));
+        ASSERT_THAT(status_b.getRobotId(), Eq(robot_b));
+        ASSERT_THAT(status_b.isMovable(), Eq(true));
+        ASSERT_THAT(status_b.getIssuedPoses(), ElementsAre(4));
+        ASSERT_THAT(status_b.getStandstillTime(), DoubleEq(0.0));
+        ASSERT_TRUE(status_b.getRemainingTasks().empty());
+    }
+
+    SHOULD("Get robot status case 2: moving robot") {
+        int robot_a = 1, robot_b = 2;
+        cm.setRobot(robot_a, {3, 4, 5}, 0.0, {});
+        cm.setRobot(robot_b, {7, 8, 9}, 0.0, {});
+
+        cm.evaluate();
+        std::vector<RobotStatus<int, int, double>> result = cm.getRobotStatusAtTime(2.0);
+        EXPECT_THAT(result.size(), Eq(2));
+        auto status_a = result.at(0);
+        auto status_b = result.at(1);
+
+        ASSERT_THAT(status_a.getTime(), DoubleEq(2.0));
+        ASSERT_THAT(status_a.getRobotId(), Eq(robot_a));
+        ASSERT_THAT(status_a.isMovable(), Eq(true));
+        ASSERT_THAT(status_a.getOccupiedIndex(), Eq(1));
+        ASSERT_THAT(status_a.getIssuedPoses(), ElementsAre(4));
+        ASSERT_THAT(status_a.getStandstillTime(), DoubleEq(0.0));
+
+        ASSERT_THAT(status_b.getTime(), DoubleEq(2.0));
+        ASSERT_THAT(status_b.getRobotId(), Eq(robot_b));
+        ASSERT_THAT(status_b.isMovable(), Eq(true));
+        ASSERT_THAT(status_b.getOccupiedIndex(), Eq(1));
+        ASSERT_THAT(status_b.getIssuedPoses(), ElementsAre(8));
+        ASSERT_THAT(status_b.getStandstillTime(), DoubleEq(0.0));
+
+        result = cm.getRobotLastStatus();
+        status_a = result.at(0);
+        status_b = result.at(1);
+
+        ASSERT_THAT(status_a.getTime(), DoubleEq(4.0));
+        ASSERT_THAT(status_a.getRobotId(), Eq(robot_a));
+        ASSERT_THAT(status_a.isMovable(), Eq(true));
+        ASSERT_THAT(status_a.getIssuedPoses(), ElementsAre(5));
+        ASSERT_THAT(status_a.getStandstillTime(), DoubleEq(0.0));
+
+        ASSERT_THAT(status_b.getTime(), DoubleEq(4.0));
+        ASSERT_THAT(status_b.getRobotId(), Eq(robot_b));
+        ASSERT_THAT(status_b.isMovable(), Eq(true));
+        ASSERT_THAT(status_b.getIssuedPoses(), ElementsAre(9));
+        ASSERT_THAT(status_b.getStandstillTime(), DoubleEq(0.0));
+    }
+
+    SHOULD("Get robot status case 3: one robot blocked by other robot") {
+        int robot_a = 1, robot_b = 2;
+        cm.setRobot(robot_a, {3}, 0.0, {});
+        cm.appendElementsToRobot(robot_a, {4, 5});
+        cm.setRobot(robot_b, {4}, 0.0, {});
+
+        cm.evaluate();
+        std::vector<RobotStatus<int, int, double>> result = cm.getRobotStatusAtTime(2.0);
+        EXPECT_THAT(result.size(), Eq(2));
+        auto status_a = result.at(0);
+        auto status_b = result.at(1);
+
+        ASSERT_THAT(status_a.getTime(), DoubleEq(2.0));
+        ASSERT_THAT(status_a.getRobotId(), Eq(robot_a));
+        ASSERT_THAT(status_a.isMovable(), Eq(true));
+        ASSERT_THAT(status_a.getIssuedPoses(), ElementsAre(3));
+        ASSERT_THAT(status_a.getStandstillTime(), DoubleEq(2.0));
+
+        ASSERT_THAT(status_b.getTime(), DoubleEq(2.0));
+        ASSERT_THAT(status_b.getRobotId(), Eq(robot_b));
+        ASSERT_THAT(status_b.isMovable(), Eq(true));
+        ASSERT_THAT(status_b.getIssuedPoses(), ElementsAre(4));
+        ASSERT_THAT(status_b.getStandstillTime(), DoubleEq(2.0));
+
+        result = cm.getRobotLastStatus();
+        status_a = result.at(0);
+        status_b = result.at(1);
+
+        ASSERT_THAT(status_a.getTime(), DoubleEq(0.0));
+        ASSERT_THAT(status_a.getRobotId(), Eq(robot_a));
+        ASSERT_THAT(status_a.isMovable(), Eq(true));
+        ASSERT_THAT(status_a.getIssuedPoses(), ElementsAre(3));
+        ASSERT_THAT(status_a.getStandstillTime(), DoubleEq(0.0));
+
+        ASSERT_THAT(status_b.getTime(), DoubleEq(0.0));
+        ASSERT_THAT(status_b.getRobotId(), Eq(robot_b));
+        ASSERT_THAT(status_b.isMovable(), Eq(true));
+        ASSERT_THAT(status_b.getIssuedPoses(), ElementsAre(4));
+        ASSERT_THAT(status_b.getStandstillTime(), DoubleEq(0.0));
+    }
+
+    SHOULD("Get robot status case 4: one robot doing operation")
+    {
+        int robot_a = 1;
+        cm.setRobot(robot_a, {3, 4, 5, 6}, 0.0,
+                    {Task(5, 3.0)});
+        cm.setRobotTaskFulfillIndex(robot_a, 0, 2);
+
+        cm.evaluate();
+        std::vector<RobotStatus<int, int, double>> result =
+            cm.getRobotStatusAtTime(5.0);
+        EXPECT_THAT(result.size(), Eq( 1));
+        auto status_a = result.at(0);
+
+        ASSERT_THAT(status_a.getTime(), DoubleEq(5.0));
+        ASSERT_THAT(status_a.getRobotId(), Eq(robot_a));
+        ASSERT_THAT(status_a.isMovable(), Eq(false));
+        ASSERT_THAT(status_a.getIssuedPoses(), ElementsAre(5));
+        ASSERT_THAT(status_a.getStandstillTime(), DoubleEq(1.0));
+        ASSERT_THAT(status_a.getRemainingTasks().size(), Eq(1));
+
+        result = cm.getRobotStatusAtTime(8.0);
+        status_a = result.at(0);
+        ASSERT_THAT(status_a.getRemainingTasks().size(), Eq(0));
+
+        result = cm.getRobotLastStatus();
+        status_a = result.at(0);
+        ASSERT_THAT(status_a.getTime(), DoubleEq(9.0));
+        ASSERT_THAT(status_a.getRobotId(), Eq(robot_a));
+        ASSERT_THAT(status_a.isMovable(), Eq(true));
+        ASSERT_THAT(status_a.getIssuedPoses(), ElementsAre(6));
+        ASSERT_THAT(status_a.getStandstillTime(), DoubleEq(0.0));
+        ASSERT_THAT(status_a.getRemainingTasks().size(), Eq(0));
+    }
+
+    SHOULD("Get robot status case 5: one robot doing operation 2")
+    {
+        int robot_a = 1;
+        cm.setRobot(robot_a, {3, 4, 5, 6}, 0.0, {Task(5, 3.0)});
+        cm.setRobotTaskFulfillIndex(robot_a, 0, 2);
+
+        cm.evaluate();
+        std::vector<RobotStatus<int, int, double>> result = cm.getRobotStatusAtTime(7.0);
+        EXPECT_THAT(result.size(), Eq( 1));
+        auto status_a = result.at(0);
+
+        ASSERT_THAT(status_a.getTime(), DoubleEq(7.0));
+        ASSERT_THAT(status_a.getRobotId(), Eq(robot_a));
+        ASSERT_THAT(status_a.isMovable(), Eq(true));
+        ASSERT_THAT(status_a.getIssuedPoses(), ElementsAre(5));
+        ASSERT_THAT(status_a.getStandstillTime(), DoubleEq(3.0));
+    }
+
+    SHOULD("Get robot status case 6: one robot doing operation 3")
+    {
+        int robot_a = 1;
+        cm.setRobot(robot_a, {3, 4, 5, 6}, 0.0, {Task(5, 3.0)});
+        cm.setRobotTaskFulfillIndex(robot_a, 0, 2);
+
+        cm.evaluate();
+        std::vector<RobotStatus<int, int, double>> result = cm.getRobotStatusAtTime(9.0);
+        EXPECT_THAT(result.size(), Eq( 1));
+        auto status_a = result.at(0);
+
+        ASSERT_THAT(status_a.getRobotId(), Eq(robot_a));
+        ASSERT_THAT(status_a.isMovable(), Eq(true));
+        ASSERT_THAT(status_a.getIssuedPoses(), ElementsAre(6));
+        ASSERT_THAT(status_a.getStandstillTime(), DoubleEq(0.0));
+    }
+
+    SHOULD("Return correct json when call toJson")
+    {
+        int robotA = 1, robotB = 2;
+        cm.setRobot(robotA, {3, 4, 5}, 0.0, {Task<int>(5)});
+        cm.setRobot(robotB, {7, 8, 9}, 0.0, {Task<int>(14)});
+        cm.setRobotTaskFulfillIndex(robotA, 0, 2);
+
+        auto j = cm.toJson();
+        std::cout << j.dump(2) << std::endl;
+
+        cm.removeRobot(robotA);
+        cm.removeRobot(robotB);
+
+        cm.fromJson(j);
+        ASSERT_THAT(cm.getPath(robotA).getPoses(), ElementsAre(3, 4, 5));
+        ASSERT_THAT(cm.getPath(robotB).getPoses(), ElementsAre(7, 8, 9));
+        auto robotATasks = cm.getRobotTasks(robotA);
+        EXPECT_THAT(robotATasks.size(), Eq(1));
+        ASSERT_THAT(robotATasks.at(0).d_targetElement, Eq(5));
+        auto robotATasksStatus = cm.getRobotAllTasksStatus(robotA);
+        EXPECT_THAT(robotATasksStatus.size(), Eq(1));
+        ASSERT_THAT(robotATasksStatus.at(0).getFulfillNodeIndex().value(), Eq(2));
+    }
+
+    SHOULD("Set robot get robot correct info") {
+        int robot_id = 1;
+        int pose_id = 4;
+        cm.setRobot(robot_id, {pose_id}, 0.0, {Task<int>(7)});
+
+        cm.evaluate();
+
+        ASSERT_THAT(cm.getArriveTimeOfIndex(robot_id, 0).value(), DoubleEq(0.0));
+        auto tasks = cm.getRobotTasks(robot_id);
+        ASSERT_THAT(tasks.size(), Eq(1));
+        ASSERT_THAT(tasks.at(0).d_targetElement, Eq(7));
+        auto tasks_status = cm.getRobotAllTasksStatus(robot_id);
+        ASSERT_THAT(tasks_status.size(), Eq(1));
+        ASSERT_THAT(tasks_status.at(0).isFulfilled(), Eq(false));
+    }
+
+    SHOULD("Set robot get robot correct info case 2") {
+        int robot_id = 1;
+        cm.setRobot(robot_id, {4}, 0.0,
+                    {Task<int>(4, 10.0, 0.0)});
+        cm.appendElementsToRobot(robot_id, {5});
+        cm.setRobotTaskFulfillIndex(robot_id, 0, 0);
+
+        cm.evaluate();
+
+        ASSERT_THAT(cm.getArriveTimeOfIndex(robot_id, 1).value(), DoubleEq(12.0));
+        auto tasks = cm.getRobotTasks(robot_id);
+        ASSERT_THAT(tasks.size(), Eq(1));
+        ASSERT_THAT(tasks.at(0).d_targetElement, Eq(4));
+        auto tasks_status = cm.getRobotAllTasksStatus(robot_id);
+        ASSERT_THAT(tasks_status.size(), Eq(1));
+        ASSERT_THAT(tasks_status.at(0).isFulfilled(), Eq(true));
+        ASSERT_THAT(tasks_status.at(0).getExpectedFinishTime(), DoubleEq(10.0));
+    }
+
+    SHOULD("Set robot to another place at another time") {
+        int robot_id = 1;
+        cm.setRobot(robot_id, {4, 5, 6}, 0.0, {Task<int>(7)});
+
+        cm.setRobot(robot_id, {6}, 1.0, {Task<int>(10), Task<int>(13)});
+
+        cm.evaluate();
+
+        auto path = cm.getPath(robot_id);
+        ASSERT_THAT(path.getPoses(), ElementsAre(6));
+        ASSERT_THAT(cm.getArriveTimeOfIndex(robot_id, 0).value(), DoubleEq(1.0));
+        auto tasks = cm.getRobotTasks(robot_id);
+        ASSERT_THAT(tasks.size(), Eq(2));
+        ASSERT_THAT(tasks.at(0).d_targetElement, Eq(10));
+        auto tasks_status = cm.getRobotAllTasksStatus(robot_id);
+        ASSERT_THAT(tasks_status.size(), Eq(2));
+        ASSERT_THAT(tasks_status.at(0).isFulfilled(), Eq(false));
+        ASSERT_THAT(tasks_status.at(1).isFulfilled(), Eq(false));
+    }
+
+    SHOULD("Get robot issued path") {
+        int robot_id = 1;
+        cm.setRobot(robot_id, {4, 5, 6}, 0.0, {Task<int>(7)});
+        cm.appendElementsToRobot(robot_id, {7, 8, 9});
+        auto issued_path = cm.getRobotIssuedPath(robot_id);
+        ASSERT_THAT(issued_path.getPoses(), ElementsAre(4, 5, 6));
+
+        cm.setRobot(robot_id, {5, 6, 7}, 0.0, {Task<int>(7)});
+        issued_path = cm.getRobotIssuedPath(robot_id);
+        ASSERT_THAT(issued_path.getPoses(), ElementsAre(5, 6, 7));
+
+        cm.setRobot(robot_id, {8, 6, 7}, 0.0, {Task<int>(7)});
+        issued_path = cm.getRobotIssuedPath(robot_id);
+        ASSERT_THAT(issued_path.getPoses(), ElementsAre(8, 6, 7));
+    }
+
+
+    SHOULD("Set robot to another place at another time case 2") {
+        int robot_id = 1;
+        int pose_id = 4;
+        cm.setRobot(robot_id, {pose_id}, 0.0, {Task<int>(7)});
+
+        cm.setRobot(robot_id, {9}, 1.0, {Task<int>(10), Task<int>(13)});
+
+        cm.evaluate();
+
+        auto path = cm.getPath(robot_id);
+        ASSERT_THAT(path.getPoses(), ElementsAre(9));
+        ASSERT_THAT(cm.getArriveTimeOfIndex(robot_id, 0).value(), DoubleEq(1.0));
+        auto tasks = cm.getRobotTasks(robot_id);
+        ASSERT_THAT(tasks.size(), Eq(2));
+        ASSERT_THAT(tasks.at(0).d_targetElement, Eq(10));
+        auto tasks_status = cm.getRobotAllTasksStatus(robot_id);
+        ASSERT_THAT(tasks_status.size(), Eq(2));
+        ASSERT_THAT(tasks_status.at(0).isFulfilled(), Eq(false));
+        ASSERT_THAT(tasks_status.at(1).isFulfilled(), Eq(false));
+    }
+
+    SHOULD("Update Task(0->0): Not wipe path") {
+        int robot_id = 1;
+        cm.setRobot(robot_id, {4, 5, 6, 7, 8, 9}, 0.0);
+        cm.setRobot(robot_id, {5, 6, 7}, 0.0);
+        ASSERT_THAT(cm.getPath(robot_id).getPoses(), ElementsAre(5, 6, 7, 8, 9));
+        ASSERT_TRUE(cm.getRobotAllTasksStatus(robot_id).empty());
+    }
+
+    SHOULD("Update Task(0->n): Not wipe path") {
+        int robot_id = 1;
+        cm.setRobot(robot_id, {4, 5, 6, 7, 8, 9}, 0.0);
+        cm.setRobot(robot_id, {5, 6, 7}, 0.0, {Task<int>(11), Task<int>(15)});
+        ASSERT_THAT(cm.getPath(robot_id).getPoses(), ElementsAre(5, 6, 7, 8, 9));
+        ASSERT_THAT(cm.getRobotAllTasksStatus(robot_id).size(), Eq(2));
+    }
+
+    SHOULD("Update Task(1->0): wipe path") {
+        int robot_id = 1;
+        cm.setRobot(robot_id, {4, 5, 6, 7, 8, 9}, 0.0, {Task<int>(9)});
+        cm.setRobot(robot_id, {5, 6, 7}, 0.0);
+        ASSERT_THAT(cm.getPath(robot_id).getPoses(), ElementsAre(5, 6, 7));
+        ASSERT_THAT(cm.getRobotAllTasksStatus(robot_id).size(), Eq(0));
+    }
+
+
+    SHOULD("Remove future path when robot change tasks") {
+        int robot_id = 1;
+        cm.setRobot(robot_id, {4, 5, 6, 7, 8, 9}, 0.0, {Task<int>(9)});
+        EXPECT_THAT(cm.getPath(robot_id).getPoses(), ElementsAre(4, 5, 6, 7, 8, 9));
+
+        cm.setRobot(robot_id, {5, 6, 7}, 1.0, {Task<int>(10)});
+        EXPECT_THAT(cm.getPath(robot_id).getPoses(), ElementsAre(5, 6, 7));
+    }
+
+    SHOULD("remove the robot when it been killed") {
+        int robot_a = 1; int robot_b = 2;
+        cm.setRobot(robot_a, {2}, 0.0);
+        cm.setRobot(robot_b, {8}, 0.0);
+        cm.appendElementsToRobot(robot_b, {1, 2, 5});
+
+        cm.evaluate();
+        EXPECT_THAT(cm.getNotFullyEvalRobots(), ElementsAre(robot_b));
+        EXPECT_FALSE(cm.getConflictRegions().empty());
+
+        cm.removeRobot(robot_a);
+        cm.evaluate();
+
+        ASSERT_TRUE(cm.getNotFullyEvalRobots().empty());
+        ASSERT_TRUE(cm.getConflictRegions().empty());
+    }
+
+    SHOULD("Have one robot when call getRobots() after add one robot") {
+        int robot_id = 1;
+        int pose_id = 4;
+        cm.setRobot(robot_id, {pose_id}, 0.0);
+
+        auto robots = cm.getAllRobots();
+        ASSERT_THAT(robots, WhenSorted(ElementsAre(1)));
+    }
+
+    SHOULD("Return path of the robot after add one robot") {
+        int robot_id = 1;
+        int pose_id = 4;
+        cm.setRobot(robot_id, {pose_id}, 0.0);
+
+        auto path = cm.getPath(robot_id);
+
+        NormalPath<int> expected_path;
+        expected_path.appendPose(pose_id);
+
+        ASSERT_THAT(path, Eq(expected_path));
+    }
+
+    SHOULD("Return empty execution path when a robot has no task") {
+        int robot_id = 1;
+        cm.setRobot(robot_id, {1}, 0.0);
+
+        RobotsConfiguration<int> configuration;
+        configuration.addRobot(robot_id,
+                               RobotOccupiedRange(
+                                   PathPoseIndex::fromInt(0),
+                                   PathPoseIndex::fromInt(0)));
+
+        auto exec_paths =
+            cm.getExecutionPathsBasedOnConfiguration(configuration, cutter, {});
+        ASSERT_THAT(exec_paths.get(robot_id), Eq(NormalPath<int>()));
+    }
+
+    SHOULD("Return execution path given robots configuration") {
+        int robot_id = 1;
+        std::deque<int> path{5, 6, 7, 8, 9};
+        cm.setRobot(robot_id, path, 0.0);
+        cm.evaluate();
+
+        RobotsConfiguration<int> configuration;
+        configuration.addRobot(robot_id,
+                               RobotOccupiedRange(
+                                   PathPoseIndex::fromInt(0),
+                                   PathPoseIndex::fromInt(0)));
+
+        auto exec_paths =
+            cm.getExecutionPathsBasedOnConfiguration(configuration, cutter, {});
+        ASSERT_THAT(exec_paths.get(robot_id), Eq(NormalPath<int>(std::deque<int>{6, 7, 8})));
+    }
+
+    SHOULD("Return execution path given robots configuration case 2") {
+        int robot_id = 1;
+        std::deque<int> path{5, 6, 7, 8, 9};
+        cm.setRobot(robot_id, path, 0.0);
+        cm.evaluate();
+
+        RobotsConfiguration<int> configuration;
+        configuration.addRobot(robot_id,
+                               RobotOccupiedRange(
+                                   PathPoseIndex::fromInt(0),
+                                   PathPoseIndex::fromInt(3)));
+
+        auto exec_paths =
+            cm.getExecutionPathsBasedOnConfiguration(configuration, cutter, {});
+        ASSERT_THAT(exec_paths.get(robot_id), Eq(NormalPath<int>()));
+    }
+
+    SHOULD("Return execution path given default configuration") {
+        int robot_id = 1;
+        std::deque<int> path{5, 6};
+        cm.setRobot(robot_id, path, 0.0);
+        cm.appendElementsToRobot(robot_id, {7, 8, 9});
+        cm.evaluate();
+
+        EXPECT_CALL(elementInfoQuerierMock, (isCanStopPose)(7)).WillOnce(Return(true));
+        EXPECT_CALL(elementInfoQuerierMock, (isCanStopPose)(8)).WillOnce(Return(false));
+
+        auto exec_paths =
+            cm.getExecutionPaths(cutter, {});
+        ASSERT_THAT(exec_paths.get(robot_id), Eq(NormalPath<int>(std::deque<int>{7})));
+    }
+
+    SHOULD("Return matching index") {
+        int robot_id = 1;
+        std::deque<int> path{5, 6, 7, 8, 9};
+        cm.setRobot(robot_id, path, 0.0);
+
+        auto result =
+            cm.getMatchIndexOfRobot(robot_id, std::deque<int>{6, 7, 8});
+        ASSERT_THAT(result.value(), Eq(1));
+
+        result =
+            cm.getMatchIndexOfRobot(robot_id, std::deque<int>{7, 8, 9, 10});
+        ASSERT_FALSE(result.has_value());
+    }
+
+    SHOULD("Return expect arrive time of node") {
+        int robot_a = 1;
+        std::deque<int> occupied_elements{1};
+        std::deque<int> future_elements{2, 5, 6};
+        double t = 1.0;
+        cm.setRobot(robot_a, occupied_elements, t);
+        cm.appendElementsToRobot(robot_a, future_elements);
+
+        cm.evaluate();
+
+        std::optional<double> t_0 = cm.getArriveTimeOfIndex(robot_a, 0);
+        ASSERT_THAT(t_0.value(), DoubleEq(1.0));
+
+        std::optional<double> t_1 = cm.getArriveTimeOfIndex(robot_a, 1);
+        ASSERT_THAT(t_1.value(), DoubleEq(3.0));
+    }
+
+    SHOULD("Return release time of node") {
+        int robot_a = 1;
+        std::deque<int> occupied_elements{1};
+        std::deque<int> future_elements{2, 5, 6};
+        double t = 1.0;
+        cm.setRobot(robot_a, occupied_elements, t);
+        cm.appendElementsToRobot(robot_a, future_elements);
+
+        cm.evaluate();
+
+        std::optional<double> t_0 = cm.getReleaseTimeOfIndex(robot_a, 0);
+        ASSERT_THAT(t_0.value(), DoubleEq(3.0));
+    }
+
+    SHOULD("Return std::nullopt when arrive time is not sure") {
+        int robot_a = 1; int robot_b = 2;
+        cm.setRobot(robot_a, {0}, 0.0);
+        cm.appendElementsToRobot(robot_a, {1, 2, 3});
+        cm.setRobot(robot_b, {8}, 0.0);
+        cm.appendElementsToRobot(robot_b, {1, 2, 5});
+
+        cm.evaluate();
+
+        auto t_1 = cm.getArriveTimeOfIndex(robot_a, 1);
+        ASSERT_THAT(t_1, Eq(std::nullopt));
+    }
+
+    SHOULD("Return not fully evaluated robots") {
+        int robot_a = 3; int robot_b = 2;
+        cm.setRobot(robot_a, {0}, 0.0);
+        cm.appendElementsToRobot(robot_a, {1, 2, 3});
+        cm.setRobot(robot_b, {8}, 0.0);
+        cm.appendElementsToRobot(robot_b, {1, 2, 5});
+
+        cm.evaluate();
+
+        auto robots = cm.getNotFullyEvalRobots();
+
+        ASSERT_THAT(robots, WhenSorted(ElementsAre(robot_b, robot_a)));
+    }
+
+    SHOULD("Not evaluate when two robot on conflict region") {
+        int robot_a = 1, robot_b = 2;
+        cm.setRobot(robot_a, {2}, 0.0);
+        cm.appendElementsToRobot(robot_a, {3, 4, 5, 6});
+        cm.setRobot(robot_b, {5}, 0.0);
+        cm.appendElementsToRobot(robot_b, {4, 3, 2, 1});
+
+        cm.evaluate();
+        auto regions = cm.getUnspecifiedConflictRegionsThatBlockRobot(robot_b);
+        for (const auto& r : regions)
+        {
+            r->setOwner(robot_b);
+        }
+        cm.evaluate();
+
+        auto t_1 = cm.getArriveTimeOfIndex(robot_b, 1);
+        ASSERT_THAT(t_1, Eq(std::nullopt));
+    }
+
+    SHOULD("Return conflict region that block the specified robot") {
+        int robot_a = 1; int robot_b = 2;
+        cm.setRobot(robot_a, {2}, 0.0);
+        cm.setRobot(robot_b, {8}, 0.0);
+        cm.appendElementsToRobot(robot_b, {1, 2, 5});
+
+        cm.evaluate();
+
+        auto robots = cm.getNotFullyEvalRobots();
+
+        EXPECT_THAT(robots, WhenSorted(ElementsAre(robot_b)));
+
+        auto conflict_regions =
+            cm.getUnspecifiedConflictRegionsThatBlockRobot(robot_b);
+
+        ASSERT_THAT(conflict_regions.size(), Eq(0));
+    }
+
+    SHOULD("Return all conflict regions that block the specified robot") {
+        int robot_a = 1, robot_b = 2, robot_c = 3;
+        cm.setRobot(robot_a, {0}, 0.0);
+        cm.appendElementsToRobot(robot_a, {1, 2, 3, 4, 5});
+        cm.setRobot(robot_b, {7}, 0.0);
+        cm.appendElementsToRobot(robot_b, {3, 4, 5});
+        cm.setRobot(robot_c, {6}, 0.0);
+        cm.appendElementsToRobot(robot_c, {3, 4, 5});
+
+        cm.evaluate();
+
+        auto robots = cm.getNotFullyEvalRobots();
+        EXPECT_THAT(robots, WhenSorted(ElementsAre(robot_a, robot_b, robot_c)));
+
+        auto conflict_regions =
+            cm.getUnspecifiedConflictRegionsThatBlockRobot(robot_a);
+        ASSERT_THAT(conflict_regions.size(), Eq(2));
+    }
+
+    SHOULD("Return all conflict regions that block the specified robot case 2") {
+        int robot_a = 1, robot_b = 2, robot_c = 3;
+        cm.setRobot(robot_a, {0}, 0.0);
+        cm.appendElementsToRobot(robot_a, {1, 2, 3, 4, 5});
+        cm.setRobot(robot_b, {7}, 0.0);
+        cm.appendElementsToRobot(robot_b, {3, 4, 5});
+        cm.setRobot(robot_c, {6}, 0.0);
+        cm.appendElementsToRobot(robot_c, {3, 4, 5});
+
+        cm.evaluate();
+
+        auto regions = cm.getUnspecifiedConflictRegionsThatBlockRobot(robot_b);
+        for (const auto& r : regions)
+        {
+            r->setOwner(robot_b);
+        }
+        cm.evaluate();
+
+        auto robots = cm.getNotFullyEvalRobots();
+        EXPECT_THAT(robots, WhenSorted(ElementsAre(robot_a, robot_c)));
+
+        auto conflict_regions =
+            cm.getUnspecifiedConflictRegionsThatBlockRobot(robot_a);
+        ASSERT_THAT(conflict_regions.size(), Eq(1));
+
+        std::optional<double> time =
+            cm.getTimeOfApplyForNextUnspecifiedConflictRegions(robot_a);
+        ASSERT_THAT(time.value(), DoubleEq(6.0));
+    }
+
+    SHOULD("Return empty conflict region when init") {
+        auto regions = cm.getConflictRegions();
+
+        ASSERT_THAT(regions.size(), Eq(0));
+    }
+
+    SHOULD("Return conflict region between two robots(case 1)") {
+        // Map:
+        // (4)---<<---(5)---->---(6)
+        //  |          |          |
+        // (1)--->----(2)---<<---(3)
+
+        // Path:
+        // Robot A: [1] ->  [2] ->  [5] ->  [6]
+        // Robot B: [3] ->> [2] ->> [5] ->> [4]
+        int robot_a = 1;
+        int robot_b = 2;
+        cm.setRobot(robot_a, {1}, 0.0);
+        cm.appendElementsToRobot(robot_a, {2, 5, 6});
+        cm.setRobot(robot_b, {3}, 0.0);
+        cm.appendElementsToRobot(robot_b, {2, 5, 4});
+
+        auto regions = cm.getConflictRegions();
+
+        ASSERT_THAT(regions.size(), Eq(1));
+        auto region = regions.at(0);
+        ASSERT_THAT(region.getRobotPair(), Eq(hblr::RobotPair<int>(2, 1)));
+        ASSERT_THAT(region.getConflictElementsOfRobot(1),
+                    Eq(std::set<int>{2, 5}));
+    }
+
+    SHOULD("Return conflict region between two robots(case 2)") {
+        // Robot A: [0] - [1] - [2] - [1]
+        // Robot B: [3] - [1]
+        int robot_a = 1;
+        int robot_b = 2;
+        cm.setRobot(robot_a, {0}, 0.0);
+        cm.appendElementsToRobot(robot_a, {1, 2, 1});
+        cm.setRobot(robot_b, {3}, 0.0);
+        cm.appendElementsToRobot(robot_b, {1});
+
+        auto regions = cm.getConflictRegions();
+
+        ASSERT_THAT(regions.size(), Eq(2));
+    }
+
+    SHOULD("Return conflict region between two robots(case 3)") {
+        // Robot A: [0] - [1] - [2] - [1]
+        // Robot B: [3] - [1] - [2]
+        int robot_a = 1;
+        int robot_b = 2;
+        cm.setRobot(robot_a, {0}, 0.0);
+        cm.appendElementsToRobot(robot_a, {1, 2, 1});
+        cm.setRobot(robot_b, {3}, 0.0);
+        cm.appendElementsToRobot(robot_b, {1, 2});
+
+        auto regions = cm.getConflictRegions();
+
+        ASSERT_THAT(regions.size(), Eq(1));
+    }
+
+    SHOULD("Issue conflict element when have no conflict region") {
+        int robot_a = 1;
+        cm.setRobot(robot_a, {0}, 0.0);
+        cm.appendElementsToRobot(robot_a, {1, 2, 3});
+        cm.evaluate();
+
+        RobotsConfiguration<int> config;
+        config.addRobot(robot_a, RobotOccupiedRange());
+
+        auto path = cm.getExecutionPathForRobot(robot_a, config, cutter);
+
+        ASSERT_THAT(path.getPoses(), ElementsAre(1, 2, 3));
+    }
+
+    SHOULD("Not issue conflict element when conflict region owner is not "
+        "specified") {
+        int robot_a = 1; int robot_b = 2;
+        cm.setRobot(robot_a, {0}, 0.0);
+        cm.appendElementsToRobot(robot_a, {1, 2, 3});
+        cm.setRobot(robot_b, {8}, 0.0);
+        cm.appendElementsToRobot(robot_b, {1, 2, 5});
+
+        RobotsConfiguration<int> config;
+        config.addRobot(robot_a, RobotOccupiedRange());
+        config.addRobot(robot_b, RobotOccupiedRange());
+
+        auto path = cm.getExecutionPathForRobot(robot_a, config, cutter);
+        ASSERT_THAT(path.getPoses(), ElementsAre());
+    }
+
+    SHOULD("Issue conflict elements when the robot owns the conflict region") {
+        int robot_a = 1; int robot_b = 2;
+        cm.setRobot(robot_a, {0}, 0.0);
+        cm.appendElementsToRobot(robot_a, {1, 2, 3});
+        cm.setRobot(robot_b, {8}, 0.0);
+        cm.appendElementsToRobot(robot_b, {1, 2, 5});
+
+        cm.evaluate();
+        auto conflict_regions =
+            cm.getUnspecifiedConflictRegionsThatBlockRobot(robot_a);
+
+        EXPECT_THAT(conflict_regions.size(), Eq(1));
+
+        auto cr_ptr = *conflict_regions.begin();
+        cr_ptr->setOwner(robot_a);
+
+        cm.evaluate();
+
+        RobotsConfiguration<int> config;
+        config.addRobot(robot_a, RobotOccupiedRange());
+        config.addRobot(robot_b, RobotOccupiedRange());
+
+
+        auto path = cm.getExecutionPathForRobot(robot_a, config, cutter);
+        ASSERT_THAT(path.getPoses(), ElementsAre(1, 2, 3));
+    }
+
+    SHOULD("Issue conflict elements when the conflict region is released by "
+        "the owner")
+    {
+        int robot_a = 1; int robot_b = 2;
+        cm.setRobot(robot_a, {0}, 0.0);
+        cm.appendElementsToRobot(robot_a, {1, 2, 3});
+        cm.setRobot(robot_b, {8}, 0.0);
+        cm.appendElementsToRobot(robot_b, {1, 2, 5});
+        cm.evaluate();
+        auto conflict_regions =
+            cm.getUnspecifiedConflictRegionsThatBlockRobot(robot_a);
+        EXPECT_THAT(conflict_regions.size(), Eq(1));
+        auto cr_ptr = *conflict_regions.begin();
+        cr_ptr->setOwner(robot_a);
+
+        cm.evaluate();
+        RobotsConfiguration<int> config;
+        config.addRobot(robot_a, RobotOccupiedRange(
+                                     PathPoseIndex::fromInt(2),
+                                     PathPoseIndex::fromInt(2)));
+        config.addRobot(robot_b, RobotOccupiedRange());
+
+        auto path = cm.getExecutionPathForRobot(robot_b, config, cutter);
+        ASSERT_THAT(path.getPoses(), ElementsAre(1));
+    }
+
+    SHOULD("Not issue conflict elements when the element conflict with other "
+        "occupied element")
+    {
+        int robot_a = 1; int robot_b = 2;
+        cm.setRobot(robot_a, {0}, 0.0);
+        cm.appendElementsToRobot(robot_a, {1, 2, 3});
+        cm.setRobot(robot_b, {2}, 0.0);
+
+        cm.evaluate();
+        RobotsConfiguration<int> config;
+        config.addRobot(robot_a, RobotOccupiedRange());
+        config.addRobot(robot_b, RobotOccupiedRange());
+
+        auto path = cm.getExecutionPathForRobot(
+            robot_a, config, cutter);
+        ASSERT_THAT(path.getPoses(), ElementsAre(1));
+    }
+
+    SHOULD("Return execution path with more info") {
+        int robot_a = 1;
+        cm.setRobot(robot_a, {0}, 0.0, {Task(3)});
+        cm.appendElementsToRobot(robot_a, {1, 2, 3});
+        cm.setRobotTaskFulfill(robot_a, 0);
+        cm.evaluate();
+
+        auto paths = cm.getExecutionPaths(cutter, {});
+        auto exe_info = paths.getExecutionInfo(robot_a);
+
+        ASSERT_THAT(exe_info.getPathToIssue().getPoses(), ElementsAre(1, 2, 3));
+        ASSERT_THAT(exe_info.isTaskFinished(), Eq(true));
+        ASSERT_THAT(exe_info.getLockedPath().getPoses(), ElementsAre(0, 1, 2, 3));
+        ASSERT_THAT(exe_info.getFuturePath().getPoses(), ElementsAre());
+    }
+
+    SHOULD("Return multi robot execution paths") {
+        int robot_a = 1, robot_b = 2;
+        cm.setRobot(robot_a, {0}, 0.0, {Task(3)});
+        cm.appendElementsToRobot(robot_a, {1, 2, 3});
+        cm.setRobotTaskFulfill(robot_a, 0);
+
+        cm.setRobot(robot_b, {10}, 0.0, {Task(13)});
+        cm.appendElementsToRobot(robot_b, {11, 12, 13});
+        cm.setRobotTaskFulfill(robot_b, 0);
+        cm.evaluate();
+
+        auto paths = cm.getExecutionPaths(cutter, {});
+        auto exe_info_a = paths.getExecutionInfo(robot_a);
+        ASSERT_THAT(exe_info_a.getPathToIssue().getPoses(), ElementsAre(1, 2, 3));
+
+        auto exe_info_b = paths.getExecutionInfo(robot_b);
+        ASSERT_THAT(exe_info_b.getPathToIssue().getPoses(), ElementsAre(11, 12, 13));
+    }
+
+    SHOULD("Return execution path with more info case 2") {
+        int robot_a = 1;
+        cm.setRobot(robot_a, {0}, 0.0, {Task(5)});
+        cm.appendElementsToRobot(robot_a, {1, 2, 3, 4, 5});
+        cm.setRobotTaskFulfill(robot_a, 0);
+        cm.evaluate();
+
+        auto paths = cm.getExecutionPaths(cutter, {});
+        auto exe_info = paths.getExecutionInfo(robot_a);
+
+        ASSERT_THAT(exe_info.getPathToIssue().getPoses(), ElementsAre(1, 2, 3));
+        ASSERT_THAT(exe_info.isTaskFinished(), Eq(false));
+        ASSERT_THAT(exe_info.getLockedPath().getPoses(), ElementsAre(0, 1, 2, 3));
+        ASSERT_THAT(exe_info.getFuturePath().getPoses(), ElementsAre(4, 5));
+    }
+
+    SHOULD("Return empty tasks when robot is not assign tasks at beginning")
+    {
+        int robot_a = 1;
+        cm.setRobot(robot_a, {0}, 0.0);
+
+        auto tasks = cm.getRobotTasks(robot_a);
+
+        ASSERT_THAT(tasks.size(), Eq(0));
+    }
+
+    SHOULD("Return the same tasks that assigned at beginning")
+    {
+        int robot_a = 1;
+        int init_pos = 0;
+        double begin_time = 0.0;
+        Task task_a = Task(10);
+        Task task_b = Task(20);
+        std::deque<Task<int, double>> tasks{task_a, task_b};
+
+        cm.setRobot(robot_a, {init_pos}, begin_time, tasks);
+
+        auto tasks2 = cm.getRobotTasks(robot_a);
+
+
+        ASSERT_THAT(tasks2.at(0).d_targetElement,
+                    Eq(tasks.at(0).d_targetElement));
+        ASSERT_THAT(tasks2.at(0).d_operationTime,
+                    Eq(tasks.at(0).d_operationTime));
+        ASSERT_THAT(tasks2.at(0).d_executedTime,
+                    DoubleEq(tasks.at(0).d_executedTime));
+
+        ASSERT_THAT(tasks2.at(1).d_targetElement,
+                    Eq(tasks.at(1).d_targetElement));
+        ASSERT_THAT(tasks2.at(1).d_operationTime,
+                    Eq(tasks.at(1).d_operationTime));
+        ASSERT_THAT(tasks2.at(1).d_executedTime,
+                    DoubleEq(tasks.at(1).d_executedTime));
+    }
+
+    SHOULD("Return robot task not fulfill when not set task fulfill index") {
+        int robot_a = 1;
+        int init_pos = 0;
+        double begin_time = 0.0;
+        Task task_a = Task(10);
+        std::deque<Task<int, double>> tasks{task_a};
+
+        cm.setRobot(robot_a, {init_pos}, begin_time, tasks);
+
+        cm.appendElementsToRobot(robot_a, {1, 5, 10});
+
+        cm.evaluate();
+
+        const std::deque<TaskStatus<double, double>>& tasks_status =
+            cm.getRobotAllTasksStatus(robot_a);
+
+        EXPECT_THAT(tasks_status.size(), Eq(1));
+
+        ASSERT_THAT(tasks_status.at(0).isFulfilled(), Eq(false));
+    }
+
+    SHOULD("Return robot task status with fulfilled when path can reach to "
+        "task target")
+    {
+        int robot_a = 1;
+        int init_pos = 0;
+        double begin_time = 0.0;
+        Task task_a = Task(10);
+        std::deque<Task<int, double>> tasks{task_a};
+
+        cm.setRobot(robot_a, {init_pos}, begin_time, tasks);
+
+        cm.appendElementsToRobot(robot_a, {1, 5, 10});
+        cm.setRobotTaskFulfill(robot_a, 0);
+
+        cm.evaluate();
+
+        const std::deque<TaskStatus<double, double>>& tasks_status =
+            cm.getRobotAllTasksStatus(robot_a);
+
+        EXPECT_THAT(tasks_status.size(), Eq(1));
+
+        ASSERT_THAT(tasks_status.at(0).isFulfilled(), Eq(true));
+        ASSERT_THAT(tasks_status.at(0).getExpectedFinishTime(), DoubleEq(6.0));
+        ASSERT_THAT(tasks_status.at(0).getEnergyConsumption(), DoubleEq(3.0));
+    }
+
+    SHOULD("Throw exception when set invalid task fulfill") {
+        int robot_a = 1;
+        int init_pos = 0;
+        double begin_time = 0.0;
+        Task task_a = Task(10);
+        std::deque<Task<int, double>> tasks{task_a};
+
+        cm.setRobot(robot_a, {init_pos}, begin_time, tasks);
+
+        cm.appendElementsToRobot(robot_a, {1, 5, 12});
+        ASSERT_ANY_THROW(cm.setRobotTaskFulfill(robot_a, 0));
+
+        cm.evaluate();
+
+        const std::deque<TaskStatus<double, double>>& tasks_status =
+            cm.getRobotAllTasksStatus(robot_a);
+
+        EXPECT_THAT(tasks_status.size(), Eq(1));
+
+        ASSERT_THAT(tasks_status.at(0).isFulfilled(), Eq(false));
+    }
+
+    SHOULD("Task should not fulfill when outdated") {
+        int robot_a = 1;
+        int init_pos = 0;
+        double begin_time = 0.0;
+        Task task_a = Task(10);
+        std::deque<Task<int, double>> tasks{task_a};
+
+        cm.setRobot(robot_a, {init_pos}, begin_time, tasks);
+
+        cm.appendElementsToRobot(robot_a, {1, 5, 10});
+        cm.setRobotTaskFulfill(robot_a, 0);
+        cm.evaluate();
+
+        std::deque<TaskStatus<double, double>> tasks_status =
+            cm.getRobotAllTasksStatus(robot_a);
+        EXPECT_THAT(tasks_status.size(), Eq(1));
+        ASSERT_THAT(tasks_status.at(0).isFulfilled(), Eq(true));
+
+        cm.wipeRobotPath(robot_a);
+        cm.appendElementsToRobot(robot_a, {15, 16, 32, 17});
+        cm.evaluate();
+        tasks_status =
+            cm.getRobotAllTasksStatus(robot_a);
+        EXPECT_THAT(tasks_status.size(), Eq(1));
+        ASSERT_THAT(tasks_status.at(0).isFulfilled(), Eq(false));
+    }
+
+    SHOULD("Update robot task status when robot move according to plan") {
+        int robot_a = 1; int init_pos = 0; double begin_time = 0.0;
+        Task task_a = Task(10);
+        std::deque<Task<int, double>> tasks{task_a};
+        cm.setRobot(robot_a, {init_pos}, begin_time, tasks);
+
+        cm.appendElementsToRobot(robot_a, {1, 5, 6, 10});
+        cm.setRobotTaskFulfill(robot_a, 0);
+        cm.evaluate();
+
+        std::deque<TaskStatus<double, double>> tasks_status =
+            cm.getRobotAllTasksStatus(robot_a);
+        EXPECT_THAT(tasks_status.size(), Eq(1));
+        EXPECT_THAT(tasks_status.at(0).isFulfilled(), Eq(true));
+        EXPECT_THAT(tasks_status.at(0).getExpectedFinishTime(), DoubleEq(8.0));
+        EXPECT_THAT(tasks_status.at(0).getEnergyConsumption(), DoubleEq(4.0));
+
+        cm.setRobot(robot_a, {5, 6}, begin_time, tasks);
+        cm.evaluate();
+
+        tasks_status = cm.getRobotAllTasksStatus(robot_a);
+        EXPECT_THAT(tasks_status.size(), Eq(1));
+        ASSERT_THAT(tasks_status.at(0).isFulfilled(), Eq(true));
+        EXPECT_THAT(tasks_status.at(0).getExpectedFinishTime(), DoubleEq(4.0));
+        EXPECT_THAT(tasks_status.at(0).getEnergyConsumption(), DoubleEq(2.0));
+    }
+
+    SHOULD("not wipe issued pose when use wipe path")
+    {
+        int robot_a = 1; double begin_time = 0.0;
+        Task task_a = Task(10);
+        std::deque<Task<int, double>> tasks{task_a};
+        cm.setRobot(robot_a, {1, 4}, begin_time, tasks);
+
+        cm.appendElementsToRobot(robot_a, {8, 5, 6, 10});
+        cm.wipeRobotPath(robot_a);
+
+        ASSERT_THAT(cm.getPath(robot_a).getPoses(), ElementsAre(1, 4));
+    }
+
+    SHOULD("update robot task status when robot move to expected location")
+    {
+        int robot_a = 1; int init_pos = 0; double begin_time = 0.0;
+        Task task_a = Task(10);
+        std::deque<Task<int, double>> tasks{task_a};
+        cm.setRobot(robot_a, {init_pos}, begin_time, tasks);
+
+        cm.appendElementsToRobot(robot_a, {1, 5, 6, 10});
+        cm.setRobotTaskFulfill(robot_a, 0);
+        cm.evaluate();
+
+        std::deque<TaskStatus<double, double>> tasks_status =
+            cm.getRobotAllTasksStatus(robot_a);
+        EXPECT_THAT(tasks_status.size(), Eq(1));
+        EXPECT_THAT(tasks_status.at(0).isFulfilled(), Eq(true));
+        EXPECT_THAT(tasks_status.at(0).getExpectedFinishTime(), DoubleEq(8.0));
+        EXPECT_THAT(tasks_status.at(0).getEnergyConsumption(), DoubleEq(4.0));
+
+        cm.setRobot(robot_a, {6, 13}, begin_time, tasks);
+        cm.evaluate();
+
+        tasks_status =
+            cm.getRobotAllTasksStatus(robot_a);
+        EXPECT_THAT(tasks_status.size(), Eq(1));
+        ASSERT_THAT(tasks_status.at(0).isFulfilled(), Eq(false));
+        ASSERT_THAT(cm.getPath(robot_a).getPoses(), ElementsAre(6, 13));
+    }
+
+    SHOULD("Return blocking robots when can not evaluate")
+    {
+        int robot_a = 1; int robot_b = 2;
+        cm.setRobot(robot_a, {0}, 0.0);
+        cm.appendElementsToRobot(robot_a, {1, 2, 3});
+        cm.setRobot(robot_b, {2}, 0.0);
+        cm.evaluate();
+        auto regions = cm.getUnspecifiedConflictRegionsThatBlockRobot(robot_a);
+        for (const auto& r : regions) {
+            r->setOwner(robot_b);
+        }
+
+        cm.evaluate();
+
+        EXPECT_TRUE(cm.isRobotFullyEval(robot_b));
+
+        auto robots = cm.getBlockingRobotsOf(robot_a);
+
+        ASSERT_THAT(robots, WhenSorted(ElementsAre(robot_b)));
+    }
+
+    SHOULD("Return other robots' earliest possible index")
+    {
+        int robot_a = 1, robot_b = 2;
+        cm.setRobot(robot_a, {3}, 0.0);
+        cm.appendElementsToRobot(robot_a, {2, 1, 0, 1, 2, 3, 4, 5, 6});
+        cm.setRobot(robot_b, {5}, 0.0);
+        cm.appendElementsToRobot(robot_b, {4, 3, 2});
+        ConflictSolver<int, int, double>::resolveConflict(cm);
+
+        EXPECT_TRUE(cm.isRobotFullyEval(robot_b));
+        EXPECT_THAT(cm.getRobotNextIndexToEval(robot_a), Eq(5));
+
+        auto robot_index = cm.getEarliestIndexOfRobotsWhenRobotArriveAt(robot_b, 3);
+
+        ASSERT_THAT(robot_index.at(robot_a), Eq(2));
+    }
+
+    SHOULD("Return other robots' earliest possible index case 2")
+    {
+        int robot_a = 1; int robot_b = 2;
+        cm.setRobot(robot_a, {0, 1, 2, 3}, 0.0);
+        cm.setRobot(robot_b, {2}, 0.0);
+        ConflictSolver<int, int, double>::resolveConflict(cm);
+
+        auto robot_index = cm.getEarliestIndexOfRobotsWhenRobotArriveAt(robot_b, 0);
+
+        ASSERT_THAT(robot_index.at(robot_a), Eq(0));
+    }
+
+    SHOULD("Not issue all path when task complete at middle")
+    {
+        int robot_a = 1;
+        cm.setRobot(robot_a, {0}, 0.0, {Task(2)});
+        cm.appendElementsToRobot(robot_a, {1, 2, 3, 4, 5});
+        cm.evaluate();
+
+        auto paths = cm.getExecutionPaths(cutter, {});
+        EXPECT_THAT(paths.getExecutionInfo(robot_a).getPathToIssue().getPoses(), ElementsAre(1, 2, 3));
+
+        cm.setRobotTaskFulfillIndex(robot_a, 0, 2);
+        paths = cm.getExecutionPaths(cutter, {});
+        EXPECT_THAT(paths.getExecutionInfo(robot_a).getPathToIssue().getPoses(), ElementsAre(1, 2));
+    }
+
+    SHOULD("Not issue following path when already issue complete task path, until task finished")
+    {
+        int robot_a = 1;
+        cm.setRobot(robot_a, {0}, 0.0, {Task(2)});
+        cm.appendElementsToRobot(robot_a, {1, 2, 3, 4, 5});
+        cm.setRobotTaskFulfillIndex(robot_a, 0, 2);
+
+        cm.setRobot(robot_a, {0, 1, 2}, 0.0, {Task(2)});
+        cm.evaluate();
+        auto paths = cm.getExecutionPaths(cutter, {});
+        ASSERT_THAT(paths.get(robot_a).size(), Eq(0));
+
+        cm.setRobot(robot_a, {1, 2}, 0.0, {Task(2)});
+        cm.evaluate();
+        paths = cm.getExecutionPaths(cutter, {});
+        ASSERT_THAT(paths.get(robot_a).size(), Eq(0));
+
+        cm.setRobot(robot_a, {2}, 0.0, {Task(2)});
+        cm.evaluate();
+        paths = cm.getExecutionPaths(cutter, {});
+        ASSERT_THAT(paths.get(robot_a).size(), Eq(0));
+
+        cm.setRobot(robot_a, {2}, 0.0);
+        cm.evaluate();
+        paths = cm.getExecutionPaths(cutter, {});
+        ASSERT_THAT(paths.get(robot_a).getPoses(), ElementsAre(3, 4, 5));
+    }
+
+    SHOULD("Not issue following path when already issue complete task path, until task finished: case 2")
+    {
+        int robot_a = 1;
+        cm.setRobot(robot_a, {0}, 0.0, {Task(2), Task(8)});
+        cm.appendElementsToRobot(robot_a, {1, 2, 3, 4, 5, 6, 7, 8, 9, 10});
+        cm.setRobotTaskFulfillIndex(robot_a, 0, 2);
+        cm.setRobotTaskFulfillIndex(robot_a, 1, 8);
+
+        cm.setRobot(robot_a, {0, 1, 2}, 0.0, {Task(2), Task(8)});
+        cm.evaluate();
+        auto paths = cm.getExecutionPaths(cutter, {});
+        ASSERT_THAT(paths.get(robot_a).size(), Eq(0));
+
+        cm.setRobot(robot_a, {1, 2}, 0.0, {Task(2), Task(8)});
+        cm.evaluate();
+        paths = cm.getExecutionPaths(cutter, {});
+        ASSERT_THAT(paths.get(robot_a).size(), Eq(0));
+
+        cm.setRobot(robot_a, {2}, 0.0, {Task(2), Task(8)});
+        cm.evaluate();
+        paths = cm.getExecutionPaths(cutter, {});
+        ASSERT_THAT(paths.get(robot_a).size(), Eq(0));
+
+        cm.setRobot(robot_a, {2}, 0.0, {Task(8)});
+        cm.evaluate();
+        paths = cm.getExecutionPaths(cutter, {});
+        ASSERT_THAT(paths.get(robot_a).getPoses(), ElementsAre(3, 4, 5));
+    }
+
+    SHOULD("Update task status when wipe not eval path") {
+        int robot_a = 1;
+        cm.setRobot(robot_a, {0}, 0.0, {Task(2), Task(8)});
+        cm.appendElementsToRobot(robot_a, {1, 2, 3, 4, 5, 6, 7, 8, 9, 10});
+        cm.setRobotTaskFulfillIndex(robot_a, 0, 2);
+        cm.setRobotTaskFulfillIndex(robot_a, 1, 8);
+
+        auto task_status = cm.getRobotAllTasksStatus(robot_a);
+        EXPECT_THAT(task_status.at(0).getFulfillNodeIndex().value(), Eq(2));
+        EXPECT_THAT(task_status.at(1).getFulfillNodeIndex().value(), Eq(8));
+
+        cm.removeNotEvalPath(robot_a);
+        task_status = cm.getRobotAllTasksStatus(robot_a);
+        ASSERT_FALSE(task_status.at(0).getFulfillNodeIndex().has_value());
+        ASSERT_FALSE(task_status.at(1).getFulfillNodeIndex().has_value());
+    }
+
+    SHOULD("Update task status when wipe all path") {
+        int robot_a = 1;
+        cm.setRobot(robot_a, {0}, 0.0, {Task(2), Task(8)});
+        cm.appendElementsToRobot(robot_a, {1, 2, 3, 4, 5, 6, 7, 8, 9, 10});
+        cm.setRobotTaskFulfillIndex(robot_a, 0, 2);
+        cm.setRobotTaskFulfillIndex(robot_a, 1, 8);
+
+        auto task_status = cm.getRobotAllTasksStatus(robot_a);
+        EXPECT_THAT(task_status.at(0).getFulfillNodeIndex().value(), Eq(2));
+        EXPECT_THAT(task_status.at(1).getFulfillNodeIndex().value(), Eq(8));
+
+        cm.wipeRobotPath(robot_a);
+        task_status = cm.getRobotAllTasksStatus(robot_a);
+        ASSERT_FALSE(task_status.at(0).getFulfillNodeIndex().has_value());
+        ASSERT_FALSE(task_status.at(1).getFulfillNodeIndex().has_value());
+    }
+
+    SHOULD("Not issue path when robot is not moveable") {
+        int robot_a = 1;
+        cm.setRobot(robot_a, {0}, 0.0, {Task(2), Task(8)});
+        cm.appendElementsToRobot(robot_a, {1, 2, 3, 4, 5, 6, 7, 8, 9, 10});
+        cm.setRobotTaskFulfillIndex(robot_a, 0, 2);
+        cm.setRobotTaskFulfillIndex(robot_a, 1, 8);
+
+        std::unordered_set<int> unmoveable_robots{robot_a};
+        auto paths = cm.getExecutionPaths(cutter, unmoveable_robots);
+        ASSERT_THAT(paths.get(robot_a).size(), Eq(0));
+    }
+
+    SHOULD("Return true when the solution is valid") {
+        int robot_a = 1, robot_b = 2;
+        cm.setRobot(robot_a, {0}, 0.0, {Task(5)});
+        cm.appendElementsToRobot(robot_a, {1, 2, 3, 4, 5});
+        cm.setRobotTaskFulfill(robot_a, 0);
+        cm.setRobot(robot_b, {6}, 0.0, {Task(9)});
+        cm.appendElementsToRobot(robot_b, {7, 2, 3, 8, 9});
+        cm.setRobotTaskFulfill(robot_b, 0);
+
+        ConflictSolver<>::resolveConflict(cm);
+        cm.evaluate();
+
+        ASSERT_TRUE(cm.isValidSolution());
+    }
+
+    SHOULD("Return false when the solution is invalid case 1") {
+        int robot_a = 1, robot_b = 2;
+        cm.setRobot(robot_a, {0}, 0.0, {Task(5)});
+        cm.appendElementsToRobot(robot_a, {1, 2, 3, 4, 5});
+        cm.setRobotTaskFulfill(robot_a, 0);
+        cm.setRobot(robot_b, {6}, 0.0, {Task(9)});
+        cm.appendElementsToRobot(robot_b, {7, 2, 3, 8, 9});
+        cm.setRobotTaskFulfill(robot_b, 0);
+
+        cm.popBackPathNodeOfRobot(robot_b, 1);
+
+        ConflictSolver<>::resolveConflict(cm);
+        cm.evaluate();
+
+        ASSERT_FALSE(cm.isValidSolution());
+    }
+
+    SHOULD("Return false when the solution is invalid case 2") {
+        int robot_a = 1, robot_b = 2;
+        cm.setRobot(robot_a, {0}, 0.0, {Task(5)});
+        cm.appendElementsToRobot(robot_a, {1, 2, 3, 4, 5});
+        cm.setRobotTaskFulfill(robot_a, 0);
+        cm.setRobot(robot_b, {6}, 0.0, {Task(9), Task(20)});
+        cm.appendElementsToRobot(robot_b, {7, 2, 3, 8, 9});
+        cm.setRobotTaskFulfill(robot_b, 0);
+
+        ConflictSolver<>::resolveConflict(cm);
+        cm.evaluate();
+
+        ASSERT_FALSE(cm.isValidSolution());
+    }
+
+}

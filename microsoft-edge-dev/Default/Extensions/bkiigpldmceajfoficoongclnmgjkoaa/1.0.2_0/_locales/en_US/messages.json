@@ -1,0 +1,122 @@
+{
+   "app_command": {
+      "message": "Toggle the Reader View"
+   },
+   "app_description": {
+      "message": "Strips away clutter like buttons, background images, and changes the page's text size, contrast and layout for better readability"
+   },
+   "app_name": {
+      "message": "Reader View"
+   },
+   "app_title": {
+      "message": "Loading... :: Reader View"
+   },
+   "app_ui_btn_fullscreen": {
+      "message": "Switch to the fullscreen reading"
+   },
+   "app_ui_btn_imgs": {
+      "message": "Toggle images"
+   },
+   "app_ui_btn_next": {
+      "message": "move to the next page (Meta + Right Arrow Key)"
+   },
+   "app_ui_btn_prev": {
+      "message": "move to the previous page (Meta + Left Arrow Key)"
+   },
+   "app_ui_btn_print": {
+      "message": "Print in the Reader View"
+   },
+   "app_ui_btn_rateUs": {
+      "message": "Please Rate Us!\n      ⭑⭑⭑⭑⭑"
+   },
+   "app_ui_btn_site_gd": {
+      "message": "On our site you can save article on your Google drive"
+   },
+   "app_ui_btn_site_pc": {
+      "message": "On our site you can save article on your Computer"
+   },
+   "app_ui_btn_speech": {
+      "message": "Read this Article"
+   },
+   "app_ui_label1": {
+      "message": "Full Width"
+   },
+   "app_ui_label2": {
+      "message": "No Height"
+   },
+   "app_ui_label3": {
+      "message": "Light"
+   },
+   "app_ui_label4": {
+      "message": "Dark"
+   },
+   "app_ui_label5": {
+      "message": "Blue"
+   },
+   "app_ui_label6": {
+      "message": "Hide"
+   },
+   "app_ui_label7": {
+      "message": "Show"
+   },
+   "app_ui_notify_wrong_content": {
+      "message": "Sorry the original content is not accessible anymore. Please load the origin content and retry"
+   },
+   "options_header": {
+      "message": "UI Customization"
+   },
+   "options_opt1": {
+      "message": "Show \"printing button\" in the reader view"
+   },
+   "options_opt10": {
+      "message": "Automatically switch to the fullscreen mode"
+   },
+   "options_opt11": {
+      "message": "Custom styling"
+   },
+   "options_opt12": {
+      "message": "User styles for the actual reader-view"
+   },
+   "options_opt13": {
+      "message": "Link Opening"
+   },
+   "options_opt14": {
+      "message": "Open links in new tabs"
+   },
+   "options_opt15": {
+      "message": "Open links in the reader view mode"
+   },
+   "options_opt16": {
+      "message": "Misc"
+   },
+   "options_opt17": {
+      "message": " Open FAQs page on updates"
+   },
+   "options_opt2": {
+      "message": "Show \"save button\" in the reader view"
+   },
+   "options_opt3": {
+      "message": "Show \"fullscreen button\" in the reader view"
+   },
+   "options_opt4": {
+      "message": "Show \"speech button\" in the reader view"
+   },
+   "options_opt5": {
+      "message": "Show \"toggle images button\" in the reader view"
+   },
+   "options_opt6": {
+      "message": "Show \"navigation buttons\" in the reader view"
+   },
+   "options_opt7": {
+      "message": "Show \"Open in Reader View\" context-menu item (restart required) (requires chrome.tabs permission)"
+   },
+   "options_opt8": {
+      "message": "Show \"Open in background Reader View\" context-menu item (restart required) (requires chrome.tabs permission)"
+   },
+   "options_opt9": {
+      "message": "Show \"Switch to Reader View\" context-menu item (restart required)"
+   },
+   "options_title": {
+      "message": "Reader View :: Options"
+   }
+}

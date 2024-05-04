@@ -1,0 +1,94 @@
+<div class="modal"  tabindex="-1">
+    <div class="modal-dialog" style="width:720px">
+        <div class="modal-content" ng-controller="UserInvitationCodesModalController">
+         
+            <div class="modal-header" style="background-color: #eeeeee;">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                    ng-click="closeModal()">
+                    &times;
+                </button>
+                <h4 class="modal-title">{{'options.layout.invitation_codes.title'|translate}}</h4>
+            </div>
+       
+            <form ng-submit="onSubmit()" style="">
+                <div class="modal-body" style= "overflow: auto;max-height: 500px;min-height: 200px;padding:30px">
+                    
+                    <div class="alert {{alertStyle}} text-center" ng-show="showAlert">{{alertText}}</div>
+                    
+
+                    <div id="servers-div" class="" style="display: table;">  
+                        <div class="clearfix" style="position: relative;">
+                            <ul class="" style="padding-inline-start: 0;">
+                                <li class="server-item" style="display: table-row;cursor: default;background-color:#f1f1f1;">
+                                    <span style="width: 240px;padding-left:4px;display: table-cell;vertical-align:middle;border-bottom: 1px solid #ccc!important;cursor: default;">{{'options.layout.invitation_codes.code' | translate}}</span>
+
+                                    <span style="width: 60px;display: table-cell;text-align:right;vertical-align:middle;border-bottom: 1px solid #ccc!important;cursor: default;">{{'options.layout.invitation_codes.used_times' | translate}}</span>
+                                    <span style="width: 100px;display: table-cell;text-align:right;vertical-align:middle;border-bottom: 1px solid #ccc!important;cursor: default;">{{'options.layout.invitation_codes.invitee' | translate}}</span>
+
+                                    <span style="width: 120px;display: table-cell;text-align:right;vertical-align:middle;border-bottom: 1px solid #ccc!important;cursor: default;">
+                                          {{'options.layout.invitation_codes.bonus' | translate}}
+                                    </span>
+                                    <span style="width: 140px;display: table-cell;text-align:right;vertical-align:middle;border-bottom: 1px solid #ccc!important;cursor: default;">
+                                        {{'options.layout.invitation_codes.expire' | translate}}
+                                    </span>
+                                </li>
+                            </ul>
+                            <ul class="servers-list">
+
+                                <li ng-repeat="code in invitation_codes" class="server-item"  id="{{code._id}}" style="display: table-row;">
+                                    <span class="" style="width: 240px;padding-left:4px;margin-left:14px;display: table-cell;vertical-align:middle;border-bottom: 1px solid #ccc!important">
+                                        <span style="text-align:left;cursor: default;" ng-if="code.active">{{code._id}}</span>
+                                        <span style="text-align:left;text-decoration: line-through;cursor: default;" ng-if="!code.active" bs-tooltip="{title: ('options.layout.invitation_codes.inactive_tooltip'|translate)}">
+                                            {{code._id}}
+                                        </span>
+                                        <span style="float:right" ng-show="code.active">
+
+                                        <i ng-click="showInviteQrcodeModal(code._id)" class="fa fa-qrcode fa-renderer" ng-click="markHided(notification)" style="cursor:pointer; font-size: 14px; right: 4px;float: right; color: #5e5e5e;margin-right: 0px;padding:3px" bs-tooltip="{title: ('options.layout.invitation_codes.qrcode_tooltip'|translate)}"></i>
+                                        <i ng-click="showInviteEmailModal(code._id)"  class="fa fa-envelope fa-renderer"  ng-class="{'accent' : notification.thumbdown == true}" ng-click="markThumbdown(notification)" style="cursor:pointer; font-size: 14px; right: 4px;float: right; color: #5e5e5e;margin-right: 0px;padding:3px" bs-tooltip="{title: ('options.layout.invitation_codes.email_tooltip'|translate)}"></i>
+                                        <i ng-click="showLink(code._id)" class="fa fa-link fa-renderer"  ng-class="{'accent' : notification.thumbup == true}" style="cursor:pointer; font-size: 14px; right: 4px;float: right; color: #5e5e5e;margin-right: 0px;padding:3px" bs-tooltip="{title: ('options.layout.invitation_codes.url_tooltip'|translate)}"></i>
+
+                                        </span>
+                                    </span>
+                                    <span class="" style="width: 60px;display: table-cell;text-align:right;vertical-align:middle;border-bottom: 1px solid #ccc!important;cursor: default;">
+                                        <span bs-tooltip="{title: ('options.layout.invitation_codes.used_times_tooltip'|translate)}">
+                                            <span>{{code.used_times}}</span>
+                                            / 
+                                            <span ng-if="code.allowance">{{code.allowance}}</span>
+                                            <span ng-if="!code.allowance">&#8734;</span>
+                                        </span>
+                                    </span>
+                                    <span style="width: 100px;display: table-cell;text-align:right;vertical-align:middle;border-bottom: 1px solid #ccc!important;cursor: default;">
+                                        <span ng-show="code.inviteeName">{{code.inviteeName}}</span>
+                                    </span>
+                                    <span style="width: 120px;display: table-cell;text-align:right;vertical-align:middle;border-bottom: 1px solid #ccc!important;cursor: default;">
+                                        <span bs-tooltip="{title: ('options.layout.invitation_codes.reward_tooltip'|translate)}">{{code.bonus_invitee | milliSecondsToDaysText}} / {{code.bonus_inviter | milliSecondsToDaysText}}</span>
+                                    </span>
+                                   <span style="width: 140px;display: table-cell;text-align:right;vertical-align:middle;border-bottom: 1px solid #ccc!important;cursor: default;font-size:12px">
+                                        {{code.expire | date: 'yyyy-MM-dd HH:mm:ss'}}
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="sarsha-spinner-container" style="" ng-show="invitation_codes_loading"> 
+                        <div class="sarsha-spinner"> <div class="spinner ng-scope"> <div class="rect1"></div> <div class="rect2"></div> <div class="rect3"></div> <div class="rect4"></div> <div class="rect5"></div> </div> </div> 
+                    </div>
+                </div>
+                    
+
+
+                <div class="modal-footer" style="margin-top:0;">
+                    <button type="submit" class="btn btn-primary pull-right" ng-click="close()">
+                        {{'common.close'|translate}}
+                    </button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<form class="input-group input-group-sm" ng-submit="setTelegram()">
+    <input type="text" class="form-control" placeholder="{{'options.telegram_input_placeholder'|translate}}"
+           manual-focus="showTelegramInput" ng-model="tempTelegram" ng-disabled='disableInput' style="height:36px;"> 
+
+    <div class="input-group-btn">
+        <button class="btn btn-success" ng-disabled="disableInput" style="height:36px;">
+                            <span ng-hide="disableInput">
+                                {{submit_button_text}}
+                            </span>
+                            <span ng-show="disableInput">
+                                <img src="/img/loading-bars.svg" alt="loading"/>
+                            </span>
+        </button>
+    </div>
+</form>

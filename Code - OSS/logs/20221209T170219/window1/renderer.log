@@ -1,0 +1,4 @@
+2022-12-09 17:02:22.383 [warning] [twxs.cmake]: Cannot register 'cmake.cmakePath'. This property is already registered.
+2022-12-09 17:02:23.986 [error] [Extension Host] [CMakeTools] 2022-12-09T09:02:23.913Z [error] [rollbar] "sourceDirectory" is not a directory {"sourceDirectory":"/home/dom/Dev/olas/Lession01"}
+2022-12-09 17:02:24.384 [error] [Extension Host] [CMakeTools] 2022-12-09T09:02:24.376Z [error] [rollbar] "sourceDirectory" is not a directory {"sourceDirectory":"/home/dom/Dev/olas/Lession01"}
+2022-12-09 17:02:25.196 [info] [perf] Render performance baseline is 172ms

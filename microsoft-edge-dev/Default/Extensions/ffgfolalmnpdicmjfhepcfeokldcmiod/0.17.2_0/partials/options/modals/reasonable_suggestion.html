@@ -1,0 +1,64 @@
+<div class="modal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content" ng-controller="ReasonableSuggestionModalController">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                        ng-click="closeModal()">
+                    &times;
+                </button>
+                <h4 class="modal-title">{{'options.reasonable_suggestion.title'|translate}}</h4>
+            </div>
+            <div>
+                <form name="passwordForm">
+                    <div class="modal-body">
+                        
+                        <div class="alert alert-info text-center">{{'options.reasonable_suggestion.init_alert'|translate}}</div>
+                        
+                        <div class="row">
+                            <div class="register col-xs-12">
+                                <div class="form-group">
+                                    <input name="subject" type="text" class="form-control"
+                                           placeholder="{{'options.reasonable_suggestion.subject'|translate}}" ng-disabled="disableInput || submit_succ"
+                                           ng-model="subject" focus-bind="focuses.subject">
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="7" name="content" ng-model="content" focus-bind="focuses.content" placeholder="{{'options.reasonable_suggestion.content'|translate}}"  ng-disabled="disableInput || submit_succ"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="modal-footer" style="margin-top:0;">
+                        <div class="clearfix"></div>
+                        <div class="alert {{alertStyle}} text-center" ng-show="showAlert">{{alertText}}</div>
+
+                        <div>
+                            <button class="cancel btn btn-link pull-right"
+                                    ng-click="closeModal()" ng-disabled='disableInput' ng-hide="submit_succ">
+                                {{'common.cancel'|translate}}
+                            </button>
+
+                            <button ng-click="submitSuggestion()" class="btn btn-primary pull-right" ng-disabled='disableInput' ng-hide="submit_succ">
+                                
+                                <span ng-hide="disableInput">
+                                    {{submit_button_text}}
+                                </span>
+                                <span ng-show="disableInput">
+                                    {{submit_button_text}}
+                                    <img src="/img/loading-bars.svg" alt="loading"/>
+                                </span>
+                            </button>
+                            <button class="btn btn-success pull-right" ng-show="submit_succ" ng-click="closeModal()" >
+                                
+                                {{'common.close'|translate}}
+                            </button>
+                            
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

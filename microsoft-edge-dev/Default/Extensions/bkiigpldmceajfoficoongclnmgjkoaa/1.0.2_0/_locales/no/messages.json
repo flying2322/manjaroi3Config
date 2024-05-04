@@ -1,0 +1,122 @@
+{
+   "app_command": {
+      "message": "Bytt leservisning"
+   },
+   "app_description": {
+      "message": "Fjerner rot som knapper, bakgrunnsbilder og endrer sidens tekststørrelse, kontrast og layout for bedre lesbarhet"
+   },
+   "app_name": {
+      "message": "Leservisning"
+   },
+   "app_title": {
+      "message": "Laster ... :: Leservisning"
+   },
+   "app_ui_btn_fullscreen": {
+      "message": "Bytt til fullskjermavlesning"
+   },
+   "app_ui_btn_imgs": {
+      "message": "Bytt bilder"
+   },
+   "app_ui_btn_next": {
+      "message": "gå til neste side (Meta + høyre piltast)"
+   },
+   "app_ui_btn_prev": {
+      "message": "gå til forrige side (Meta + venstre piltast)"
+   },
+   "app_ui_btn_print": {
+      "message": "Skriv ut i Leservisningen"
+   },
+   "app_ui_btn_rateUs": {
+      "message": "Vennligst ranger oss! ⭑⭑⭑⭑⭑"
+   },
+   "app_ui_btn_site_gd": {
+      "message": "På siden vår kan du lagre artikkelen på Google-stasjonen din"
+   },
+   "app_ui_btn_site_pc": {
+      "message": "På siden vår kan du lagre artikkelen på datamaskinen din"
+   },
+   "app_ui_btn_speech": {
+      "message": "Les denne artikkelen"
+   },
+   "app_ui_label1": {
+      "message": "Full bredde"
+   },
+   "app_ui_label2": {
+      "message": "Ingen høyde"
+   },
+   "app_ui_label3": {
+      "message": "Lys"
+   },
+   "app_ui_label4": {
+      "message": "Mørk"
+   },
+   "app_ui_label5": {
+      "message": "Blå"
+   },
+   "app_ui_label6": {
+      "message": "Gjemme seg"
+   },
+   "app_ui_label7": {
+      "message": "Forestilling"
+   },
+   "app_ui_notify_wrong_content": {
+      "message": "Beklager at det opprinnelige innholdet ikke er tilgjengelig lenger. Last inn opprinnelsesinnholdet og prøv på nytt"
+   },
+   "options_header": {
+      "message": "Tilpasning av brukergrensesnitt"
+   },
+   "options_opt1": {
+      "message": "Vis \"utskriftsknapp\" i leservisningen"
+   },
+   "options_opt10": {
+      "message": "Bytt automatisk til fullskjermmodus"
+   },
+   "options_opt11": {
+      "message": "Tilpasset styling"
+   },
+   "options_opt12": {
+      "message": "Brukerstiler for den faktiske leservisningen"
+   },
+   "options_opt13": {
+      "message": "Linkåpning"
+   },
+   "options_opt14": {
+      "message": "Åpne lenker i nye faner"
+   },
+   "options_opt15": {
+      "message": "Åpne lenker i leservisningsmodus"
+   },
+   "options_opt16": {
+      "message": "Diverse"
+   },
+   "options_opt17": {
+      "message": "Åpne FAQ-siden for oppdateringer"
+   },
+   "options_opt2": {
+      "message": "Vis \"lagre-knapp\" i leservisningen"
+   },
+   "options_opt3": {
+      "message": "Vis \"fullskjerm-knapp\" i leservisningen"
+   },
+   "options_opt4": {
+      "message": "Vis \"taleknapp\" i leservisningen"
+   },
+   "options_opt5": {
+      "message": "Vis \"slå bilder-knappen\" i leservisningen"
+   },
+   "options_opt6": {
+      "message": "Vis \"navigasjonsknapper\" i leservisningen"
+   },
+   "options_opt7": {
+      "message": "Vis kontekstmenyelement \"Åpne i leservisning\" (omstart kreves) (krever tillatelse av chrome.tabs)"
+   },
+   "options_opt8": {
+      "message": "Vis kontekstmenyelement \"Åpne i bakgrunnleservisning\" (omstart påkrevd) (krever tillatelse av chrome.tabs)"
+   },
+   "options_opt9": {
+      "message": "Vis kontekstmenyelement \"Bytt til leservisning\" (omstart kreves)"
+   },
+   "options_title": {
+      "message": "Leservisning :: Alternativer"
+   }
+}

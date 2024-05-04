@@ -1,0 +1,198 @@
+
+<div ng-hide="anonymous()">
+    <div class="url-wrapper slide-down" style="background-color:#f8f8f8;padding:3px;margin-top:16px">
+        <div class="reward-header">
+            <h2 ng-click="toggleReward('url-wrapper')">
+                <i class="fa fa-th-large" aria-hidden="true"></i>
+                
+                {{'options.clash_subscription.title'|translate}}
+                <small class="for_more_detail">({{'options.clash_subscription.click_for_more'|translate}})</small>
+                <a class="toggle-reward glyphicon glyphicon glyphicon-chevron-down pull-right" ></a>
+            </h2>
+
+            
+            <div class="alert alert-warning" style="padding-top:12px">
+                <span translate="options.clash_subscription.clash_subscription_notice"></span>
+            </div>
+            <div class="alert alert-warning" style="padding-top:12px">
+                <span ng-bind-html="'{{'options.ss_subscription.subscription_april2024_notice' | translate}}'"></span>
+            </div>
+            <div class="alert alert-warning" style="padding-top:12px">
+                <span ng-bind-html="'{{'options.ss_subscription.data_traffic_notice' | translate}}'"></span>
+            </div>
+            <div class="clearfix"></div>  
+        </div>
+
+        <div style="padding:3px;">
+              
+                <div ng-hide="!clash_subscription_url">
+                    <h4>
+                        <span class="label label-primary" style="color:#4cae4c;" ><i class="fa fa-link" aria-hidden="true" style="color:white"></i></span>
+                        
+                        <span translate="options.clash_subscription.clash_subscription_url"></span>
+                        :
+                        <div>&nbsp;&nbsp;</div>
+                        <span style="cursor:pointer;color:#e83e8c" ng-mouseenter="clash_mouseEnter()" ng-mouseleave="clash_mouseLeave()" 
+                        ng-click="$root.copyToClipboard(clash_subscription_url)">
+                            {{clash_subscription_url}}
+                        </span>
+                        <svg ng-if="showCopyClashUrl" style="width:16px;height:16px;opacity: 50%;" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ContentCopyIcon" aria-label="fontSize small"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg>
+                        &nbsp;&nbsp;
+                        <img ng-click="showClashQrcode()" style="cursor:pointer" src="/img/qrcode.png" width=24 height=24>
+                    </h4>
+
+                    <div>&nbsp;</div>
+                    <h4>
+                        <span class="label label-primary" style="color:#4cae4c;" ><i class="fa fa-link" aria-hidden="true" style="color:white"></i></span>
+                        
+                        <span translate="options.clash_subscription.clash2024_subscription_url"></span>
+                        :
+                        <div>&nbsp;&nbsp;</div>
+                        <span style="cursor:pointer;color:#e83e8c" ng-mouseenter="clash2024_mouseEnter()" ng-mouseleave="clash2024_mouseLeave()" 
+                        ng-click="$root.copyToClipboard(clash2024_subscription_url)">
+                            {{clash2024_subscription_url}}
+                        </span>
+                        <svg ng-if="show2024CopyClashUrl" style="width:16px;height:16px;opacity: 50%;" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ContentCopyIcon" aria-label="fontSize small"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg>
+                        &nbsp;&nbsp;
+                        <img ng-click="showClash2024Qrcode()" style="cursor:pointer" src="/img/qrcode.png" width=24 height=24>
+                    </h4>
+                </div>
+
+
+                <div>&nbsp;</div>  
+                <div class="wrapper">
+
+                    <h4>
+                        <i class="fa fa-table" aria-hidden="true"></i>
+                        <b translate='options.clash_subscription.subscription_record'></b>
+                    </h4>
+
+                    <div class="alert alert-warning">
+                        <span translate="options.clash_subscription.clash_subscription_caveat"></span>
+                    </div>
+
+                    <div>
+
+                        <table class="clash_subscription table">
+                            <thead>
+                            <tr>
+                                <th class="time" translate="options.clash_subscription.date_time"></th>
+                                <th class="location" translate="options.clash_subscription.location"></th>
+                                <th class="ip" translate="options.clash_subscription.ip"></th>
+                                <th class="user_agent text-right" translate="options.clash_subscription.user_agent"></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="text-muted" ng-show="$root.clash_subscription_accesses && !$root.clash_subscription_accesses.length">
+                                <td colspan="3" translate="options.clash_subscription.no_record_so_far"></td>
+                            </tr>
+                            <tr ng-repeat="access in $root.clash_subscription_accesses">
+                                <th class="time">
+                                    <span class="text-muted" >{{ access.date_time }}</span>
+                                </th>
+                                <th class="location">
+                                    <span class="text-muted" >{{ access.ip_region }}</span>
+                                </th>
+                                <th class="ip">
+                                    <span class="text-muted" >{{ access.ip }}</span>
+                                </th>
+                                <td class="user_agent text-right">
+                                    <span class="text-muted" >{{ access.user_agent }}</span>
+                                </td>
+                            </tr>
+
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+
+
+    <div class="clients-wrapper slide-down" style="background-color:#f8f8f8;padding:3px;margin-top:16px" ng-show="$root.user.clash_client_url != ''">
+        <div class="reward-header" style="padding-bottom: 20px;">
+            <h2 ng-click="toggleReward('clients-wrapper')">
+                <i class="fa fa-th-large" aria-hidden="true"></i>
+                
+                {{'options.clash_subscription.clients'|translate}}
+                <small class="for_more_detail">({{'options.clash_subscription.click_for_more'|translate}})</small>
+                <a class="toggle-reward glyphicon glyphicon glyphicon-chevron-down pull-right" ></a>
+            </h2>
+
+            <div class="clearfix"></div>  
+                    <div class="alert alert-warning">
+                        <span translate="options.clash_subscription.clash_client_caveat"></span>
+                    </div>
+        </div>
+<!--
+        <div class="wrapper" style="padding:3px;margin-top:12px;height: 650px;">
+            <div>
+              <div class="col-lg-6">
+                <div class="card card-hero" ng-click="showSSClient('windows')" style="cursor:pointer">
+                                  <div class="card-header os-card windows-card">
+                    <div class="card-icon">
+                      <i class="fa fa-windows"></i>
+                    </div>
+                    <h4>Windows</h4>
+                    <div class="card-description">适用于 Windows 7 或更高版本</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="card card-hero" ng-click="showSSClient('android')" style="cursor:pointer">
+                                  <div class="card-header os-card android-card">
+                    <div class="card-icon">
+                      <i class="fa fa-android"></i>
+                    </div>
+                    <h4>Android</h4>
+                    <div class="card-description">适用于 Android 5.0 或更高版本</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="card card-hero" ng-click="showSSClient('ios')" style="cursor:pointer">
+                                  <div class="card-header os-card ios-card">
+                    <div class="card-icon">
+                      <i class="fa fa-apple"></i>
+                    </div>
+                    <h4>iOS</h4>
+                    <div class="card-description">适用于 iOS 9 或更高版本</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="card card-hero" ng-click="showSSClient('macos')" style="cursor:pointer">
+                                  <div class="card-header os-card mac-card">
+                    <div class="card-icon">
+                      <i class="fa fa-apple"></i>
+                    </div>
+                    <h4>Mac</h4>
+                    <div class="card-description">适用于 macOS Sierra (10.12) 或更高版本</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="card card-hero" ng-click="showSSClient('linux')" style="cursor:pointer">
+                                  <div class="card-header os-card linux-card">
+                    <div class="card-icon">
+                      <i class="fa fa-linux"></i>
+                    </div>
+                    <h4>Linux</h4>
+                    <div class="card-description">适用于……所有版本？</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+        </div>-->
+    </div>
+</div>
+
+
+
+
+
+
+
+

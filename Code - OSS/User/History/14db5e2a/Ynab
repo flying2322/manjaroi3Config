@@ -1,0 +1,3 @@
+[submodule "external/glfw"]
+    path = external/glfw
+    url = https://gitee.com/wangnd/glfw.git

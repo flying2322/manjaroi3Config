@@ -1,0 +1,142 @@
+[2022-10-29 17:56:05.900] [exthost] [info] Extension host with pid 28810 started
+[2022-10-29 17:56:05.900] [exthost] [info] Skipping acquiring lock for /home/dom/.config/Code - OSS/User/workspaceStorage/68649607b51873d48219cc45d8d43928.
+[2022-10-29 17:56:05.969] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: true, activationEvent: '*'
+[2022-10-29 17:56:05.970] [exthost] [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+[2022-10-29 17:56:05.970] [exthost] [info] ExtensionService#_doActivateExtension vscode.ipynb, startup: true, activationEvent: '*'
+[2022-10-29 17:56:05.970] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode.cmake-tools, startup: true, activationEvent: 'workspaceContains:CMakeLists.txt'
+[2022-10-29 17:56:06.040] [exthost] [info] ExtensionService#_doActivateExtension franneck94.c-cpp-runner, startup: true, activationEvent: 'workspaceContains:*.h,*.c,*.hh,*.cc,*.hxx,*.cxx,*.hpp,*.cpp'
+[2022-10-29 17:56:06.040] [exthost] [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+[2022-10-29 17:56:06.040] [exthost] [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+[2022-10-29 17:56:06.509] [exthost] [info] Eager extensions activated
+[2022-10-29 17:56:06.545] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onStartupFinished'
+[2022-10-29 17:56:06.545] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+[2022-10-29 17:56:16.863] [exthost] [info] Extension host terminating: received terminate message from renderer
+[2022-10-29 17:56:16.896] [exthost] [info] Extension host with pid 28810 exiting with code 0
+[2022-10-29 17:56:18.412] [exthost] [info] Extension host with pid 28962 started
+[2022-10-29 17:56:18.412] [exthost] [info] Skipping acquiring lock for /home/dom/.config/Code - OSS/User/workspaceStorage/6614e367187bb51f1d5c2804e4c6d651.
+[2022-10-29 17:56:18.595] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: true, activationEvent: '*'
+[2022-10-29 17:56:18.596] [exthost] [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+[2022-10-29 17:56:18.596] [exthost] [info] ExtensionService#_doActivateExtension vscode.ipynb, startup: true, activationEvent: '*'
+[2022-10-29 17:56:18.632] [exthost] [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+[2022-10-29 17:56:18.633] [exthost] [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+[2022-10-29 17:56:18.652] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode.cmake-tools, startup: true, activationEvent: 'workspaceContains:*/CMakeLists.txt,*/*/CMakeLists.txt,*/*/*/CMakeLists.txt'
+[2022-10-29 17:56:18.982] [exthost] [info] Eager extensions activated
+[2022-10-29 17:56:19.010] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onStartupFinished'
+[2022-10-29 17:56:19.010] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+[2022-10-29 17:57:38.126] [exthost] [info] ExtensionService#_doActivateExtension twxs.cmake, startup: false, activationEvent: 'onLanguage:cmake'
+[2022-10-29 17:57:38.833] [exthost] [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:markdown'
+[2022-10-29 17:57:38.834] [exthost] [info] ExtensionService#_doActivateExtension vscode.markdown-language-features, startup: false, activationEvent: 'onLanguage:markdown'
+[2022-10-29 17:57:39.269] [exthost] [info] ExtensionService#_doActivateExtension vscode.markdown-math, startup: false, activationEvent: 'api', root cause: vscode.markdown-language-features
+[2022-10-29 18:06:22.968] [exthost] [info] Extension host terminating: received terminate message from renderer
+[2022-10-29 18:06:22.984] [exthost] [info] Extension host with pid 28962 exiting with code 0
+[2022-10-29 18:06:24.955] [exthost] [info] Extension host with pid 29629 started
+[2022-10-29 18:06:24.955] [exthost] [info] Skipping acquiring lock for /home/dom/.config/Code - OSS/User/workspaceStorage/cefd899c6baabe7c05be32efcb094572.
+[2022-10-29 18:06:25.003] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: true, activationEvent: '*'
+[2022-10-29 18:06:25.004] [exthost] [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+[2022-10-29 18:06:25.004] [exthost] [info] ExtensionService#_doActivateExtension vscode.ipynb, startup: true, activationEvent: '*'
+[2022-10-29 18:06:25.005] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode.cmake-tools, startup: true, activationEvent: 'workspaceContains:CMakeLists.txt'
+[2022-10-29 18:06:25.065] [exthost] [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+[2022-10-29 18:06:25.065] [exthost] [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+[2022-10-29 18:06:25.086] [exthost] [info] ExtensionService#_doActivateExtension franneck94.c-cpp-runner, startup: true, activationEvent: 'workspaceContains:*.h,*.c,*.hh,*.cc,*.hxx,*.cxx,*.hpp,*.cpp'
+[2022-10-29 18:06:25.419] [exthost] [info] Eager extensions activated
+[2022-10-29 18:06:25.453] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onStartupFinished'
+[2022-10-29 18:06:25.454] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+[2022-10-29 18:07:06.455] [exthost] [info] ExtensionService#_doActivateExtension twxs.cmake, startup: false, activationEvent: 'onLanguage:cmake'
+[2022-10-29 18:17:07.417] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 253
+[2022-10-29 18:19:54.909] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 256
+[2022-10-29 18:20:03.030] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 254
+[2022-10-29 18:21:11.719] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 253
+[2022-10-29 18:21:53.479] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 251
+[2022-10-29 18:26:12.085] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 251
+[2022-10-29 18:27:39.792] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 251
+[2022-10-29 18:27:44.856] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 255
+[2022-10-29 18:27:49.918] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 255
+[2022-10-29 18:31:03.613] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 255
+[2022-10-29 18:31:22.356] [exthost] [info] Extension host terminating: received terminate message from renderer
+[2022-10-29 18:31:22.387] [exthost] [info] Extension host with pid 29629 exiting with code 0
+[2022-10-29 18:31:24.378] [exthost] [info] Extension host with pid 31573 started
+[2022-10-29 18:31:24.378] [exthost] [info] Skipping acquiring lock for /home/dom/.config/Code - OSS/User/workspaceStorage/922147cc612bbaafe09ed6ef5579af61.
+[2022-10-29 18:31:24.466] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: true, activationEvent: '*'
+[2022-10-29 18:31:24.467] [exthost] [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+[2022-10-29 18:31:24.467] [exthost] [info] ExtensionService#_doActivateExtension vscode.ipynb, startup: true, activationEvent: '*'
+[2022-10-29 18:31:24.467] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode.cmake-tools, startup: true, activationEvent: 'workspaceContains:CMakeLists.txt'
+[2022-10-29 18:31:24.529] [exthost] [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+[2022-10-29 18:31:24.529] [exthost] [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+[2022-10-29 18:31:24.573] [exthost] [info] ExtensionService#_doActivateExtension franneck94.c-cpp-runner, startup: true, activationEvent: 'workspaceContains:*.h,*.c,*.hh,*.cc,*.hxx,*.cxx,*.hpp,*.cpp'
+[2022-10-29 18:31:24.727] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 255
+[2022-10-29 18:31:24.827] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 255
+[2022-10-29 18:31:24.922] [exthost] [info] Eager extensions activated
+[2022-10-29 18:31:24.928] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onStartupFinished'
+[2022-10-29 18:31:24.928] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+[2022-10-29 18:31:32.957] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 308
+[2022-10-29 18:32:58.952] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 469
+[2022-10-29 18:33:04.017] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 308
+[2022-10-29 18:40:45.296] [exthost] [info] ExtensionService#_doActivateExtension twxs.cmake, startup: false, activationEvent: 'onLanguage:cmake'
+[2022-10-29 18:42:39.196] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 309
+[2022-10-29 18:50:36.066] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 280
+[2022-10-29 18:51:53.235] [exthost] [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+[2022-10-29 18:51:53.236] [exthost] [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+[2022-10-29 18:51:53.236] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+[2022-10-29 18:53:23.537] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 284
+[2022-10-29 18:53:28.605] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 281
+[2022-10-29 18:54:40.649] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 281
+[2022-10-29 18:55:34.509] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 281
+[2022-10-29 18:56:03.358] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 281
+[2022-10-29 18:56:08.422] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 281
+[2022-10-29 18:56:13.480] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 281
+[2022-10-29 19:03:30.826] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 281
+[2022-10-29 19:03:40.939] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 281
+[2022-10-29 19:03:46.520] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 321
+[2022-10-29 19:10:47.413] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 324
+[2022-10-29 19:11:33.386] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 324
+[2022-10-29 19:52:34.179] [exthost] [info] Extension host terminating: received terminate message from renderer
+[2022-10-29 19:52:34.199] [exthost] [error] Error: read ECONNRESET
+	at Pipe.onStreamRead (node:internal/stream_base_commons:217:20)
+[2022-10-29 19:52:34.201] [exthost] [info] Extension host with pid 31573 exiting with code 0
+[2022-10-29 19:52:36.310] [exthost] [info] Extension host with pid 37866 started
+[2022-10-29 19:52:36.310] [exthost] [info] Skipping acquiring lock for /home/dom/.config/Code - OSS/User/workspaceStorage/d185796fe4a5c83c09752c53bd2d4dd6.
+[2022-10-29 19:52:36.377] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: true, activationEvent: '*'
+[2022-10-29 19:52:36.377] [exthost] [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+[2022-10-29 19:52:36.378] [exthost] [info] ExtensionService#_doActivateExtension vscode.ipynb, startup: true, activationEvent: '*'
+[2022-10-29 19:52:36.378] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode.cmake-tools, startup: true, activationEvent: 'workspaceContains:CMakeLists.txt'
+[2022-10-29 19:52:36.443] [exthost] [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+[2022-10-29 19:52:36.443] [exthost] [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+[2022-10-29 19:52:36.467] [exthost] [info] ExtensionService#_doActivateExtension franneck94.c-cpp-runner, startup: true, activationEvent: 'workspaceContains:*.h,*.c,*.hh,*.cc,*.hxx,*.cxx,*.hpp,*.cpp'
+[2022-10-29 19:52:36.850] [exthost] [info] Eager extensions activated
+[2022-10-29 19:52:36.895] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onStartupFinished'
+[2022-10-29 19:52:36.895] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+[2022-10-29 20:05:30.969] [exthost] [info] ExtensionService#_doActivateExtension twxs.cmake, startup: false, activationEvent: 'onLanguage:cmake'
+[2022-10-29 20:18:57.702] [exthost] [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+[2022-10-29 20:18:57.702] [exthost] [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+[2022-10-29 20:18:57.702] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+[2022-10-29 20:44:27.673] [exthost] [info] Extension host terminating: received terminate message from renderer
+[2022-10-29 20:44:27.697] [exthost] [info] Extension host with pid 37866 exiting with code 0
+[2022-10-29 20:44:29.785] [exthost] [info] Extension host with pid 42150 started
+[2022-10-29 20:44:29.786] [exthost] [info] Skipping acquiring lock for /home/dom/.config/Code - OSS/User/workspaceStorage/846ed6acf63cf69535112ffb8563f881.
+[2022-10-29 20:44:29.829] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: true, activationEvent: '*'
+[2022-10-29 20:44:29.829] [exthost] [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+[2022-10-29 20:44:29.829] [exthost] [info] ExtensionService#_doActivateExtension vscode.ipynb, startup: true, activationEvent: '*'
+[2022-10-29 20:44:29.839] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode.cmake-tools, startup: true, activationEvent: 'workspaceContains:CMakeLists.txt'
+[2022-10-29 20:44:29.892] [exthost] [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+[2022-10-29 20:44:29.893] [exthost] [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+[2022-10-29 20:44:29.921] [exthost] [info] ExtensionService#_doActivateExtension franneck94.c-cpp-runner, startup: true, activationEvent: 'workspaceContains:*.h,*.c,*.hh,*.cc,*.hxx,*.cxx,*.hpp,*.cpp'
+[2022-10-29 20:44:30.271] [exthost] [info] Eager extensions activated
+[2022-10-29 20:44:30.290] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onStartupFinished'
+[2022-10-29 20:44:30.290] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+[2022-10-30 11:14:48.940] [exthost] [error] {"message":"Git error","stdout":"","stderr":"fatal: Pathspec '/home/dom/Dev/olas/Lession05/external/glfw/.github' is in submodule 'Lession05/external/glfw'\n","exitCode":128,"gitErrorCode":"IsInSubmodule"}
+[2022-10-30 11:14:48.941] [exthost] [error] {"message":"Git error","stdout":"","stderr":"fatal: Pathspec '/home/dom/Dev/olas/Lession05/external/glfw/.github' is in submodule 'Lession05/external/glfw'\n","exitCode":128,"gitErrorCode":"IsInSubmodule"}
+[2022-10-30 11:14:48.941] [exthost] [error] {"message":"Git error","stdout":"","stderr":"fatal: Pathspec '/home/dom/Dev/olas/Lession05/external/glfw/.github' is in submodule 'Lession05/external/glfw'\n","exitCode":128,"gitErrorCode":"IsInSubmodule"}
+[2022-10-30 11:14:48.941] [exthost] [error] {"message":"Git error","stdout":"","stderr":"fatal: Pathspec '/home/dom/Dev/olas/Lession05/external/glfw/.github' is in submodule 'Lession05/external/glfw'\n","exitCode":128,"gitErrorCode":"IsInSubmodule"}
+[2022-10-30 11:14:48.941] [exthost] [error] {"message":"Git error","stdout":"","stderr":"fatal: Pathspec '/home/dom/Dev/olas/Lession05/external/glfw/.github' is in submodule 'Lession05/external/glfw'\n","exitCode":128,"gitErrorCode":"IsInSubmodule"}
+[2022-10-30 11:14:48.941] [exthost] [error] {"message":"Git error","stdout":"","stderr":"fatal: Pathspec '/home/dom/Dev/olas/Lession05/external/glfw/.github' is in submodule 'Lession05/external/glfw'\n","exitCode":128,"gitErrorCode":"IsInSubmodule"}
+[2022-10-30 11:14:48.941] [exthost] [error] {"message":"Git error","stdout":"","stderr":"fatal: Pathspec '/home/dom/Dev/olas/Lession05/external/glfw/.github' is in submodule 'Lession05/external/glfw'\n","exitCode":128,"gitErrorCode":"IsInSubmodule"}
+[2022-10-30 11:14:48.941] [exthost] [error] {"message":"Git error","stdout":"","stderr":"fatal: Pathspec '/home/dom/Dev/olas/Lession05/external/glfw/.github' is in submodule 'Lession05/external/glfw'\n","exitCode":128,"gitErrorCode":"IsInSubmodule"}
+[2022-10-30 11:14:48.941] [exthost] [error] {"message":"Git error","stdout":"","stderr":"fatal: Pathspec '/home/dom/Dev/olas/Lession05/external/glfw/.github' is in submodule 'Lession05/external/glfw'\n","exitCode":128,"gitErrorCode":"IsInSubmodule"}
+[2022-10-30 11:14:48.941] [exthost] [error] {"message":"Git error","stdout":"","stderr":"fatal: Pathspec '/home/dom/Dev/olas/Lession05/external/glfw/.github' is in submodule 'Lession05/external/glfw'\n","exitCode":128,"gitErrorCode":"IsInSubmodule"}
+[2022-10-30 11:14:48.941] [exthost] [error] {"message":"Git error","stdout":"","stderr":"fatal: Pathspec '/home/dom/Dev/olas/Lession05/external/glfw/.github' is in submodule 'Lession05/external/glfw'\n","exitCode":128,"gitErrorCode":"IsInSubmodule"}
+[2022-10-30 11:14:48.941] [exthost] [error] {"message":"Git error","stdout":"","stderr":"fatal: Pathspec '/home/dom/Dev/olas/Lession05/external/glfw/.github' is in submodule 'Lession05/external/glfw'\n","exitCode":128,"gitErrorCode":"IsInSubmodule"}
+[2022-10-30 11:14:48.941] [exthost] [error] {"message":"Git error","stdout":"","stderr":"fatal: Pathspec '/home/dom/Dev/olas/Lession05/external/glfw/.github' is in submodule 'Lession05/external/glfw'\n","exitCode":128,"gitErrorCode":"IsInSubmodule"}
+[2022-10-30 11:14:48.941] [exthost] [error] {"message":"Git error","stdout":"","stderr":"fatal: Pathspec '/home/dom/Dev/olas/Lession05/external/glfw/.github' is in submodule 'Lession05/external/glfw'\n","exitCode":128,"gitErrorCode":"IsInSubmodule"}
+[2022-10-30 11:14:48.941] [exthost] [error] {"message":"Git error","stdout":"","stderr":"fatal: Pathspec '/home/dom/Dev/olas/Lession05/external/glfw/.github' is in submodule 'Lession05/external/glfw'\n","exitCode":128,"gitErrorCode":"IsInSubmodule"}
+[2022-10-30 11:14:48.942] [exthost] [error] {"message":"Git error","stdout":"","stderr":"fatal: Pathspec '/home/dom/Dev/olas/Lession05/external/glfw/.github' is in submodule 'Lession05/external/glfw'\n","exitCode":128,"gitErrorCode":"IsInSubmodule"}
+[2022-10-30 11:15:46.621] [exthost] [info] ExtensionService#_doActivateExtension twxs.cmake, startup: false, activationEvent: 'onLanguage:cmake'

@@ -1,0 +1,24 @@
+{
+   "browser_action": {
+      "default_icon": "FuckCSDN.png",
+      "default_popup": "https://www.wandhi.com",
+      "default_title": "右击查看更新"
+   },
+   "content_scripts": [ {
+      "js": [ "jquery-3.2.1.min.js", "js/crxTool.js", "FuckCSDN.js" ],
+      "matches": [ "*://blog.csdn.net/*" ]
+   } ],
+   "description": "CSDN自动展开+去广告+净化剪贴板，移除计时登录框，修正弹窗闪烁",
+   "homepage_url": "https://www.wandhi.com",
+   "icons": {
+      "128": "128x128.png",
+      "19": "FuckCSDN.png",
+      "38": "FuckCSDN.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAovR1mQ5PzTX1BT0z2qXEIhWgZdAQPIMFWXXdwWi6ZuELGqBmhYQgzmTEev5PQHrMnFSfvFEN7EpVnD1jTpoFBT9KsaXSl+oIQNZX269MhlG5RtWr43gILxgDZl7GhUY4pCw6snDVVX/PnXS8kz8B3eEBLoABYSYDQTCt03G0BX1nlcbVkMrTZpm/wl5Upi9vo2+p1NKhc1uvsLW4NCBMZ5zftexr5z5rwe+4H31EA0CuzotXIuMT9QsbU0ykhSWatMMbbFKM65sLTvmCgB/PZeEQWVlErmUQdh/IiqeQ4qDWBT0g4jWbojqGkD29S8Kwn/vVu390GG8BzV6a53IVCwIDAQAB",
+   "manifest_version": 2,
+   "name": "CSDN自动展开+去广告+净化剪贴板",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.1.5",
+   "web_accessible_resources": [ "js/clearPaster.js" ]
+}

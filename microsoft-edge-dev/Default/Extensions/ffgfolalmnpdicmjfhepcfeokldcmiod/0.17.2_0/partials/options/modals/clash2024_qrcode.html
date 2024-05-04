@@ -1,0 +1,18 @@
+<div class="modal"  tabindex="-1">
+    <div class="modal-dialog" style="width:520px">
+        <div class="modal-content" ng-controller="Clash2024QrCodeModalController">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                    ng-click="closeModal()">
+                    &times;
+                </button>
+
+                <h4 class="modal-title">{{'options.clash2024_qrcode_modal.title'|translate}}</h4>
+            </div>
+
+            <div class="modal-body">
+                <img width="480" ng-src="{{imageUrl}}">
+            </div>
+        </div>
+    </div>
+</div>

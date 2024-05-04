@@ -1,0 +1,87 @@
+<div class="modal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content" ng-controller="InviteEmailModalController">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                        ng-click="closeModal()">
+                    &times;
+                </button>
+                <h4 class="modal-title">{{'options.invite_email.title'|translate}}</h4>
+            </div>
+            <div>
+                <form name="passwordForm">
+                    <div class="modal-body">
+                        <div class="alert {{alertStyle}} text-center">{{alertText}}</div>
+                        
+                        <div class="row">
+                            <div class="register col-xs-12">
+                                <div class="form-group">
+                                    <input name="subject" type="text" class="form-control"
+                                           ng-disabled='disableInput'
+                                           ng-model="subject" focus-bind="focuses.subject">
+                                </div>
+                                <div class="form-group content" contenteditable="true" style="padding: 20px;">
+                                    
+                                        {{'options.invite_email.greetings'|translate}}
+                                        <br/><br/>
+                                        <span translate="options.invite_email.content"></span>
+                                        <div class="alert alert-success" style="font-size: 14px;">
+                                            <b>{{'options.invitation.invite_url'|translate}}</b>
+                              
+                                            <a  style="color:#23377c;cursor:pointer" href="{{getInviteUrl()}}" target="_blank">
+                                                {{getInviteUrl()}}
+                                            </a>
+                        
+                                        </div>
+                                        <div><span translate="options.invite_email.qrcode"></span></div>
+                                        <a href="{{getInviteUrl()}}" target="_blank">
+                                            <img style="margin: 0 auto;" alt="" src="{{getQRCodeImageURL()}}" width="200"/>
+                                        </a>
+                                        <br/><br/>
+                                        <span translate="options.invite_email.best"></span><br/><br/>
+                                        <span translate="options.invite_email.signature"></span>
+                                   
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <!--
+                        <div style="text-align: left;"  ng-show="!showSendEmailInput"><small>点击Email标题或者正文，可以在草稿的基础上在线编辑</small></div>
+                        -->
+                        <div style="margin-bottom:10px" ng-hide="disableInput">
+                            <invite-email-input manual-focus="focusSendToEmail" binded-email="email" set-email="setEmail()" ng-show="showSendEmailInput"></invite-email-input>
+                        </div>
+                        <div style="text-align: left;margin-bottom:10px" ng-hide="disableInput">
+                            <span style="color:#23377c;cursor:pointer" ng-click="showSendEmailInput=true;focusSendToEmail=true;" ng-show="!showSendEmailInput">
+                                {{'options.invite_email.send_to'|translate}}&nbsp;{{email}}
+                                <small style="color:#999">({{'options.invite_qrcode_modal.click_to_set_email'|translate}})</small>
+                            </span>
+                        </div>
+
+                        <button ng-click="submitEmailDraft()" class="btn btn-primary pull-left" ng-disabled='disableInput' ng-hide="submit_succ">
+                            
+                            <span ng-hide="disableInput">
+                                {{submit_button_text}}
+                            </span>
+                            <span ng-show="disableInput">
+                                {{submit_button_text}}
+                                <img src="/img/loading-bars.svg" alt="loading"/>
+                            </span>
+                        </button>
+                        <button class="btn btn-success pull-left" ng-show="submit_succ" ng-click="cancel()" >
+                            
+                            {{'common.close'|translate}}
+                        </button>
+                        <button class="cancel btn btn-link pull-left"
+                                ng-click="cancel()" ng-hide='disableInput'>
+                            {{'common.cancel'|translate}}
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

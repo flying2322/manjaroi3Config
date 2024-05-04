@@ -1,0 +1,82 @@
+<div class="modal"  tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content" ng-controller="GrabWheatModalController">
+         
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                    ng-click="closeModal()">
+                    &times;
+                </button>
+                <h4 class="modal-title">{{'options.layout.grab_wheat.title'|translate}}</h4>
+            </div>
+       
+            <form ng-submit="onSubmit()">
+                <div class="modal-body">
+                    <div class="alert {{alertStyle}} text-center">{{alertText}}</div>
+                        
+                    <div class="row clearfix" style="margin-top:40px;margin-bottom:20px;margin-left:10px;margin-right:10px;display:block;position:relative">
+                        <ul style="list-style-type: none;padding-inline-start: 0;">
+                        <li class="col-xs-2" ng-repeat="wheat in wheats()" ng-show="wheat.status=='unfetched' || wheat.status=='fetched' || wheat.status=='waiting' || wheat.status=='ready' || wheat.status=='fetching'" style="padding-left:8px;padding-right:8px">
+                            <div style="text-align: center;" ng-show="wheat.status =='unfetched'">
+                                <img src="/img/wheat_grains_gray_512_512.png" style="max-width: 64px;max-height:64px">
+                            </div>
+                            <div style="text-align: center;" ng-show="wheat.status =='fetched'">
+                                <img src="/img/wheat_grains_gold_512_512.png" style="max-width: 64px;max-height:64px">
+                            </div>
+                            <div style="text-align: center" ng-class="{'blink-image':wheat.status =='waiting'}" ng-show="wheat.status =='waiting'||wheat.status =='ready'||wheat.status =='fetching'">
+                                <img src="/img/wheat_grains_green_512_512.png" style="max-width: 64px;max-height:64px">
+                            </div>
+
+                            <div style="text-align: center;margin-top: 16px;font-size:11px" ng-show="wheat.status=='fetched' || wheat.status=='ready'|| wheat.status=='waiting' || wheat.status=='fetching'" bs-tooltip="{title: '{{ 'options.layout.grab_wheat.wheat_vip_time' | translate }}'}">
+                                <span>{{wheat.vip_time | milliSecondsToHourMinText}}</span>
+                            </div>
+                            <div style="text-align: center;margin-top: 10px;font-size:11px" ng-show="wheat.status=='waiting'">
+                                <span id="wheat-waiting">{{$root.countDown}}</span>
+                            </div>
+                            <button style="width: 100%;margin-top: 10px;font-size:12px" class="btn btn-xs btn-success ng-scope ng-binding" ng-if="wheat.status=='ready' || wheat.status=='fetching'" ng-click="collectWheat(wheat)">
+                                <span ng-hide="wheat.status=='fetching'">{{'options.layout.grab_wheat.collect'|translate}}</span>
+                                <img src="/img/loading-bars.svg" alt="loading" ng-show="wheat.status=='fetching'"/>
+                            </button>
+                            <div style="text-align: center;margin-top: 15px;font-size:11px" ng-show="wheat.status=='unfetched'">
+                                <span class="text-muted ng-scope">{{'options.layout.grab_wheat.to_be_collected'|translate}}</span>
+                            </div>
+                            <div style="text-align: center;margin-top: 10px;font-size:11px" ng-show="wheat.status=='fetched'">
+                                <span class="text-success ng-scope"  translate="options.invitation.rewarded">{{'options.layout.grab_wheat.collected'|translate}}</span>
+                            </div>
+                        </li>
+
+                        <div class="sarsha-spinner-container" style="" ng-show="$root.wheats_loading"> 
+                            <div class="sarsha-spinner"> <div class="spinner ng-scope"> <div class="rect1"></div> <div class="rect2"></div> <div class="rect3"></div> <div class="rect4"></div> <div class="rect5"></div> </div> </div> 
+                        </div>  
+                
+                        </ul>
+
+                        <div ng-show="wheats().size()==0" class="alert alert-warning text-center">{{'options.layout.grab_wheat.no_wheat_alert'|translate}}</div>
+                    </div>
+
+                    <div ng-show="wheats().size()!=0" class="text-muted" style="margin-top:30px;margin-left:8px">
+                        {{'common.note'|translate}}:
+                        <ul style="list-style-type: disc;padding-inline-start: 0;">
+                            <li>{{'options.layout.grab_wheat.wheat_note_1'|translate}}</li>
+                            <li>{{'options.layout.grab_wheat.wheat_note_2'|translate}}</li>
+                            <li>{{'options.layout.grab_wheat.wheat_note_3'|translate}}</li>
+                            <li>{{'options.layout.grab_wheat.wheat_note_4'|translate}} 
+                                <div>
+                                    {{'options.layout.grab_wheat.wheat_note_5'|translate}}: {{$root.user.profile.start_time | date: 'yyyy-MM-dd HH:mm:ss'}}
+                                </div>
+                            </li>
+                            <li>{{'options.layout.grab_wheat.wheat_note_6'|translate}}</li>
+                        </ul>
+                    </div>
+                </div>
+     
+                <div class="modal-footer" style="margin-top:0;">
+                    <button type="submit" class="btn btn-primary pull-right" ng-click="close()">
+                        {{'common.close'|translate}}
+                    </button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

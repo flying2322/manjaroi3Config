@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>{{"app"  | translate}} {{"guide.title" | translate}}</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/common.css"/>
+<link rel="stylesheet" href="css/guide/reveal.min.css">
+<link rel="stylesheet" href="css/guide/guide_default.css" id="theme">
+<link rel="stylesheet" href="css/guide/my_guide.css?312">
+<link rel="stylesheet" href="css/guide/jquery.remodal.css">
+<link rel="stylesheet" href="css/guide/animate.min.css">
+</head>
+
+<body style="transition: -webkit-transform 0.8s ease;">
+
+
+<div class="reveal remodal-bg default center" data-transition-speed="default" data-background-transition="default" ng-controller="GuidePageController">
+<!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides" style="width: 960px; height: 700px; zoom: 0.915429;">
+        <section data-background="#eee" class="present" style="top: -223.5px; display: block;" data-autoslide="3000">
+            <h1 style="color:#23377c">{{"app"  | translate}}</h1>
+            <h2>运营商网络线路优化简介</h2>
+            
+        </section>
+        <section data-background="#FFFFFF" hidden="" class="future" data-autoslide="5000" style="top: -127px; display: block;">
+            <h3>由于中国大陆网络现况的特殊性</h3>
+            <p>相同的服务器对于不同的运营商的网络连接状况</p>
+            <p>天差地别，电信直连的，联通或者移动可能绕全球，反之亦然</p>
+            <img class="" src="img/isp_tutorial/missing_globally.jpg" >
+        </section>
+        <section data-background="#FFFFFF" hidden="" class="future" data-autoslide="5000" style="top: -127px; display: block;">
+            <h3>{{"app"  | translate}}动态路由技术</h3>
+            <p>根据IP数据库来确定运营商，动态调整网络访问至最佳服务器</p>
+            <p>获得最好的网络访问体验</p>
+            <img class="" src="img/isp_tutorial/maikr_best_servers_selection.jpg" >
+        </section>
+        <section data-background="#FFFFFF" hidden="" class="future" data-autoslide="3000" style="top: -272.5px; display: block;">
+            <h2 style="color:#23377c">新增手动选择运营商线路功能</h2>
+            <p>有时候，IP数据库的运营商数据可能出错</p>
+            <p>这时可以启用手动选择最优的运营商线路。在服务器列表页面，选择运营商</p>
+            <img  class="fragment fade-up" src="img/isp_tutorial/isp_selection_before.png" >
+        </section>
+        <section data-background="#FFFFFF" hidden="" class="future" data-autoslide="3000" style="top: -272.5px; display: block;">
+            <h3>选择运营商后，{{"app"  | translate}}会根据所选的运营商给出针对该运营商特殊优化的服务器</h3>
+            <p></p>
+            <img  class="" src="img/isp_tutorial/isp_selection_after.png" >
+        </section>
+        
+        <section data-background="#FFFFFF" hidden="" class="future" style="top: -134.5px; display: block;">
+            <h3>是不是很简单呢？</h3>
+            <small ng-click="gotoOptions()"><br>谢谢耐心观看。我们还在不断改进。让我们一起做的更好。</small>
+            
+        </section>
+    </div>
+    <div class="backgrounds">
+        <div class="slide-background present" data-background-hash="#eeeeeenullnullnullnullnullnull" style=""></div>
+        <div class="slide-background future" data-background-hash="#eeeeeenullnullnullnullnullnull" style=""></div>
+        <div class="slide-background future" data-background-hash="#eeeeeenullnullnullnullnullnull" style=""></div>
+        <div class="slide-background future" data-background-hash="#eeeeeenullnullnullnullnullnull" style=""></div>
+        <div class="slide-background future" data-background-hash="#eeeeeenullnullnullnullnullnull" style=""></div>
+        <div class="slide-background future" data-background-hash="#eeeeeenullnullnullnullnullnull" style=""></div>
+        <div class="slide-background future" data-background-hash="#eeeeeenullnullnullnullnullnull" style=""></div>
+        <div class="slide-background future" data-background-hash="#eeeeeenullnullnullnullnullnull" style=""></div>
+        <div class="slide-background future" data-background-hash="#eeeeeenullnullnullnullnullnull" style=""></div>
+    </div>
+    <div class="progress" style="display: block;"><span style="width: 0px;"></span></div>
+
+    <div class="controls" style="display: block; width: 800px; margin:0 auto;">
+        <div class="navigate-left"></div>
+        <div class="navigate-right enabled"></div>
+        <div class="navigate-up"></div>
+        <div class="navigate-down"></div>
+    </div>
+
+    <div class="slide-number"></div>
+    <div class="state-background"></div>
+    <div class="pause-overlay"></div>
+</div>
+
+<script src="js/guide/lib/jquery-1.8.2.min.js"></script>
+
+<script src="js/guide/lib/head.min.js"></script>
+<script src="js/guide/lib/reveal.min.js"></script>
+<script src="js/guide/lib/jquery.remodal.min.js"></script>
+
+<script src="js/guide/routing_tutorial.js"></script>
+<script type="text/javascript" src="js/guide/lib/zoom.js"></script>
+<script type="text/javascript" src="js/guide/lib/classList.js"></script>
+
+<script data-main="/js/guide/guide.js"
+        src="/js/libs/require.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+2023/04/24-21:54:17.786 1329 Creating DB /home/dom/.config/microsoft-edge-dev/Default/IndexedDB/https_weread.qq.com_0.indexeddb.leveldb since it was missing.
+2023/04/24-21:54:17.788 1329 Reusing MANIFEST /home/dom/.config/microsoft-edge-dev/Default/IndexedDB/https_weread.qq.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/04/24-21:57:51.426 1363 Level-0 table #5: started
+2023/04/24-21:57:51.427 1363 Level-0 table #5: 821 bytes OK
+2023/04/24-21:57:51.429 1363 Delete type=0 #3
+2023/04/24-21:57:51.429 1363 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

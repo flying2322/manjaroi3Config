@@ -1,0 +1,4 @@
+[2022-10-30 22:29:21.122] [main] [info] update#ctor - updates are disabled as there is no update URL
+[2022-10-30 22:29:23.856] [main] [info] Starting extension host with pid 4323 (fork() took 13 ms).
+[2022-10-30 22:29:42.434] [main] [info] Starting extension host with pid 4652 (fork() took 8 ms).
+[2022-10-30 22:50:31.036] [main] [info] Enabling inspect port on extension host with pid 4652.

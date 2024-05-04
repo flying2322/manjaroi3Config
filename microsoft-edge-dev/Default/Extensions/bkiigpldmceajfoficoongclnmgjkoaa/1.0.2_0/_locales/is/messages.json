@@ -1,0 +1,122 @@
+{
+  "app_name": {
+    "message": "Lesandi"
+  },
+  "app_description": {
+    "message": "Ræmur í burtu ringulreið eins og hnappa, bakgrunnsmyndir og breytir textastærð síðunnar, andstæða og skipulagi fyrir betri læsileika"
+  },
+  "app_command": {
+    "message": "Skiptu um lesandaskjá"
+  },
+  "app_title": {
+    "message": "Hleður ... :: Lesandi"
+  },
+  "app_ui_label1": {
+    "message": "Full breidd"
+  },
+  "app_ui_label2": {
+    "message": "Engin hæð"
+  },
+  "app_ui_label3": {
+    "message": "Létt"
+  },
+  "app_ui_label4": {
+    "message": "Myrkur"
+  },
+  "app_ui_label5": {
+    "message": "Bláir"
+  },
+  "app_ui_label6": {
+    "message": "Fela"
+  },
+  "app_ui_label7": {
+    "message": "Sýna"
+  },
+  "app_ui_btn_prev": {
+    "message": "fara á fyrri síðu (Meta + vinstri örvatakkinn)"
+  },
+  "app_ui_btn_next": {
+    "message": "farðu á næstu síðu (Meta + hægri örlykill)"
+  },
+  "app_ui_btn_print": {
+    "message": "Prentaðu í lesandanum"
+  },
+  "app_ui_btn_site_pc": {
+    "message": "Á vefsíðu okkar geturðu vistað grein á tölvunni þinni"
+  },
+  "app_ui_btn_site_gd": {
+    "message": "Á vefnum okkar geturðu vistað grein á Google drifinu þínu"
+  },
+  "app_ui_btn_fullscreen": {
+    "message": "Skiptu yfir í lesturinn á öllum skjánum"
+  },
+  "app_ui_btn_speech": {
+    "message": "Lestu þessa grein"
+  },
+  "app_ui_btn_imgs": {
+    "message": "Skiptu um myndir"
+  },
+  "app_ui_btn_rateUs": {
+    "message": "Vinsamlegast metið okkur! ⭑⭑⭑⭑⭑"
+  },
+  "app_ui_notify_wrong_content": {
+    "message": "Því miður er upprunalega efnið ekki aðgengilegt lengur. Vinsamlegast hlaðið inntak uppruna og reyndu aftur"
+  },
+  "options_title": {
+    "message": "Lesandi Skoða :: Valkostir"
+  },
+  "options_header": {
+    "message": "Aðlögun HÍ"
+  },
+  "options_opt1": {
+    "message": "Sýna „prentunarhnapp“ í lesandanum"
+  },
+  "options_opt2": {
+    "message": "Sýna „vista hnappinn“ í lesandanum"
+  },
+  "options_opt3": {
+    "message": "Sýna „fullskjáhnapp“ í lesandanum"
+  },
+  "options_opt4": {
+    "message": "Sýna „talhnapp“ í lesandanum"
+  },
+  "options_opt5": {
+    "message": "Sýna „skipta á myndhnapp“ á lesandayfirlitinu"
+  },
+  "options_opt6": {
+    "message": "Sýna „stýrihnappana“ í lesandanum"
+  },
+  "options_opt7": {
+    "message": "Sýna samhengisvalmyndaratriðið „Opna í lesara“ (endurræsa krafist) (krefst leyfis króm.tabs)"
+  },
+  "options_opt8": {
+    "message": "Sýna „Opna í bakgrunni Reader View“ samhengisvalmyndaratriðis (endurræsa krafist) (krefst leyfis króm.tabs)"
+  },
+  "options_opt9": {
+    "message": "Sýna samhengisvalmyndaratriðið „Skipta yfir í lesara“ (endurræsa krafist)"
+  },
+  "options_opt10": {
+    "message": "Skiptu sjálfkrafa yfir á allan skjáinn"
+  },
+  "options_opt11": {
+    "message": "Sérsniðin stíl"
+  },
+  "options_opt12": {
+    "message": "Notendastíll fyrir raunverulegt lesandamynd"
+  },
+  "options_opt13": {
+    "message": "Opnun tengla"
+  },
+  "options_opt14": {
+    "message": "Opnaðu hlekki í nýjum flipa"
+  },
+  "options_opt15": {
+    "message": "Opnaðu tengla í skjástillingu lesandans"
+  },
+  "options_opt16": {
+    "message": "Ýmislegt"
+  },
+  "options_opt17": {
+    "message": "Opnaðu algengar spurningar um uppfærslur"
+  }
+}

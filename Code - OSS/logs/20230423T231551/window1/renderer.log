@@ -1,0 +1,6 @@
+2023-04-23 23:15:53.691 [info] Started initializing default profile extensions in extensions installation folder. file:///home/dom/.vscode-oss/extensions
+2023-04-23 23:15:54.016 [info] Completed initializing default profile extensions in extensions installation folder. file:///home/dom/.vscode-oss/extensions
+2023-04-23 23:15:54.091 [warning] [twxs.cmake]: Cannot register 'cmake.cmakePath'. This property is already registered.
+2023-04-23 23:15:56.925 [info] [perf] Render performance baseline is 152ms
+2023-04-23 23:17:25.524 [warning] [twxs.cmake]: Cannot register 'cmake.cmakePath'. This property is already registered.
+2023-04-23 23:17:28.736 [info] [perf] Render performance baseline is 157ms

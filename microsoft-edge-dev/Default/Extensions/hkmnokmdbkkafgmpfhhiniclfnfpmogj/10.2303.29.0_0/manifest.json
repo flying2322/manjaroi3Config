@@ -1,0 +1,30 @@
+{
+   "background": {
+      "page": "static/html/extension.html",
+      "persistent": true
+   },
+   "browser_action": {
+      "default_icon": "static/images/asmile_16.png",
+      "default_popup": "static/html/panel.html",
+      "default_title": "__MSG_appTitle__"
+   },
+   "content_scripts": [ {
+      "js": [ "js/ubp/extension/contextual/peer-scripts/drivers/chrome/PageMessagingDriver.js" ],
+      "matches": [ "*://*.amazon.co.uk/*", "*://*.amazon.de/*", "*://*.amazon.cn/*", "*://*.amazon.it/*", "*://*.amazon.com/*", "*://*.amazon.es/*", "*://*.amazon.co.jp/*", "*://*.amazon.ca/*", "*://*.amazon.fr/*", "*://*.amazon.in/*", "*://*.amazon.com.mx/*", "*://*.amazon.com.br/*", "*://*.amazon.com.tr/*", "*://*.amazon.com.au/*", "*://*.amazon.ae/*" ],
+      "run_at": "document_start"
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_appDesc__",
+   "icons": {
+      "128": "static/images/asmile_128.png",
+      "16": "static/images/asmile_16.png",
+      "48": "static/images/asmile_48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4IOOaOJkQ6imFR4SiYKdgcb6GvjtEEXbID4ji/p8/ofQyGwGLnc6M4dMnt6BObrNWtyMiTSmRiRTnrWAv4vMdCSt8iuZS3eJqwFHBZWqIRM6DHswyTxPk9tNYwRw7rXz48sjIx+k2uGFJ2cOSm0N4qj06iVKdWF2P/lQ+E82WCD7e98Yc9NGqAXi+49qeqahfg6Y2UzWqsMVFZ85DiGwNsFccUNd6OnEbgDhfF8fiOL5V9m020q0SUU83YOmBULeHa0Y5SC1AywyjM3ijcNZ4N1I1b8en2FksUOcIC+Ne8MSe6LVf2tiL9zUs132ARgSpkDGrLBiLFj/Sb7V6+hBCQIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_appName__",
+   "permissions": [ "tabs", "storage", "cookies", "http://*/*", "https://*/*", "notifications", "management", "contextMenus" ],
+   "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+   "version": "10.2303.29.0",
+   "web_accessible_resources": [ "static/html/cookieProxy.html", "static/js/cookieProxy.js", "static/html/localProxy.html", "static/js/localProxy.js" ]
+}

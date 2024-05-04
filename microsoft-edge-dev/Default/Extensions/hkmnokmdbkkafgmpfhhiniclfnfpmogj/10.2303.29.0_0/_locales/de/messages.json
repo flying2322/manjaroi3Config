@@ -1,0 +1,59 @@
+{
+   "appDesc": {
+      "message": "Amazons offizielle Browser-Erweiterung. Durch die Installation stimmen Sie den Nutzungsbedingungen zu: amazon.de/aa/TOU"
+   },
+   "appName": {
+      "message": "Amazon Assistant"
+   },
+   "appTitle": {
+      "message": "Amazon Assistant"
+   },
+   "changeMarketplaceString": {
+      "message": "Bitte versuchen Sie, einen Standort in der Nähe auszuwählen, um die Erweiterung neu zu laden."
+   },
+   "deprecationMessage": {
+      "message": "Bei Amazon experimentieren wir ständig und evaluieren das Potenzial unserer Produkte. \u003Cb>Wir haben die Entscheidung getroffen, Amazon Assistant am 28. März 2023 einzustellen.\u003C/b> Ab diesem Datum kannst du Amazon Assistant nicht mehr verwenden. Du hast bei Amazon weiterhin Zugriff auf Listen, die du bereits mit Amazon Assistant erstellt hast, und die Produkte, die du zuvor von anderen Websites hinzugefügt hast, bleiben erhalten. Wir entschuldigen uns für die Unannehmlichkeiten, die dir diese Entscheidung bereiten könnte."
+   },
+   "emailBody1": {
+      "message": "Hilf mir, zu verbessern! Bitte sagen Sie mir, was passiert ist, so kann ich es zu beheben."
+   },
+   "emailBody2": {
+      "message": "Was ist passiert?"
+   },
+   "emailBody3": {
+      "message": "Alles andere können Sie mir über Ihren Computer, Browser oder Netzwerkverbindung zu erzählen?"
+   },
+   "emailBody4": {
+      "message": "Referenz-ID: "
+   },
+   "emailSubject": {
+      "message": "Feedback zur Amazon Assistant"
+   },
+   "feedbackMessage": {
+      "message": "Feedback zu Amazon Assistant senden"
+   },
+   "feedbackString": {
+      "message": "Feedback"
+   },
+   "improveString": {
+      "message": "Könnten Sie lassen Sie mich wissen , was auf so dass ich verbessern kann gehen ?"
+   },
+   "noLuckString": {
+      "message": "Noch kein Glück ?"
+   },
+   "resetAgainString": {
+      "message": "Versuchen Sie, zu schließen und wieder zurückgesetzt"
+   },
+   "resetString": {
+      "message": "Schließen und Rücksetzen"
+   },
+   "sorryString1": {
+      "message": "Tut mir leid,"
+   },
+   "sorryString2": {
+      "message": "ich habe Probleme beim Laden."
+   },
+   "uninstallButton": {
+      "message": "Amazon Assistant deinstallieren"
+   }
+}

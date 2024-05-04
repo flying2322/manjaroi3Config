@@ -1,0 +1,122 @@
+{
+   "app_command": {
+      "message": "リーダービューの切り替え"
+   },
+   "app_description": {
+      "message": "ボタン、背景画像などの雑然としたものを取り除き、ページのテキストサイズ、コントラスト、レイアウトを変更して読みやすくします"
+   },
+   "app_name": {
+      "message": "リーダービュー"
+   },
+   "app_title": {
+      "message": "読み込み中... ::リーダービュー"
+   },
+   "app_ui_btn_fullscreen": {
+      "message": "全画面表示に切り替える"
+   },
+   "app_ui_btn_imgs": {
+      "message": "画像の切り替え"
+   },
+   "app_ui_btn_next": {
+      "message": "次のページに移動します（メタ+右矢印キー）"
+   },
+   "app_ui_btn_prev": {
+      "message": "前のページに移動します（メタ+左矢印キー）"
+   },
+   "app_ui_btn_print": {
+      "message": "リーダービューで印刷する"
+   },
+   "app_ui_btn_rateUs": {
+      "message": "評価してください！ ⭑⭑⭑⭑⭑"
+   },
+   "app_ui_btn_site_gd": {
+      "message": "当サイトでは、Googleドライブに記事を保存できます"
+   },
+   "app_ui_btn_site_pc": {
+      "message": "私たちのサイトでは、コンピュータに記事を保存できます"
+   },
+   "app_ui_btn_speech": {
+      "message": "この記事を読む"
+   },
+   "app_ui_label1": {
+      "message": "全幅"
+   },
+   "app_ui_label2": {
+      "message": "高さなし"
+   },
+   "app_ui_label3": {
+      "message": "光"
+   },
+   "app_ui_label4": {
+      "message": "闇"
+   },
+   "app_ui_label5": {
+      "message": "青"
+   },
+   "app_ui_label6": {
+      "message": "隠す"
+   },
+   "app_ui_label7": {
+      "message": "公演"
+   },
+   "app_ui_notify_wrong_content": {
+      "message": "申し訳ありませんが、元のコンテンツにはアクセスできなくなりました。元のコンテンツを読み込んで再試行してください"
+   },
+   "options_header": {
+      "message": "UIのカスタマイズ"
+   },
+   "options_opt1": {
+      "message": "リーダービューに「印刷ボタン」を表示する"
+   },
+   "options_opt10": {
+      "message": "全画面モードに自動的に切り替える"
+   },
+   "options_opt11": {
+      "message": "カスタムスタイリング"
+   },
+   "options_opt12": {
+      "message": "実際のリーダービューのユーザースタイル"
+   },
+   "options_opt13": {
+      "message": "リンクを開く"
+   },
+   "options_opt14": {
+      "message": "新しいタブでリンクを開く"
+   },
+   "options_opt15": {
+      "message": "リーダービューモードでリンクを開く"
+   },
+   "options_opt16": {
+      "message": "その他"
+   },
+   "options_opt17": {
+      "message": "アップデートに関するFAQページを開く"
+   },
+   "options_opt2": {
+      "message": "リーダービューに「保存ボタン」を表示する"
+   },
+   "options_opt3": {
+      "message": "リーダービューに「フルスクリーンボタン」を表示する"
+   },
+   "options_opt4": {
+      "message": "リーダービューに「音声ボタン」を表示する"
+   },
+   "options_opt5": {
+      "message": "リーダービューに「画像の切り替えボタン」を表示する"
+   },
+   "options_opt6": {
+      "message": "リーダービューに「ナビゲーションボタン」を表示する"
+   },
+   "options_opt7": {
+      "message": "「リーダービューで開く」コンテキストメニュー項目を表示（再起動が必要）（chrome.tabs権限が必要）"
+   },
+   "options_opt8": {
+      "message": "「バックグラウンドリーダービューで開く」コンテキストメニュー項目を表示（再起動が必要）（chrome.tabs権限が必要）"
+   },
+   "options_opt9": {
+      "message": "「リーダービューに切り替える」コンテキストメニュー項目を表示（再起動が必要）"
+   },
+   "options_title": {
+      "message": "Reader View ::オプション"
+   }
+}

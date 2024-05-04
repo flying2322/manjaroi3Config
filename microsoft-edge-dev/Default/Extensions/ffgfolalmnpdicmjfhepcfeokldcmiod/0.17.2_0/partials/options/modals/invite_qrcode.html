@@ -1,0 +1,64 @@
+<div class="modal"  tabindex="-1">
+    <div class="modal-dialog" style="width:390px">
+        <div class="modal-content" ng-controller="InviteQrcodeController">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                    ng-click="closeModal()">
+                    &times;
+                </button>
+
+                <h4 class="modal-title">{{'options.invite_qrcode_modal.title'|translate}}</h4>
+            </div>
+
+            <div class="modal-body">
+                <form name="qrcodeSendEmailForm" class="">
+                    <div class="row" style="margin-left: 0px;">
+                        <a href="{{getInviteUrl()}}" target="_blank" style="margin: 0 auto;">
+                                <img style="margin: 0 auto;" alt="" src="{{getQRCodeImageURL()}}" width="360" />
+                        </a>
+                        <div>
+                            <small style="color:#999; padding: 20px;">{{'options.invite_qrcode_modal.howto'|translate}}</small>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer" style="margin-top:0;">
+                        <div class="clearfix"></div>
+                        <div class="alert {{alertStyle}} text-center" ng-show="showAlert">{{alertText}}</div>
+                        <div style="margin-bottom:10px" ng-hide="disableInput">
+                            <email-input manual-focus="focusSendToEmailInput" binded-email="email" set-email="setEmail()" ng-show="showSendQREmailInput"></email-input>
+                        </div>
+                        <div style="margin-bottom:10px" ng-hide="disableInput">
+                            <span style="color:#23377c;cursor:pointer" ng-click="showSendQREmailInput=true;focusSendToEmailInput=true;" ng-show="!showSendQREmailInput">
+                                {{'options.invite_qrcode_modal.send_to'|translate}}&nbsp;{{email}}
+                                <small style="color:#999">({{'options.invite_qrcode_modal.click_to_set_email'|translate}})</small>
+                            </span>
+                        </div>
+                        <div>
+                            <button class="cancel btn btn-link pull-right"
+                                    ng-click="closeModal()" ng-disabled='disableInput' ng-hide="submit_succ">
+                                {{'common.cancel'|translate}}
+                            </button>
+
+                            <button ng-click="submitQRCodeEmail()" class="btn btn-primary pull-right" ng-disabled='disableInput' ng-hide="submit_succ">
+                                
+                                <span ng-hide="disableInput">
+                                    {{submit_button_text}}
+                                </span>
+                                <span ng-show="disableInput">
+                                    {{submit_button_text}}
+                                    <img src="/img/loading-bars.svg" alt="loading"/>
+                                </span>
+                            </button>
+                            <button class="btn btn-success pull-right" ng-show="submit_succ" ng-click="closeModal()" >
+                                
+                                {{'common.close'|translate}}
+                            </button>
+                            
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

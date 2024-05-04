@@ -1,0 +1,12 @@
+<form class="input-group input-group-sm"
+      >
+    <input type="text" class="form-control" placeholder="{{'options.edu_email_placeholder'|translate}}"
+           manual-focus="focusEmailInput" ng-model="tempEmail"
+           ui-keydown="{esc: 'showEmailInput=false'}">
+
+    <div class="input-group-btn">
+        <button class="btn btn-success" ng-click="setEmail()">
+            {{'common.ok'|translate}}
+        </button>
+    </div>
+</form>

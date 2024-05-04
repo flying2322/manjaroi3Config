@@ -1,0 +1,122 @@
+{
+   "app_command": {
+      "message": "Basculer la vue du lecteur"
+   },
+   "app_description": {
+      "message": "Élimine les encombrements tels que les boutons et les images d'arrière-plan et modifie la taille du texte, le contraste et la présentation de la page pour une meilleure lisibilité"
+   },
+   "app_name": {
+      "message": "Vue du lecteur"
+   },
+   "app_title": {
+      "message": "Chargement ... :: Reader View"
+   },
+   "app_ui_btn_fullscreen": {
+      "message": "Passer à la lecture en plein écran"
+   },
+   "app_ui_btn_imgs": {
+      "message": "Basculer les images"
+   },
+   "app_ui_btn_next": {
+      "message": "passer à la page suivante (méta + flèche droite)"
+   },
+   "app_ui_btn_prev": {
+      "message": "passer à la page précédente (méta + flèche gauche)"
+   },
+   "app_ui_btn_print": {
+      "message": "Imprimer dans la vue du lecteur"
+   },
+   "app_ui_btn_rateUs": {
+      "message": "Veuillez nous évaluer! ⭑⭑⭑⭑⭑"
+   },
+   "app_ui_btn_site_gd": {
+      "message": "Sur notre site, vous pouvez enregistrer un article sur votre lecteur Google."
+   },
+   "app_ui_btn_site_pc": {
+      "message": "Sur notre site, vous pouvez enregistrer un article sur votre ordinateur"
+   },
+   "app_ui_btn_speech": {
+      "message": "Lire cet article"
+   },
+   "app_ui_label1": {
+      "message": "Pleine largeur"
+   },
+   "app_ui_label2": {
+      "message": "Pas de hauteur"
+   },
+   "app_ui_label3": {
+      "message": "Lumière"
+   },
+   "app_ui_label4": {
+      "message": "Sombre"
+   },
+   "app_ui_label5": {
+      "message": "Bleu"
+   },
+   "app_ui_label6": {
+      "message": "Cacher"
+   },
+   "app_ui_label7": {
+      "message": "Spectacle"
+   },
+   "app_ui_notify_wrong_content": {
+      "message": "Désolé, le contenu d'origine n'est plus accessible. Veuillez charger le contenu d'origine et réessayer"
+   },
+   "options_header": {
+      "message": "Personnalisation de l'interface utilisateur"
+   },
+   "options_opt1": {
+      "message": "Afficher \"bouton d'impression\" dans la vue du lecteur"
+   },
+   "options_opt10": {
+      "message": "Basculer automatiquement en mode plein écran"
+   },
+   "options_opt11": {
+      "message": "Style personnalisé"
+   },
+   "options_opt12": {
+      "message": "Styles d'utilisateur pour la vue de lecteur réelle"
+   },
+   "options_opt13": {
+      "message": "Ouverture de lien"
+   },
+   "options_opt14": {
+      "message": "Ouvrir des liens dans de nouveaux onglets"
+   },
+   "options_opt15": {
+      "message": "Ouvrir des liens dans le mode d'affichage du lecteur"
+   },
+   "options_opt16": {
+      "message": "Misc"
+   },
+   "options_opt17": {
+      "message": "Ouvrir la page FAQ sur les mises à jour"
+   },
+   "options_opt2": {
+      "message": "Afficher le bouton \"Enregistrer\" dans la vue du lecteur"
+   },
+   "options_opt3": {
+      "message": "Afficher le \"bouton plein écran\" dans la vue du lecteur"
+   },
+   "options_opt4": {
+      "message": "Afficher \"bouton de parole\" dans la vue du lecteur"
+   },
+   "options_opt5": {
+      "message": "Afficher le bouton \"Basculer les images\" dans la vue du lecteur"
+   },
+   "options_opt6": {
+      "message": "Afficher les \"boutons de navigation\" dans la vue du lecteur"
+   },
+   "options_opt7": {
+      "message": "Afficher l'élément de menu contextuel \"Ouvrir dans la vue Lecteur\" (redémarrage requis) (nécessite l'autorisation de chrome.tabs)"
+   },
+   "options_opt8": {
+      "message": "Afficher l'élément de menu contextuel «Ouvrir en arrière-plan de Reader View» (redémarrage requis) (nécessite l'autorisation de chrome.tabs)"
+   },
+   "options_opt9": {
+      "message": "Afficher l'élément de menu contextuel \"Basculer vers la vue du lecteur\" (redémarrage requis)"
+   },
+   "options_title": {
+      "message": "Vue Lecteur :: Options"
+   }
+}

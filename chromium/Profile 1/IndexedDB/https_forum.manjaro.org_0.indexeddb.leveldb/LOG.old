@@ -1,0 +1,6 @@
+2024/05/04-16:45:25.348 7244 Creating DB /home/dom/.config/chromium/Profile 1/IndexedDB/https_forum.manjaro.org_0.indexeddb.leveldb since it was missing.
+2024/05/04-16:45:25.357 7244 Reusing MANIFEST /home/dom/.config/chromium/Profile 1/IndexedDB/https_forum.manjaro.org_0.indexeddb.leveldb/MANIFEST-000001
+2024/05/04-16:48:04.886 7244 Level-0 table #5: started
+2024/05/04-16:48:04.891 7244 Level-0 table #5: 76397 bytes OK
+2024/05/04-16:48:04.894 7244 Delete type=0 #3
+2024/05/04-16:48:04.894 7244 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

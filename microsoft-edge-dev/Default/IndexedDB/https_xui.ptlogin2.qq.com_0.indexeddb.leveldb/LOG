@@ -1,0 +1,6 @@
+2022/10/29-20:09:14.767 96a8 Creating DB /home/dom/.config/microsoft-edge-dev/Default/IndexedDB/https_xui.ptlogin2.qq.com_0.indexeddb.leveldb since it was missing.
+2022/10/29-20:09:14.773 96a8 Reusing MANIFEST /home/dom/.config/microsoft-edge-dev/Default/IndexedDB/https_xui.ptlogin2.qq.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/10/29-20:09:53.767 96a8 Level-0 table #5: started
+2022/10/29-20:09:53.770 96a8 Level-0 table #5: 17911 bytes OK
+2022/10/29-20:09:53.771 96a8 Delete type=0 #3
+2022/10/29-20:09:53.772 96a8 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

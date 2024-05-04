@@ -1,0 +1,122 @@
+{
+   "app_command": {
+      "message": "Attiva / disattiva la vista Reader"
+   },
+   "app_description": {
+      "message": "Elimina il disordine come pulsanti, immagini di sfondo e modifica le dimensioni del testo, il contrasto e il layout della pagina per una migliore leggibilità"
+   },
+   "app_name": {
+      "message": "Lettore View"
+   },
+   "app_title": {
+      "message": "Caricamento in corso ... :: View Reader"
+   },
+   "app_ui_btn_fullscreen": {
+      "message": "Passa alla lettura a schermo intero"
+   },
+   "app_ui_btn_imgs": {
+      "message": "Attiva / disattiva le immagini"
+   },
+   "app_ui_btn_next": {
+      "message": "passa alla pagina successiva (Meta + tasto freccia destra)"
+   },
+   "app_ui_btn_prev": {
+      "message": "passa alla pagina precedente (Meta + tasto freccia sinistra)"
+   },
+   "app_ui_btn_print": {
+      "message": "Stampa nella vista Reader"
+   },
+   "app_ui_btn_rateUs": {
+      "message": "Per favore, votaci! ⭑⭑⭑⭑⭑"
+   },
+   "app_ui_btn_site_gd": {
+      "message": "Sul nostro sito puoi salvare l'articolo sul tuo disco di Google"
+   },
+   "app_ui_btn_site_pc": {
+      "message": "Sul nostro sito puoi salvare l'articolo sul tuo computer"
+   },
+   "app_ui_btn_speech": {
+      "message": "Leggi questo articolo"
+   },
+   "app_ui_label1": {
+      "message": "Intera larghezza"
+   },
+   "app_ui_label2": {
+      "message": "Nessuna altezza"
+   },
+   "app_ui_label3": {
+      "message": "Luce"
+   },
+   "app_ui_label4": {
+      "message": "Buio"
+   },
+   "app_ui_label5": {
+      "message": "Blu"
+   },
+   "app_ui_label6": {
+      "message": "Nascondere"
+   },
+   "app_ui_label7": {
+      "message": "Mostrare"
+   },
+   "app_ui_notify_wrong_content": {
+      "message": "Spiacenti, il contenuto originale non è più accessibile. Carica il contenuto di origine e riprova"
+   },
+   "options_header": {
+      "message": "Personalizzazione dell'interfaccia utente"
+   },
+   "options_opt1": {
+      "message": "Mostra \"pulsante di stampa\" nella vista del lettore"
+   },
+   "options_opt10": {
+      "message": "Passa automaticamente alla modalità a schermo intero"
+   },
+   "options_opt11": {
+      "message": "Stile personalizzato"
+   },
+   "options_opt12": {
+      "message": "Stili utente per l'attuale vista del lettore"
+   },
+   "options_opt13": {
+      "message": "Apertura del collegamento"
+   },
+   "options_opt14": {
+      "message": "Apri i collegamenti in nuove schede"
+   },
+   "options_opt15": {
+      "message": "Apri i collegamenti in modalità vista lettore"
+   },
+   "options_opt16": {
+      "message": "Varie"
+   },
+   "options_opt17": {
+      "message": "Apri la pagina Domande frequenti sugli aggiornamenti"
+   },
+   "options_opt2": {
+      "message": "Mostra \"pulsante Salva\" nella vista del lettore"
+   },
+   "options_opt3": {
+      "message": "Mostra \"pulsante a schermo intero\" nella vista del lettore"
+   },
+   "options_opt4": {
+      "message": "Mostra \"pulsante vocale\" nella vista del lettore"
+   },
+   "options_opt5": {
+      "message": "Mostra \"pulsante di attivazione / disattivazione delle immagini\" nella vista del lettore"
+   },
+   "options_opt6": {
+      "message": "Mostra \"pulsanti di navigazione\" nella vista del lettore"
+   },
+   "options_opt7": {
+      "message": "Mostra la voce di menu contestuale \"Apri in Reader View\" (riavvio richiesto) (richiede l'autorizzazione chrome.tabs)"
+   },
+   "options_opt8": {
+      "message": "Mostra la voce di menu contestuale \"Apri in background Reader View\" (riavvio richiesto) (richiede l'autorizzazione chrome.tabs)"
+   },
+   "options_opt9": {
+      "message": "Mostra la voce di menu contestuale \"Passa alla vista Reader\" (riavvio richiesto)"
+   },
+   "options_title": {
+      "message": "Lettore View :: Opzioni"
+   }
+}

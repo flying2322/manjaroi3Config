@@ -1,0 +1,3 @@
+[2022-12-09 17:01:22.806] [main] [info] update#ctor - updates are disabled as there is no update URL
+[2022-12-09 17:01:24.722] [main] [info] Starting extension host with pid 5901 (fork() took 11 ms).
+[2022-12-09 17:01:24.767] [main] [info] Starting extension host with pid 5910 (fork() took 4 ms).

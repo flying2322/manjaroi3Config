@@ -1,0 +1,32 @@
+{
+   "action": {
+      "default_icon": "images/icon19_normal.png",
+      "default_popup": "popup.html",
+      "default_title": "迅雷Chrome支持"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "js/xl-content.css" ],
+      "js": [ "js/xl-content.js" ],
+      "matches": [ "http://*/*", "https://*/*", "ftp://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "default_locale": "zh_CN",
+   "description": "__MSG_description__",
+   "host_permissions": [ "\u003Call_urls>", "http://*/*", "https://*/*" ],
+   "icons": {
+      "128": "images/install_logo.png",
+      "16": "images/menu_logo.png",
+      "48": "images/extension_logo.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmOEUyqC+gYGiZWmus5fvl38p2ys9H70W1ZlfxCYYd3yRS7K55cXvb5xMy81MzT1ec8TIPN3yhWaiegLMkakBMBniUOvHnhgruZY/L6/FY/oa2KTlr6Ew1mkGVZJblLTqN4Ov62UixERKLydbzzWHv5DWZ2n1pJ90XrhFUoD3vc6OAMDi4Za5Me7uy0r79RLFWGh66vf/Jkt8oyeKoRJHAB3/1x5pWp1u/Wb/PmUNuqjVxBxU/P8I4gCUNaOxCCg/yxrgoqjkvebwrkoD5rQFGtWGCJUTV9+yC1bt9gNVAz0AM1bfjG/QGlbaiUuW14W7sHA74VnDy8aFXRBmOHP/UwIDAQAB",
+   "manifest_version": 3,
+   "name": "__MSG_name__",
+   "options_page": "options.html",
+   "permissions": [ "contextMenus", "cookies", "tabs", "webRequest", "downloads", "nativeMessaging", "storage", "scripting", "notifications" ],
+   "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+   "version": "3.48"
+}

@@ -1,0 +1,122 @@
+{
+  "app_name": {
+    "message": "Reader View"
+  },
+  "app_description": {
+    "message": "Umalis ang kalat na tulad ng mga pindutan, mga larawan sa background, at binago ang laki ng teksto, kaibahan at layout para sa mas mahusay na kakayahang mabasa"
+  },
+  "app_command": {
+    "message": "I -ulo ang View ng Reader"
+  },
+  "app_title": {
+    "message": "Naglo-load ... :: Viewer ng Reader"
+  },
+  "app_ui_label1": {
+    "message": "Buong lapad"
+  },
+  "app_ui_label2": {
+    "message": "Walang Taas"
+  },
+  "app_ui_label3": {
+    "message": "Liwanag"
+  },
+  "app_ui_label4": {
+    "message": "Madilim"
+  },
+  "app_ui_label5": {
+    "message": "Bughaw"
+  },
+  "app_ui_label6": {
+    "message": "Tago"
+  },
+  "app_ui_label7": {
+    "message": "Ipakita"
+  },
+  "app_ui_btn_prev": {
+    "message": "lumipat sa nakaraang pahina (Meta + Kaliwa Arrow Key)"
+  },
+  "app_ui_btn_next": {
+    "message": "lumipat sa susunod na pahina (Meta + Right Arrow Key)"
+  },
+  "app_ui_btn_print": {
+    "message": "I-print sa Viewer ng Reader"
+  },
+  "app_ui_btn_site_pc": {
+    "message": "Sa aming site maaari mong mai-save ang artikulo sa iyong Computer"
+  },
+  "app_ui_btn_site_gd": {
+    "message": "Sa aming site maaari mong mai-save ang artikulo sa iyong Google drive"
+  },
+  "app_ui_btn_fullscreen": {
+    "message": "Lumipat sa pagbabasa ng fullscreen"
+  },
+  "app_ui_btn_speech": {
+    "message": "Basahin ang Artikulo na ito"
+  },
+  "app_ui_btn_imgs": {
+    "message": "I-toggle ang mga imahe"
+  },
+  "app_ui_btn_rateUs": {
+    "message": "Paki-rate sa Amin! ⭑⭑⭑⭑⭑"
+  },
+  "app_ui_notify_wrong_content": {
+    "message": "Paumanhin ang orihinal na nilalaman ay hindi naa-access ngayon. Mangyaring i-load ang pinagmulan na nilalaman at muling subukan"
+  },
+  "options_title": {
+    "message": "Reader View :: Mga Pagpipilian"
+  },
+  "options_header": {
+    "message": "Pag-customize ng UI"
+  },
+  "options_opt1": {
+    "message": "Ipakita ang \"button sa pag-print\" sa view ng mambabasa"
+  },
+  "options_opt2": {
+    "message": "Ipakita ang \"save button\" sa view ng mambabasa"
+  },
+  "options_opt3": {
+    "message": "Ipakita ang \"pindutan ng fullscreen\" sa view ng mambabasa"
+  },
+  "options_opt4": {
+    "message": "Ipakita ang \"button ng pagsasalita\" sa view ng mambabasa"
+  },
+  "options_opt5": {
+    "message": "Ipakita ang \"pindutan ng mga toggle na imahe\" sa view ng mambabasa"
+  },
+  "options_opt6": {
+    "message": "Ipakita ang \"mga pindutan ng nabigasyon\" sa view ng mambabasa"
+  },
+  "options_opt7": {
+    "message": "Ipakita ang \"Buksan sa Reader View\" item ng konteksto-menu (kailangan ng pag-restart) (nangangailangan ng pahintulot ng chrome.tabs)"
+  },
+  "options_opt8": {
+    "message": "Ipakita ang \"Buksan sa background Reader View\" item ng konteksto-menu (kailangan ulit ng pag-restart) (nangangailangan ng pahintulot ng chrome.tabs)"
+  },
+  "options_opt9": {
+    "message": "Ipakita ang \"Lumipat sa Reader View\" na item sa konteksto-menu (kailangan ulitin)"
+  },
+  "options_opt10": {
+    "message": "Awtomatikong lumipat sa mode na fullscreen"
+  },
+  "options_opt11": {
+    "message": "Pasadyang istilo"
+  },
+  "options_opt12": {
+    "message": "Mga estilo ng gumagamit para sa aktwal na view ng mambabasa"
+  },
+  "options_opt13": {
+    "message": "Pagbukas ng Link"
+  },
+  "options_opt14": {
+    "message": "Buksan ang mga link sa mga bagong tab"
+  },
+  "options_opt15": {
+    "message": "Buksan ang mga link sa mode ng view ng mambabasa"
+  },
+  "options_opt16": {
+    "message": "Misc"
+  },
+  "options_opt17": {
+    "message": "Buksan ang pahina ng Mga FAQ sa mga update"
+  }
+}

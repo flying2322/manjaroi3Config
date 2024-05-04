@@ -1,0 +1,122 @@
+{
+   "app_command": {
+      "message": "نمای خواننده را تغییر دهید"
+   },
+   "app_description": {
+      "message": "از بین بردن دکمه ها ، دکمه ها ، تصاویر پس زمینه و تغییر اندازه متن ، کنتراست و چیدمان صفحه برای خوانایی بهتر"
+   },
+   "app_name": {
+      "message": "نمای خواننده"
+   },
+   "app_title": {
+      "message": "در حال بارگیری ... :: نمایش خواننده"
+   },
+   "app_ui_btn_fullscreen": {
+      "message": "به خواندن تمام صفحه تغییر دهید"
+   },
+   "app_ui_btn_imgs": {
+      "message": "تصاویر را تغییر دهید"
+   },
+   "app_ui_btn_next": {
+      "message": "انتقال به صفحه بعد (کلید فلش راست)"
+   },
+   "app_ui_btn_prev": {
+      "message": "انتقال به صفحه قبلی (Meta + Key Arrow Key)"
+   },
+   "app_ui_btn_print": {
+      "message": "در نمای Reader چاپ کنید"
+   },
+   "app_ui_btn_rateUs": {
+      "message": "لطفا به ما امتیاز دهید ⭑⭑⭑⭑⭑"
+   },
+   "app_ui_btn_site_gd": {
+      "message": "در سایت ما می توانید مقاله را در درایو Google خود ذخیره کنید"
+   },
+   "app_ui_btn_site_pc": {
+      "message": "در سایت ما می توانید مقاله را در رایانه خود ذخیره کنید"
+   },
+   "app_ui_btn_speech": {
+      "message": "این مقاله را بخوانید"
+   },
+   "app_ui_label1": {
+      "message": "تمام عرض"
+   },
+   "app_ui_label2": {
+      "message": "هیچ قد"
+   },
+   "app_ui_label3": {
+      "message": "سبک"
+   },
+   "app_ui_label4": {
+      "message": "تاریک"
+   },
+   "app_ui_label5": {
+      "message": "آبی"
+   },
+   "app_ui_label6": {
+      "message": "پنهان شدن"
+   },
+   "app_ui_label7": {
+      "message": "نشان دادن"
+   },
+   "app_ui_notify_wrong_content": {
+      "message": "متأسفیم محتوای اصلی دیگر در دسترس نیست. لطفاً محتوای اصلی را بارگیری کنید و دوباره امتحان کنید"
+   },
+   "options_header": {
+      "message": "سفارشی سازی UI"
+   },
+   "options_opt1": {
+      "message": "نمایش \"دکمه چاپ\" در نمای خواننده"
+   },
+   "options_opt10": {
+      "message": "به طور خودکار به حالت تمام صفحه تغییر دهید"
+   },
+   "options_opt11": {
+      "message": "یک ظاهر طراحی شده سفارشی"
+   },
+   "options_opt12": {
+      "message": "سبک های کاربر برای مشاهده واقعی خواننده"
+   },
+   "options_opt13": {
+      "message": "باز کردن پیوند"
+   },
+   "options_opt14": {
+      "message": "پیوندها را در برگه های جدید باز کنید"
+   },
+   "options_opt15": {
+      "message": "پیوندها را در حالت مشاهده خواننده باز کنید"
+   },
+   "options_opt16": {
+      "message": "متفرقه"
+   },
+   "options_opt17": {
+      "message": "صفحه سؤالات متداول را در به روزرسانی ها باز کنید"
+   },
+   "options_opt2": {
+      "message": "نمایش \"دکمه ذخیره\" در نمای خواننده"
+   },
+   "options_opt3": {
+      "message": "نمایش \"دکمه تمام صفحه\" در نمای خواننده"
+   },
+   "options_opt4": {
+      "message": "نمایش \"دکمه گفتار\" در نمای خواننده"
+   },
+   "options_opt5": {
+      "message": "نمایش \"دکمه جابجایی تصاویر\" در نمای خواننده"
+   },
+   "options_opt6": {
+      "message": "نمایش \"دکمه های ناوبری\" در نمای خواننده"
+   },
+   "options_opt7": {
+      "message": "نمایش \"Open in View Reader\" مورد منوی زمینه (شروع مجدد مورد نیاز) (به مجوز chrome.tabs نیاز دارد)"
+   },
+   "options_opt8": {
+      "message": "نمایش \"باز کردن در پس زمینه مشاهده خواننده\" مورد از فهرست زمینه (شروع مجدد مورد نیاز) (به مجوز chrome.tabs نیاز دارد)"
+   },
+   "options_opt9": {
+      "message": "نمایش \"تغییر به نمای خواننده\" مورد منوی زمینه (شروع مجدد مورد نیاز)"
+   },
+   "options_title": {
+      "message": "نمایش خواننده :: گزینه ها"
+   }
+}

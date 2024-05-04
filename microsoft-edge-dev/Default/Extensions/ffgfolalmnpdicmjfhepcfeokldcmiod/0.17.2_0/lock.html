@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>{{ "lock.title" | translate}}</title>
+    <link rel="stylesheet" href="/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/css/font-awesome.css"/>
+    <link rel="stylesheet" href="/css/common.css"/>
+    <link rel="stylesheet" href="/css/login.css"/>
+    <link rel="stylesheet" href="/css/animate.css"/>
+</head>
+<body>
+
+<div class="container" ng-controller="LockPageController" ng-cloak>
+    <language-select class="head-dropdown"></language-select>
+    <div class="heading">
+        <h1 class="font-ya-hei text-center">{{"app" | translate}}</h1>
+        <!--
+        <h2 class="font-kai text-center text-muted">
+            <p ng-bind-html="'{{'login.head' | translate}}'"></p>
+        </h2>
+    -->
+    </div>
+
+    <div class="alert alert-warning animated bounce">
+        {{"lock.messages.kick_out"|translate}}
+    </div>
+
+    <div class="login-box">
+        <form name="login" class="login step" ng-submit="oneKeyLogin()" novalidate>
+
+            <div class="form-group" ng-class="{'is-loading': checkingName}" form-state="login.name">
+                <div class="errors">
+                    <span class="error" ng-if="login.name.$error.required" translate="login.errors.name_required"></span>
+                    <span class="error" ng-if="login.name.$error.format" translate="login.errors.format"></span>
+                    <span class="error" ng-if="login.name.$error.server" translate="login.errors.server"></span>
+                    <span class="error" ng-if="login.name.$error.notExisted" translate="login.errors.notExisted"></span>
+                </div>
+                <label translate="login.account"></label>
+                <input name="name" class="form-control font-ya-hei"
+                       type="text"
+                       ng-model="$root.user.profile.name"
+                       disabled="disabled">
+            </div>
+            <button type="submit" class="btn btn-block btn-success" ng-disabled="submitting">
+                <span ng-hide="submitting">{{'lock.onekey_login'|translate}}</span>
+                <img src="/img/loading-bars.svg" alt="loading" ng-show="submitting"/>
+            </button>
+            <a href="" class="pull-right" ng-click="logout()"><small>{{'lock.logout'|translate}}</small></a>
+
+            <div class="clearfix"></div>
+        </form>
+    </div>
+
+    <div class="alert alert-warning animated bounce" ng-show="search().message">
+        {{ search().message }}
+    </div>
+
+    <p class="small text-muted text-center"  ng-bind-html="'{{'login.messages.contact_me' | translate}}'">  </p>
+</div>
+<script data-main="/js/lock/lock.js"
+        src="/js/libs/require.js"></script>
+</body>
+</html>

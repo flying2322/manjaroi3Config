@@ -1,0 +1,531 @@
+    <div class="app-alerts animated bounce" ng-if="'blog' != currentState">
+        <div ng-if="$root.isGuest()" class="app-alert alert alert-info">
+            <i class="glyphicon glyphicon-send pull-right" style="font-size:72px; margin: 10px 20px 10px 10px;"></i>
+            <p>
+                {{'options.alerts.update_to_vip_for_more_servers'|translate}}
+                <br> 
+                {{'options.alerts.two_ways_to_open_vip'|translate}}
+            </p>
+            <div>
+                <div>
+                    <a href="{{$root.orderUrl()}}" class="btn btn-default" style="margin-top:10px" target="_blank">
+                        {{'options.alerts.buy_vip'|translate}}
+                        <small>{{'options.alerts.watch_detail'|translate}}</small>
+                    </a>
+                </div>
+
+                <div style="margin-top:10px">
+                    {{'options.alerts.invite_friends_as_first_means'|translate}}
+                </div>
+                <!--
+                <div style="margin-top:10px">
+                    {{'options.alerts.edu_email_verification_as_second_means'|translate}}
+                </div>-->
+                <div style="margin-top:10px">
+                    {{'options.alerts.get_wheat_fragment_to_open_vip_as_second_means'|translate}}
+                </div>
+
+                <div>
+                    <a href="https://t.me/maikr_users" class="btn btn-default" style="margin-top:10px" target="_blank">
+                        {{'options.alerts.punch_in_telegram_group_to_open_vip_as_third_means'|translate}}
+                        <small>{{'options.alerts.watch_detail'|translate}}</small>
+                    </a>
+                </div>
+                
+                <div style="margin-top:10px;cursor:pointer;font-size:11px;" ng-click="openAnonymousModal()">
+                    {{'options.alerts.note_extend_vip_gui_only_with_account'|translate}}
+                </div>
+            </div>
+            <!--
+            <div>
+                <hr> 
+                {{'options.alerts.free_trial_server'|translate}}
+                <small ng-click="logout()" style="cursor:pointer;color:#999;padding-left:2px">{{'options.alerts.free_trial_server_sign_out'|translate}}</small>
+                {{'options.alerts.free_trial_server_suffix'|translate}}
+                </hr>
+            </div>
+            -->
+            <div>
+                <hr> {{'options.alerts.free_server'|translate}}</hr>
+                <div>&nbsp;</div>
+                <div>
+                    {{'options.alerts.predefined_domain_names'|translate}}
+                    <small style="color:#999;cursor:pointer" class="link_lable" ng-click="showFrequentDomains()">&nbsp;({{'options.alerts.predefined_domain_names_show'|translate}})</small>
+                </div>
+            </div>
+        </div>
+        <div ng-if="!$root.isGuest() && !$root.isVIP() && !$root.isDue()" class="app-alert alert alert-info">
+            <i class="glyphicon glyphicon-send pull-right" style="font-size:72px; margin: 10px 20px 10px 10px;"></i>
+            <p>
+                {{'options.alerts.update_to_vip_for_more_servers'|translate}}
+                <br> 
+                {{'options.alerts.two_ways_to_open_vip'|translate}}
+            </p>
+            <div>
+                <div>
+                    <a href="{{$root.orderUrl()}}" class="btn btn-default" target="_blank">
+                        {{'options.alerts.buy_vip'|translate}}
+                        <small>{{'options.alerts.watch_detail'|translate}}</small>
+                    </a>
+                </div>
+
+
+                <div>
+                    <a href="#/invite_codes" class="btn btn-default" style="margin-top:10px">
+                        {{'options.alerts.invite_friends'|translate}}
+                        <small>{{'options.alerts.watch_detail'|translate}}</small>
+                    </a>
+                </div>
+                <!--
+                <div>
+                    <a href="#/invite_codes" class="btn btn-default" style="margin-top:10px">
+                        {{'options.alerts.edu_email_verification'|translate}}
+                        <small>{{'options.alerts.watch_detail'|translate}}</small>
+                    </a>
+                </div>-->
+                <div ng-if="!$root.isWheatCollectingDisabled()">
+                    <a href="" class="btn btn-default" style="margin-top:10px" ng-click="$root.showGrabWheat()">
+                        {{'options.alerts.collect_wheat_fragment'|translate}}
+                        <small>{{'options.alerts.watch_detail'|translate}}</small>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://t.me/maikr_users" class="btn btn-default" style="margin-top:10px" target="_blank">
+                        {{'options.alerts.punch_in_telegram_group'|translate}}
+                        <small>{{'options.alerts.watch_detail'|translate}}</small>
+                    </a>
+                </div>
+            </div>
+            <!--
+            <div>
+                <hr> 
+                {{'options.alerts.free_trial_server'|translate}}
+                <small ng-click="logout()" style="cursor:pointer;color:#999;padding-left:2px">{{'options.alerts.free_trial_server_sign_out'|translate}}</small>
+                {{'options.alerts.free_trial_server_suffix'|translate}}
+                </hr>
+            </div>
+            -->
+            <div>
+                <hr> 
+                {{'options.alerts.free_trial_server'|translate}}
+                <small ng-click="logout()" style="cursor:pointer;color:#999;padding-left:2px">{{'options.alerts.free_trial_server_sign_out'|translate}}</small>
+                {{'options.alerts.free_trial_server_suffix'|translate}}
+                </hr>
+            </div>
+        </div>
+        <div ng-if="!$root.isGuest() && $root.isDue()" class="app-alert alert alert-danger">
+            <i class="glyphicon glyphicon-usd pull-right" style="font-size:32px; margin: -3px 10px 0 0;"></i>
+            <p translate="options.alerts.expire"></p>
+            <div>
+
+                <div>
+                    <a href="{{$root.orderUrl()}}" class="btn btn-default" target="_blank">
+                        {{'options.alerts.buy_vip'|translate}}
+                        <small>{{'options.alerts.watch_detail'|translate}}</small>
+                    </a>
+                </div>
+
+
+                <div>
+                    <a href="#/invite_codes" class="btn btn-default" style="margin-top:10px">
+                        {{'options.alerts.invite_friends'|translate}}
+                        <small>{{'options.alerts.watch_detail'|translate}}</small>
+                    </a>
+                </div>
+                <!--
+                <div>
+                    <a href="#/invite_codes" class="btn btn-default" style="margin-top:10px">
+                        {{'options.alerts.edu_email_verification'|translate}}
+                        <small>{{'options.alerts.watch_detail'|translate}}</small>
+                    </a>
+                </div>-->
+                <div ng-if="!$root.isWheatCollectingDisabled()">
+                    <a href="" class="btn btn-default" style="margin-top:10px" ng-click="$root.showGrabWheat()">
+                        {{'options.alerts.collect_wheat_fragment'|translate}}
+                        <small>{{'options.alerts.watch_detail'|translate}}</small>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://t.me/maikr_users" class="btn btn-default" style="margin-top:10px" target="_blank">
+                        {{'options.alerts.punch_in_telegram_group'|translate}}
+                        <small>{{'options.alerts.watch_detail'|translate}}</small>
+                    </a>
+                </div>
+                <!--
+                <div>
+                <a href="{{payUrl}}" target="_blank" class="btn btn-default" disabled style="margin-top: 10px; cursor: not-allowed;">
+                        {{'options.alerts.buy_vip'|translate}}
+                        <small>{{'options.alerts.not_yet_open'|translate}}</small>
+                    </a>
+                </div>
+                -->
+            </div>
+                <hr> 
+                {{'options.alerts.free_trial_server'|translate}}
+                <small ng-click="logout()" style="cursor:pointer;color:#999;padding-left:2px">{{'options.alerts.free_trial_server_sign_out'|translate}}</small>
+                {{'options.alerts.free_trial_server_suffix'|translate}}
+                </hr>
+            <!--
+            <hr> {{'options.alerts.free_server'|translate}}</hr>
+            <div>&nbsp;</div>
+            <div>
+                {{'options.alerts.predefined_domain_names'|translate}}
+                <small style="color:#999;cursor:pointer" class="link_lable" ng-click="showFrequentDomains()">&nbsp;({{'options.alerts.predefined_domain_names_show'|translate}})</small>
+            </div>
+        -->
+        </div>
+    </div>
+
+    <div class="page-header" style="margin-bottom:0px">
+        <h2 style="float:left">{{'options.server_list.title' | translate}} (<span>{{'options.server_list.connected_server'|translate}} <b>{{$root.connected_server_num}}</b> {{'options.server_list.server_num'|translate}}</span>)</h2>
+        <div class="clearfix"></div>
+    </div>
+
+
+
+<!--
+
+
+
+                <div class="panel-footer" >
+                    <a href="#" ng-click="reloadProxies()" class="btn btn-primary btn-block">
+                        <span>reload</span>
+                    </a>
+
+                </div>
+-->
+
+
+    <div class="panel-footer container" style="width:100%" ng-class="{'non-vip':!isVIP()}">
+        <div class="row" ng-show="isVIP()" style="margin-top: 8px;min-height:60px; height: 60px;">
+            <div class="col-sm-9">
+                <div class="mode section mode-section" style="margin-left: 6px;">
+                    <span class="section-title" style="text-align: center;" translate="popup.settings.routing_mode"></span>  
+                    <div class="tips-box" ng-init="mode_tips=''" ng-show="mode_tips">
+                        <div class="tips">
+                            <div class="content">
+                                {{ mode_tips }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modes btn-group btn-group-justified btn-group-sm">
+                        <a href="" class="btn"
+                            ng-class="{'btn-success': $root.mode=='auto' , 'btn-default': $root.mode!='auto'}"
+                            ng-mouseenter="showModeTips('auto');hovering_Auto=true"
+                            ng-mouseleave="showModeTips();hovering_Auto=false"
+                            ng-click="switchMode('auto')">
+                            <span ng-class="{'color_emphasis':hovering_Auto}">
+                            {{"popup.menu.auto.name" | translate}}
+                            </span>
+                        </a>
+                        <a href="" class="btn"
+                            ng-class="{'btn-warning':$root.mode=='always' , 'btn-default': $root.mode!='always'}"
+                            ng-mouseenter="showModeTips('always');hovering_Always=true"
+                            ng-mouseleave="showModeTips();hovering_Always=false"
+                            ng-click="switchMode('always')">
+                            <span ng-class="{'color_emphasis':hovering_Always}">
+                            {{'popup.menu.always.name'|translate}}
+                            </span>
+                        </a>
+                        <a href="" class="btn"
+                            ng-class="{'btn-danger':$root.mode=='never', 'btn-default': $root.mode!='never'}"
+                            ng-mouseenter="showModeTips('never');hovering_Never=true"
+                            ng-mouseleave="showModeTips();hovering_Never=false"
+                            ng-click="switchMode('never')">
+                            <span ng-class="{'color_emphasis':hovering_Never}">
+                            {{'popup.menu.never.name'|translate}}
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3" style="margin-right:0;padding-right:0" id="server-mode-switch">
+                <div class="mode section mode-section" style="margin-left: 6px;">
+                    <div class="section-title" style="text-align: center;" translate="popup.settings.servers_mode"></div>  
+                </div>
+
+                <div style="height:40px; margin-left: 16px;float:left;" bs-tooltip="{title: serversModeTooltip()}" data-placement="left">
+                    <div>
+                        <label class="switch">
+                            <input type="checkbox" ng-model="$root.serversmodeChecked" ng-change="serversmodeChanged()" />
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+                <div style="color:#4ED164;font-size:14px;top:6px;margin-left:6px;height: 20px;padding-top: 6px;float:left;" ng-if="$root.servers_mode == 'auto'">
+                    {{'options.server_list.auto_mode' | translate}}
+                    <i class="fa fa-info-circle" style="cursor:pointer;color:black" aria-hidden="true" ng-click="showRoutingTutorialPlay()" bs-tooltip="{title: ('common.help'|translate)}" data-placement="top"></i>
+                    </div>
+                    <div style="color:#23377c;font-size:14px;top:6px;margin-left:6px;height: 20px;padding-top: 6px;;" ng-if="$root.servers_mode == 'manual'">
+                    {{'options.server_list.manual_mode' | translate}}
+                    <i class="fa fa-info-circle" style="cursor:pointer;color:black" aria-hidden="true" ng-click="showRoutingTutorialPlay()" bs-tooltip="{title: ('common.help'|translate)}" data-placement="top"></i>
+                    </div>
+            </div>
+        </div>
+
+        <div class="row" ng-show="isVIP()" style="margin-top: 8px;height:60px;min-height:60px">
+            <div class="col-sm-10">
+                <div class="env section env-section" style="margin-left: 6px;">
+                    <span class="section-title" style="text-align: center;" translate="popup.settings.env"></span>   
+                    <div class="tips-box" ng-init="env_mode_tips=''" ng-show="env_mode_tips">
+                        <div class="tips">
+                            <div class="content">
+                                {{ env_mode_tips }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-group btn-group-justified btn-group-sm">
+                        <a href="" class="btn"
+                            ng-class="{'btn-success': $root.env_mode=='env_china' , 'btn-default': $root.env_mode!='env_china'}"
+                            ng-click="switchEnvMode('env_china')" 
+                            ng-mouseenter="showEnvModeTips('env_china');hovering_env_china=true" 
+                            ng-mouseleave="showEnvModeTips();hovering_env_china=false">
+                            <span ng-class="{'color_emphasis':hovering_env_china}">{{"popup.settings.env_china.name" | translate}}</span>
+                        </a>
+                        <a href="" class="btn"
+                            ng-class="{'btn-success': $root.env_mode=='env_china_office' , 'btn-default': $root.env_mode!='env_china_office'}"
+                            ng-click="switchEnvMode('env_china_office')" 
+                            ng-mouseenter="showEnvModeTips('env_china_office');hovering_env_china_office=true" 
+                            ng-mouseleave="showEnvModeTips();hovering_env_china_office=false">
+                            <span ng-class="{'color_emphasis':hovering_env_china_office}">{{"popup.settings.env_china_office.name" | translate}}</span>
+                        </a>
+                        <a href="" class="btn"
+                            ng-class="{'btn-success': $root.env_mode=='env_oversea' , 'btn-default': $root.env_mode!='env_oversea'}"
+                            ng-click="switchEnvMode('env_oversea')" 
+                            ng-mouseenter="showEnvModeTips('env_oversea');hovering_env_oversea=true" 
+                            ng-mouseleave="showEnvModeTips();hovering_env_oversea=false">
+                            <span ng-class="{'color_emphasis':hovering_env_oversea}">{{"popup.settings.env_oversea.name" | translate}}</span>
+
+                        </a>
+                    </div>
+                </div>
+            </div>  
+        </div>   
+
+        <div class="row" ng-show="isVIP()" style="margin-top: 8px;height:60px;min-height:60px">
+            <div class="col-sm-10">
+                <div class="isp section isp-section" style="margin-left: 6px;">
+                    <span class="section-title" style="text-align: center;" translate="popup.settings.isp_mode"></span>        
+                    <i class="fa fa-info-circle" style="cursor:pointer;color:black" aria-hidden="true" ng-click="showISPTutorialPlay()" bs-tooltip="{title: ('common.help'|translate)}" data-placement="top"></i>
+                    <div class="btn-group btn-group-justified btn-group-sm">
+                        <a href="" class="btn"
+                           ng-class="{'btn-success': $root.isp_mode=='CT' , 'btn-default': $root.isp_mode!='CT'}"
+                           ng-click="switchISPMode('CT')" ng-mouseenter="hovering_CT=true" ng-mouseleave="hovering_CT=false">
+                            <span ng-class="{'color_emphasis':hovering_CT}">{{"options.server_list.isp_ct.name" | translate}}</span>
+                            <i class="fa fa-refresh" ng-class="{'color_emphasis':hovering_CT}"  aria-hidden="true" ng-show="$root.isp_mode=='CT'"></i>
+                        </a>
+                        <a href="" class="btn"
+                           ng-class="{'btn-success':$root.isp_mode=='CU' , 'btn-default': $root.isp_mode!='CU'}"
+                           ng-click="switchISPMode('CU')" ng-mouseenter="hovering_CU=true" ng-mouseleave="hovering_CU=false">
+                            <span ng-class="{'color_emphasis':hovering_CU}">{{'options.server_list.isp_cu.name'|translate}}</span>
+                            <i class="fa fa-refresh" ng-class="{'color_emphasis':hovering_CU}"  aria-hidden="true" ng-show="$root.isp_mode=='CU'"></i>
+                        </a>
+                        <a href="" class="btn"
+                           ng-class="{'btn-success':$root.isp_mode=='CM', 'btn-default': $root.isp_mode!='CM'}"
+                           ng-click="switchISPMode('CM')" ng-mouseenter="hovering_CM=true" ng-mouseleave="hovering_CM=false">
+                            <span ng-class="{'color_emphasis':hovering_CM}">{{'options.server_list.isp_cm.name'|translate}}</span>
+                            <i class="fa fa-refresh" ng-class="{'color_emphasis':hovering_CM}"  aria-hidden="true" ng-show="$root.isp_mode=='CM'"></i>
+                        </a>
+                        <a href="" class="btn"
+                           ng-class="{'btn-success':$root.isp_mode=='CE' , 'btn-default': $root.isp_mode!='CE'}"
+                           ng-click="switchISPMode('CE')" ng-mouseenter="hovering_CE=true" ng-mouseleave="hovering_CE=false">
+                            <span ng-class="{'color_emphasis':hovering_CE}">{{'options.server_list.isp_ce.name'|translate}}</span>
+                            <i class="fa fa-refresh" ng-class="{'color_emphasis':hovering_CE}"  aria-hidden="true" ng-show="$root.isp_mode=='CE'"></i>
+                        </a>
+                        <a href="" class="btn"
+                           ng-class="{'btn-danger':$root.isp_mode=='none', 'btn-default': $root.isp_mode!='none'}"
+                           ng-click="switchISPMode('none')" ng-mouseenter="hovering_none=true" ng-mouseleave="hovering_none=false">
+                            <span ng-class="{'color_emphasis':hovering_none}">{{'options.server_list.isp_none.name'|translate}}</span>
+                            <i class="fa fa-refresh" ng-class="{'color_emphasis':hovering_none}" aria-hidden="true" ng-show="$root.isp_mode=='none'"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="row" ng-show="isVIP()" style="margin-top: 8px;min-height:60px">
+            <div class="col-sm-12">
+                <div class="isp section isp-section" style="margin-left: 6px;">
+                    <div class="section-title">
+
+                        <span translate="popup.settings.destination" ng-if="$root.destination == 'All'"/>
+                        <span translate="popup.settings.destination_choosen" ng-if="$root.destination != 'All'"/>
+                        <span ng-if="$root.destination != 'All'" style="margin-left:10px;background: #e8f8ff;color: #5cb85c;padding-left:10px;padding-right:10px">
+                            {{'country.' + $root.destination | translate}}
+                        </span>
+                    </div>
+                    <ul class="destination-list" style="list-style: none;padding-left: 0;margin-bottom: 0;">
+                        <li ng-repeat="destination in $root.destinations" class="destination-32 {{makeLowerCase(destination)}}"               
+                           ng-click="switchDestination(destination)"
+                           ng-class="{'selected' : $root.destination == destination}"
+                           bs-tooltip="{title: destinationTooltip(destination)}" data-placement="top" 
+                           >
+                        </li>
+                        <li class="destination-32 united-nations" 
+                            ng-class="{'selected' : $root.destination == 'All'}"
+                            ng-click="switchDestination('All')"
+                            bs-tooltip="{title: destinationTooltip('All')}" data-placement="top" 
+                           >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row disconnected" ng-show="isVIP()" style="margin-top: 12px; left: 6px; min-height:30px; position:relative;">
+            <div id="select-country" style="top:0" ng-style="showServerSelect && {'z-index':1} || {'z-index': 0}" class="flag-24 {{getTopServer().country.toLowerCase()}}" ng-show="$root.servers.length">
+                <div id="select-style" style="border-color:#ccc;">
+                    <div id="country-selected" style="color:black" ng-class="{opened: showServerSelect}" ng-click="toggleServersSelect()">
+                        <!--
+                        {{'country.' + getTopServer().country | translate}}
+                    -->
+                        <div class="row" style="padding-left:27px"
+                        >
+                          <span style="width:36px;display: block;" class="country-option flag-24 {{makeLowerCase(getTopServer().country)}}"></span>
+                          <span style="margin-left: 36px;">
+                                    {{'country.' + getTopServer().country | translate}} {{getTopServer().name}}
+                          </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <ul id="choices" ng-class="{opened: showServerSelect}">
+                    <li ng-repeat="server in displayServers" class="country-option flag-24 {{makeLowerCase(server.country)}}"               
+                   ng-click="selectServer(server)">
+           
+                        {{'country.' + server.country | translate}} {{server.name}}
+               
+                    <!--
+                    <span style="width: 100px;padding-left:37px">
+                        {{'country.' + server.country | translate}}
+                    </span>
+                          <span style="width: 40px;">
+                                    {{server.score.toFixed(1)}}
+                          </span>
+                      -->
+                    <li>
+                </ul>
+            
+            </div>
+
+        </div>
+
+   <div id="servers-div" class="row" style="display: table;padding-left: 15px; " ng-class="{'non-vip':!isVIP()}">        
+        <div id="dragdrop" class="">        
+            <div class="clearfix" style="position: relative;">
+                <ul class="server-header" style="padding-inline-start: 0;margin-bottom:0">
+                    <li class="server-item" style="display: table-row;cursor: default;background-color:#f1f1f1;">
+                        <span style="display: table-cell;vertical-align:middle;border-bottom: 1px solid #ccc!important;cursor: default;">
+                        <img src="/img/dragListicon.png" height="8px" width="8px" style="margin-right:8px;margin-top:-2px;margin-left: 4px;cursor: default;" ng-if="serversmodeChecked"><img>
+                        </span>
+                        <span ng-class="{'server-name': lang == 'zh', 'server-name-en': lang == 'en', 'server-name-non-vip': !isVIP()}" style="padding-left:4px;display: table-cell;vertical-align:middle;border-bottom: 1px solid #ccc!important;cursor: default;">{{'options.server_list.server_name' | translate}}</span>
+<!--
+                        <span style="width: 120px;display: table-cell;vertical-align:middle;border-bottom: 1px solid #ccc!important;cursor: default;">{{'options.server_list.city' | translate}}</span>
+                    -->
+                        <span style="width: 130px;display: table-cell;vertical-align:middle;border-bottom: 1px solid #ccc!important;cursor: default;" ng-if="isVIP() && lang=='zh'">{{'options.server_list.specials' | translate}}
+                            <i class="fa fa-info-circle" style="cursor:pointer;color:black" aria-hidden="true" ng-click="showStreamingServicesTutorialPlay()" bs-tooltip="{title: ('common.help'|translate)}" data-placement="top"></i>
+                        </span>
+
+                        <span style="width: 130px;text-align: left;display: table-cell;vertical-align:middle;border-bottom: 1px solid #ccc!important;cursor: default;" ng-class="{'text-align-center' : lang=='zh'}">{{'options.server_list.area' | translate}}</span>
+
+                        <span class="text-align-center" style="width: 70px;display: table-cell;vertical-align:middle;border-bottom: 1px solid #ccc!important;cursor: default;">
+                              {{'options.server_list.speed' | translate}}
+                        </span>
+                        <span style="width: 70px;display: table-cell;text-align:right;vertical-align:middle;border-bottom: 1px solid #ccc!important;cursor: default;">
+                            {{'options.server_list.ping' | translate}}
+                        </span>
+                        <span ng-class="{'network-status': lang == 'zh', 'network-status-en': lang == 'en'}" style="display: table-cell;text-align:right;vertical-align:middle;border-bottom: 1px solid #ccc!important;cursor: default;padding-right:6px">
+                            {{'options.server_list.status' | translate}}
+                        </span>
+                    </li>
+                </ul>
+
+                <ul class="servers-list" style="padding-top:8px">
+                    <li ng-repeat="server in $root.servers track by (server.server_id + ':' + $index)" class="server-item opaque-{{server.opaque}}"  id="{{server.server_id}}" style="display: table-row;">
+                        <span>
+                        <img src="/img/dragListicon.png" class="drag-icon" height="8px" width="8px" style="margin-top:16px;margin-left: 4px;" ng-if="serversmodeChecked"><img>
+                        </span>
+                        <span ng-class="{'server-name': lang == 'zh', 'server-name-en': lang == 'en', 'server-name-non-vip': !isVIP()}" style="padding-left:4px;margin-left:14px;display: table-cell;vertical-align:middle;border-bottom: 1px solid #ccc!important">{{server.name}}</span>
+                        
+                        <span class="" style="cursor:pointer;width: 120px;padding-right:20px;display: table-cell;vertical-align:middle;border-bottom: 1px solid #ccc!important;padding-top: 3px;padding-bottom: 3px;" ng-if="isVIP() && lang=='zh'" ng-click="showMoreStreamingServices(server)">
+                       
+                            <span ng-if="getSpecials(server).length &lt; 8" ng-repeat="special in getSpecials(server)">
+                                <img ng-if="getSpecialImg(special)" style="width:20px;height:20px;" ng-src="{{getSpecialImg(special)}}"  bs-tooltip="{title: getSpecialTooltip(special)}" data-placement="top" />
+                            </span>
+                       
+                            <span ng-if="getSpecials(server).length &gt; 7" ng-repeat="special in getSpecials(server)" ng-click="showMoreStreamingServices(server)" ng-show="$index &lt; 7">
+                                
+                                <img ng-if="getSpecialImg(special)"  style="width:20px;height:20px;" ng-src="{{ getSpecialImg(special) }}"  bs-tooltip="{title: getSpecialTooltip(special)}" data-placement="top" />
+                            </span>
+                            <img ng-if="getSpecials(server).length &gt; 7" style="width:20px;height:20px;" src="/img/more.png"  data-placement="top" bs-tooltip="{title: ('common.click_for_more'|translate)}" ng-click="showMoreStreamingServices(server)"/>
+                        </span>
+        
+                        <span class="flag-24 server-country {{makeLowerCase(server.country)}}" style="width: 120px;display: table-cell;vertical-align:middle;border-bottom: 1px solid #ccc!important;padding-left:36px;padding-bottom: 6px;" title="{{'city.' + server.city | translate}} - {{'country.' + server.country | translate}}">{{'city.' + server.city | translate}}<!--{{'country.' + server.country | translate}}--></span>
+       
+                        <span class="text-align-center" ng-class="{'animated fadeInRight' : server.changed}" style="width: 70px;display: table-cell;text-align:right;vertical-align:middle;border-bottom: 1px solid #ccc!important">
+                            <div ng-if="server.speed > 0">
+                                {{server.speed.toFixed(0)}}
+                                <span ng-if="server.googleVideoSpeed > 0  && server.bounceTime - server.googleVideoTestTime < 1 * 30">
+                                    ({{server.googleVideoSpeed.toFixed(0)}})
+                                </span>
+                            </div>     
+                        </span>
+              
+                        <span class="" ng-class="{'animated fadeInRight' : server.changed}" style="width: 70px;display: table-cell;text-align:right;vertical-align:middle;border-bottom: 1px solid #ccc!important">
+                            <div ng-if="server.latency != 0 && server.latency < 3000">
+                                {{(server.latency / 2).toFixed(0)}}
+                                <span ng-if="server.googleVideoLatency > 0 && server.bounceTime - server.googleVideoTestTime < 1 * 30">
+                                    ({{(server.googleVideoLatency / 2).toFixed(0)}})
+                                </span>
+                            </div>
+                            <div ng-if="server.latency == 0 || server.latency >= 3000">
+                                <!--Disconnected-->
+                            </div>       
+                        </span> 
+                        <span class="score animated"  ng-class="{'network-status': lang == 'zh', 'network-status-en': lang == 'en', 'fadeInRight' : server.changed}" style="display: table-cell;text-align:right;vertical-align:middle;border-bottom: 1px solid #ccc!important;padding-right:6px">
+                            <span ng-if="server.score > 0">
+                                {{server.score.toFixed(1)}}
+                                <i class="fa " ng-class="server.acc && 'fa-arrow-up' || 'fa-arrow-down'"></i>
+                                <!--
+                                <br/>
+                                ({{server.priority}})
+                                -->
+                            </span>
+                        </span>
+                    </li>  
+
+
+                </ul>
+                <div class="sarsha-spinner-container" style="" ng-show="servers_loading"> 
+                    <div class="sarsha-spinner"> <div class="spinner ng-scope"> <div class="rect1"></div> <div class="rect2"></div> <div class="rect3"></div> <div class="rect4"></div> <div class="rect5"></div> </div> </div> </div>  
+            </div>  
+        </div>            
+    </div>
+
+<div class="clearfix"></div>
+
+<div class="map_wrapper_600" style="margin-left:60px;margin-top:50px">
+    <img src="../img/world_map_600.png">
+    <i ng-repeat="server in $root.servers  track by (server.server_id + ':' + $index)" ng-class="{primary: server.primary == true}" class="glyphicon glyphicon-map-marker {{server.country}}_{{server.city}}">
+    </i>
+       
+
+ <!--
+    <i class="glyphicon glyphicon-map-marker connected JP_Tyoko"></i>
+    <i class="glyphicon glyphicon-map-marker JP_Osaka"></i>
+    <i class="glyphicon glyphicon-map-marker HK_HK"></i>
+    <i class="glyphicon glyphicon-map-marker SG_SG"></i>
+    <i class="glyphicon glyphicon-map-marker US_LA"></i>
+    <i class="glyphicon glyphicon-map-marker US_SF"></i>
+    <i class="glyphicon glyphicon-map-marker US_Fremont"></i>
+    <i class="glyphicon glyphicon-map-marker FR_Paris"></i>
+
+    <i class="glyphicon glyphicon-map-marker US_SanJose"></i>
+
+    <i class="glyphicon glyphicon-map-marker US_Seattle"></i>
+    <i class="glyphicon glyphicon-map-marker US_Dallas"></i>
+ 
+    <i class="glyphicon glyphicon-map-marker IE_Dublin"></i>   
+<i class="glyphicon glyphicon-map-marker PH_Manila"></i>-->
+</div>
+
+

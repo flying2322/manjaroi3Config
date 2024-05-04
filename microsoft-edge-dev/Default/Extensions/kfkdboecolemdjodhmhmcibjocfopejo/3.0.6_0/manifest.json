@@ -1,0 +1,59 @@
+{
+   "action": {
+      "default_icon": "icons/icon-logo.png",
+      "default_popup": "pages/popup.html",
+      "default_title": "CSDN-搜索"
+   },
+   "background": {
+      "service_worker": "serviceWorker.js"
+   },
+   "chrome_url_overrides": {
+      "newtab": "pages/newTab.html"
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "css": [  ],
+      "js": [ "js/content.js", "packages/json-format/js/json_utils.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "css": [ "plugins/doc/index.css" ],
+      "js": [ "js/jquery-3.5.1.min.js", "plugins/doc/index.js" ],
+      "matches": [ "https://www.runoob.com/*__mode__=frame*" ]
+   } ],
+   "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self';"
+   },
+   "declarative_net_request": {
+      "rule_resources": [ {
+         "enabled": true,
+         "id": "bizModifyHeader",
+         "path": "json/bizModifyHeader.json"
+      } ]
+   },
+   "default_locale": "zh_CN",
+   "description": "__MSG_extDescription__",
+   "externally_connectable": {
+      "matches": [ "*://*.csdn.net/*" ]
+   },
+   "homepage_url": "https://plugin.csdn.net/",
+   "host_permissions": [ "\u003Call_urls>" ],
+   "icons": {
+      "128": "icons/icon-logo-128.png",
+      "16": "icons/icon-logo-16.png",
+      "48": "icons/icon-logo-48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmmV+3QNNFDGSNlAhHdjlHeZh+Kge4+Dc+HGEQ7wpCfmx0Qt0ATvTSm0gbqO4StLRYZAB9ssmjIqWxlGjq7zICCbRNAYfezk+aFkRSqT2ln0GNeeC3ZkiCmJwCepw0/Mn/zTYUF2oXu6McW82gprLYS8ziB26QgoSRB261f5IPt/aJhYfIMoL5ZZNryfQ9AkHCZX40efUJOH/PxM2ERaUlULOHwmRdfE7DoiRa8+wd+RsX8QJHwc4KBXR4g+ysz/ps90doNbQnPzdVz254N+4MvQLhpTntNp3K/3FL5Kl1MvZRJFOhYmKJISWdyNY6mnBrKScuvRxz1T1vcP2icY0GwIDAQAB",
+   "manifest_version": 3,
+   "minimum_chrome_version": "88.0",
+   "name": "__MSG_extName__",
+   "options_page": "pages/options.html",
+   "permissions": [ "tabs", "bookmarks", "history", "contextMenus", "storage", "webNavigation", "unlimitedStorage", "declarativeNetRequest", "cookies", "topSites", "scripting" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.0.6",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "packages/*", "svg/*", "images/*", "icons/*", "pages/*", "js/*", "css/jsonPages.css", "vendor/*" ]
+   } ]
+}

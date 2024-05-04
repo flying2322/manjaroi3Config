@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>{{"app"  | translate}} {{"guide.title" | translate}}</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/common.css"/>
+<link rel="stylesheet" href="css/guide/reveal.min.css">
+<link rel="stylesheet" href="css/guide/guide_default.css" id="theme">
+<link rel="stylesheet" href="css/guide/my_guide.css?312">
+<link rel="stylesheet" href="css/guide/jquery.remodal.css">
+<link rel="stylesheet" href="css/guide/animate.min.css">
+</head>
+
+<body style="transition: -webkit-transform 0.8s ease;">
+
+
+<div class="reveal remodal-bg default center" data-transition-speed="default" data-background-transition="default" ng-controller="GuidePageController">
+<!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides" style="width: 960px; height: 700px; zoom: 0.915429;">
+        <section data-background="#eee" class="present" style="top: -223.5px; display: block;" data-autoslide="1000">
+            <h1 style="color:#23377c">{{"app"  | translate}}</h1>
+            <h2>解锁流媒体使用简介</h2>
+            
+        </section>
+        <section data-background="#FFFFFF" hidden="" class="future" data-autoslide="2000" style="top: -127px; display: block;">
+            <h3>想在线观看全世界各主要流媒体网站的视频和直播？</h3>
+            <p>Netflix, Hulu, HBO, 日本动漫，TVB，台湾動畫瘋...</p>
+            <img class="" src="img/streaming_tutorial/watch_streaming_services.png" >
+        </section>
+        <section data-background="#FFFFFF" hidden="" class="future" data-autoslide="5000" style="top: -127px; display: block;">
+            <h3>{{"app"  | translate}}已经为你解锁，马上开始？</h3>
+            <p>第一步，查看哪些服务器支持你所想观看的流媒体服务(点击服务器列表上的左图红色区域出现右图界面)</p>
+            <img class="" src="img/streaming_tutorial/streaming_server_services_list.png" >
+        </section>
+        <section data-background="#FFFFFF" hidden="" class="future" data-autoslide="5000" style="top: -272.5px; display: block;">
+            <h2 style="color:#23377c">第二步，手动选择该服务器</h2>
+            <p style="font-size: 24px;text-align: left;">1）选择全局VPN模式(对所有域名和IP使用{{"app"  | translate}}服务器连接)</p>
+            <p style="font-size: 24px;text-align: left;">2）选择手动模式(下面服务器列表左边会出现小图标，表示服务器列表顺序可以进行拖动) </p>
+            <p style="font-size: 24px;text-align: left;">3）将目标服务器拖动到服务器列表第一位(手动模式时，只有第一个服务器被启用，其他备用)</p>
+            <img  class="" src="img/streaming_tutorial/streaming_manual_server_selection.png" >
+        </section>
+        
+        <section data-background="#FFFFFF" hidden="" class="future" style="top: -134.5px; display: block;">
+            <h3>是不是很简单呢？</h3>
+            <small ng-click="gotoOptions()"><br>谢谢耐心观看。我们还在不断改进。让我们一起做的更好。</small>
+            
+        </section>
+    </div>
+    <div class="backgrounds">
+        <div class="slide-background present" data-background-hash="#eeeeeenullnullnullnullnullnull" style=""></div>
+        <div class="slide-background future" data-background-hash="#eeeeeenullnullnullnullnullnull" style=""></div>
+        <div class="slide-background future" data-background-hash="#eeeeeenullnullnullnullnullnull" style=""></div>
+        <div class="slide-background future" data-background-hash="#eeeeeenullnullnullnullnullnull" style=""></div>
+        <div class="slide-background future" data-background-hash="#eeeeeenullnullnullnullnullnull" style=""></div>
+        <div class="slide-background future" data-background-hash="#eeeeeenullnullnullnullnullnull" style=""></div>
+        <div class="slide-background future" data-background-hash="#eeeeeenullnullnullnullnullnull" style=""></div>
+        <div class="slide-background future" data-background-hash="#eeeeeenullnullnullnullnullnull" style=""></div>
+        <div class="slide-background future" data-background-hash="#eeeeeenullnullnullnullnullnull" style=""></div>
+    </div>
+    <div class="progress" style="display: block;"><span style="width: 0px;"></span></div>
+
+    <div class="controls" style="display: block; width: 800px; margin:0 auto;">
+        <div class="navigate-left"></div>
+        <div class="navigate-right enabled"></div>
+        <div class="navigate-up"></div>
+        <div class="navigate-down"></div>
+    </div>
+
+    <div class="slide-number"></div>
+    <div class="state-background"></div>
+    <div class="pause-overlay"></div>
+</div>
+
+<script src="js/guide/lib/jquery-1.8.2.min.js"></script>
+
+<script src="js/guide/lib/head.min.js"></script>
+<script src="js/guide/lib/reveal.min.js"></script>
+<script src="js/guide/lib/jquery.remodal.min.js"></script>
+
+<script src="js/guide/routing_tutorial.js"></script>
+<script type="text/javascript" src="js/guide/lib/zoom.js"></script>
+<script type="text/javascript" src="js/guide/lib/classList.js"></script>
+
+<script data-main="/js/guide/guide.js"
+        src="/js/libs/require.js"></script>
+</body>
+</html>

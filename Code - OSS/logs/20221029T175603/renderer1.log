@@ -1,0 +1,41 @@
+[2022-10-29 17:56:05.564] [renderer1] [warning] [twxs.cmake]: Cannot register 'cmake.cmakePath'. This property is already registered.
+[2022-10-29 17:56:15.514] [renderer1] [error] Error while registering log channel file:///home/dom/.config/Code%20-%20OSS/logs/20221029T175603/userDataSync.log Timed out while waiting for file to be created
+[2022-10-29 17:56:17.872] [renderer1] [warning] [twxs.cmake]: Cannot register 'cmake.cmakePath'. This property is already registered.
+[2022-10-29 17:56:27.830] [renderer1] [error] Error while registering log channel file:///home/dom/.config/Code%20-%20OSS/logs/20221029T175603/userDataSync.log Timed out while waiting for file to be created
+[2022-10-29 18:06:22.914] [renderer1] [warning] [backup tracker] suspended, ignoring dirty change event file:///home/dom/Dev/olas/readme.md 
+[2022-10-29 18:06:24.457] [renderer1] [warning] [twxs.cmake]: Cannot register 'cmake.cmakePath'. This property is already registered.
+[2022-10-29 18:06:34.480] [renderer1] [error] Error while registering log channel file:///home/dom/.config/Code%20-%20OSS/logs/20221029T175603/userDataSync.log Timed out while waiting for file to be created
+[2022-10-29 18:13:44.916] [renderer1] [error] [Extension Host] [CMakeTools] 2022-10-29T10:13:44.907Z [error] [cmake] CMake Error at CMakeLists.txt:5 (add_executable):
+[2022-10-29 18:13:44.917] [renderer1] [error] [Extension Host] [CMakeTools] 2022-10-29T10:13:44.908Z [error] [cmake]   Cannot find source file:
+[2022-10-29 18:13:44.917] [renderer1] [error] [Extension Host] [CMakeTools] 2022-10-29T10:13:44.908Z [error] [cmake] 
+[2022-10-29 18:13:44.917] [renderer1] [error] [Extension Host] [CMakeTools] 2022-10-29T10:13:44.909Z [error] [cmake]     adder.cpp
+[2022-10-29 18:13:44.918] [renderer1] [error] [Extension Host] [CMakeTools] 2022-10-29T10:13:44.909Z [error] [cmake] 
+[2022-10-29 18:13:44.918] [renderer1] [error] [Extension Host] [CMakeTools] 2022-10-29T10:13:44.909Z [error] [cmake]   Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm .h
+[2022-10-29 18:13:44.919] [renderer1] [error] [Extension Host] [CMakeTools] 2022-10-29T10:13:44.909Z [error] [cmake]   .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90 .f95 .f03 .hip .ispc
+[2022-10-29 18:13:44.919] [renderer1] [error] [Extension Host] [CMakeTools] 2022-10-29T10:13:44.910Z [error] [cmake] 
+[2022-10-29 18:13:44.920] [renderer1] [error] [Extension Host] [CMakeTools] 2022-10-29T10:13:44.910Z [error] [cmake] 
+[2022-10-29 18:13:44.920] [renderer1] [error] [Extension Host] [CMakeTools] 2022-10-29T10:13:44.910Z [error] [cmake] CMake Error at CMakeLists.txt:5 (add_executable):
+[2022-10-29 18:13:44.921] [renderer1] [error] [Extension Host] [CMakeTools] 2022-10-29T10:13:44.911Z [error] [cmake]   No SOURCES given to target: OLAS
+[2022-10-29 18:13:44.921] [renderer1] [error] [Extension Host] [CMakeTools] 2022-10-29T10:13:44.912Z [error] [cmake] 
+[2022-10-29 18:13:44.922] [renderer1] [error] [Extension Host] [CMakeTools] 2022-10-29T10:13:44.912Z [error] [cmake] 
+[2022-10-29 18:13:44.923] [renderer1] [error] [Extension Host] [CMakeTools] 2022-10-29T10:13:44.912Z [error] [cmake] CMake Generate step failed.  Build files cannot be regenerated correctly.
+[2022-10-29 18:17:06.382] [renderer1] [error] [Extension Host] [CMakeTools] 2022-10-29T10:17:06.375Z [error] [build] /home/dom/Dev/olas/Lession02/main.cpp:2:10: fatal error: Adder/adder.h: No such file or directory
+[2022-10-29 18:17:06.383] [renderer1] [error] [Extension Host] [CMakeTools] 2022-10-29T10:17:06.375Z [error] [build]     2 | #include <Adder/adder.h>
+[2022-10-29 18:17:06.384] [renderer1] [error] [Extension Host] [CMakeTools] 2022-10-29T10:17:06.375Z [error] [build]       |          ^~~~~~~~~~~~~~~
+[2022-10-29 18:17:06.385] [renderer1] [error] [Extension Host] [CMakeTools] 2022-10-29T10:17:06.375Z [error] [build] compilation terminated.
+[2022-10-29 18:17:06.385] [renderer1] [error] [Extension Host] [CMakeTools] 2022-10-29T10:17:06.376Z [error] [build] make[2]: *** [CMakeFiles/OLAS.dir/build.make:76: CMakeFiles/OLAS.dir/main.cpp.o] Error 1
+[2022-10-29 18:17:06.386] [renderer1] [error] [Extension Host] [CMakeTools] 2022-10-29T10:17:06.377Z [error] [build] make[1]: *** [CMakeFiles/Makefile2:100: CMakeFiles/OLAS.dir/all] Error 2
+[2022-10-29 18:17:06.387] [renderer1] [error] [Extension Host] [CMakeTools] 2022-10-29T10:17:06.377Z [error] [build] make: *** [Makefile:91: all] Error 2
+[2022-10-29 18:20:45.739] [renderer1] [error] [Extension Host] [CMakeTools] 2022-10-29T10:20:45.729Z [error] [cmake] CMake Error at CMakeLists.txt:9 (target_include_directories):
+[2022-10-29 18:20:45.740] [renderer1] [error] [Extension Host] [CMakeTools] 2022-10-29T10:20:45.730Z [error] [cmake]   target_include_directories called with invalid arguments
+[2022-10-29 18:20:45.740] [renderer1] [error] [Extension Host] [CMakeTools] 2022-10-29T10:20:45.730Z [error] [cmake] 
+[2022-10-29 18:20:45.741] [renderer1] [error] [Extension Host] [CMakeTools] 2022-10-29T10:20:45.730Z [error] [cmake] 
+[2022-10-29 18:31:23.855] [renderer1] [warning] [twxs.cmake]: Cannot register 'cmake.cmakePath'. This property is already registered.
+[2022-10-29 18:31:33.795] [renderer1] [error] Error while registering log channel file:///home/dom/.config/Code%20-%20OSS/logs/20221029T175603/userDataSync.log Timed out while waiting for file to be created
+[2022-10-29 19:52:35.792] [renderer1] [warning] [twxs.cmake]: Cannot register 'cmake.cmakePath'. This property is already registered.
+[2022-10-29 19:52:45.795] [renderer1] [error] Error while registering log channel file:///home/dom/.config/Code%20-%20OSS/logs/20221029T175603/userDataSync.log Timed out while waiting for file to be created
+[2022-10-29 20:44:29.235] [renderer1] [warning] [twxs.cmake]: Cannot register 'cmake.cmakePath'. This property is already registered.
+[2022-10-29 20:44:39.147] [renderer1] [error] Error while registering log channel file:///home/dom/.config/Code%20-%20OSS/logs/20221029T175603/userDataSync.log Timed out while waiting for file to be created
+[2022-10-29 21:06:16.346] [renderer1] [info] UNRESPONSIVE extension host: starting to profile NOW
+[2022-10-30 10:48:10.619] [renderer1] [warning] [File Watcher (node.js)] Watcher shutdown because watched path got deleted
+[2022-10-30 11:14:49.952] [renderer1] [error] Git error

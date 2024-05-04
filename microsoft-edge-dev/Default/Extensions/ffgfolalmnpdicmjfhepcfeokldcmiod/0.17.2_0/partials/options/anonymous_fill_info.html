@@ -1,0 +1,68 @@
+<div class="modal"  tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content" ng-controller="CreateAccountController">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                    ng-click="closeModal()">
+                    &times;
+                </button>
+                <h4 class="modal-title">{{'options.create_account.title'|translate}}</h4>
+            </div>
+            <form name="fillInfoForm" ng-submit="createAccount()" novalidate>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="register col-xs-12">
+                            <div class="form-group" form-state="fillInfoForm.user">
+                                <div class="errors">
+                                    <span class="error" ng-if="fillInfoForm.user.$error.required">{{'options.create_account.errors.name_required'|translate}}</span>
+                                    <span class="error" ng-if="fillInfoForm.user.$error.format">{{'options.create_account.errors.format'|translate}}</span>
+                                    <span class="error" ng-if="fillInfoForm.user.$error.exists">{{'options.create_account.errors.notTaken'|translate}}</span>
+                                </div>
+                                <label>{{'options.create_account.account'|translate}}</label>
+                                <input tabindex="1" name="user"
+                                       class="form-control font-kai"
+                                       type="text" required ng-model="name"
+                                       placeholder="{{'options.create_account.name_placeholder'|translate}}"
+                                       ui-validate="{format: 'verifyNameFormat($value)'}"
+                                       ng-blur="checkNameExists()"
+                                       ng-change="fillInfoForm.user.$setValidity('exists', true)"
+                                       ng-disabled="disableInput">
+                                <a class="form-control-feedback glyphicon glyphicon-ok"></a>
+                            </div>
+                            <div class="form-group" form-state="fillInfoForm.password">
+                                <div class="errors">
+                                    <span class="error" ng-if="fillInfoForm.password.$error.required">{{'options.create_account.errors.password_required'|translate}}</span>
+                                    <span class="error" ng-if="fillInfoForm.password.$error.minlength">{{'options.create_account.errors.minlength'|translate}}</span>
+                                </div>
+                                <label>{{'options.create_account.password'|translate}}</label>
+                                <input name="password" tabindex="2" class="form-control font-kai"
+                                       type="{{passwordInputType}}" ng-model="password"
+                                       placeholder="{{'options.create_account.password_placeholder'|translate}}"
+                                       required ng-minlength="6"
+                                       ng-disabled="disabledInput">
+                            </div>
+
+                            <div class="checkbox">
+                                <label>
+                                  <input type="checkbox" ng-model="hidePassword"> {{'options.create_account.hide_password'|translate}}
+                                </label>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary pull-left">
+                        {{'common.ok'|translate}}
+                    </button>
+
+                    <button class="cancel btn btn-link pull-left"
+                            ng-click="closeModal()" ng-disabled='disableInput'>{{'common.cancel'|translate}}
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

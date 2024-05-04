@@ -1,0 +1,28 @@
+[2022-10-29T09:56:06.086Z] Log level: Info
+[2022-10-29T09:56:06.087Z] [info] Validating found git in: git
+[2022-10-29T09:56:06.098Z] [info] Using git 2.38.0 from git
+[2022-10-29T09:56:06.112Z] > git rev-parse --show-toplevel [5ms]
+[2022-10-29T09:56:06.175Z] > git rev-parse --git-dir --git-common-dir [56ms]
+[2022-10-29T09:56:06.178Z] [info] Open repository: /home/dom/Dev/olas
+[2022-10-29T09:56:06.192Z] > git status -z -uall [8ms]
+[2022-10-29T09:56:06.198Z] > git symbolic-ref --short HEAD [1ms]
+[2022-10-29T09:56:06.203Z] > git rev-parse --show-toplevel [13ms]
+[2022-10-29T09:56:06.215Z] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [12ms]
+[2022-10-29T09:56:06.228Z] > git remote --verbose [2ms]
+[2022-10-29T09:56:06.229Z] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [8ms]
+[2022-10-29T09:56:06.229Z] > git rev-parse --show-toplevel [20ms]
+[2022-10-29T09:56:06.235Z] > git rev-parse --show-toplevel [2ms]
+[2022-10-29T09:56:06.255Z] > git config --get commit.template [2ms]
+[2022-10-29T09:56:06.315Z] > git status -z -uall [53ms]
+[2022-10-29T09:56:06.321Z] > git symbolic-ref --short HEAD [1ms]
+[2022-10-29T09:56:06.330Z] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [3ms]
+[2022-10-29T09:56:06.341Z] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [6ms]
+[2022-10-29T09:56:06.341Z] > git remote --verbose [2ms]
+[2022-10-29T09:56:06.354Z] > git config --get commit.template [1ms]
+[2022-10-29T09:56:06.721Z] > git check-ignore -v -z --stdin [1ms]
+[2022-10-29T09:56:08.024Z] > git status -z -uall [5ms]
+[2022-10-29T09:56:08.032Z] > git symbolic-ref --short HEAD [0ms]
+[2022-10-29T09:56:08.043Z] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [2ms]
+[2022-10-29T09:56:08.060Z] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [9ms]
+[2022-10-29T09:56:08.061Z] > git remote --verbose [3ms]
+[2022-10-29T09:56:08.080Z] > git config --get commit.template [4ms]

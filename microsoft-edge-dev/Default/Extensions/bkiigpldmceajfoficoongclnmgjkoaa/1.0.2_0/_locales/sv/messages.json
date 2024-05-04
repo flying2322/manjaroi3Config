@@ -1,0 +1,122 @@
+{
+   "app_command": {
+      "message": "Växla läsarvyn"
+   },
+   "app_description": {
+      "message": "Raderar bort röran som knappar, bakgrundsbilder och ändrar sidans textstorlek, kontrast och layout för bättre läsbarhet"
+   },
+   "app_name": {
+      "message": "Läsarvy"
+   },
+   "app_title": {
+      "message": "Laddar ... :: Läsarvy"
+   },
+   "app_ui_btn_fullscreen": {
+      "message": "Byt till helskärmsläsningen"
+   },
+   "app_ui_btn_imgs": {
+      "message": "Växla bilder"
+   },
+   "app_ui_btn_next": {
+      "message": "gå till nästa sida (Meta + högerpil)"
+   },
+   "app_ui_btn_prev": {
+      "message": "gå till föregående sida (Meta + vänsterpiltangent)"
+   },
+   "app_ui_btn_print": {
+      "message": "Skriv ut i läsarvyn"
+   },
+   "app_ui_btn_rateUs": {
+      "message": "Vänligen betygsätt oss! ⭑⭑⭑⭑⭑"
+   },
+   "app_ui_btn_site_gd": {
+      "message": "På vår webbplats kan du spara artikeln på din Google-enhet"
+   },
+   "app_ui_btn_site_pc": {
+      "message": "På vår webbplats kan du spara artikeln på din dator"
+   },
+   "app_ui_btn_speech": {
+      "message": "Läs denna artikel"
+   },
+   "app_ui_label1": {
+      "message": "Full bredd"
+   },
+   "app_ui_label2": {
+      "message": "Ingen höjd"
+   },
+   "app_ui_label3": {
+      "message": "Ljus"
+   },
+   "app_ui_label4": {
+      "message": "Mörk"
+   },
+   "app_ui_label5": {
+      "message": "Blå"
+   },
+   "app_ui_label6": {
+      "message": "Dölj"
+   },
+   "app_ui_label7": {
+      "message": "Visa"
+   },
+   "app_ui_notify_wrong_content": {
+      "message": "Tyvärr är det ursprungliga innehållet inte tillgängligt längre. Ladda originalinnehållet och försök igen"
+   },
+   "options_header": {
+      "message": "UI-anpassning"
+   },
+   "options_opt1": {
+      "message": "Visa \"utskriftsknapp\" i läsarvyn"
+   },
+   "options_opt10": {
+      "message": "Byt automatiskt till helskärmsläge"
+   },
+   "options_opt11": {
+      "message": "Anpassad styling"
+   },
+   "options_opt12": {
+      "message": "Användarstilar för den faktiska läsarvyn"
+   },
+   "options_opt13": {
+      "message": "Länköppning"
+   },
+   "options_opt14": {
+      "message": "Öppna länkar i nya flikar"
+   },
+   "options_opt15": {
+      "message": "Öppna länkar i läsevisningsläget"
+   },
+   "options_opt16": {
+      "message": "Blandat"
+   },
+   "options_opt17": {
+      "message": "Öppna Vanliga frågor om uppdateringar"
+   },
+   "options_opt2": {
+      "message": "Visa \"spara-knappen\" i läsarvyn"
+   },
+   "options_opt3": {
+      "message": "Visa \"helskärmsknapp\" i läsarvyn"
+   },
+   "options_opt4": {
+      "message": "Visa \"talknapp\" i läsarvyn"
+   },
+   "options_opt5": {
+      "message": "Visa \"växla bilder-knappen\" i läsarvyn"
+   },
+   "options_opt6": {
+      "message": "Visa \"navigeringsknappar\" i läsarvyn"
+   },
+   "options_opt7": {
+      "message": "Visa kontextmenyobjekt \"Öppna i läsarvy\" (omstart krävs) (kräver tillstånd för chrome.tabs)"
+   },
+   "options_opt8": {
+      "message": "Visa kontextmenyobjekt \"Öppna i bakgrundsläsarvy\" (omstart krävs) (kräver tillstånd för chrome.tabs)"
+   },
+   "options_opt9": {
+      "message": "Visa kontextmenyobjekt \"Byt till läsarvy\" (omstart krävs)"
+   },
+   "options_title": {
+      "message": "Läsarvy :: Alternativ"
+   }
+}

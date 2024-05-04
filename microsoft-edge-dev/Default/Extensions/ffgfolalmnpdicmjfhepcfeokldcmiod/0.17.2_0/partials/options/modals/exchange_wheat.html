@@ -1,0 +1,118 @@
+<div class="modal"  tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content" ng-controller="UserExchangeWheatModalController">
+         
+            <div class="modal-header" style="background-color: #eeeeee;">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                    ng-click="closeModal()">
+                    &times;
+                </button>
+                <h4 class="modal-title">{{'options.layout.exchange_wheat.title'|translate}}</h4>
+            </div>
+       
+            <form ng-submit="onSubmit()" style="">
+                <div class="modal-body" style= "overflow: auto;max-height: 500px;min-height: 200px;padding:30px">
+                    
+                    <div class="alert {{alertStyle}} text-center" ng-show="showAlert">{{alertText}}</div>
+                    
+                    <div class="row clearfix" style="margin-bottom:20px;margin-left:10px;margin-right:10px;display:block;position:relative" ng-hide="!exchangable_wheat">
+                        <ul style="list-style-type: none;padding-inline-start: 0;">
+                            <li class="col-xs-2" ng-repeat="wheat in exchangable_wheat.wheats" style="padding-left:8px;padding-right:8px">
+                                <div style="text-align:center;">
+                                    <img src="/img/wheat_grains_gold_512_512.png" style="max-width:32px; max-height:32px">
+                                </div>
+
+                                <div style="text-align: center;margin-top: 16px;font-size:11px" bs-tooltip="{title: ('options.layout.exchange_wheat.wheat_type_tooltip'|translate)}">
+                                    <span>{{ wheat.type }}</span>
+                                </div>
+                                <div style="text-align: center;margin-top: 10px;font-size:11px" bs-tooltip="{title: ('options.layout.exchange_wheat.wheat_count_tooltip'|translate)}">
+                                    <span id="wheat-waiting">{{ wheat.count }}</span>
+                                </div>
+                            </li>
+
+                            <div class="sarsha-spinner-container" style="" ng-show="$root.wheats_loading"> 
+                                <div class="sarsha-spinner"> <div class="spinner ng-scope"> <div class="rect1"></div> <div class="rect2"></div> <div class="rect3"></div> <div class="rect4"></div> <div class="rect5"></div> </div> </div> 
+                            </div>  
+                    
+                        </ul>
+                    </div>
+                    <div class="row clearfix" style="margin-left: -15px;font-size:12px" ng-hide="!exchangable_wheat">
+                        <div class="col-xs-3" style="padding-right: 0px;">
+                            {{'options.layout.exchange_wheat.total_wheat_score'|translate}}:
+                        </div>
+                        <div class="col-xs-2" style="padding-left: 0px;">
+                            {{ exchangable_wheat.total_wheat_score }}
+                        </div>
+                        
+
+                    </div>
+                    <div class="row clearfix" style="margin-left: -15px;font-size:12px" ng-hide="!exchangable_wheat">
+                        <div class="col-xs-3" style="padding-right: 0px;">
+                            {{'options.layout.exchange_wheat.used_wheat_score'|translate}}:
+                        </div>
+                        <div class="col-xs-2" style="padding-left: 0px;">
+                            {{ exchangable_wheat.used_wheat_score }}
+                        </div>
+                    </div>
+                    <div class="row clearfix" style="margin-left: -15px;font-size:12px" ng-hide="!exchangable_wheat">
+                        <div class="col-xs-3" style="padding-right: 0px;">
+                            {{'options.layout.exchange_wheat.exchangable_wheat_score'|translate}}:
+                        </div>
+                        <div class="col-xs-2" style="padding-left: 0px;">
+                            {{ exchangable_wheat.exchangable_wheat_score }} 
+                        </div>
+                    </div>
+                    <div class="row clearfix" style="margin-left: -15px;font-size:12px" ng-hide="!exchangable_wheat">
+                        <div class="col-xs-3" style="padding-right: 0px;" bs-tooltip="{title: ('options.layout.exchange_wheat.exchangable_codes_tooltip'|translate) + exchangable_wheat.exchange_rate + ('options.layout.exchange_wheat.exchangable_codes_tooltip_2'|translate)}">
+                            {{'options.layout.exchange_wheat.exchangable_codes'|translate}} <i class="fa fa-info-circle ng-scope" style="cursor:pointer;color:black" aria-hidden="true"></i>:
+                        
+                        </div>
+                        <div class="col-xs-2" style="padding-left: 0px;" bs-tooltip="{title: ('options.layout.exchange_wheat.exchangable_codes_tooltip'|translate) + exchangable_wheat.exchange_rate + ('options.layout.exchange_wheat.exchangable_codes_tooltip_2'|translate)}">
+                            {{ exchangable_wheat.exchangable_codes }}
+                            <span class="text-muted" ng-show="!showExchangeInput && exchangable_wheat.exchangable_codes &gt; 0">
+                                <a href="" ng-click="click_start_exchange()">
+                                    <small>{{'options.layout.exchange_wheat.click_start_exchange'|translate}}</small>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row clearfix" style="margin-left: -15px;margin-top:20px;font-size:12px" ng-show="showExchangeInput" >
+                        <div class="col-xs-3" style="width: 20%;padding-right: 0px;">
+                            {{'options.layout.exchange_wheat.num_codes_to_exchange'|translate}}:
+                            
+                        </div>
+                        <div class="col-xs-2" style="padding-left: 0px;">
+                            <select class="form-control" ng-disabled="exchanging" ng-model="selectedNum">
+                                <option ng-repeat="op in num_options" ng-value="op">
+                                    {{op}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row clearfix" style="margin-left: -15px;margin-top:20px" ng-show="showExchangeInput">
+                        <div class="col-xs-3" style="width: 20%;padding-right: 0px;">
+                            
+                        </div>
+                        <div class="col-xs-2" style="padding-left: 0px;">
+                            <button ng-click="exchange()" ng-disabled="exchanging" ng-if="!exchanging" type="submit" class="btn btn-primary">{{'options.layout.exchange_wheat.exchange'|translate}}</button>
+                            <button ng-click="exchange()" ng-disabled="exchanging" ng-if="exchanging" type="submit" class="btn btn-primary"><img src="/img/loading-bars.svg" alt="loading"/></button>
+
+                        </div>
+                    </div>
+                    <div class="sarsha-spinner-container" style="" ng-show="exchange_wheat_loading || !exchangable_wheat"> 
+                        <div class="sarsha-spinner"> <div class="spinner ng-scope"> <div class="rect1"></div> <div class="rect2"></div> <div class="rect3"></div> <div class="rect4"></div> <div class="rect5"></div> </div> </div> 
+                    </div>
+                </div>
+     
+
+
+                <div class="modal-footer" style="margin-top:0;">
+                    <button type="submit" class="btn btn-primary pull-right" ng-click="close()">
+                        {{'common.close'|translate}}
+                    </button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

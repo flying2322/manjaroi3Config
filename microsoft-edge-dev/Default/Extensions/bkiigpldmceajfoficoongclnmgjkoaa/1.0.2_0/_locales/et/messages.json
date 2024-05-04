@@ -1,0 +1,122 @@
+{
+   "app_command": {
+      "message": "Lülitab lugejavaate sisse"
+   },
+   "app_description": {
+      "message": "Eemaldab segadused, nagu nupud, taustpildid, ja muudab paremaks loetavuseks lehe teksti suurust, kontrasti ja paigutust"
+   },
+   "app_name": {
+      "message": "Lugeja vaade"
+   },
+   "app_title": {
+      "message": "Laadimine ... :: Lugeja vaade"
+   },
+   "app_ui_btn_fullscreen": {
+      "message": "Lülitage täisekraanilugemisele"
+   },
+   "app_ui_btn_imgs": {
+      "message": "Piltide vahetamine"
+   },
+   "app_ui_btn_next": {
+      "message": "liikuda järgmisele lehele (Meta + parem nooleklahv)"
+   },
+   "app_ui_btn_prev": {
+      "message": "liikuda eelmisele lehele (Meta + vasak nooleklahv)"
+   },
+   "app_ui_btn_print": {
+      "message": "Printige lugejavaates"
+   },
+   "app_ui_btn_rateUs": {
+      "message": "Palun hinnake meid! ⭑⭑⭑⭑⭑"
+   },
+   "app_ui_btn_site_gd": {
+      "message": "Meie saidil saate artikli oma Google'i draivile salvestada"
+   },
+   "app_ui_btn_site_pc": {
+      "message": "Meie saidil saate artikli arvutisse salvestada"
+   },
+   "app_ui_btn_speech": {
+      "message": "Lugege seda artiklit"
+   },
+   "app_ui_label1": {
+      "message": "Täislaius"
+   },
+   "app_ui_label2": {
+      "message": "Pole kõrgust"
+   },
+   "app_ui_label3": {
+      "message": "Valgus"
+   },
+   "app_ui_label4": {
+      "message": "Tume"
+   },
+   "app_ui_label5": {
+      "message": "Sinine"
+   },
+   "app_ui_label6": {
+      "message": "Peida"
+   },
+   "app_ui_label7": {
+      "message": "Näita"
+   },
+   "app_ui_notify_wrong_content": {
+      "message": "Kahjuks pole algsele sisule enam juurdepääsu. Laadige päritolu sisu ja proovige uuesti"
+   },
+   "options_header": {
+      "message": "UI kohandamine"
+   },
+   "options_opt1": {
+      "message": "Kuva lugejavaates \"printimisnupp\""
+   },
+   "options_opt10": {
+      "message": "Lülitub automaatselt täisekraani režiimile"
+   },
+   "options_opt11": {
+      "message": "Kohandatud stiil"
+   },
+   "options_opt12": {
+      "message": "Kasutaja stiilid tegeliku lugejavaate jaoks"
+   },
+   "options_opt13": {
+      "message": "Lingi avamine"
+   },
+   "options_opt14": {
+      "message": "Uutel vahelehtedel linkide avamine"
+   },
+   "options_opt15": {
+      "message": "Avage lingid lugejavaate režiimis"
+   },
+   "options_opt16": {
+      "message": "Muu"
+   },
+   "options_opt17": {
+      "message": "Avage värskenduste leht KKK"
+   },
+   "options_opt2": {
+      "message": "Näita lugejavaates nuppu „Salvesta nupp“"
+   },
+   "options_opt3": {
+      "message": "Näita lugejavaates \"täisekraani nuppu\""
+   },
+   "options_opt4": {
+      "message": "Kuva \"kõne nupp\" lugeja vaates"
+   },
+   "options_opt5": {
+      "message": "Näita lugejavaates nuppu „piltide ümberlülitamine”"
+   },
+   "options_opt6": {
+      "message": "Kuvage \"navigeerimisnupud\" lugeja vaates"
+   },
+   "options_opt7": {
+      "message": "Kuva kontekstimenüü element \"Ava lugejavaates\" (vajalik taaskäivitamine) (vajab chrome.tabs luba)"
+   },
+   "options_opt8": {
+      "message": "Kuva kontekstimenüü üksus \"Ava taustalugeja vaates\" (vajalik taaskäivitamine) (vajab chrome.tabs luba)"
+   },
+   "options_opt9": {
+      "message": "Kuva kontekstimenüü element \"Lülitu lugejavaatesse\" (taaskäivitamine on vajalik)"
+   },
+   "options_title": {
+      "message": "Lugeja vaade :: Valikud"
+   }
+}
