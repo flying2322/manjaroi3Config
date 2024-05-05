@@ -1,4 +1,15 @@
 0
+/home/dom/.config/variety/Downloaded/nasa_apod/StormPaths_NHC_8000.jpg
+/home/dom/.config/variety/Downloaded/flickr_user_www_flickr_com_photos_peter_levi__user_id_93647178_N00_/7527959832_fbb4d21ff9_o.jpg
+/home/dom/.config/variety/Downloaded/flickr_user_www_flickr_com_photos_peter_levi__user_id_93647178_N00_/7527890332_dd43c18909_o.jpg
+/home/dom/.config/variety/Downloaded/nasa_apod/suitsat1_nasa_2008.jpg
+/home/dom/.config/variety/Downloaded/Earth View/Arequipa, Peru (ID-1436).jpg
+/home/dom/.config/variety/Downloaded/Earth View/Mauritania (ID-6302).jpg
+/home/dom/.config/variety/Downloaded/Bing/OHR.GiffordPinchot_ZH-CN2050686223_1920x1080.jpg
+/usr/share/backgrounds/future2.jpg
+/home/dom/.config/variety/Downloaded/Bing/OHR.CheetahRain_EN-US6179670004_UHD.jpg
+/home/dom/.config/variety/Downloaded/Bing/OHR.TulouFujian_EN-US6009679228_UHD.jpg
+/usr/share/backgrounds/future2.jpg
+/home/dom/.config/variety/Downloaded/nasa_apod/ngc2841_hstColombari_2896.jpg
 /home/dom/.config/variety/Downloaded/Bing/OHR.SwedishAntenna_ZH-CN9163420082_1920x1080.jpg
 /home/dom/.config/variety/Downloaded/Earth View/Mauritania (ID-6302).jpg
-/usr/share/backgrounds/gnome/adwaita-timed.xml
