@@ -1,3 +1,15 @@
-2024/05/04-18:30:53.730 133a Reusing MANIFEST /home/dom/.config/microsoft-edge-dev/Default/IndexedDB/chrome-extension_llhcnbijpnechllogkacbcjmkcgjbjfi_0.indexeddb.leveldb/MANIFEST-000001
-2024/05/04-18:30:53.730 133a Recovering log #4
-2024/05/04-18:30:53.730 133a Reusing old log /home/dom/.config/microsoft-edge-dev/Default/IndexedDB/chrome-extension_llhcnbijpnechllogkacbcjmkcgjbjfi_0.indexeddb.leveldb/000004.log 
+2024/05/05-10:29:00.267 30ea Reusing MANIFEST /home/dom/.config/microsoft-edge-dev/Default/IndexedDB/chrome-extension_llhcnbijpnechllogkacbcjmkcgjbjfi_0.indexeddb.leveldb/MANIFEST-000001
+2024/05/05-10:29:00.267 30ea Recovering log #4
+2024/05/05-10:29:00.269 30ea Reusing old log /home/dom/.config/microsoft-edge-dev/Default/IndexedDB/chrome-extension_llhcnbijpnechllogkacbcjmkcgjbjfi_0.indexeddb.leveldb/000004.log 
+2024/05/05-10:29:32.275 30ea Level-0 table #8: started
+2024/05/05-10:29:32.282 30ea Level-0 table #8: 260395 bytes OK
+2024/05/05-10:29:32.284 30ea Delete type=0 #4
+2024/05/05-10:29:32.285 30ea Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2024/05/05-10:29:32.285 30ea Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01\x12\x00l\x00o\x00g\x00.\x00e\x00n\x00t\x00r\x00i\x00e\x00s\x00.\x00c\x00o\x00m\x00m\x00o\x00n' @ 1023 : 1
+2024/05/05-10:29:32.285 30ea Compacting 1@1 + 1@2 files
+2024/05/05-10:29:32.290 30ea Generated table #9@1: 35 keys, 6468 bytes
+2024/05/05-10:29:32.290 30ea Compacted 1@1 + 1@2 files => 6468 bytes
+2024/05/05-10:29:32.292 30ea compacted to: files[ 0 0 1 0 0 0 0 ]
+2024/05/05-10:29:32.292 30ea Delete type=2 #8
+2024/05/05-10:29:32.292 30ea Delete type=2 #5
+2024/05/05-10:29:32.292 30ea Manual compaction at level-1 from '\x00\x01\x01\x02\x01\x12\x00l\x00o\x00g\x00.\x00e\x00n\x00t\x00r\x00i\x00e\x00s\x00.\x00c\x00o\x00m\x00m\x00o\x00n' @ 1023 : 1 .. (end); will stop at (end)

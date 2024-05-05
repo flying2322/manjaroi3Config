@@ -1,0 +1,8 @@
+2024/05/05-10:17:53.391 3135 Creating DB /home/dom/.config/yesplaymusic/Local Storage/leveldb since it was missing.
+2024/05/05-10:17:53.401 3135 Reusing MANIFEST /home/dom/.config/yesplaymusic/Local Storage/leveldb/MANIFEST-000001
+2024/05/05-10:25:53.651 3338 Level-0 table #5: started
+2024/05/05-10:25:53.657 3338 Level-0 table #5: 22938 bytes OK
+2024/05/05-10:25:53.659 3338 Delete type=0 #3
+2024/05/05-10:30:53.652 33c6 Level-0 table #7: started
+2024/05/05-10:30:53.658 33c6 Level-0 table #7: 20555 bytes OK
+2024/05/05-10:30:53.661 33c6 Delete type=0 #4

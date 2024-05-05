@@ -1,3 +1,6 @@
-2024/05/04-18:30:53.019 12db Reusing MANIFEST /home/dom/.config/microsoft-edge-dev/Default/Extension State/MANIFEST-000001
-2024/05/04-18:30:53.019 12db Recovering log #3
-2024/05/04-18:30:53.022 12db Reusing old log /home/dom/.config/microsoft-edge-dev/Default/Extension State/000003.log 
+2024/05/05-10:08:30.742 1715 Reusing MANIFEST /home/dom/.config/microsoft-edge-dev/Default/Extension State/MANIFEST-000001
+2024/05/05-10:08:30.743 1715 Recovering log #3
+2024/05/05-10:08:30.747 1715 Reusing old log /home/dom/.config/microsoft-edge-dev/Default/Extension State/000003.log 
+2024/05/05-10:09:14.562 17e6 Level-0 table #5: started
+2024/05/05-10:09:14.590 17e6 Level-0 table #5: 692407 bytes OK
+2024/05/05-10:09:14.593 17e6 Delete type=0 #3

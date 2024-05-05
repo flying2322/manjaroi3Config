@@ -1,24 +1,6 @@
-2024/05/04-18:26:50.085 999 Reusing MANIFEST /home/dom/.config/microsoft-edge-dev/Default/Local Extension Settings/ejbalbakoplchlghecdalmeeeajnimhm/MANIFEST-000001
-2024/05/04-18:26:50.086 999 Recovering log #20
-2024/05/04-18:26:50.103 999 Reusing old log /home/dom/.config/microsoft-edge-dev/Default/Local Extension Settings/ejbalbakoplchlghecdalmeeeajnimhm/000020.log 
-2024/05/04-18:26:56.017 927 Level-0 table #23: started
-2024/05/04-18:26:56.045 927 Level-0 table #23: 3458691 bytes OK
-2024/05/04-18:26:56.047 927 Delete type=0 #20
-2024/05/04-18:27:50.930 936 Level-0 table #25: started
-2024/05/04-18:27:51.001 936 Level-0 table #25: 3635219 bytes OK
-2024/05/04-18:27:51.003 936 Delete type=0 #22
-2024/05/04-18:28:49.135 fe5 Level-0 table #27: started
-2024/05/04-18:28:49.201 fe5 Level-0 table #27: 3846727 bytes OK
-2024/05/04-18:28:49.203 fe5 Delete type=0 #24
-2024/05/04-18:28:49.205 fe5 Compacting 4@0 + 1@1 files
-2024/05/04-18:28:49.254 fe5 Generated table #28@0: 2 keys, 1923472 bytes
-2024/05/04-18:28:49.254 fe5 Compacted 4@0 + 1@1 files => 1923472 bytes
-2024/05/04-18:28:49.255 fe5 compacted to: files[ 0 1 1 0 0 0 0 ]
-2024/05/04-18:28:49.255 fe5 Delete type=2 #19
-2024/05/04-18:28:49.255 fe5 Delete type=2 #27
-2024/05/04-18:28:49.255 fe5 Delete type=2 #25
-2024/05/04-18:28:49.255 fe5 Delete type=2 #17
-2024/05/04-18:28:49.255 fe5 Delete type=2 #23
-2024/05/04-18:29:17.392 104b Level-0 table #30: started
-2024/05/04-18:29:17.430 104b Level-0 table #30: 3846988 bytes OK
-2024/05/04-18:29:17.433 104b Delete type=0 #26
+2024/05/05-10:07:55.631 13f5 Reusing MANIFEST /home/dom/.config/microsoft-edge-dev/Default/Local Extension Settings/ejbalbakoplchlghecdalmeeeajnimhm/MANIFEST-000001
+2024/05/05-10:07:55.631 13f5 Recovering log #32
+2024/05/05-10:07:55.631 13f5 Reusing old log /home/dom/.config/microsoft-edge-dev/Default/Local Extension Settings/ejbalbakoplchlghecdalmeeeajnimhm/000032.log 
+2024/05/05-10:08:04.590 127e Level-0 table #36: started
+2024/05/05-10:08:04.624 127e Level-0 table #36: 3848074 bytes OK
+2024/05/05-10:08:04.627 127e Delete type=0 #32

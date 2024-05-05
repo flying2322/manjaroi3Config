@@ -1,17 +1,3 @@
-2024/05/04-18:26:48.689 3 Reusing MANIFEST /home/dom/.config/microsoft-edge-dev/Default/Local Storage/leveldb/MANIFEST-000001
-2024/05/04-18:26:48.692 3 Recovering log #24
-2024/05/04-18:26:48.697 3 Level-0 table #27: started
-2024/05/04-18:26:48.702 3 Level-0 table #27: 117152 bytes OK
-2024/05/04-18:26:48.705 3 Delete type=0 #24
-2024/05/04-18:26:48.705 5 Compacting 4@0 + 1@1 files
-2024/05/04-18:26:48.726 5 Generated table #29@0: 281 keys, 541363 bytes
-2024/05/04-18:26:48.726 5 Compacted 4@0 + 1@1 files => 541363 bytes
-2024/05/04-18:26:48.727 5 compacted to: files[ 0 1 1 0 0 0 0 ]
-2024/05/04-18:26:48.728 5 Delete type=2 #22
-2024/05/04-18:26:48.728 5 Delete type=2 #27
-2024/05/04-18:26:48.728 5 Delete type=2 #20
-2024/05/04-18:26:48.728 5 Delete type=2 #25
-2024/05/04-18:26:48.729 5 Delete type=2 #17
-2024/05/04-18:29:00.074 5 Level-0 table #31: started
-2024/05/04-18:29:00.082 5 Level-0 table #31: 27045 bytes OK
-2024/05/04-18:29:00.086 5 Delete type=0 #28
+2024/05/05-10:07:54.061 3 Reusing MANIFEST /home/dom/.config/microsoft-edge-dev/Default/Local Storage/leveldb/MANIFEST-000001
+2024/05/05-10:07:54.062 3 Recovering log #34
+2024/05/05-10:07:54.063 3 Reusing old log /home/dom/.config/microsoft-edge-dev/Default/Local Storage/leveldb/000034.log 

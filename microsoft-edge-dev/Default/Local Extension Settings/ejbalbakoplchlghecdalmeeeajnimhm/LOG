@@ -1,6 +1,18 @@
-2024/05/04-18:30:54.067 133a Reusing MANIFEST /home/dom/.config/microsoft-edge-dev/Default/Local Extension Settings/ejbalbakoplchlghecdalmeeeajnimhm/MANIFEST-000001
-2024/05/04-18:30:54.067 133a Recovering log #29
-2024/05/04-18:30:54.067 133a Reusing old log /home/dom/.config/microsoft-edge-dev/Default/Local Extension Settings/ejbalbakoplchlghecdalmeeeajnimhm/000029.log 
-2024/05/04-18:31:08.627 1339 Level-0 table #33: started
-2024/05/04-18:31:08.699 1339 Level-0 table #33: 3846633 bytes OK
-2024/05/04-18:31:08.702 1339 Delete type=0 #29
+2024/05/05-10:08:31.802 1715 Reusing MANIFEST /home/dom/.config/microsoft-edge-dev/Default/Local Extension Settings/ejbalbakoplchlghecdalmeeeajnimhm/MANIFEST-000001
+2024/05/05-10:08:31.802 1715 Recovering log #35
+2024/05/05-10:08:31.803 1715 Reusing old log /home/dom/.config/microsoft-edge-dev/Default/Local Extension Settings/ejbalbakoplchlghecdalmeeeajnimhm/000035.log 
+2024/05/05-10:08:47.174 17e6 Level-0 table #39: started
+2024/05/05-10:08:47.212 17e6 Level-0 table #39: 3847991 bytes OK
+2024/05/05-10:08:47.215 17e6 Delete type=0 #35
+2024/05/05-10:08:47.217 17e6 Compacting 4@0 + 1@1 files
+2024/05/05-10:08:47.269 17e6 Generated table #40@0: 2 keys, 1924146 bytes
+2024/05/05-10:08:47.269 17e6 Compacted 4@0 + 1@1 files => 1924146 bytes
+2024/05/05-10:08:47.271 17e6 compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/05/05-10:08:47.271 17e6 Delete type=2 #28
+2024/05/05-10:08:47.271 17e6 Delete type=2 #30
+2024/05/05-10:08:47.271 17e6 Delete type=2 #39
+2024/05/05-10:08:47.271 17e6 Delete type=2 #33
+2024/05/05-10:08:47.271 17e6 Delete type=2 #36
+2024/05/05-10:08:59.877 1717 Level-0 table #42: started
+2024/05/05-10:08:59.954 1717 Level-0 table #42: 3848212 bytes OK
+2024/05/05-10:08:59.957 1717 Delete type=0 #38
