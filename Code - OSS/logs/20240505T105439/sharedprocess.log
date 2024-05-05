@@ -1,0 +1,149 @@
+2024-05-05 10:54:41.661 [info] Deleted uninstalled extension from disk franneck94.c-cpp-runner /home/dom/.vscode-oss/extensions/franneck94.c-cpp-runner-3.0.0-universal
+2024-05-05 10:54:41.666 [info] Deleted uninstalled extension from disk ms-vscode.cmake-tools /home/dom/.vscode-oss/extensions/ms-vscode.cmake-tools-1.12.27-universal
+2024-05-05 10:54:46.410 [info] Getting Manifest... franneck94.c-cpp-runner
+2024-05-05 10:54:46.416 [info] Getting Manifest... ms-vscode.cmake-tools
+2024-05-05 10:54:46.418 [info] Getting Manifest... vadimcn.vscode-lldb
+2024-05-05 10:54:48.420 [info] Installing extension: franneck94.c-cpp-runner
+2024-05-05 10:54:48.514 [info] Installing extension: vadimcn.vscode-lldb
+2024-05-05 10:54:48.796 [info] Getting Manifest... vadimcn.vscode-lldb
+2024-05-05 10:54:48.888 [info] Waiting for already requested installing extension vadimcn.vscode-lldb franneck94.c-cpp-runner
+2024-05-05 10:54:49.557 [info] Installing extension: ms-vscode.cmake-tools
+2024-05-05 10:54:50.175 [error] Could not load vsce-sign module Cannot find module '@vscode/vsce-sign'
+Require stack:
+- /usr/lib/code/out/bootstrap-amd.js
+- /usr/lib/code/out/bootstrap-fork.js
+- 
+2024-05-05 10:54:50.182 [info] Extension signature verification is not done: vadimcn.vscode-lldb
+2024-05-05 10:54:50.202 [info] Extracted extension to file:///home/dom/.vscode-oss/extensions/vadimcn.vscode-lldb-1.10.0-universal: vadimcn.vscode-lldb
+2024-05-05 10:54:50.205 [info] Renamed to /home/dom/.vscode-oss/extensions/vadimcn.vscode-lldb-1.10.0-universal
+2024-05-05 10:54:50.207 [info] Extracting extension completed. vadimcn.vscode-lldb
+2024-05-05 10:54:50.219 [info] Extension installed successfully: vadimcn.vscode-lldb
+2024-05-05 10:54:50.219 [info] Finished waiting for already requested installing extension vadimcn.vscode-lldb franneck94.c-cpp-runner
+2024-05-05 10:54:50.222 [info] Marked extension as uninstalled vadimcn.vscode-lldb-1.9.0-universal
+2024-05-05 10:54:50.291 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/dom/.vscode-oss/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/dom/.vscode-oss/extensions/extensions.json.vsctmp'
+    at r.create (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30083)
+    at a (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30198)
+    at i.fb (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:36634)
+    at i.stat (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:29080)
+    at async v.stat (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:16226)
+    at async X.sb (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:102:107729)
+2024-05-05 10:54:50.666 [error] Could not load vsce-sign module Cannot find module '@vscode/vsce-sign'
+Require stack:
+- /usr/lib/code/out/bootstrap-amd.js
+- /usr/lib/code/out/bootstrap-fork.js
+- 
+2024-05-05 10:54:50.666 [info] Extension signature verification is not done: franneck94.c-cpp-runner
+2024-05-05 10:54:50.725 [info] Extracted extension to file:///home/dom/.vscode-oss/extensions/franneck94.c-cpp-runner-9.4.7-universal: franneck94.c-cpp-runner
+2024-05-05 10:54:50.729 [info] Renamed to /home/dom/.vscode-oss/extensions/franneck94.c-cpp-runner-9.4.7-universal
+2024-05-05 10:54:50.730 [info] Extracting extension completed. franneck94.c-cpp-runner
+2024-05-05 10:54:50.739 [info] Extension installed successfully: franneck94.c-cpp-runner
+2024-05-05 10:54:50.741 [info] Marked extension as uninstalled franneck94.c-cpp-runner-5.2.1-universal
+2024-05-05 10:54:50.812 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/dom/.vscode-oss/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/dom/.vscode-oss/extensions/extensions.json.vsctmp'
+    at r.create (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30083)
+    at a (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30198)
+    at i.fb (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:36634)
+    at i.stat (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:29080)
+    at async v.stat (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:16226)
+    at async X.sb (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:102:107729)
+2024-05-05 10:54:51.301 [error] Could not load vsce-sign module Cannot find module '@vscode/vsce-sign'
+Require stack:
+- /usr/lib/code/out/bootstrap-amd.js
+- /usr/lib/code/out/bootstrap-fork.js
+- 
+2024-05-05 10:54:51.303 [info] Extension signature verification is not done: ms-vscode.cmake-tools
+2024-05-05 10:54:51.547 [info] Extracted extension to file:///home/dom/.vscode-oss/extensions/ms-vscode.cmake-tools-1.17.17-universal: ms-vscode.cmake-tools
+2024-05-05 10:54:51.557 [info] Renamed to /home/dom/.vscode-oss/extensions/ms-vscode.cmake-tools-1.17.17-universal
+2024-05-05 10:54:51.561 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 10:54:51.561 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 10:54:51.561 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 10:54:51.562 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 10:54:51.562 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 10:54:51.562 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 10:54:51.562 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 10:54:51.562 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 10:54:51.562 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 10:54:51.562 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 10:54:51.563 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 10:54:51.563 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 10:54:51.563 [info] Extracting extension completed. ms-vscode.cmake-tools
+2024-05-05 10:54:51.574 [info] Extension installed successfully: ms-vscode.cmake-tools
+2024-05-05 10:54:51.578 [info] Marked extension as uninstalled ms-vscode.cmake-tools-1.14.30-universal
+2024-05-05 10:54:51.645 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/dom/.vscode-oss/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/dom/.vscode-oss/extensions/extensions.json.vsctmp'
+    at r.create (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30083)
+    at a (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30198)
+    at i.fb (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:36634)
+    at i.stat (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:29080)
+    at async v.stat (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:16226)
+    at async X.sb (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:102:107729)
+2024-05-05 10:59:43.568 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 10:59:43.569 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 10:59:43.569 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 10:59:43.569 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 10:59:43.569 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 10:59:43.569 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 10:59:43.569 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 10:59:43.570 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 10:59:43.570 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 10:59:43.570 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 10:59:43.570 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 10:59:43.570 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:04:43.602 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:04:43.602 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:04:43.602 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:04:43.603 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:04:43.603 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:04:43.603 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:04:43.603 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:04:43.604 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:04:43.604 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:04:43.604 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:04:43.604 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:04:43.605 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:09:43.635 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:09:43.635 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:09:43.635 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:09:43.635 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:09:43.635 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:09:43.636 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:09:43.636 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:09:43.636 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:09:43.637 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:09:43.637 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:09:43.637 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:09:43.637 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:14:43.671 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:14:43.671 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:14:43.672 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:14:43.672 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:14:43.672 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:14:43.673 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:14:43.673 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:14:43.673 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:14:43.674 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:14:43.674 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:14:43.674 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:14:43.675 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:19:43.699 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:19:43.699 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:19:43.702 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:19:43.702 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:19:43.702 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:19:43.702 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:19:43.703 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:19:43.703 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:19:43.703 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:19:43.703 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:19:43.703 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:19:43.704 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:24:43.713 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:24:43.713 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:24:43.713 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:24:43.713 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:24:43.714 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:24:43.714 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:24:43.714 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:24:43.714 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:24:43.714 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:24:43.714 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:24:43.714 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
+2024-05-05 11:24:43.715 [warning] [cmake-tools]: Couldn't find message for key cmake-tools.configuration.cmake.options.advanced.statusBarLength.description.
